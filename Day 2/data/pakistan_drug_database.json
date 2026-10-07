@@ -1,0 +1,1643 @@
+[
+  {
+    "brand_name": "Panadol",
+    "generic_name": "Paracetamol",
+    "drug_class": "Analgesic / Antipyretic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 60,
+    "pregnancy_category": "B (Compatible)",
+    "elderly_caution": false,
+    "contraindications": [
+      "Severe hepatic impairment",
+      "Active liver failure"
+    ],
+    "allergy_group": "Paracetamol"
+  },
+  {
+    "brand_name": "Calpol",
+    "generic_name": "Paracetamol",
+    "drug_class": "Analgesic / Antipyretic",
+    "common_dosage_mg": 250,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 60,
+    "pregnancy_category": "B (Compatible)",
+    "elderly_caution": false,
+    "contraindications": [
+      "Severe hepatic impairment"
+    ],
+    "allergy_group": "Paracetamol"
+  },
+  {
+    "brand_name": "Brufen",
+    "generic_name": "Ibuprofen",
+    "drug_class": "NSAID",
+    "common_dosage_mg": 400,
+    "max_daily_dose_mg": 2400,
+    "pediatric_max_mg_kg_day": 40,
+    "pregnancy_category": "D (Contraindicated in 3rd trimester)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active peptic ulcer",
+      "Severe renal impairment",
+      "Dengue fever",
+      "Heart failure"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Ponstan",
+    "generic_name": "Mefenamic Acid",
+    "drug_class": "NSAID",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 1500,
+    "pediatric_max_mg_kg_day": 25,
+    "pregnancy_category": "D (3rd trimester)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active GI bleeding",
+      "Severe renal impairment",
+      "Dengue fever"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Disprin",
+    "generic_name": "Aspirin",
+    "drug_class": "Salicylate / NSAID",
+    "common_dosage_mg": 300,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D (Contraindicated)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Children under 16 (Reye syndrome risk)",
+      "Bleeding disorders",
+      "Dengue fever",
+      "Active ulcer"
+    ],
+    "allergy_group": "Aspirin / Salicylates"
+  },
+  {
+    "brand_name": "Loprin",
+    "generic_name": "Aspirin",
+    "drug_class": "Antiplatelet",
+    "common_dosage_mg": 75,
+    "max_daily_dose_mg": 150,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Children < 16",
+      "Active bleeding",
+      "Dengue fever",
+      "Severe thrombocytopenia"
+    ],
+    "allergy_group": "Aspirin / Salicylates"
+  },
+  {
+    "brand_name": "Voren",
+    "generic_name": "Diclofenac Sodium",
+    "drug_class": "NSAID",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 150,
+    "pediatric_max_mg_kg_day": 2,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Ischemic heart disease",
+      "Peptic ulcer",
+      "Severe renal failure"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Dicloran",
+    "generic_name": "Diclofenac Sodium",
+    "drug_class": "NSAID",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 150,
+    "pediatric_max_mg_kg_day": 2,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Peptic ulcer",
+      "Heart failure",
+      "Renal impairment"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Tramal",
+    "generic_name": "Tramadol",
+    "drug_class": "Opioid Analgesic",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 400,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Acute respiratory depression",
+      "Severe asthma",
+      "Concurrent MAO inhibitors"
+    ],
+    "allergy_group": "Opioids"
+  },
+  {
+    "brand_name": "Augmentin",
+    "generic_name": "Amoxicillin + Clavulanic Acid",
+    "drug_class": "Penicillin Antibiotic",
+    "common_dosage_mg": 625,
+    "max_daily_dose_mg": 2000,
+    "pediatric_max_mg_kg_day": 90,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "History of penicillin allergy",
+      "Augmentin-associated cholestatic jaundice"
+    ],
+    "allergy_group": "Penicillin"
+  },
+  {
+    "brand_name": "Amoxil",
+    "generic_name": "Amoxicillin",
+    "drug_class": "Penicillin Antibiotic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 3000,
+    "pediatric_max_mg_kg_day": 90,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Penicillin hypersensitivity",
+      "Infectious mononucleosis (rash risk)"
+    ],
+    "allergy_group": "Penicillin"
+  },
+  {
+    "brand_name": "Ciproxin",
+    "generic_name": "Ciprofloxacin",
+    "drug_class": "Fluoroquinolone Antibiotic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 1500,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C (Contraindicated)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Children under 18 (tendon rupture risk)",
+      "Pregnancy",
+      "Myasthenia gravis",
+      "QT prolongation"
+    ],
+    "allergy_group": "Fluoroquinolones"
+  },
+  {
+    "brand_name": "Leflox",
+    "generic_name": "Levofloxacin",
+    "drug_class": "Fluoroquinolone Antibiotic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 750,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Children < 18",
+      "Tendonitis",
+      "Severe QT prolongation"
+    ],
+    "allergy_group": "Fluoroquinolones"
+  },
+  {
+    "brand_name": "Flagyl",
+    "generic_name": "Metronidazole",
+    "drug_class": "Nitroimidazole Antimicrobial",
+    "common_dosage_mg": 400,
+    "max_daily_dose_mg": 2000,
+    "pediatric_max_mg_kg_day": 30,
+    "pregnancy_category": "B (Avoid in 1st trimester)",
+    "elderly_caution": false,
+    "contraindications": [
+      "Alcohol intake (disulfiram reaction)",
+      "1st trimester pregnancy"
+    ],
+    "allergy_group": "Nitroimidazoles"
+  },
+  {
+    "brand_name": "Azomax",
+    "generic_name": "Azithromycin",
+    "drug_class": "Macrolide Antibiotic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 500,
+    "pediatric_max_mg_kg_day": 10,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Severe hepatic impairment",
+      "Known QT interval prolongation"
+    ],
+    "allergy_group": "Macrolides"
+  },
+  {
+    "brand_name": "Klaricid",
+    "generic_name": "Clarithromycin",
+    "drug_class": "Macrolide Antibiotic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 1000,
+    "pediatric_max_mg_kg_day": 15,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Concurrent Statin therapy (rhabdomyolysis)",
+      "Severe QT prolongation",
+      "Hypokalemia"
+    ],
+    "allergy_group": "Macrolides"
+  },
+  {
+    "brand_name": "Rocephin",
+    "generic_name": "Ceftriaxone",
+    "drug_class": "Cephalosporin (3rd Gen)",
+    "common_dosage_mg": 1000,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 100,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Severe anaphylactic penicillin allergy (cross-reactivity)",
+      "Neonates with hyperbilirubinemia"
+    ],
+    "allergy_group": "Cephalosporins"
+  },
+  {
+    "brand_name": "Septran",
+    "generic_name": "Co-trimoxazole",
+    "drug_class": "Sulfonamide Antibiotic",
+    "common_dosage_mg": 480,
+    "max_daily_dose_mg": 1920,
+    "pediatric_max_mg_kg_day": 40,
+    "pregnancy_category": "D (Contraindicated in late pregnancy)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Sulfa drug hypersensitivity",
+      "G6PD deficiency",
+      "Severe renal impairment",
+      "Infants < 6 weeks"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Ceclor",
+    "generic_name": "Cefaclor",
+    "drug_class": "Cephalosporin (2nd Gen)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 1500,
+    "pediatric_max_mg_kg_day": 40,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Cephalosporin allergy"
+    ],
+    "allergy_group": "Cephalosporins"
+  },
+  {
+    "brand_name": "Concor",
+    "generic_name": "Bisoprolol",
+    "drug_class": "Beta-Blocker",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe asthma / COPD bronchospasm",
+      "Bradycardia (HR < 50)",
+      "2nd/3rd degree heart block",
+      "Cardiogenic shock"
+    ],
+    "allergy_group": "Beta-Blockers"
+  },
+  {
+    "brand_name": "Inderal",
+    "generic_name": "Propranolol",
+    "drug_class": "Non-selective Beta-Blocker",
+    "common_dosage_mg": 40,
+    "max_daily_dose_mg": 320,
+    "pediatric_max_mg_kg_day": 2,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Bronchial asthma",
+      "Severe bradycardia",
+      "Raynaud disease"
+    ],
+    "allergy_group": "Beta-Blockers"
+  },
+  {
+    "brand_name": "Lipiget",
+    "generic_name": "Atorvastatin",
+    "drug_class": "HMG-CoA Reductase Inhibitor (Statin)",
+    "common_dosage_mg": 20,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "X (Strictly Contraindicated in Pregnancy)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active liver disease",
+      "Pregnancy / Nursing mothers",
+      "Concurrent Clarithromycin / Gemfibrozil"
+    ],
+    "allergy_group": "Statins"
+  },
+  {
+    "brand_name": "Crestor",
+    "generic_name": "Rosuvastatin",
+    "drug_class": "Statin",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "X",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active liver disease",
+      "Pregnancy",
+      "Severe renal impairment"
+    ],
+    "allergy_group": "Statins"
+  },
+  {
+    "brand_name": "Zocor",
+    "generic_name": "Simvastatin",
+    "drug_class": "Statin",
+    "common_dosage_mg": 20,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "X",
+    "elderly_caution": true,
+    "contraindications": [
+      "Pregnancy",
+      "Active liver disease",
+      "Concomitant CYP3A4 inhibitors (Clarithromycin, Ketoconazole)"
+    ],
+    "allergy_group": "Statins"
+  },
+  {
+    "brand_name": "Zestril",
+    "generic_name": "Lisinopril",
+    "drug_class": "ACE Inhibitor",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D (Teratogenic / Contraindicated in Pregnancy)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Pregnancy",
+      "History of angioedema",
+      "Bilateral renal artery stenosis",
+      "Concurrent Potassium supplements / Spironolactone"
+    ],
+    "allergy_group": "ACE Inhibitors"
+  },
+  {
+    "brand_name": "Capoten",
+    "generic_name": "Captopril",
+    "drug_class": "ACE Inhibitor",
+    "common_dosage_mg": 25,
+    "max_daily_dose_mg": 150,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Pregnancy",
+      "Angioedema",
+      "Renal artery stenosis"
+    ],
+    "allergy_group": "ACE Inhibitors"
+  },
+  {
+    "brand_name": "Diovan",
+    "generic_name": "Valsartan",
+    "drug_class": "Angiotensin II Receptor Blocker (ARB)",
+    "common_dosage_mg": 80,
+    "max_daily_dose_mg": 320,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D (Contraindicated in Pregnancy)",
+    "elderly_caution": false,
+    "contraindications": [
+      "Pregnancy",
+      "Concurrent Aliskiren in diabetics"
+    ],
+    "allergy_group": "ARBs"
+  },
+  {
+    "brand_name": "Sofvasc",
+    "generic_name": "Amlodipine",
+    "drug_class": "Calcium Channel Blocker",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe hypotension",
+      "Severe aortic stenosis"
+    ],
+    "allergy_group": "Calcium Channel Blockers"
+  },
+  {
+    "brand_name": "Norvasc",
+    "generic_name": "Amlodipine",
+    "drug_class": "Calcium Channel Blocker",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe hypotension"
+    ],
+    "allergy_group": "Calcium Channel Blockers"
+  },
+  {
+    "brand_name": "Lowplat",
+    "generic_name": "Clopidogrel",
+    "drug_class": "Antiplatelet",
+    "common_dosage_mg": 75,
+    "max_daily_dose_mg": 75,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "B",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active pathological bleeding (peptic ulcer, intracranial hemorrhage)",
+      "Concurrent Omeprazole (efficacy loss)"
+    ],
+    "allergy_group": "Thienopyridines"
+  },
+  {
+    "brand_name": "Plavix",
+    "generic_name": "Clopidogrel",
+    "drug_class": "Antiplatelet",
+    "common_dosage_mg": 75,
+    "max_daily_dose_mg": 75,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "B",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active bleeding"
+    ],
+    "allergy_group": "Thienopyridines"
+  },
+  {
+    "brand_name": "Lasix",
+    "generic_name": "Furosemide",
+    "drug_class": "Loop Diuretic",
+    "common_dosage_mg": 40,
+    "max_daily_dose_mg": 600,
+    "pediatric_max_mg_kg_day": 2,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Anuria",
+      "Severe hypokalemia",
+      "Severe hyponatremia",
+      "Hepatic coma"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Aldactone",
+    "generic_name": "Spironolactone",
+    "drug_class": "Potassium-Sparing Diuretic",
+    "common_dosage_mg": 25,
+    "max_daily_dose_mg": 200,
+    "pediatric_max_mg_kg_day": 3,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Hyperkalemia (K > 5.0)",
+      "Addison disease",
+      "Anuria",
+      "Concurrent Lisinopril / ACEi without monitoring"
+    ],
+    "allergy_group": "Spironolactone"
+  },
+  {
+    "brand_name": "Lanoxin",
+    "generic_name": "Digoxin",
+    "drug_class": "Cardiac Glycoside",
+    "common_dosage_mg": 0.25,
+    "max_daily_dose_mg": 0.5,
+    "pediatric_max_mg_kg_day": 0.01,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Ventricular fibrillation",
+      "Wolff-Parkinson-White syndrome",
+      "Hypokalemia"
+    ],
+    "allergy_group": "Digitalis"
+  },
+  {
+    "brand_name": "Glucophage",
+    "generic_name": "Metformin",
+    "drug_class": "Biguanide Antidiabetic",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 2550,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "B",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe renal impairment (eGFR < 30)",
+      "Lactic acidosis history",
+      "Acute heart failure",
+      "Iodinated radiocontrast procedures"
+    ],
+    "allergy_group": "Biguanides"
+  },
+  {
+    "brand_name": "Getryl",
+    "generic_name": "Glimepiride",
+    "drug_class": "Sulfonylurea Antidiabetic",
+    "common_dosage_mg": 2,
+    "max_daily_dose_mg": 8,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Diabetic ketoacidosis (DKA)",
+      "Severe renal / hepatic failure",
+      "Sulfa allergy"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Amaryl",
+    "generic_name": "Glimepiride",
+    "drug_class": "Sulfonylurea Antidiabetic",
+    "common_dosage_mg": 2,
+    "max_daily_dose_mg": 8,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "DKA",
+      "Severe hepatic impairment"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Januvia",
+    "generic_name": "Sitagliptin",
+    "drug_class": "DPP-4 Inhibitor",
+    "common_dosage_mg": 100,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "History of acute pancreatitis",
+      "Type 1 diabetes"
+    ],
+    "allergy_group": "DPP-4 Inhibitors"
+  },
+  {
+    "brand_name": "Jardiance",
+    "generic_name": "Empagliflozin",
+    "drug_class": "SGLT2 Inhibitor",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 25,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe renal impairment (eGFR < 20)",
+      "Euglycemic DKA",
+      "Recurrent severe genital mycotic infections"
+    ],
+    "allergy_group": "SGLT2 Inhibitors"
+  },
+  {
+    "brand_name": "Risek",
+    "generic_name": "Omeprazole",
+    "drug_class": "Proton Pump Inhibitor (PPI)",
+    "common_dosage_mg": 20,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 1,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known PPI hypersensitivity",
+      "Concurrent Clopidogrel / Plavix (reduces antiplatelet activation)"
+    ],
+    "allergy_group": "PPIs"
+  },
+  {
+    "brand_name": "Nexum",
+    "generic_name": "Esomeprazole",
+    "drug_class": "PPI",
+    "common_dosage_mg": 40,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 1,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Concurrent Nelfinavir"
+    ],
+    "allergy_group": "PPIs"
+  },
+  {
+    "brand_name": "Losec",
+    "generic_name": "Omeprazole",
+    "drug_class": "PPI",
+    "common_dosage_mg": 20,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 1,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "PPI hypersensitivity"
+    ],
+    "allergy_group": "PPIs"
+  },
+  {
+    "brand_name": "Motilium",
+    "generic_name": "Domperidone",
+    "drug_class": "Prokinetic / Antiemetic",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 30,
+    "pediatric_max_mg_kg_day": 0.75,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Cardiac conduction prolongation (QTc prolongation)",
+      "GI obstruction or perforation"
+    ],
+    "allergy_group": "Domperidone"
+  },
+  {
+    "brand_name": "Gravinate",
+    "generic_name": "Dimenhydrinate",
+    "drug_class": "Antiemetic / Antihistamine",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 300,
+    "pediatric_max_mg_kg_day": 5,
+    "pregnancy_category": "B",
+    "elderly_caution": true,
+    "contraindications": [
+      "Angle-closure glaucoma",
+      "Severe prostatic hypertrophy"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Buscopan",
+    "generic_name": "Hyoscine Butylbromide",
+    "drug_class": "Antispasmodic",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 60,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Glaucoma",
+      "Myasthenia gravis",
+      "Megacolon",
+      "Paralytic ileus"
+    ],
+    "allergy_group": "Anticholinergics"
+  },
+  {
+    "brand_name": "Entamizole",
+    "generic_name": "Diloxanide Furoate + Metronidazole",
+    "drug_class": "Amebicide",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 1500,
+    "pediatric_max_mg_kg_day": 20,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Pregnancy 1st trimester",
+      "Concurrent alcohol"
+    ],
+    "allergy_group": "Nitroimidazoles"
+  },
+  {
+    "brand_name": "Ventolin",
+    "generic_name": "Salbutamol",
+    "drug_class": "Beta-2 Agonist Bronchodilator",
+    "common_dosage_mg": 4,
+    "max_daily_dose_mg": 32,
+    "pediatric_max_mg_kg_day": 0.3,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Tachyarrhythmias",
+      "Severe thyrotoxicosis"
+    ],
+    "allergy_group": "Beta-2 Agonists"
+  },
+  {
+    "brand_name": "Rigix",
+    "generic_name": "Cetirizine",
+    "drug_class": "Antihistamine (2nd Gen)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.25,
+    "pregnancy_category": "B",
+    "elderly_caution": true,
+    "contraindications": [
+      "End-stage renal disease (CrCl < 10)"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Softin",
+    "generic_name": "Loratadine",
+    "drug_class": "Antihistamine (2nd Gen)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.2,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Severe liver failure without dose adjustment"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Singulair",
+    "generic_name": "Montelukast",
+    "drug_class": "Leukotriene Receptor Antagonist",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Acute asthma attack (not for rescue)",
+      "Neuropsychiatric disturbance warning"
+    ],
+    "allergy_group": "Leukotriene Inhibitors"
+  },
+  {
+    "brand_name": "Xanax",
+    "generic_name": "Alprazolam",
+    "drug_class": "Benzodiazepine",
+    "common_dosage_mg": 0.5,
+    "max_daily_dose_mg": 4,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Acute narrow-angle glaucoma",
+      "Myasthenia gravis",
+      "Severe respiratory depression"
+    ],
+    "allergy_group": "Benzodiazepines"
+  },
+  {
+    "brand_name": "Lexotanil",
+    "generic_name": "Bromazepam",
+    "drug_class": "Benzodiazepine",
+    "common_dosage_mg": 3,
+    "max_daily_dose_mg": 18,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Severe respiratory insufficiency",
+      "Sleep apnea"
+    ],
+    "allergy_group": "Benzodiazepines"
+  },
+  {
+    "brand_name": "Cipralex",
+    "generic_name": "Escitalopram",
+    "drug_class": "SSRI Antidepressant",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 20,
+    "pediatric_max_mg_kg_day": 0,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Concurrent MAO inhibitors (serotonin syndrome)",
+      "Pimozide",
+      "QT prolongation"
+    ],
+    "allergy_group": "SSRIs"
+  },
+  {
+    "brand_name": "Thyroxine",
+    "generic_name": "Levothyroxine",
+    "drug_class": "Thyroid Hormone",
+    "common_dosage_mg": 0.05,
+    "max_daily_dose_mg": 0.2,
+    "pediatric_max_mg_kg_day": 0.01,
+    "pregnancy_category": "A (Safe and necessary in pregnancy)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Untreated subclinical or overt thyrotoxicosis",
+      "Acute myocardial infarction",
+      "Uncorrected adrenal insufficiency"
+    ],
+    "allergy_group": "Thyroid Hormones"
+  },
+  {
+    "brand_name": "Deltacortril",
+    "generic_name": "Prednisolone",
+    "drug_class": "Systemic Corticosteroid",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 60,
+    "pediatric_max_mg_kg_day": 2,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Systemic fungal infections",
+      "Live virus vaccines",
+      "Uncontrolled severe herpes simplex"
+    ],
+    "allergy_group": "Corticosteroids"
+  },
+  {
+    "brand_name": "Amoxil Forte",
+    "generic_name": "Amoxicillin",
+    "drug_class": "Clinical Formulation (Penicillin)",
+    "common_dosage_mg": 250,
+    "max_daily_dose_mg": 3000,
+    "pediatric_max_mg_kg_day": 45.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Penicillin"
+    ],
+    "allergy_group": "Penicillin"
+  },
+  {
+    "brand_name": "Augmentin DS",
+    "generic_name": "Amoxicillin + Clavulanic Acid",
+    "drug_class": "Clinical Formulation (Penicillin)",
+    "common_dosage_mg": 312.5,
+    "max_daily_dose_mg": 2000,
+    "pediatric_max_mg_kg_day": 30.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Penicillin"
+    ],
+    "allergy_group": "Penicillin"
+  },
+  {
+    "brand_name": "Brufen DS",
+    "generic_name": "Ibuprofen",
+    "drug_class": "Clinical Formulation (NSAIDs)",
+    "common_dosage_mg": 800,
+    "max_daily_dose_mg": 2400,
+    "pediatric_max_mg_kg_day": 36.0,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to NSAIDs"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Panadol Extra",
+    "generic_name": "Paracetamol + Caffeine",
+    "drug_class": "Clinical Formulation (Paracetamol)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 60.0,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Paracetamol"
+    ],
+    "allergy_group": "Paracetamol"
+  },
+  {
+    "brand_name": "Panadol CF",
+    "generic_name": "Paracetamol + Pseudoephedrine",
+    "drug_class": "Clinical Formulation (Paracetamol)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 60.0,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Paracetamol"
+    ],
+    "allergy_group": "Paracetamol"
+  },
+  {
+    "brand_name": "Zyrtec",
+    "generic_name": "Cetirizine",
+    "drug_class": "Clinical Formulation (Antihistamines)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antihistamines"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Kestine",
+    "generic_name": "Ebastine",
+    "drug_class": "Clinical Formulation (Antihistamines)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 20,
+    "pediatric_max_mg_kg_day": 0.3,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antihistamines"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Loramax",
+    "generic_name": "Loratadine",
+    "drug_class": "Clinical Formulation (Antihistamines)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antihistamines"
+    ],
+    "allergy_group": "Antihistamines"
+  },
+  {
+    "brand_name": "Claritek",
+    "generic_name": "Clarithromycin",
+    "drug_class": "Clinical Formulation (Macrolides)",
+    "common_dosage_mg": 250,
+    "max_daily_dose_mg": 1000,
+    "pediatric_max_mg_kg_day": 15.0,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Macrolides"
+    ],
+    "allergy_group": "Macrolides"
+  },
+  {
+    "brand_name": "Dalacin C",
+    "generic_name": "Clindamycin",
+    "drug_class": "Clinical Formulation (Lincosamides)",
+    "common_dosage_mg": 300,
+    "max_daily_dose_mg": 1800,
+    "pediatric_max_mg_kg_day": 27.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Lincosamides"
+    ],
+    "allergy_group": "Lincosamides"
+  },
+  {
+    "brand_name": "Cravit",
+    "generic_name": "Levofloxacin",
+    "drug_class": "Clinical Formulation (Fluoroquinolones)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 750,
+    "pediatric_max_mg_kg_day": 11.2,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Fluoroquinolones"
+    ],
+    "allergy_group": "Fluoroquinolones"
+  },
+  {
+    "brand_name": "Velosef",
+    "generic_name": "Cephradine",
+    "drug_class": "Clinical Formulation (Cephalosporins)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 4000,
+    "pediatric_max_mg_kg_day": 60.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Cephalosporins"
+    ],
+    "allergy_group": "Cephalosporins"
+  },
+  {
+    "brand_name": "Cefspan",
+    "generic_name": "Cefixime",
+    "drug_class": "Clinical Formulation (Cephalosporins)",
+    "common_dosage_mg": 400,
+    "max_daily_dose_mg": 800,
+    "pediatric_max_mg_kg_day": 12.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Cephalosporins"
+    ],
+    "allergy_group": "Cephalosporins"
+  },
+  {
+    "brand_name": "Spasler",
+    "generic_name": "Fenpiverinium + Pitofenone",
+    "drug_class": "Clinical Formulation (Antispasmodics)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 20,
+    "pediatric_max_mg_kg_day": 0.3,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antispasmodics"
+    ],
+    "allergy_group": "Antispasmodics"
+  },
+  {
+    "brand_name": "Risek Insta",
+    "generic_name": "Omeprazole + Sodium Bicarbonate",
+    "drug_class": "Clinical Formulation (PPIs)",
+    "common_dosage_mg": 40,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 1.2,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to PPIs"
+    ],
+    "allergy_group": "PPIs"
+  },
+  {
+    "brand_name": "Nexum IV",
+    "generic_name": "Esomeprazole",
+    "drug_class": "Clinical Formulation (PPIs)",
+    "common_dosage_mg": 40,
+    "max_daily_dose_mg": 80,
+    "pediatric_max_mg_kg_day": 1.2,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to PPIs"
+    ],
+    "allergy_group": "PPIs"
+  },
+  {
+    "brand_name": "Zantac",
+    "generic_name": "Ranitidine",
+    "drug_class": "Clinical Formulation (H2 Blockers)",
+    "common_dosage_mg": 150,
+    "max_daily_dose_mg": 300,
+    "pediatric_max_mg_kg_day": 4.5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to H2 Blockers"
+    ],
+    "allergy_group": "H2 Blockers"
+  },
+  {
+    "brand_name": "Famopsin",
+    "generic_name": "Famotidine",
+    "drug_class": "Clinical Formulation (H2 Blockers)",
+    "common_dosage_mg": 20,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0.6,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to H2 Blockers"
+    ],
+    "allergy_group": "H2 Blockers"
+  },
+  {
+    "brand_name": "Gaviscon",
+    "generic_name": "Sodium Alginate + Potassium Bicarbonate",
+    "drug_class": "Clinical Formulation (Antacids)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 2000,
+    "pediatric_max_mg_kg_day": 30.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antacids"
+    ],
+    "allergy_group": "Antacids"
+  },
+  {
+    "brand_name": "Mucocaine",
+    "generic_name": "Oxethazaine + Antacid",
+    "drug_class": "Clinical Formulation (Antacids)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0.6,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Antacids"
+    ],
+    "allergy_group": "Antacids"
+  },
+  {
+    "brand_name": "Concor AM",
+    "generic_name": "Bisoprolol + Amlodipine",
+    "drug_class": "Clinical Formulation (Beta-Blockers)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Beta-Blockers"
+    ],
+    "allergy_group": "Beta-Blockers"
+  },
+  {
+    "brand_name": "Tenormin",
+    "generic_name": "Atenolol",
+    "drug_class": "Clinical Formulation (Beta-Blockers)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 1.5,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Beta-Blockers"
+    ],
+    "allergy_group": "Beta-Blockers"
+  },
+  {
+    "brand_name": "Cardizem",
+    "generic_name": "Diltiazem",
+    "drug_class": "Clinical Formulation (Calcium Channel Blockers)",
+    "common_dosage_mg": 60,
+    "max_daily_dose_mg": 360,
+    "pediatric_max_mg_kg_day": 5.4,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Calcium Channel Blockers"
+    ],
+    "allergy_group": "Calcium Channel Blockers"
+  },
+  {
+    "brand_name": "Isoptin",
+    "generic_name": "Verapamil",
+    "drug_class": "Clinical Formulation (Calcium Channel Blockers)",
+    "common_dosage_mg": 80,
+    "max_daily_dose_mg": 480,
+    "pediatric_max_mg_kg_day": 7.2,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Calcium Channel Blockers"
+    ],
+    "allergy_group": "Calcium Channel Blockers"
+  },
+  {
+    "brand_name": "Atacand",
+    "generic_name": "Candesartan",
+    "drug_class": "Clinical Formulation (ARBs)",
+    "common_dosage_mg": 8,
+    "max_daily_dose_mg": 32,
+    "pediatric_max_mg_kg_day": 0.5,
+    "pregnancy_category": "D",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to ARBs"
+    ],
+    "allergy_group": "ARBs"
+  },
+  {
+    "brand_name": "Exforge",
+    "generic_name": "Amlodipine + Valsartan",
+    "drug_class": "Clinical Formulation (ARBs)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 10,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "D",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to ARBs"
+    ],
+    "allergy_group": "ARBs"
+  },
+  {
+    "brand_name": "Co-Diovan",
+    "generic_name": "Valsartan + Hydrochlorothiazide",
+    "drug_class": "Clinical Formulation (ARBs)",
+    "common_dosage_mg": 80,
+    "max_daily_dose_mg": 320,
+    "pediatric_max_mg_kg_day": 4.8,
+    "pregnancy_category": "D",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to ARBs"
+    ],
+    "allergy_group": "ARBs"
+  },
+  {
+    "brand_name": "Natrilix SR",
+    "generic_name": "Indapamide",
+    "drug_class": "Clinical Formulation (Diuretics)",
+    "common_dosage_mg": 1.5,
+    "max_daily_dose_mg": 1.5,
+    "pediatric_max_mg_kg_day": 0.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Diuretics"
+    ],
+    "allergy_group": "Diuretics"
+  },
+  {
+    "brand_name": "Diamicron MR",
+    "generic_name": "Gliclazide",
+    "drug_class": "Clinical Formulation (Sulfa drugs)",
+    "common_dosage_mg": 30,
+    "max_daily_dose_mg": 120,
+    "pediatric_max_mg_kg_day": 1.8,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Sulfa drugs"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Daonil",
+    "generic_name": "Glibenclamide",
+    "drug_class": "Clinical Formulation (Sulfa drugs)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 15,
+    "pediatric_max_mg_kg_day": 0.2,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Sulfa drugs"
+    ],
+    "allergy_group": "Sulfa drugs"
+  },
+  {
+    "brand_name": "Janumet",
+    "generic_name": "Sitagliptin + Metformin",
+    "drug_class": "Clinical Formulation (DPP-4 Inhibitors)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 1.5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to DPP-4 Inhibitors"
+    ],
+    "allergy_group": "DPP-4 Inhibitors"
+  },
+  {
+    "brand_name": "Galvus",
+    "generic_name": "Vildagliptin",
+    "drug_class": "Clinical Formulation (DPP-4 Inhibitors)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 1.5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to DPP-4 Inhibitors"
+    ],
+    "allergy_group": "DPP-4 Inhibitors"
+  },
+  {
+    "brand_name": "Galvus Met",
+    "generic_name": "Vildagliptin + Metformin",
+    "drug_class": "Clinical Formulation (DPP-4 Inhibitors)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 1.5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to DPP-4 Inhibitors"
+    ],
+    "allergy_group": "DPP-4 Inhibitors"
+  },
+  {
+    "brand_name": "Synjardy",
+    "generic_name": "Empagliflozin + Metformin",
+    "drug_class": "Clinical Formulation (SGLT2 Inhibitors)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 25,
+    "pediatric_max_mg_kg_day": 0.4,
+    "pregnancy_category": "C",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to SGLT2 Inhibitors"
+    ],
+    "allergy_group": "SGLT2 Inhibitors"
+  },
+  {
+    "brand_name": "Mixtard 30/70",
+    "generic_name": "Human Insulin (Biphasic)",
+    "drug_class": "Clinical Formulation (Insulin)",
+    "common_dosage_mg": 100,
+    "max_daily_dose_mg": 200,
+    "pediatric_max_mg_kg_day": 3.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Insulin"
+    ],
+    "allergy_group": "Insulin"
+  },
+  {
+    "brand_name": "Lantus",
+    "generic_name": "Insulin Glargine",
+    "drug_class": "Clinical Formulation (Insulin)",
+    "common_dosage_mg": 100,
+    "max_daily_dose_mg": 200,
+    "pediatric_max_mg_kg_day": 3.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Insulin"
+    ],
+    "allergy_group": "Insulin"
+  },
+  {
+    "brand_name": "Humalog",
+    "generic_name": "Insulin Lispro",
+    "drug_class": "Clinical Formulation (Insulin)",
+    "common_dosage_mg": 100,
+    "max_daily_dose_mg": 200,
+    "pediatric_max_mg_kg_day": 3.0,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Insulin"
+    ],
+    "allergy_group": "Insulin"
+  },
+  {
+    "brand_name": "Rivotril",
+    "generic_name": "Clonazepam",
+    "drug_class": "Clinical Formulation (Benzodiazepines)",
+    "common_dosage_mg": 0.5,
+    "max_daily_dose_mg": 4,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Benzodiazepines"
+    ],
+    "allergy_group": "Benzodiazepines"
+  },
+  {
+    "brand_name": "Valium",
+    "generic_name": "Diazepam",
+    "drug_class": "Clinical Formulation (Benzodiazepines)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0.6,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Benzodiazepines"
+    ],
+    "allergy_group": "Benzodiazepines"
+  },
+  {
+    "brand_name": "Ativan",
+    "generic_name": "Lorazepam",
+    "drug_class": "Clinical Formulation (Benzodiazepines)",
+    "common_dosage_mg": 1,
+    "max_daily_dose_mg": 6,
+    "pediatric_max_mg_kg_day": 0.1,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Benzodiazepines"
+    ],
+    "allergy_group": "Benzodiazepines"
+  },
+  {
+    "brand_name": "Inderal 10mg",
+    "generic_name": "Propranolol",
+    "drug_class": "Clinical Formulation (Beta-Blockers)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 320,
+    "pediatric_max_mg_kg_day": 4.8,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to Beta-Blockers"
+    ],
+    "allergy_group": "Beta-Blockers"
+  },
+  {
+    "brand_name": "Epival",
+    "generic_name": "Sodium Valproate",
+    "drug_class": "Clinical Formulation (Anticonvulsants)",
+    "common_dosage_mg": 500,
+    "max_daily_dose_mg": 2500,
+    "pediatric_max_mg_kg_day": 37.5,
+    "pregnancy_category": "D",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Anticonvulsants"
+    ],
+    "allergy_group": "Anticonvulsants"
+  },
+  {
+    "brand_name": "Tegral",
+    "generic_name": "Carbamazepine",
+    "drug_class": "Clinical Formulation (Anticonvulsants)",
+    "common_dosage_mg": 200,
+    "max_daily_dose_mg": 1200,
+    "pediatric_max_mg_kg_day": 18.0,
+    "pregnancy_category": "D",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Anticonvulsants"
+    ],
+    "allergy_group": "Anticonvulsants"
+  },
+  {
+    "brand_name": "Neurobion",
+    "generic_name": "Vitamin B1 + B6 + B12",
+    "drug_class": "Clinical Formulation (Vitamins)",
+    "common_dosage_mg": 100,
+    "max_daily_dose_mg": 300,
+    "pediatric_max_mg_kg_day": 4.5,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Vitamins"
+    ],
+    "allergy_group": "Vitamins"
+  },
+  {
+    "brand_name": "Surbex Z",
+    "generic_name": "Zinc + Vitamin B-Complex + C",
+    "drug_class": "Clinical Formulation (Vitamins)",
+    "common_dosage_mg": 22.5,
+    "max_daily_dose_mg": 50,
+    "pediatric_max_mg_kg_day": 0.8,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Vitamins"
+    ],
+    "allergy_group": "Vitamins"
+  },
+  {
+    "brand_name": "Cac-1000 Plus",
+    "generic_name": "Calcium Lactate + Vitamin C + D3",
+    "drug_class": "Clinical Formulation (Minerals)",
+    "common_dosage_mg": 1000,
+    "max_daily_dose_mg": 2000,
+    "pediatric_max_mg_kg_day": 30.0,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Minerals"
+    ],
+    "allergy_group": "Minerals"
+  },
+  {
+    "brand_name": "Sunny D",
+    "generic_name": "Cholecalciferol (Vitamin D3)",
+    "drug_class": "Clinical Formulation (Vitamins)",
+    "common_dosage_mg": 5000,
+    "max_daily_dose_mg": 200000,
+    "pediatric_max_mg_kg_day": 3000.0,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Vitamins"
+    ],
+    "allergy_group": "Vitamins"
+  },
+  {
+    "brand_name": "Fefol-Vit",
+    "generic_name": "Ferrous Sulfate + Folic Acid",
+    "drug_class": "Clinical Formulation (Iron Supplements)",
+    "common_dosage_mg": 150,
+    "max_daily_dose_mg": 300,
+    "pediatric_max_mg_kg_day": 4.5,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Iron Supplements"
+    ],
+    "allergy_group": "Iron Supplements"
+  },
+  {
+    "brand_name": "Iberet Folic",
+    "generic_name": "Ferrous Sulfate + B-Complex",
+    "drug_class": "Clinical Formulation (Iron Supplements)",
+    "common_dosage_mg": 525,
+    "max_daily_dose_mg": 1050,
+    "pediatric_max_mg_kg_day": 15.8,
+    "pregnancy_category": "A",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Iron Supplements"
+    ],
+    "allergy_group": "Iron Supplements"
+  },
+  {
+    "brand_name": "Duphaston",
+    "generic_name": "Dydrogesterone",
+    "drug_class": "Clinical Formulation (Progestogens)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 30,
+    "pediatric_max_mg_kg_day": 0.4,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Progestogens"
+    ],
+    "allergy_group": "Progestogens"
+  },
+  {
+    "brand_name": "Primolut N",
+    "generic_name": "Norethisterone",
+    "drug_class": "Clinical Formulation (Progestogens)",
+    "common_dosage_mg": 5,
+    "max_daily_dose_mg": 15,
+    "pediatric_max_mg_kg_day": 0.2,
+    "pregnancy_category": "X",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Progestogens"
+    ],
+    "allergy_group": "Progestogens"
+  },
+  {
+    "brand_name": "Clomid",
+    "generic_name": "Clomifene Citrate",
+    "drug_class": "Clinical Formulation (Ovulation Inducers)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 100,
+    "pediatric_max_mg_kg_day": 1.5,
+    "pregnancy_category": "X",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to Ovulation Inducers"
+    ],
+    "allergy_group": "Ovulation Inducers"
+  },
+  {
+    "brand_name": "Cataflam",
+    "generic_name": "Diclofenac Potassium",
+    "drug_class": "Clinical Formulation (NSAIDs)",
+    "common_dosage_mg": 50,
+    "max_daily_dose_mg": 150,
+    "pediatric_max_mg_kg_day": 2.2,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to NSAIDs"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Synflex",
+    "generic_name": "Naproxen Sodium",
+    "drug_class": "Clinical Formulation (NSAIDs)",
+    "common_dosage_mg": 550,
+    "max_daily_dose_mg": 1100,
+    "pediatric_max_mg_kg_day": 16.5,
+    "pregnancy_category": "D",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to NSAIDs"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Toradol",
+    "generic_name": "Ketorolac Tromethamine",
+    "drug_class": "Clinical Formulation (NSAIDs)",
+    "common_dosage_mg": 10,
+    "max_daily_dose_mg": 40,
+    "pediatric_max_mg_kg_day": 0.6,
+    "pregnancy_category": "C",
+    "elderly_caution": true,
+    "contraindications": [
+      "Known hypersensitivity to NSAIDs"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
+    "brand_name": "Zantac Syrup",
+    "generic_name": "Ranitidine",
+    "drug_class": "Clinical Formulation (H2 Blockers)",
+    "common_dosage_mg": 75,
+    "max_daily_dose_mg": 300,
+    "pediatric_max_mg_kg_day": 4.5,
+    "pregnancy_category": "B",
+    "elderly_caution": false,
+    "contraindications": [
+      "Known hypersensitivity to H2 Blockers"
+    ],
+    "allergy_group": "H2 Blockers"
+  }
+]
