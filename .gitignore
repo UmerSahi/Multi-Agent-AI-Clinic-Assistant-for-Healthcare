@@ -28,6 +28,14 @@ wheels/
 .installed.cfg
 *.egg
 
+# Database & Vector stores
+*.db
+*.sqlite
+*.sqlite3
+chroma_db/
+Day 2/data/chroma_db/
+Day 2/data/clinic_local.db
+
 # Virtual Environments
 .venv
 venv/
