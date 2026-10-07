@@ -1,0 +1,49 @@
+{
+  "lab_instructions": [
+    {
+      "id": "lab_001",
+      "test_name": "Fasting Blood Sugar & Fasting Lipid Profile",
+      "fasting_hours": "10-12 hours",
+      "preparation": "The patient must fast for 10 to 12 hours overnight. Only plain drinking water is permitted. Tea, coffee, milk, sweetened drinks, and smoking are strictly forbidden during the fasting period. Essential morning blood pressure or cardiac medications may be taken with a small sip of water unless otherwise directed by the doctor.",
+      "special_notes": "For Fasting Blood Glucose, fasting should not exceed 14 hours as prolonged starvation can skew results. HbA1c does not require fasting.",
+      "source": "City Care Clinics Laboratory Sample Collection Guidebook",
+      "tags": ["fasting", "sugar", "glucose", "cholesterol", "lipid", "hba1c"]
+    },
+    {
+      "id": "lab_002",
+      "test_name": "Ultrasound Pelvis & Lower Abdomen",
+      "fasting_hours": "None for pelvic; 6 hours for upper abdomen",
+      "preparation": "For Pelvic and Obstetric ultrasound scans, a completely full urinary bladder is mandatory. The patient should drink 1 liter (3 to 4 glasses) of plain water 60 minutes prior to the appointment and refrain from urinating until the scan is completed. For whole abdomen or gallbladder scans, 6 hours of fasting from solid food is also required.",
+      "special_notes": "If the bladder is empty, sound waves cannot penetrate clearly to visualize the uterus, ovaries, or prostate.",
+      "source": "City Care Clinics Diagnostic Radiology Protocols",
+      "tags": ["ultrasound", "scan", "pelvis", "abdomen", "full bladder", "water"]
+    },
+    {
+      "id": "lab_003",
+      "test_name": "Urine Routine Examination (Urine R/E) & Culture",
+      "fasting_hours": "None",
+      "preparation": "Collect a clean-catch midstream urine specimen in a sterile container provided by the clinic lab. Clean the genital area with plain water first. Discard the initial stream of urine and collect approximately 30-50 ml of the midstream urine without touching the interior of the sterile container. Deliver the sample to the lab within 60 minutes of collection.",
+      "special_notes": "If antibiotics are currently being taken, notify the lab technician as this alters culture sensitivity results.",
+      "source": "City Care Clinics Clinical Pathology Procedures",
+      "tags": ["urine", "urine re", "urine culture", "midstream", "sample"]
+    },
+    {
+      "id": "lab_004",
+      "test_name": "Liver Function Test (LFT) & Renal Function Test (RFT)",
+      "fasting_hours": "4-6 hours recommended",
+      "preparation": "Avoid heavy, fatty, or deep-fried meals 12 hours before sample collection. Stay adequately hydrated with water. Strenuous weightlifting or intense gym exercise should be avoided 24 hours prior to testing as it can artificially elevate AST and Serum Creatinine levels.",
+      "special_notes": "Notify the lab if you are taking Paracetamol, statins, or herbal supplements.",
+      "source": "City Care Clinics Clinical Biochemistry Handbook",
+      "tags": ["lft", "rft", "creatinine", "liver", "kidney", "urea"]
+    },
+    {
+      "id": "lab_005",
+      "test_name": "Thyroid Profile (TSH, Free T3, Free T4)",
+      "fasting_hours": "None mandatory",
+      "preparation": "Blood should ideally be drawn in the early morning between 08:00 AM and 10:00 AM because TSH follows a circadian rhythm. If the patient is taking thyroid hormone replacement (e.g. Thyroxine / Levothyroxine), the morning dose should be taken AFTER the blood sample has been drawn, not before.",
+      "special_notes": "Biotin supplements should be discontinued 48 hours prior to testing as biotin interferes with immunoassay readouts.",
+      "source": "City Care Clinics Endocrinology Testing Guidelines",
+      "tags": ["thyroid", "tsh", "t3", "t4", "thyroxine", "hormone"]
+    }
+  ]
+}

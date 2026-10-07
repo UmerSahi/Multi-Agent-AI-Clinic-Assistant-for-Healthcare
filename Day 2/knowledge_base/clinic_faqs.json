@@ -1,0 +1,44 @@
+{
+  "clinic_faqs": [
+    {
+      "id": "faq_001",
+      "category": "Fees",
+      "question": "What are the doctor consultation fees at City Care Clinics?",
+      "answer": "Consultation fees at City Care Clinics vary by specialty: General Medicine is PKR 2,000; Paediatrics is PKR 2,500; Dermatology is PKR 2,500; ENT is PKR 2,000; Gynaecology is PKR 3,000; and Cardiology is PKR 3,500. Follow-up visits within 7 days for the same illness are discounted at 50% across all branches.",
+      "source": "City Care Clinics Official Fee Schedule 2026",
+      "tags": ["fees", "cost", "charges", "doctor fee"]
+    },
+    {
+      "id": "faq_002",
+      "category": "Timings",
+      "question": "What are the branch operating hours in Lahore and Islamabad?",
+      "answer": "All 5 City Care Clinics branches (Gulberg, DHA Phase 5, Johar Town in Lahore; F-8 Markaz and Blue Area in Islamabad) operate Monday through Saturday from 08:00 AM to 10:00 PM. On Fridays, outpatient clinics take a Juma prayer break between 12:30 PM and 03:00 PM. Sunday clinic is open for urgent outpatient care only from 10:00 AM to 04:00 PM.",
+      "source": "City Care Clinics Branch Operating Directory",
+      "tags": ["timings", "hours", "branches", "open", "sunday"]
+    },
+    {
+      "id": "faq_003",
+      "category": "Appointments",
+      "question": "How can I book, cancel, or reschedule an appointment?",
+      "answer": "Appointments can be booked, rescheduled, or cancelled directly through this AI Chat Assistant, via WhatsApp at +92-42-35789011, or at the front desk. Rescheduling or cancellation requires at least 2 hours notice before the scheduled appointment slot with zero penalty fee.",
+      "source": "City Care Clinics Patient Services Policy",
+      "tags": ["booking", "cancellation", "reschedule", "appointment"]
+    },
+    {
+      "id": "faq_004",
+      "category": "Emergency",
+      "question": "Does City Care Clinics provide acute emergency resuscitation or trauma ICU services?",
+      "answer": "City Care Clinics is an outpatient clinic network and does not operate a full-scale trauma ICU or acute emergency department. In life-threatening emergencies (e.g. crushing chest pain, acute stroke, respiratory arrest, severe trauma), patients must immediately call Rescue 1122 or proceed to the nearest tertiary care hospital emergency department.",
+      "source": "City Care Clinics Emergency Protocols Manual",
+      "tags": ["emergency", "1122", "icu", "trauma", "life threatening"]
+    },
+    {
+      "id": "faq_005",
+      "category": "Telemedicine",
+      "question": "Are video or phone consultations available with doctors?",
+      "answer": "Yes, 15-minute video tele-consultations are available for stable follow-up patients and lab report reviews across General Medicine, Dermatology, and Paediatrics. Tele-consultation fees are the same as regular in-person clinic fees. First-time diagnostic visits with acute symptoms require an in-person physical examination.",
+      "source": "City Care Clinics Telehealth Guidelines",
+      "tags": ["telemedicine", "video call", "online doctor", "teleconsult"]
+    }
+  ]
+}

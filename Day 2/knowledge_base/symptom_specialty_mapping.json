@@ -1,0 +1,70 @@
+{
+  "mappings": [
+    {
+      "specialty": "General Medicine",
+      "typical_symptoms": [
+        "Unexplained fever lasting several days", "Generalized body ache and fatigue",
+        "Persistent cough without severe distress", "Uncontrolled high blood sugar or hypertension checkup",
+        "Loss of appetite and weight loss", "Mild to moderate abdominal discomfort or indigestion"
+      ],
+      "keywords": ["bukhar", "fever", "body ache", "badan dard", "khansi", "cough", "sugar", "bp", "kamzori", "fatigue"],
+      "urgency_hint": "ROUTINE",
+      "red_flags": ["High continuous fever with rigors > 103 F", "Altered sensorium"]
+    },
+    {
+      "specialty": "Paediatrics",
+      "typical_symptoms": [
+        "Fever in children under 14 years", "Childhood vomiting and watery diarrhea",
+        "Poor feeding in infant", "Childhood rash or measles/chickenpox suspicion",
+        "Wheezing or noisy breathing in toddlers", "Delayed developmental milestones or growth issues"
+      ],
+      "keywords": ["bacha", "child", "infant", "toddler", "beta", "beti", "vomiting", "loose motion", "dast", "milk refusal"],
+      "urgency_hint": "URGENT",
+      "red_flags": ["Fever in infant < 3 months", "Sunken fontanelle, no urine > 6 hours", "Extreme drowsiness / limpness"]
+    },
+    {
+      "specialty": "Cardiology",
+      "typical_symptoms": [
+        "Chest heaviness or discomfort during physical walking", "Palpitations or rapid irregular heartbeats",
+        "Shortness of breath on lying flat (orthopnea)", "Swelling in both feet and ankles (bilateral pedal edema)",
+        "Dizziness or transient lightheadedness on standing", "History of previous heart attack or stent placement"
+      ],
+      "keywords": ["dil", "heart", "chest pain", "seena", "dhadkan", "palpitations", "pairon ki soojan", "ankle swelling"],
+      "urgency_hint": "URGENT",
+      "red_flags": ["Acute central crushing chest pain with arm/jaw radiation", "Diaphoresis", "Syncope"]
+    },
+    {
+      "specialty": "Gynaecology",
+      "typical_symptoms": [
+        "Irregular or painful menstrual cycles", "Antenatal pregnancy routine check-ups",
+        "Pelvic pain or white discharge", "PCOD symptoms (facial hair, weight gain, irregular menses)",
+        "Post-menopausal spotting or bleeding", "Family planning and preconception counseling"
+      ],
+      "keywords": ["pregnancy", "hamal", "period", "mahwari", "pelvic pain", "pcod", "khawateen", "ultrasound pregnancy"],
+      "urgency_hint": "ROUTINE",
+      "red_flags": ["Vaginal bleeding in pregnancy", "Severe acute lower abdominal agony", "Eclampsia convulsions"]
+    },
+    {
+      "specialty": "Dermatology",
+      "typical_symptoms": [
+        "Itchy skin rashes, eczema, or fungal ringworm patches", "Severe facial acne, pimples, or blemishes",
+        "Sudden patch of hair loss (alopecia) or dandruff", "Nail discoloration or fungal thickening",
+        "Dry cracked skin or psoriasis plaques", "Unusual mole color or border changes"
+      ],
+      "keywords": ["jild", "skin", "kharish", "rash", "acne", "daanay", "keel", "baal girna", "hair fall", "nails"],
+      "urgency_hint": "ROUTINE",
+      "red_flags": ["Rapidly spreading blistered rash with mucosal shedding", "Suspected Stevens-Johnson syndrome"]
+    },
+    {
+      "specialty": "ENT",
+      "typical_symptoms": [
+        "Ear ache, ear discharge, or decreased hearing", "Severe sore throat, difficulty swallowing, or hoarseness",
+        "Chronic sinus congestion, facial pressure, or post-nasal drip", "Frequent nosebleeds (epistaxis)",
+        "Vertigo or room-spinning dizziness", "Tinnitus (ringing in the ears)"
+      ],
+      "keywords": ["kaan", "ear", "gala", "throat", "naak", "nose", "sinus", "awaz baithna", "chakkar", "vertigo", "tinnitus"],
+      "urgency_hint": "ROUTINE",
+      "red_flags": ["Inability to swallow saliva with stridor", "Uncontrolled active heavy nosebleed"]
+    }
+  ]
+}

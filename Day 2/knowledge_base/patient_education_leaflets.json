@@ -1,0 +1,44 @@
+{
+  "leaflets": [
+    {
+      "id": "edu_001",
+      "topic": "Dengue Fever Care and Critical Red Flags",
+      "summary": "Dengue is a viral infection transmitted by Aedes mosquitoes, common in Lahore and Islamabad during post-monsoon months. Management focuses on meticulous oral hydration and monitoring for the critical phase.",
+      "content": "Most dengue cases present with high fever, severe retro-orbital eye pain, bone breaking muscle aches, and rash. The CRITICAL PHASE occurs typically between Day 3 and Day 6 as fever subsides. Red flags requiring emergency hospital admission include: persistent severe abdominal pain, repeated vomiting, bleeding from gums or nose, blood in stool/vomit, extreme lethargy, or sudden drop in platelet count below 50,000 /mcL. Home care: Drink 2.5 to 3 liters of fluids daily (ORS, coconut water, soup, apple juice). STRICT CONTRAINDICATION: Never take NSAIDs like Brufen (Ibuprofen), Aspirin, or Ponstan as they dramatically increase bleeding risk; take only plain Paracetamol (Panadol) under medical supervision.",
+      "source": "WHO Guidelines for Dengue Management & Punjab Health Commission Advisory",
+      "tags": ["dengue", "fever", "platelets", "ors", "panadol", "brufen warning"]
+    },
+    {
+      "id": "edu_002",
+      "topic": "Type 2 Diabetes Nutritional and Lifestyle Management in Pakistan",
+      "summary": "Comprehensive dietary guidance adapted to Pakistani cuisine for controlling blood glucose and preventing diabetic microvascular complications.",
+      "content": "Target HbA1c is below 7.0% for most non-pregnant adults. Dietary modifications for Pakistani households: Replace refined white atta and naan with whole wheat (choker wala atta) or barley roti. Strictly avoid sweetened milk tea (meethi doodh patti), carbonated colas, traditional mithai, and deep-fried samosas/pakoras. Fill half the plate with non-starchy vegetables (tinda, bhindi, palak, karela, salad), one quarter with lean protein (skinless chicken, daal, fish), and one quarter with complex carbs. Foot care: Inspect feet daily for blisters, cuts, or black spots; never walk barefoot. Engage in at least 30 minutes of brisk walking 5 days a week.",
+      "source": "Diabetic Association of Pakistan (DAP) Patient Guidelines & ADA 2026 Standards",
+      "tags": ["diabetes", "sugar", "diet", "roti", "chai", "foot care", "hba1c"]
+    },
+    {
+      "id": "edu_003",
+      "topic": "Hypertension (High Blood Pressure) Self-Care",
+      "summary": "Essential non-pharmacological steps to manage blood pressure and avoid hypertensive crises.",
+      "content": "Blood pressure reading above 140/90 mmHg requires consistent medical management. Salt restriction is paramount: limit total daily sodium to less than 2,000 mg (under 1 level teaspoon of table salt across all cooked meals). Avoid excessive desi ghee, pickles (achaar), processed snacks, and papad. Take prescribed antihypertensives (such as ACE inhibitors or Beta-blockers) at the same time every day even if you feel completely healthy, as high blood pressure is often a silent condition. If systolic blood pressure exceeds 180 mmHg or diastolic exceeds 120 mmHg accompanied by chest tightness, headache, or visual blurring, seek immediate emergency medical care.",
+      "source": "Pakistan Hypertension League Consensus Guidelines",
+      "tags": ["hypertension", "blood pressure", "salt", "namak", "high bp", "ghee"]
+    },
+    {
+      "id": "edu_004",
+      "topic": "Childhood Acute Diarrhea & Dehydration Management",
+      "summary": "Evidence-based rehydration and nutrition protocols for infants and young children experiencing watery diarrhea or gastroenteritis.",
+      "content": "Dehydration is the primary danger of pediatric diarrhea. The cornerstone of treatment is Low-Osmolarity Oral Rehydration Salts (ORS). Prepare by dissolving 1 full sachet of ORS in exactly 1 liter of clean, boiled and cooled drinking water. Never add sugar, honey, or milk to the ORS solution. Give 50 to 100 ml of ORS after every loose stool in children under 2 years, and 100 to 200 ml in older children, using a spoon or cup in small frequent sips. Zinc supplementation (20 mg daily for 14 days, or 10 mg if under 6 months) shortens diarrhea duration and prevents recurrence. Continue regular breastfeeding and soft nutritious meals (khichdi, banana, curd). Seek emergency medical help if the child exhibits: sunken fontanelle/eyes, dry mouth, absence of tears when crying, no urine for over 6 hours, or severe drowsiness.",
+      "source": "UNICEF & WHO Integrated Management of Childhood Illness (IMCI)",
+      "tags": ["diarrhea", "pediatric", "ors", "zinc", "dehydration", "child vomiting"]
+    },
+    {
+      "id": "edu_005",
+      "topic": "Asthma and Inhaler Technique Guide",
+      "summary": "Best practices for using pressurized Metered Dose Inhalers (pMDI) and spacer devices for optimal lung deposition.",
+      "content": "Proper inhaler technique ensures medication reaches the lower bronchial airways rather than depositing in the throat. Always use a valved holding chamber (spacer) with a pMDI when possible. Steps: 1. Remove cap and shake inhaler vigorously for 5 seconds. 2. Breathe out gently away from inhaler. 3. Place mouthpiece between lips with airtight seal. 4. Press the canister once while breathing in slowly and deeply through the mouth over 3-5 seconds. 5. Hold breath for 10 seconds or as long as comfortable. CRITICAL SAFETY RULE: Always thoroughly rinse mouth with water and spit out after using corticosteroid preventer inhalers (e.g. Beclomethasone, Budesonide) to prevent oral thrush (fungal infection) and hoarseness.",
+      "source": "Global Initiative for Asthma (GINA) & Pakistan Chest Society",
+      "tags": ["asthma", "inhaler", "spacer", "ventolin", "breathing", "steroid rinse"]
+    }
+  ]
+}
