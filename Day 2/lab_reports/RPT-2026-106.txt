@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-106
+Patient Name:     Amna Chaudhry
+MRN / Patient ID: CCC-PK-100006
+Collection Date:  2026-10-06
+Panel Type:       CBC
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Haemoglobin (Hb)                    14.4         g/dL      12.0 - 17.0       [NORMAL]
+Total Leukocyte Count (WBC)         4682.6       /mcL      4000.0 - 11000.0  [NORMAL]
+Platelet Count                      201765.4     /mcL      150000.0 - 450000.0 [NORMAL]
+Hematocrit (PCV)                    44.1         %         36.0 - 50.0       [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-128
+Patient Name:     Anum Afzal
+MRN / Patient ID: CCC-PK-100028
+Collection Date:  2026-10-04
+Panel Type:       URINE_RE
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Urine Specific Gravity              1.03                   1.005 - 1.03      [NORMAL]
+Urine pH                            5.38                   5.0 - 7.5         [NORMAL]
+Urine Pus Cells (WBC)               0.01         /HPF      0.0 - 5.0         [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

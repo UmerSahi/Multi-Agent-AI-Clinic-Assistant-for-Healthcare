@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-129
+Patient Name:     Zeeshan Hameed
+MRN / Patient ID: CCC-PK-100029
+Collection Date:  2026-10-02
+Panel Type:       URINE_RE
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Urine Specific Gravity              1.34                   1.005 - 1.03      [HIGH]
+Urine pH                            3.03                   5.0 - 7.5         [LOW]
+Urine Pus Cells (WBC)               8.04         /HPF      0.0 - 5.0         [HIGH]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

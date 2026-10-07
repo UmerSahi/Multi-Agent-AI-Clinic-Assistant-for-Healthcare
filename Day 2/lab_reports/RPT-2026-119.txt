@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-119
+Patient Name:     Asad Ashraf
+MRN / Patient ID: CCC-PK-100019
+Collection Date:  2026-10-07
+Panel Type:       LIPID
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Total Cholesterol                   78.3         mg/dL     100.0 - 200.0     [LOW]
+Triglycerides                       94.5         mg/dL     50.0 - 150.0      [NORMAL]
+HDL Cholesterol (Good)              30.5         mg/dL     40.0 - 60.0       [LOW]
+LDL Cholesterol (Bad)               174.0        mg/dL     60.0 - 100.0      [HIGH]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

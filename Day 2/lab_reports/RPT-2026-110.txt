@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-110
+Patient Name:     Sadia Abbasi
+MRN / Patient ID: CCC-PK-100010
+Collection Date:  2026-10-03
+Panel Type:       LFT
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Alanine Aminotransferase (ALT/SGPT) 8.29         U/L       7.0 - 55.0        [NORMAL]
+Aspartate Aminotransferase (AST/SGOT) 46.83        U/L       8.0 - 48.0        [NORMAL]
+Total Bilirubin                     1.01         mg/dL     0.2 - 1.2         [NORMAL]
+Alkaline Phosphatase (ALP)          103.9        U/L       40.0 - 130.0      [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

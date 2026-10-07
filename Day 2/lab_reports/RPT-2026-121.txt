@@ -1,0 +1,18 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-121
+Patient Name:     Faisal Rehman
+MRN / Patient ID: CCC-PK-100021
+Collection Date:  2026-10-07
+Panel Type:       HBA1C
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+HbA1c (Glycated Hemoglobin)         7.45         %         4.0 - 5.6         [HIGH]
+Estimated Average Glucose (eAG)     199.7        mg/dL     70.0 - 114.0      [HIGH]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

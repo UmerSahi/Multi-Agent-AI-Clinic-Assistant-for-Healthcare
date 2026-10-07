@@ -1,0 +1,1150 @@
+[
+  {
+    "report_id": "RPT-2026-101",
+    "patient_name": "Muhammad Tariq",
+    "mrn": "CCC-PK-100001",
+    "panel": "CBC",
+    "city": "Islamabad",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 6.6,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 10457.6,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 546096.7,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 37.0,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-102",
+    "patient_name": "Fatima Bibi",
+    "mrn": "CCC-PK-100002",
+    "panel": "CBC",
+    "city": "Lahore",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 14.8,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 6874.2,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 276273.1,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 37.1,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-103",
+    "patient_name": "Ahmed Raza",
+    "mrn": "CCC-PK-100003",
+    "panel": "CBC",
+    "city": "Islamabad",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 8.6,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 16946.4,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 117525.1,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 79.7,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-104",
+    "patient_name": "Zainab Malik",
+    "mrn": "CCC-PK-100004",
+    "panel": "CBC",
+    "city": "Lahore",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 12.0,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 5961.9,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 179679.9,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 37.0,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-105",
+    "patient_name": "Usman Sheikh",
+    "mrn": "CCC-PK-100005",
+    "panel": "CBC",
+    "city": "Islamabad",
+    "date": "2026-10-02",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 6.2,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 5706.1,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 231663.9,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 39.8,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-106",
+    "patient_name": "Amna Chaudhry",
+    "mrn": "CCC-PK-100006",
+    "panel": "CBC",
+    "city": "Lahore",
+    "date": "2026-10-06",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 14.4,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 4682.6,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 201765.4,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 44.1,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-107",
+    "patient_name": "Bilal Ansari",
+    "mrn": "CCC-PK-100007",
+    "panel": "CBC",
+    "city": "Islamabad",
+    "date": "2026-10-02",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 6.2,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 10291.6,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 391768.7,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 30.5,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "LOW"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-108",
+    "patient_name": "Sana Mir",
+    "mrn": "CCC-PK-100008",
+    "panel": "CBC",
+    "city": "Lahore",
+    "date": "2026-10-05",
+    "tests": [
+      {
+        "test_name": "Haemoglobin (Hb)",
+        "numeric_value": 16.4,
+        "unit": "g/dL",
+        "reference_range_low": 12.0,
+        "reference_range_high": 17.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Leukocyte Count (WBC)",
+        "numeric_value": 5038.8,
+        "unit": "/mcL",
+        "reference_range_low": 4000.0,
+        "reference_range_high": 11000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Platelet Count",
+        "numeric_value": 283572.8,
+        "unit": "/mcL",
+        "reference_range_low": 150000.0,
+        "reference_range_high": 450000.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Hematocrit (PCV)",
+        "numeric_value": 47.2,
+        "unit": "%",
+        "reference_range_low": 36.0,
+        "reference_range_high": 50.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-109",
+    "patient_name": "Hamza Javed",
+    "mrn": "CCC-PK-100009",
+    "panel": "LFT",
+    "city": "Islamabad",
+    "date": "2026-10-01",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 4.95,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 69.95,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 0.11,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 164.0,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-110",
+    "patient_name": "Sadia Abbasi",
+    "mrn": "CCC-PK-100010",
+    "panel": "LFT",
+    "city": "Lahore",
+    "date": "2026-10-03",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 8.29,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 46.83,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 1.01,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 103.9,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-111",
+    "patient_name": "Khurram Shah",
+    "mrn": "CCC-PK-100011",
+    "panel": "LFT",
+    "city": "Islamabad",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 4.13,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 4.98,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 0.57,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 58.8,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-112",
+    "patient_name": "Nida Qureshi",
+    "mrn": "CCC-PK-100012",
+    "panel": "LFT",
+    "city": "Lahore",
+    "date": "2026-10-06",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 9.65,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 9.36,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 0.41,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 89.5,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-113",
+    "patient_name": "Hassan Butt",
+    "mrn": "CCC-PK-100013",
+    "panel": "LFT",
+    "city": "Islamabad",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 5.1,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 65.18,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 0.74,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 169.9,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-114",
+    "patient_name": "Iqra Dar",
+    "mrn": "CCC-PK-100014",
+    "panel": "LFT",
+    "city": "Lahore",
+    "date": "2026-10-05",
+    "tests": [
+      {
+        "test_name": "Alanine Aminotransferase (ALT/SGPT)",
+        "numeric_value": 28.26,
+        "unit": "U/L",
+        "reference_range_low": 7.0,
+        "reference_range_high": 55.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Aspartate Aminotransferase (AST/SGOT)",
+        "numeric_value": 40.09,
+        "unit": "U/L",
+        "reference_range_low": 8.0,
+        "reference_range_high": 48.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Total Bilirubin",
+        "numeric_value": 0.41,
+        "unit": "mg/dL",
+        "reference_range_low": 0.2,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Alkaline Phosphatase (ALP)",
+        "numeric_value": 89.6,
+        "unit": "U/L",
+        "reference_range_low": 40.0,
+        "reference_range_high": 130.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-115",
+    "patient_name": "Zubair Hashmi",
+    "mrn": "CCC-PK-100015",
+    "panel": "LIPID",
+    "city": "Islamabad",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 109.4,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 33.0,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 74.9,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 94.8,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-116",
+    "patient_name": "Rabia Gillani",
+    "mrn": "CCC-PK-100016",
+    "panel": "LIPID",
+    "city": "Lahore",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 134.2,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 124.3,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 50.7,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 77.1,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-117",
+    "patient_name": "Omer Akram",
+    "mrn": "CCC-PK-100017",
+    "panel": "LIPID",
+    "city": "Islamabad",
+    "date": "2026-10-02",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 289.0,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 39.4,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 20.3,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 88.9,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-118",
+    "patient_name": "Bushra Iqbal",
+    "mrn": "CCC-PK-100018",
+    "panel": "LIPID",
+    "city": "Lahore",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 108.2,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 145.4,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 42.8,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 65.3,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-119",
+    "patient_name": "Asad Ashraf",
+    "mrn": "CCC-PK-100019",
+    "panel": "LIPID",
+    "city": "Islamabad",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 78.3,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 94.5,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 30.5,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 174.0,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-120",
+    "patient_name": "Farah Tariq",
+    "mrn": "CCC-PK-100020",
+    "panel": "LIPID",
+    "city": "Lahore",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "Total Cholesterol",
+        "numeric_value": 171.4,
+        "unit": "mg/dL",
+        "reference_range_low": 100.0,
+        "reference_range_high": 200.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Triglycerides",
+        "numeric_value": 75.8,
+        "unit": "mg/dL",
+        "reference_range_low": 50.0,
+        "reference_range_high": 150.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "HDL Cholesterol (Good)",
+        "numeric_value": 40.3,
+        "unit": "mg/dL",
+        "reference_range_low": 40.0,
+        "reference_range_high": 60.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "LDL Cholesterol (Bad)",
+        "numeric_value": 60.6,
+        "unit": "mg/dL",
+        "reference_range_low": 60.0,
+        "reference_range_high": 100.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-121",
+    "patient_name": "Faisal Rehman",
+    "mrn": "CCC-PK-100021",
+    "panel": "HBA1C",
+    "city": "Islamabad",
+    "date": "2026-10-07",
+    "tests": [
+      {
+        "test_name": "HbA1c (Glycated Hemoglobin)",
+        "numeric_value": 7.45,
+        "unit": "%",
+        "reference_range_low": 4.0,
+        "reference_range_high": 5.6,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Estimated Average Glucose (eAG)",
+        "numeric_value": 199.7,
+        "unit": "mg/dL",
+        "reference_range_low": 70.0,
+        "reference_range_high": 114.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-122",
+    "patient_name": "Mehwish Aziz",
+    "mrn": "CCC-PK-100022",
+    "panel": "HBA1C",
+    "city": "Lahore",
+    "date": "2026-10-06",
+    "tests": [
+      {
+        "test_name": "HbA1c (Glycated Hemoglobin)",
+        "numeric_value": 4.54,
+        "unit": "%",
+        "reference_range_low": 4.0,
+        "reference_range_high": 5.6,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Estimated Average Glucose (eAG)",
+        "numeric_value": 71.1,
+        "unit": "mg/dL",
+        "reference_range_low": 70.0,
+        "reference_range_high": 114.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-123",
+    "patient_name": "Saad Saeed",
+    "mrn": "CCC-PK-100023",
+    "panel": "HBA1C",
+    "city": "Islamabad",
+    "date": "2026-10-06",
+    "tests": [
+      {
+        "test_name": "HbA1c (Glycated Hemoglobin)",
+        "numeric_value": 8.77,
+        "unit": "%",
+        "reference_range_low": 4.0,
+        "reference_range_high": 5.6,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Estimated Average Glucose (eAG)",
+        "numeric_value": 175.2,
+        "unit": "mg/dL",
+        "reference_range_low": 70.0,
+        "reference_range_high": 114.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-124",
+    "patient_name": "Hira Mahmood",
+    "mrn": "CCC-PK-100024",
+    "panel": "HBA1C",
+    "city": "Lahore",
+    "date": "2026-10-05",
+    "tests": [
+      {
+        "test_name": "HbA1c (Glycated Hemoglobin)",
+        "numeric_value": 4.71,
+        "unit": "%",
+        "reference_range_low": 4.0,
+        "reference_range_high": 5.6,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Estimated Average Glucose (eAG)",
+        "numeric_value": 110.6,
+        "unit": "mg/dL",
+        "reference_range_low": 70.0,
+        "reference_range_high": 114.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-125",
+    "patient_name": "Waleed Riaz",
+    "mrn": "CCC-PK-100025",
+    "panel": "RFT",
+    "city": "Islamabad",
+    "date": "2026-10-05",
+    "tests": [
+      {
+        "test_name": "Serum Creatinine",
+        "numeric_value": 0.35,
+        "unit": "mg/dL",
+        "reference_range_low": 0.6,
+        "reference_range_high": 1.2,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Blood Urea Nitrogen (BUN)",
+        "numeric_value": 26.09,
+        "unit": "mg/dL",
+        "reference_range_low": 7.0,
+        "reference_range_high": 20.0,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Serum Uric Acid",
+        "numeric_value": 2.89,
+        "unit": "mg/dL",
+        "reference_range_low": 3.5,
+        "reference_range_high": 7.2,
+        "flag": "LOW"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-126",
+    "patient_name": "Zunaira Latif",
+    "mrn": "CCC-PK-100026",
+    "panel": "RFT",
+    "city": "Lahore",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Serum Creatinine",
+        "numeric_value": 0.71,
+        "unit": "mg/dL",
+        "reference_range_low": 0.6,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Blood Urea Nitrogen (BUN)",
+        "numeric_value": 17.05,
+        "unit": "mg/dL",
+        "reference_range_low": 7.0,
+        "reference_range_high": 20.0,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Serum Uric Acid",
+        "numeric_value": 6.31,
+        "unit": "mg/dL",
+        "reference_range_low": 3.5,
+        "reference_range_high": 7.2,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-127",
+    "patient_name": "Haris Ghaffar",
+    "mrn": "CCC-PK-100027",
+    "panel": "RFT",
+    "city": "Islamabad",
+    "date": "2026-10-06",
+    "tests": [
+      {
+        "test_name": "Serum Creatinine",
+        "numeric_value": 1.13,
+        "unit": "mg/dL",
+        "reference_range_low": 0.6,
+        "reference_range_high": 1.2,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Blood Urea Nitrogen (BUN)",
+        "numeric_value": 5.46,
+        "unit": "mg/dL",
+        "reference_range_low": 7.0,
+        "reference_range_high": 20.0,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Serum Uric Acid",
+        "numeric_value": 2.32,
+        "unit": "mg/dL",
+        "reference_range_low": 3.5,
+        "reference_range_high": 7.2,
+        "flag": "LOW"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-128",
+    "patient_name": "Anum Afzal",
+    "mrn": "CCC-PK-100028",
+    "panel": "URINE_RE",
+    "city": "Lahore",
+    "date": "2026-10-04",
+    "tests": [
+      {
+        "test_name": "Urine Specific Gravity",
+        "numeric_value": 1.03,
+        "unit": "",
+        "reference_range_low": 1.005,
+        "reference_range_high": 1.03,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Urine pH",
+        "numeric_value": 5.38,
+        "unit": "",
+        "reference_range_low": 5.0,
+        "reference_range_high": 7.5,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Urine Pus Cells (WBC)",
+        "numeric_value": 0.01,
+        "unit": "/HPF",
+        "reference_range_low": 0.0,
+        "reference_range_high": 5.0,
+        "flag": "NORMAL"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-129",
+    "patient_name": "Zeeshan Hameed",
+    "mrn": "CCC-PK-100029",
+    "panel": "URINE_RE",
+    "city": "Islamabad",
+    "date": "2026-10-02",
+    "tests": [
+      {
+        "test_name": "Urine Specific Gravity",
+        "numeric_value": 1.34,
+        "unit": "",
+        "reference_range_low": 1.005,
+        "reference_range_high": 1.03,
+        "flag": "HIGH"
+      },
+      {
+        "test_name": "Urine pH",
+        "numeric_value": 3.03,
+        "unit": "",
+        "reference_range_low": 5.0,
+        "reference_range_high": 7.5,
+        "flag": "LOW"
+      },
+      {
+        "test_name": "Urine Pus Cells (WBC)",
+        "numeric_value": 8.04,
+        "unit": "/HPF",
+        "reference_range_low": 0.0,
+        "reference_range_high": 5.0,
+        "flag": "HIGH"
+      }
+    ]
+  },
+  {
+    "report_id": "RPT-2026-130",
+    "patient_name": "Maria Siddiqui",
+    "mrn": "CCC-PK-100030",
+    "panel": "URINE_RE",
+    "city": "Lahore",
+    "date": "2026-10-02",
+    "tests": [
+      {
+        "test_name": "Urine Specific Gravity",
+        "numeric_value": 1.01,
+        "unit": "",
+        "reference_range_low": 1.005,
+        "reference_range_high": 1.03,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Urine pH",
+        "numeric_value": 6.64,
+        "unit": "",
+        "reference_range_low": 5.0,
+        "reference_range_high": 7.5,
+        "flag": "NORMAL"
+      },
+      {
+        "test_name": "Urine Pus Cells (WBC)",
+        "numeric_value": 2.38,
+        "unit": "/HPF",
+        "reference_range_low": 0.0,
+        "reference_range_high": 5.0,
+        "flag": "NORMAL"
+      }
+    ]
+  }
+]

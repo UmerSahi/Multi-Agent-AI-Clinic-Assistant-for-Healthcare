@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-130
+Patient Name:     Maria Siddiqui
+MRN / Patient ID: CCC-PK-100030
+Collection Date:  2026-10-02
+Panel Type:       URINE_RE
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Urine Specific Gravity              1.01                   1.005 - 1.03      [NORMAL]
+Urine pH                            6.64                   5.0 - 7.5         [NORMAL]
+Urine Pus Cells (WBC)               2.38         /HPF      0.0 - 5.0         [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

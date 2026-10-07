@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-105
+Patient Name:     Usman Sheikh
+MRN / Patient ID: CCC-PK-100005
+Collection Date:  2026-10-02
+Panel Type:       CBC
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Haemoglobin (Hb)                    6.2          g/dL      12.0 - 17.0       [LOW]
+Total Leukocyte Count (WBC)         5706.1       /mcL      4000.0 - 11000.0  [NORMAL]
+Platelet Count                      231663.9     /mcL      150000.0 - 450000.0 [NORMAL]
+Hematocrit (PCV)                    39.8         %         36.0 - 50.0       [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

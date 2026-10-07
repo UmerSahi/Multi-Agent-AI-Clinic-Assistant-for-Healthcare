@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-127
+Patient Name:     Haris Ghaffar
+MRN / Patient ID: CCC-PK-100027
+Collection Date:  2026-10-06
+Panel Type:       RFT
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Serum Creatinine                    1.13         mg/dL     0.6 - 1.2         [NORMAL]
+Blood Urea Nitrogen (BUN)           5.46         mg/dL     7.0 - 20.0        [LOW]
+Serum Uric Acid                     2.32         mg/dL     3.5 - 7.2         [LOW]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

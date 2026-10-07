@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-125
+Patient Name:     Waleed Riaz
+MRN / Patient ID: CCC-PK-100025
+Collection Date:  2026-10-05
+Panel Type:       RFT
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Serum Creatinine                    0.35         mg/dL     0.6 - 1.2         [LOW]
+Blood Urea Nitrogen (BUN)           26.09        mg/dL     7.0 - 20.0        [HIGH]
+Serum Uric Acid                     2.89         mg/dL     3.5 - 7.2         [LOW]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

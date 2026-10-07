@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — ISLAMABAD BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-117
+Patient Name:     Omer Akram
+MRN / Patient ID: CCC-PK-100017
+Collection Date:  2026-10-02
+Panel Type:       LIPID
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Total Cholesterol                   289.0        mg/dL     100.0 - 200.0     [HIGH]
+Triglycerides                       39.4         mg/dL     50.0 - 150.0      [LOW]
+HDL Cholesterol (Good)              20.3         mg/dL     40.0 - 60.0       [LOW]
+LDL Cholesterol (Bad)               88.9         mg/dL     60.0 - 100.0      [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

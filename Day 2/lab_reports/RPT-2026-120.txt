@@ -1,0 +1,20 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-120
+Patient Name:     Farah Tariq
+MRN / Patient ID: CCC-PK-100020
+Collection Date:  2026-10-07
+Panel Type:       LIPID
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Total Cholesterol                   171.4        mg/dL     100.0 - 200.0     [NORMAL]
+Triglycerides                       75.8         mg/dL     50.0 - 150.0      [NORMAL]
+HDL Cholesterol (Good)              40.3         mg/dL     40.0 - 60.0       [NORMAL]
+LDL Cholesterol (Bad)               60.6         mg/dL     60.0 - 100.0      [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================

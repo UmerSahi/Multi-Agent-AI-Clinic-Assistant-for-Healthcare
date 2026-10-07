@@ -1,0 +1,19 @@
+======================================================================
+CITY CARE CLINICS DIAGNOSTIC LABORATORY — LAHORE BRANCH
+Accredited Clinical Pathology & Biochemistry Division
+======================================================================
+Report Reference: RPT-2026-126
+Patient Name:     Zunaira Latif
+MRN / Patient ID: CCC-PK-100026
+Collection Date:  2026-10-04
+Panel Type:       RFT
+----------------------------------------------------------------------
+INVESTIGATION                         RESULT       UNIT      REFERENCE RANGE   STATUS
+----------------------------------------------------------------------
+Serum Creatinine                    0.71         mg/dL     0.6 - 1.2         [NORMAL]
+Blood Urea Nitrogen (BUN)           17.05        mg/dL     7.0 - 20.0        [NORMAL]
+Serum Uric Acid                     6.31         mg/dL     3.5 - 7.2         [NORMAL]
+----------------------------------------------------------------------
+Consultant Pathologist: Dr. Tariq Mahmood (MBBS, FCPS Pathology)
+Note: Clinical correlation is required. Not valid for medico-legal purposes.
+======================================================================
