@@ -92,10 +92,14 @@
 * **[04_safety_and_triage_policy.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%201/04_safety_and_triage_policy.md):** 8-domain red-flag taxonomy, Emergency/Urgent/Routine SLA matrix, exact UrduLish escalation messages, AI vs. Doctor boundary matrix, and statutory disclaimers.
 * **[05_privacy_compliance_and_prompts.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%201/05_privacy_compliance_and_prompts.md):** PII/PHI definitions, Microsoft Presidio anonymization pipeline for Pakistani CNIC & phone numbers, Supabase RBAC matrix, immutable audit log schemas, patient consent banner, and complete UrduLish system prompts.
 
-### Day 2: Database Schema, Synthetic Data & Knowledge Layer ⏳
-* Supabase PostgreSQL FHIR-aligned schema setup (Patients, Doctors, Clinics, Encounters, Observations, Prescriptions, Audit Logs).
-* 500+ synthetic Pakistani patient records, 30 doctors, 5 clinic branches, and 100+ Pakistani drug formulations.
-* Vector knowledge base indexing (ChromaDB / pgvector).
+### [Day 2: Data Layer, Knowledge Base & MCP Servers](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202) ✅
+* **[01_day_2_data_and_mcp_architecture.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/01_day_2_data_and_mcp_architecture.md):** Complete Day 2 architectural breakdown, Mermaid ER diagram, and rationale for deterministic rule-based safety checks.
+* **[schema.sql](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/schema.sql):** Production PostgreSQL / Supabase FHIR-aligned schema (`clinic_branches`, `practitioners`, `patients`, `appointments`, `encounters`, `observations`, `medication_requests`, `audit_logs`).
+* **[seed_database.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/seed_database.py):** Generator for 5 clinic branches, 30 doctors across 6 specialties, 520 synthetic Pakistani patients, visit histories, and lab results.
+* **[rag_pipeline.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/rag_pipeline.py) & [rag_evaluation_report.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/rag_evaluation_report.md):** ChromaDB hybrid semantic RAG pipeline evaluated over 25 questions (**92.0% Grounding Rate**, **0.0% Hallucination Rate**, 100% Citation Attribution).
+* **[lab_extractor.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/lab_extractor.py) & [lab_extraction_report.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/lab_extraction_report.md):** Lab report understanding pipeline benchmarked on 30 synthetic reports (**100% Parameter Recall & Precision**, **100% Flag Accuracy**, **100% Medical Safety Compliance**).
+* **[mcp_servers/](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/mcp_servers):** 4 decoupled Model Context Protocol (MCP) servers (`patient-records`, `scheduling`, `drug-database`, `notifications`) verified via [`test_mcp_servers.py`](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/test_mcp_servers.py) (**9/9 tools passed**).
+* **[prescription_safety_engine.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/prescription_safety_engine.py):** Deterministic clinical safety rule engine covering 100+ Pakistani medicines, allergy conflicts, DDIs, max daily dose, duplicate therapy, and pregnancy/pediatric contraindications (11/11 unit tests passed).
 
 ### Day 3: LangGraph Core Engine & Worker Agents ⏳
 * Supervisor router graph implementation.
