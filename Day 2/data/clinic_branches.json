@@ -1,0 +1,62 @@
+[
+  {
+    "id": "11111111-1111-4111-a111-111111111111",
+    "branch_code": "CCC-LHR-GLB",
+    "name": "City Care Clinics — Gulberg Branch",
+    "city": "Lahore",
+    "address": "14-C Main Boulevard, Gulberg III, Lahore",
+    "phone": "+92-42-35789011",
+    "emergency_helpline": "1122",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00",
+    "is_active": true
+  },
+  {
+    "id": "22222222-2222-4222-a222-222222222222",
+    "branch_code": "CCC-LHR-DHA",
+    "name": "City Care Clinics — DHA Phase 5 Branch",
+    "city": "Lahore",
+    "address": "Plaza 88, Commercial Sector C, DHA Phase 5, Lahore",
+    "phone": "+92-42-35712344",
+    "emergency_helpline": "1122",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00",
+    "is_active": true
+  },
+  {
+    "id": "33333333-3333-4333-a333-333333333333",
+    "branch_code": "CCC-LHR-JHT",
+    "name": "City Care Clinics — Johar Town Branch",
+    "city": "Lahore",
+    "address": "Block G-3, M.A. Johar Town, Lahore",
+    "phone": "+92-42-35309988",
+    "emergency_helpline": "1122",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00",
+    "is_active": true
+  },
+  {
+    "id": "44444444-4444-4444-a444-444444444444",
+    "branch_code": "CCC-ISB-F8",
+    "name": "City Care Clinics — F-8 Markaz Branch",
+    "city": "Islamabad",
+    "address": "Ayub Market, F-8 Markaz, Islamabad",
+    "phone": "+92-51-2856677",
+    "emergency_helpline": "1122",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00",
+    "is_active": true
+  },
+  {
+    "id": "55555555-5555-4555-a555-555555555555",
+    "branch_code": "CCC-ISB-BLU",
+    "name": "City Care Clinics — Blue Area Branch",
+    "city": "Islamabad",
+    "address": "Fazl-ul-Haq Road, Blue Area, Islamabad",
+    "phone": "+92-51-2279911",
+    "emergency_helpline": "1122",
+    "opening_time": "08:00:00",
+    "closing_time": "22:00:00",
+    "is_active": true
+  }
+]

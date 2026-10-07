@@ -1,0 +1,1262 @@
+[
+  {
+    "id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "pmdc_number": "13278-P",
+    "full_name": "Dr. Junaid Bhatti",
+    "gender": "Male",
+    "specialty": "General Medicine",
+    "qualification": "MBBS, MRCP (UK)",
+    "experience_years": 13,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "pmdc_number": "23434-P",
+    "full_name": "Dr. Bilal Saeed",
+    "gender": "Male",
+    "specialty": "General Medicine",
+    "qualification": "MBBS, FCPS (Medicine)",
+    "experience_years": 24,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "pmdc_number": "22280-P",
+    "full_name": "Dr. Ali Khan",
+    "gender": "Male",
+    "specialty": "General Medicine",
+    "qualification": "MBBS, FCPS (Medicine)",
+    "experience_years": 13,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "pmdc_number": "95181-P",
+    "full_name": "Dr. Waleed Sheikh",
+    "gender": "Male",
+    "specialty": "General Medicine",
+    "qualification": "MBBS, MRCP (UK)",
+    "experience_years": 13,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "pmdc_number": "10851-P",
+    "full_name": "Dr. Haris Ansari",
+    "gender": "Male",
+    "specialty": "General Medicine",
+    "qualification": "MBBS, FCPS (Medicine)",
+    "experience_years": 19,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "8e19ea33-b9ee-470f-9639-6b1c0ed4e99d",
+    "pmdc_number": "38221-P",
+    "full_name": "Dr. Hassan Qureshi",
+    "gender": "Male",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, DCH, MCPS",
+    "experience_years": 9,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "pmdc_number": "57052-P",
+    "full_name": "Dr. Sidra Bhatti",
+    "gender": "Female",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, DCH, MCPS",
+    "experience_years": 25,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "3710517b-b4c6-4bb3-8bd4-684f70f2a7e7",
+    "pmdc_number": "70217-P",
+    "full_name": "Dr. Salman Malik",
+    "gender": "Male",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, FCPS (Paediatrics)",
+    "experience_years": 18,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "2a39b104-560a-44a0-9347-6c121bae9096",
+    "pmdc_number": "92397-P",
+    "full_name": "Dr. Mehwish Mirza",
+    "gender": "Female",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, DCH, MCPS",
+    "experience_years": 24,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "pmdc_number": "16006-P",
+    "full_name": "Dr. Farhan Chaudhry",
+    "gender": "Male",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, FCPS (Paediatrics)",
+    "experience_years": 15,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "629f2930-2502-4f1a-beb6-5d2a427c6772",
+    "pmdc_number": "23238-P",
+    "full_name": "Dr. Kiran Raza",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, MRCOG (UK)",
+    "experience_years": 14,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "pmdc_number": "57819-P",
+    "full_name": "Dr. Farah Latif",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, FCPS (Obs & Gynae)",
+    "experience_years": 17,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "pmdc_number": "44993-P",
+    "full_name": "Dr. Sadia Rehman",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, FCPS (Obs & Gynae)",
+    "experience_years": 25,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "pmdc_number": "42087-P",
+    "full_name": "Dr. Mehwish Saeed",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, FCPS (Obs & Gynae)",
+    "experience_years": 20,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "pmdc_number": "93886-P",
+    "full_name": "Dr. Mahnoor Hameed",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, FCPS (Obs & Gynae)",
+    "experience_years": 16,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "pmdc_number": "14207-P",
+    "full_name": "Dr. Omer Latif",
+    "gender": "Male",
+    "specialty": "Cardiology",
+    "qualification": "MBBS, MD (Cardiology)",
+    "experience_years": 18,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "pmdc_number": "84341-P",
+    "full_name": "Dr. Ahmed Sheikh",
+    "gender": "Male",
+    "specialty": "Cardiology",
+    "qualification": "MBBS, MD (Cardiology)",
+    "experience_years": 12,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "8eadf2a8-6831-4384-aae2-4004e3802494",
+    "pmdc_number": "94259-P",
+    "full_name": "Dr. Imran Afzal",
+    "gender": "Male",
+    "specialty": "Cardiology",
+    "qualification": "MBBS, MD (Cardiology)",
+    "experience_years": 10,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "pmdc_number": "83579-P",
+    "full_name": "Dr. Bilal Raza",
+    "gender": "Male",
+    "specialty": "Cardiology",
+    "qualification": "MBBS, MD (Cardiology)",
+    "experience_years": 24,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "pmdc_number": "62350-P",
+    "full_name": "Dr. Rizwan Ashraf",
+    "gender": "Male",
+    "specialty": "Cardiology",
+    "qualification": "MBBS, MD (Cardiology)",
+    "experience_years": 13,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "pmdc_number": "21915-P",
+    "full_name": "Dr. Saad Javed",
+    "gender": "Male",
+    "specialty": "Dermatology",
+    "qualification": "MBBS, FCPS (Dermatology)",
+    "experience_years": 9,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "pmdc_number": "99192-P",
+    "full_name": "Dr. Farah Siddiqui",
+    "gender": "Female",
+    "specialty": "Dermatology",
+    "qualification": "MBBS, MCPS (Dermatology)",
+    "experience_years": 25,
+    "consultation_fee": 2000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "pmdc_number": "88104-P",
+    "full_name": "Dr. Imran Dar",
+    "gender": "Male",
+    "specialty": "Dermatology",
+    "qualification": "MBBS, MCPS (Dermatology)",
+    "experience_years": 22,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "6b8eb1e2-b1a6-4f3f-9a83-0359ff449251",
+    "pmdc_number": "11504-P",
+    "full_name": "Dr. Mehwish Ghaffar",
+    "gender": "Female",
+    "specialty": "Dermatology",
+    "qualification": "MBBS, FCPS (Dermatology)",
+    "experience_years": 23,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "pmdc_number": "54587-P",
+    "full_name": "Dr. Atif Shah",
+    "gender": "Male",
+    "specialty": "Dermatology",
+    "qualification": "MBBS, FCPS (Dermatology)",
+    "experience_years": 15,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "pmdc_number": "10425-P",
+    "full_name": "Dr. Hamza Gillani",
+    "gender": "Male",
+    "specialty": "ENT",
+    "qualification": "MBBS, FRCS (ENT)",
+    "experience_years": 22,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "11111111-1111-4111-a111-111111111111",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "pmdc_number": "23947-P",
+    "full_name": "Dr. Saad Hameed",
+    "gender": "Male",
+    "specialty": "ENT",
+    "qualification": "MBBS, FRCS (ENT)",
+    "experience_years": 22,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "pmdc_number": "31174-P",
+    "full_name": "Dr. Bilal Butt",
+    "gender": "Male",
+    "specialty": "ENT",
+    "qualification": "MBBS, FCPS (Otolaryngology)",
+    "experience_years": 25,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "33333333-3333-4333-a333-333333333333",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "pmdc_number": "24662-P",
+    "full_name": "Dr. Faisal Khan",
+    "gender": "Male",
+    "specialty": "ENT",
+    "qualification": "MBBS, FRCS (ENT)",
+    "experience_years": 15,
+    "consultation_fee": 2500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "pmdc_number": "84364-P",
+    "full_name": "Dr. Ali Raza",
+    "gender": "Male",
+    "specialty": "ENT",
+    "qualification": "MBBS, FCPS (Otolaryngology)",
+    "experience_years": 8,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "55555555-5555-4555-a555-555555555555",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "15:30-20:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  }
+]
