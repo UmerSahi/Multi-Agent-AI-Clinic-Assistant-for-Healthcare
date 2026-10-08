@@ -15,11 +15,11 @@
     ],
     "chronic_conditions": [],
     "past_complaints": [
-      "High blood pressure routine check",
-      "Seenay mein jalan aur tez acid",
       "sar mein dard",
       "bukhar",
-      "seenay mein dard"
+      "seenay mein dard",
+      "CBC blood report aur WBC count",
+      "high fever"
     ],
     "last_visit_date": "2026-09-06"
   },
@@ -65,5 +65,47 @@
     ],
     "last_visit_date": "2026-09-22",
     "last_updated": "2026-10-08T07:53:26.527732+00:00"
+  },
+  "p4_e43c": {
+    "patient_id": "p4_e43c",
+    "patient_name": "Zainab Bibi",
+    "phone": "+923451122334",
+    "mrn": "CCC-PK-100004",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Ayesha Tariq",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "DHA Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Ibuprofen"
+    ],
+    "chronic_conditions": [
+      "Migraine"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08"
+  },
+  "p5_706a": {
+    "patient_id": "p5_706a",
+    "patient_name": "Kamran Tariq",
+    "phone": "+923007654321",
+    "mrn": "CCC-PK-100005",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Sulfa"
+    ],
+    "chronic_conditions": [
+      "Hypertension"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08"
   }
 }

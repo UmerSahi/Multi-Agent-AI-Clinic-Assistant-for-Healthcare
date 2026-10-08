@@ -9,6 +9,7 @@ Handles:
 
 import sys
 import re
+import uuid
 import json
 from pathlib import Path
 from datetime import datetime, timezone
@@ -190,11 +191,50 @@ class MemoryManager:
         self._save_memory()
         return sanitized
 
-    def generate_returning_patient_greeting(self, memory: Dict[str, Any]) -> str:
+    def register_patient(self, data: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Generates personalized, empathetic UrduLish greeting using long-term memory:
-        e.g., 'Assalam-o-Alaikum Ahmed sahib! Pichli dafa aap Dr. Bilal ko dikhaye thay.
-               Kya isi doctor ke saath appointment chahiye?'
+        Registers a new patient, generates unique MRN, and saves long-term memory.
+        """
+        existing_count = len(self._memory_cache) + 1
+        new_id = f"p{existing_count}_{uuid.uuid4().hex[:4]}"
+        mrn = f"CCC-PK-1000{existing_count:02d}"
+
+        # Clean allergies and conditions
+        allergies = data.get("known_allergies", [])
+        if isinstance(allergies, str):
+            allergies = [a.strip() for a in allergies.split(",") if a.strip() and a.strip().lower() != "none"]
+
+        conditions = data.get("chronic_conditions", [])
+        if isinstance(conditions, str):
+            conditions = [c.strip() for c in conditions.split(",") if c.strip() and c.strip().lower() != "none"]
+
+        patient_record = {
+            "patient_id": new_id,
+            "patient_name": data.get("patient_name") or data.get("name") or "New Patient",
+            "phone": data.get("phone", ""),
+            "mrn": mrn,
+            "gender": data.get("gender", "Unspecified"),
+            "age": int(data.get("age", 30)) if str(data.get("age", "")).isdigit() else 30,
+            "preferred_doctor_id": data.get("preferred_doctor_id", "doc1"),
+            "preferred_doctor_name": data.get("preferred_doctor_name", "Dr. Bilal Saeed"),
+            "preferred_specialty": data.get("preferred_specialty", "General Medicine"),
+            "preferred_branch": data.get("preferred_branch", "Gulberg Lahore"),
+            "preferred_language": data.get("preferred_language", "English"),
+            "known_allergies": allergies,
+            "chronic_conditions": conditions,
+            "past_complaints": [data.get("initial_complaint")] if data.get("initial_complaint") else ["General Consultation"],
+            "last_visit_date": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+            "last_updated": datetime.now(timezone.utc).isoformat()
+        }
+
+        sanitized = self.sanitize_for_privacy(patient_record)
+        self._memory_cache[new_id] = sanitized
+        self._save_memory()
+        return sanitized
+
+    def generate_returning_patient_greeting(self, memory: Dict[str, Any], language: str = "Urdu") -> str:
+        """
+        Generates personalized, empathetic greeting using long-term memory in English or UrduLish.
         """
         full_name = memory.get("patient_name", "Sahib")
         first_name = full_name.split()[0] if full_name else "Sahib"
@@ -202,12 +242,20 @@ class MemoryManager:
         branch = memory.get("preferred_branch", "clinic")
         last_date = memory.get("last_visit_date")
 
-        greeting = (
-            f"Assalam-o-Alaikum {first_name} sahib! City Care Clinics mein khush-amdeed.\n"
-            f"Record ke mutabiq aap pichli dafa {f'({last_date}) ' if last_date else ''}"
-            f"**{doc_name}** ko dikhaye thay ({branch} branch mein).\n\n"
-            f"Kya aap dobara **{doc_name}** ke saath appointment book karna chahte hain, ya koi nayi takleef ke liye doosray specialist se mashwara chahiye?"
-        )
+        if language and language.lower() in ("english", "en"):
+            greeting = (
+                f"Hello {first_name}! Welcome to City Care Clinics.\n"
+                f"Our records show that on your last visit {f'({last_date}) ' if last_date else ''}"
+                f"you consulted **{doc_name}** at our {branch} branch.\n\n"
+                f"Would you like to schedule an appointment with **{doc_name}**, or do you have a new medical concern today?"
+            )
+        else:
+            greeting = (
+                f"Assalam-o-Alaikum {first_name} sahib! City Care Clinics mein khush-amdeed.\n"
+                f"Record ke mutabiq aap pichli dafa {f'({last_date}) ' if last_date else ''}"
+                f"**{doc_name}** ko dikhaye thay ({branch} branch mein).\n\n"
+                f"Kya aap dobara **{doc_name}** ke saath appointment book karna chahte hain, ya koi nayi takleef ke liye doosray specialist se mashwara chahiye?"
+            )
         return greeting
 
 

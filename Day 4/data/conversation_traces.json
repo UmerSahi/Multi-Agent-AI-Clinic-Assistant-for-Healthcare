@@ -2112,5 +2112,350 @@
     "total_cost_usd": 3.6e-05,
     "total_latency_ms": 0.0,
     "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791455683948",
+    "thread_id": "sess_p1_1791455323049",
+    "patient_identifier": "p1",
+    "start_time": "2026-10-08T10:34:43.948389+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:34:44.069216+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "MemoryManager",
+        "timestamp": "2026-10-08T10:34:44.085173+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 90,
+        "completion_tokens": 75,
+        "cost_usd": 2.9e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:34:52.729017+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SchedulingAgent",
+        "timestamp": "2026-10-08T10:34:52.787550+00:00",
+        "latency_ms": 52.45,
+        "prompt_tokens": 210,
+        "completion_tokens": 140,
+        "cost_usd": 5.8e-05,
+        "tool_called": "book_appointment"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "SchedulingAgent",
+        "tool": "book_appointment",
+        "latency_ms": 52.45,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 540,
+    "total_completion_tokens": 275,
+    "total_cost_usd": 0.000123,
+    "total_latency_ms": 52.45,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791455780726",
+    "thread_id": "sess_en_test_1",
+    "patient_identifier": "p1",
+    "start_time": "2026-10-08T10:36:20.726737+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:36:20.730577+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "MemoryManager",
+        "timestamp": "2026-10-08T10:36:20.733818+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 90,
+        "completion_tokens": 75,
+        "cost_usd": 2.9e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 210,
+    "total_completion_tokens": 105,
+    "total_cost_usd": 4.7e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456044308",
+    "thread_id": "sess_p1_1791456032577",
+    "patient_identifier": "p1",
+    "start_time": "2026-10-08T10:40:44.308161+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:40:44.310510+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "MemoryManager",
+        "timestamp": "2026-10-08T10:40:44.317872+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 90,
+        "completion_tokens": 75,
+        "cost_usd": 2.9e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:41:35.641426+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T10:41:36.880988+00:00",
+        "latency_ms": 1234.56,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 570,
+    "total_completion_tokens": 245,
+    "total_cost_usd": 0.000116,
+    "total_latency_ms": 1234.56,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456089709",
+    "thread_id": "sess_en_verify",
+    "patient_identifier": "CCC-PK-100005",
+    "start_time": "2026-10-08T10:41:29.709232+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:41:29.711458+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SchedulingAgent",
+        "timestamp": "2026-10-08T10:41:29.731640+00:00",
+        "latency_ms": 15.0,
+        "prompt_tokens": 210,
+        "completion_tokens": 140,
+        "cost_usd": 5.8e-05,
+        "tool_called": "book_appointment"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "SchedulingAgent",
+        "tool": "book_appointment",
+        "latency_ms": 15.0,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 330,
+    "total_completion_tokens": 170,
+    "total_cost_usd": 7.6e-05,
+    "total_latency_ms": 15.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456115034",
+    "thread_id": "sess_en_verify_2",
+    "patient_identifier": "p1",
+    "start_time": "2026-10-08T10:41:55.034967+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:41:55.038184+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T10:41:56.287244+00:00",
+        "latency_ms": 1244.0,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 1244.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456116298",
+    "thread_id": "sess_ur_verify_2",
+    "patient_identifier": "p1",
+    "start_time": "2026-10-08T10:41:56.298732+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:41:56.301439+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "MemoryManager",
+        "timestamp": "2026-10-08T10:41:56.307336+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 90,
+        "completion_tokens": 75,
+        "cost_usd": 2.9e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 210,
+    "total_completion_tokens": 105,
+    "total_cost_usd": 4.7e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456140844",
+    "thread_id": "test_par_1791456140",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T10:42:20.844803+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:42:20.850273+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T10:42:22.211924+00:00",
+        "latency_ms": 1357.59,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1357.59,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1357.59,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791456142217",
+    "thread_id": "test_hitl_1791456142",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T10:42:22.217924+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:42:22.219924+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:42:22.232051+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [
+      {
+        "task_type": "LAB_EXPLANATION",
+        "action": "EDITED",
+        "doctor": "Dr. Maryam Naveed (Medical Director)",
+        "notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+        "timestamp": "2026-10-08T10:42:22.236478+00:00"
+      }
+    ],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
   }
 ]

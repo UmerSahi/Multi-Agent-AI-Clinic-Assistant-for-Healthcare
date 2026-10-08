@@ -110,53 +110,81 @@ If not mentioned in the message, leave the field as null/empty. Do NOT invent de
         if update.is_pregnant is not None:
             form.is_pregnant = update.is_pregnant
 
-    def determine_next_step(self, form: IntakeForm) -> tuple[bool, str]:
+    def determine_next_step(self, form: IntakeForm, language: str = "Urdu") -> tuple[bool, str]:
         """
-        Determines if intake is complete, and if not, generates the single next question in natural UrduLish.
+        Determines if intake is complete, and if not, generates the single next question in English or natural UrduLish.
         Rules:
         - Asks ONE question at a time.
         - Warm, respectful, never a long form.
         """
+        is_en = language and language.lower() in ("english", "en")
+
         # 1. Chief complaint missing
         if not form.chief_complaint:
-            return False, "Assalam o Alaikum! City Care Clinics mein khushamdeed. Aap ko aaj kya takleef ya masla darpesh hai?"
+            return False, (
+                "Hello! Welcome to City Care Clinics. What symptom or medical concern brings you in today?"
+                if is_en else
+                "Assalam o Alaikum! City Care Clinics mein khushamdeed. Aap ko aaj kya takleef ya masla darpesh hai?"
+            )
 
         # 2. Duration missing
         if not form.duration:
-            target = "aap ko" if form.patient_relation == "self" else "mariz ko"
-            return False, f"Yeh {form.chief_complaint} kab se hai? Kitne din ya ghante guzar chuke hain?"
+            return False, (
+                f"How long have you had this {form.chief_complaint}? How many days or hours has it been?"
+                if is_en else
+                f"Yeh {form.chief_complaint} kab se hai? Kitne din ya ghante guzar chuke hain?"
+            )
 
         # 3. Severity (1-10) missing
         if form.severity is None:
-            return False, "Takleef ki shiddat (severity) 1 se 10 ke scale par kitni hogi? Jahan 1 halki aur 10 shadeed tareen dard ho?"
+            return False, (
+                "On a scale of 1 to 10 (where 1 is mild and 10 is severe), how would you rate your discomfort?"
+                if is_en else
+                "Takleef ki shiddat (severity) 1 se 10 ke scale par kitni hogi? Jahan 1 halki aur 10 shadeed tareen dard ho?"
+            )
 
         # 4. Associated symptoms missing
         if not form.associated_symptoms:
-            return False, f"Kya is {form.chief_complaint} ke saath koi aur alamat bhi mehsoos ho rahi hai, jaise bukhar, ulti ya kamzori?"
+            return False, (
+                f"Are you noticing any other symptoms along with this {form.chief_complaint}, such as fever, cough, nausea, or dizziness?"
+                if is_en else
+                f"Kya is {form.chief_complaint} ke saath koi aur alamat bhi mehsoos ho rahi hai, jaise bukhar, ulti ya kamzori?"
+            )
 
         # 5. Allergies & current meds missing
         if not form.allergies and not form.current_medications:
-            return False, "Kya aap pehle se koi dawa le rahe hain, ya kisi dawa (maslan Penicillin ya Sulfa) se koi allergy hai?"
+            return False, (
+                "Are you currently taking any medicines, or do you have any drug allergies (e.g., Penicillin, Sulfa)?"
+                if is_en else
+                "Kya aap pehle se koi dawa le rahe hain, ya kisi dawa (maslan Penicillin ya Sulfa) se koi allergy hai?"
+            )
 
         # 6. Medical history / Pregnancy / Chronic illnesses check
         if not form.medical_history and form.is_pregnant is None:
-            return False, "Kya pehle se koi purani bemari hai, jaise Sugar (Diabetes), High Blood Pressure, ya hamal (pregnancy)?"
+            return False, (
+                "Do you have any past medical conditions like Diabetes, High Blood Pressure, Asthma, or pregnancy?"
+                if is_en else
+                "Kya pehle se koi purani bemari hai, jaise Sugar (Diabetes), High Blood Pressure, ya hamal (pregnancy)?"
+            )
 
         # Everything essential collected!
         form.is_complete = True
         summary_msg = (
+            f"Thank you for providing the details. I have recorded your symptoms ({form.chief_complaint}, "
+            f"duration: {form.duration}, severity: {form.severity}/10). Let me now connect you with the appropriate specialist and available appointments."
+            if is_en else
             f"Boht shukriya tafseelat faraham karne ka. Main ne aap ki alamaat ({form.chief_complaint}, "
             f"duration: {form.duration}, severity: {form.severity}/10) record kar li hain. "
             f"Ab hum foran aap ke liye munasib specialist aur appointment check karte hain."
         )
         return True, summary_msg
 
-    def process_turn(self, user_message: str, session_form: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
+    def process_turn(self, user_message: str, session_form: Optional[Dict[str, Any]] = None, language: str = "Urdu") -> Dict[str, Any]:
         """
         Processes a single conversational turn in the Intake workflow.
         Returns:
             {
-                "reply": "Assistant response in UrduLish",
+                "reply": "Assistant response in English or UrduLish",
                 "form": IntakeForm dict,
                 "is_complete": bool
             }
@@ -167,11 +195,11 @@ If not mentioned in the message, leave the field as null/empty. Do NOT invent de
             form = IntakeForm()
 
         # If user message is a greeting or empty initial trigger
-        if not form.chief_complaint and any(g in user_message.lower() for g in ["salam", "hello", "hi", "aoa"]):
+        if not form.chief_complaint and any(g in user_message.lower() for g in ["salam", "hello", "hi", "aoa", "hey"]):
             # Check if symptoms also mentioned in the greeting
             update = self.extract_from_message(user_message, form.model_dump())
             self.merge_update(form, update)
-            is_complete, next_q = self.determine_next_step(form)
+            is_complete, next_q = self.determine_next_step(form, language=language)
             return {
                 "reply": next_q,
                 "form": form.model_dump(),
@@ -183,7 +211,7 @@ If not mentioned in the message, leave the field as null/empty. Do NOT invent de
         self.merge_update(form, update)
 
         # Determine next question or complete
-        is_complete, reply = self.determine_next_step(form)
+        is_complete, reply = self.determine_next_step(form, language=language)
 
         return {
             "reply": reply,

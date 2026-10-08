@@ -114,7 +114,8 @@ def returning_greeting_node(state: ClinicalState) -> Dict[str, Any]:
     """
     t0 = time.time()
     mem = state.get("long_term_memory", {})
-    greeting_text = memory_manager.generate_returning_patient_greeting(mem)
+    lang = state.get("language") or mem.get("preferred_language") or "Urdu"
+    greeting_text = memory_manager.generate_returning_patient_greeting(mem, language=lang)
     latency_ms = (time.time() - t0) * 1000
 
     messages = list(state.get("messages", []))
@@ -150,15 +151,18 @@ def intake_node(state: ClinicalState) -> Dict[str, Any]:
             latest_user_msg = _get_msg_content(m)
             break
 
+    lang = state.get("language") or state.get("long_term_memory", {}).get("preferred_language") or "Urdu"
     intake_result, latency_ms = supervisor.execute_with_retry(
         "intake",
         intake_agent.process_turn,
         latest_user_msg,
-        state.get("intake_form")
+        state.get("intake_form"),
+        lang
     )
     if not intake_result:
+        is_en = lang and lang.lower() in ("english", "en")
         intake_result = {
-            "reply": "Maaf kijiye ga, kya aap apni alamat dobara bayan kar sakte hain?",
+            "reply": "Pardon me, could you please describe your symptoms once more?" if is_en else "Maaf kijiye ga, kya aap apni alamat dobara bayan kar sakte hain?",
             "form": state.get("intake_form", {}),
             "is_complete": False
         }
@@ -368,16 +372,29 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 calendar_url=gcal_link
             )
 
-            booking_msg = (
-                f"✅ **Appointment Confirmed!**\n\n"
-                f"• **Doctor:** {doc['full_name']} ({specialty})\n"
-                f"• **Date & Time:** {date_disp} at {time_disp}\n"
-                f"• **Branch:** {doc.get('branch_name', 'Gulberg Lahore')}\n"
-                f"• **Consultation Fee:** PKR {fee:,}\n"
-                f"• **Booking Reference:** `#{booking_ref}`\n\n"
-                f"📅 [Google Calendar mein add karein]({gcal_link})\n\n"
-                f"Aap ko email aur SMS confirmation bhi bhej di gayi hai."
-            )
+            lang = state.get("language") or "Urdu"
+            if lang and lang.lower() in ("english", "en"):
+                booking_msg = (
+                    f"✅ **Appointment Confirmed!**\n\n"
+                    f"• **Doctor:** {doc['full_name']} ({specialty})\n"
+                    f"• **Date & Time:** {date_disp} at {time_disp}\n"
+                    f"• **Branch:** {doc.get('branch_name', 'Gulberg Lahore')}\n"
+                    f"• **Consultation Fee:** PKR {fee:,}\n"
+                    f"• **Booking Reference:** `#{booking_ref}`\n\n"
+                    f"📅 [Add to Google Calendar]({gcal_link})\n\n"
+                    f"Email and SMS confirmations have also been dispatched."
+                )
+            else:
+                booking_msg = (
+                    f"✅ **Appointment Confirmed!**\n\n"
+                    f"• **Doctor:** {doc['full_name']} ({specialty})\n"
+                    f"• **Date & Time:** {date_disp} at {time_disp}\n"
+                    f"• **Branch:** {doc.get('branch_name', 'Gulberg Lahore')}\n"
+                    f"• **Consultation Fee:** PKR {fee:,}\n"
+                    f"• **Booking Reference:** `#{booking_ref}`\n\n"
+                    f"📅 [Google Calendar mein add karein]({gcal_link})\n\n"
+                    f"Aap ko email aur SMS confirmation bhi bhej di gayi hai."
+                )
             messages.append({
                 "role": "assistant",
                 "content": booking_msg,
@@ -386,9 +403,15 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 "timestamp": datetime.now(timezone.utc).isoformat()
             })
     else:
+        lang = state.get("language") or "Urdu"
+        empty_msg = (
+            f"Slots for {doc['full_name']} are fully booked for the next 2 days. Would you like to check available slots at another branch or with another specialist?"
+            if lang and lang.lower() in ("english", "en")
+            else f"Dr. {doc['full_name']} ke aglay 2 dino mein slots pur hain. Kya aap kisi doosri branch ya doctor ke sath slot dekhna chahein gay?"
+        )
         messages.append({
             "role": "assistant",
-            "content": f"Dr. {doc['full_name']} ke aglay 2 dino mein slots pur hain. Kya aap kisi doosri branch ya doctor ke sath slot dekhna chahein gay?",
+            "content": empty_msg,
             "agent": "SchedulingAgent",
             "timestamp": datetime.now(timezone.utc).isoformat()
         })
@@ -663,11 +686,22 @@ def emergency_escalation_node(state: ClinicalState) -> Dict[str, Any]:
     """
     t0 = time.time()
     triage = state.get("triage_result") or {}
-    esc_msg = triage.get("escalation_message_urdulish") or (
-        "🚨 **SHADEED EMERGENCY NOTICE (1122 RESCUE)** 🚨\n"
-        "Aap ki alamaat jaan-lewa khatray ki nishandahi karti hain. "
-        "Baraye meharbani bila-takheer 1122 emergency helpline par call karein ya foran qareebi Emergency Ward pohnchein!"
-    )
+    lang = state.get("language") or "Urdu"
+    if lang and lang.lower() in ("english", "en"):
+        default_esc = (
+            "🚨 **CRITICAL MEDICAL EMERGENCY (CALL 1122 RESCUE)** 🚨\n"
+            "Your reported symptoms indicate an immediate, life-threatening condition. "
+            "Please call 1122 Emergency Services immediately or proceed directly to the nearest Hospital Emergency Ward (ER)!"
+        )
+    else:
+        default_esc = (
+            "🚨 **SHADEED EMERGENCY NOTICE (1122 RESCUE)** 🚨\n"
+            "Aap ki alamaat jaan-lewa khatray ki nishandahi karti hain. "
+            "Baraye meharbani bila-takheer 1122 emergency helpline par call karein ya foran qareebi Emergency Ward pohnchein!"
+        )
+    esc_msg = triage.get("escalation_message_urdulish") if lang != "English" else default_esc
+    if not esc_msg:
+        esc_msg = default_esc
     messages = list(state.get("messages", []))
     messages.append({
         "role": "assistant",

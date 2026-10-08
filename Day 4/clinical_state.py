@@ -26,6 +26,7 @@ class ClinicalState(TypedDict):
     patient_phone: Optional[str]
     patient_mrn: Optional[str]
     is_returning_patient: bool
+    language: Optional[str]  # "English" | "Urdu"
     long_term_memory: Dict[str, Any]  # Preferences, past diagnoses, preferred doctor, language
 
     # 3. Clinical Intake Data

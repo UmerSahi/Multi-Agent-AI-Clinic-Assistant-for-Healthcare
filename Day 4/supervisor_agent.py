@@ -65,7 +65,8 @@ class SupervisorAgent:
         # Emergency check
         emergency_keywords = [
             "chest pain", "seene mein", "seenay mein", "seena dard", "heart attack",
-            "saans ruk", "saans band", "saans lene mein shadeed", "behosh", "unconscious"
+            "saans ruk", "saans band", "saans lene mein shadeed", "shortness of breath",
+            "difficulty breathing", "behosh", "unconscious", "heavy bleeding"
         ]
         if any(ek in last_msg for ek in emergency_keywords):
             return "emergency_escalation"
@@ -75,7 +76,7 @@ class SupervisorAgent:
             return "hitl_gate"
 
         # 2. Direct booking / scheduling intent (runs first if patient explicitly asks for booking/appointment)
-        booking_keywords = ["appointment", "booking", "tarikh", "slot", "doctor time", "milna hai", "book kar", "cancel", "reschedule"]
+        booking_keywords = ["appointment", "booking", "tarikh", "slot", "doctor time", "milna hai", "book kar", "schedule", "dr.", "doctor", "cancel", "reschedule"]
         if any(kw in last_msg for kw in booking_keywords):
             if not state.get("triage_result"):
                 pref_spec = state.get("long_term_memory", {}).get("preferred_specialty", "General Medicine")
@@ -94,7 +95,10 @@ class SupervisorAgent:
             if (isinstance(m, dict) and m.get("role") == "assistant")
             or (hasattr(m, "type") and m.type == "ai")
         ]
-        has_complaint_in_msg = any(k in last_msg for k in ["bukhar", "fever", "dard", "pain", "khansi", "cough", "jalan", "vomit", "ulti", "seeti", "asthma"])
+        has_complaint_in_msg = any(k in last_msg for k in [
+            "bukhar", "fever", "dard", "pain", "khansi", "cough", "jalan", "vomit",
+            "ulti", "seeti", "asthma", "headache", "sore throat", "stomach", "rash"
+        ])
         if state.get("is_returning_patient") and len(assistant_msgs) == 0 and not has_complaint_in_msg:
             return "returning_greeting"
 
