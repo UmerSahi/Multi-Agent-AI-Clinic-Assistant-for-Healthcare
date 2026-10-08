@@ -52,7 +52,7 @@ interface TelemetryStats {
   emergency_escalations: number;
 }
 
-const API_BASE = "http://127.0.0.1:8000";
+const API_BASE = "";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<"patient" | "doctor" | "telemetry">("patient");
@@ -81,10 +81,10 @@ export default function Home() {
   useEffect(() => {
     const init = async () => {
       try {
-        const hRes = await fetch(`${API_BASE}/api/health`);
+        const hRes = await fetch(`/api/health`);
         if (hRes.ok) setServerHealthy(true);
 
-        const pRes = await fetch(`${API_BASE}/api/patients`);
+        const pRes = await fetch(`/api/patients`);
         if (pRes.ok) {
           const data = await pRes.json();
           setPatients(data.patients || []);
@@ -167,7 +167,7 @@ export default function Home() {
 
   const fetchPendingTasks = async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/doctor/pending`);
+      const res = await fetch(`/api/doctor/pending`);
       if (res.ok) {
         const data = await res.json();
         setPendingTasks(data.pending_tasks || []);
@@ -177,7 +177,7 @@ export default function Home() {
 
   const fetchTelemetry = async () => {
     try {
-      const res = await fetch(`${API_BASE}/api/telemetry/stats`);
+      const res = await fetch(`/api/telemetry/stats`);
       if (res.ok) {
         const data = await res.json();
         setStats(data);
@@ -188,6 +188,9 @@ export default function Home() {
   const handleSendMessage = async (textToSend?: string, triggerType?: string) => {
     const text = textToSend || inputMessage;
     if (!text.trim() || isLoading) return;
+
+    const activeSess = sessionId || `sess_${selectedPatient?.patient_id || "p1"}_${Date.now()}`;
+    if (!sessionId) setSessionId(activeSess);
 
     const userMsg: Message = {
       role: "user",
@@ -200,11 +203,11 @@ export default function Home() {
     setIsLoading(true);
 
     try {
-      const res = await fetch(`${API_BASE}/api/chat`, {
+      const res = await fetch(`/api/chat`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          session_id: sessionId,
+          session_id: activeSess,
           message: text,
           patient_identifier: selectedPatient?.patient_name || "Valued Patient",
           is_returning_patient: true,
@@ -219,7 +222,7 @@ export default function Home() {
         const newMsgs = data.messages.map((m: any) => ({
           role: m.role === "human" || m.role === "user" ? "user" : "assistant",
           content: m.content || "",
-          agent: m.agent || "ClinicalAssistant",
+          agent: m.agent || (m.role === "user" ? undefined : (data.current_agent || "ClinicalAssistant")),
           timestamp: m.timestamp || new Date().toISOString(),
           is_pending_review: m.is_pending_review,
           is_approved_by_doctor: m.is_approved_by_doctor,
@@ -227,17 +230,36 @@ export default function Home() {
           appointment_card: m.appointment_card
         }));
 
-        setMessages(newMsgs);
+        setMessages((prev) => {
+          const initialGreeting = prev.find((m) => m.agent === "MemoryManager");
+          if (initialGreeting && !newMsgs.some((m: any) => m.content === initialGreeting.content)) {
+            return [initialGreeting, ...newMsgs];
+          }
+          return newMsgs;
+        });
+
         fetchPendingTasks();
         fetchTelemetry();
+      } else {
+        const errText = await res.text();
+        console.error("Server returned non-200:", errText);
+        setMessages((prev) => [
+          ...prev,
+          {
+            role: "assistant",
+            content: "Maaf kijiye ga, server par request process nahi ho saki. Baraye meharbani kuch deir baad dobara koshish karein.",
+            agent: "System",
+            timestamp: new Date().toISOString()
+          }
+        ]);
       }
-    } catch (e) {
-      console.error(e);
+    } catch (e: any) {
+      console.error("Chat fetch error:", e);
       setMessages((prev) => [
         ...prev,
         {
           role: "assistant",
-          content: "Shukriya. Aap ka paigham receive ho gaya hai. Network verification jari hai.",
+          content: `Maaf kijiye ga, network connection check karein (${e.message || "Network Error"}).`,
           agent: "System",
           timestamp: new Date().toISOString()
         }
@@ -246,6 +268,7 @@ export default function Home() {
       setIsLoading(false);
     }
   };
+
 
   const handleDoctorDecision = async (
     taskId: string,

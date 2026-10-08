@@ -12,15 +12,14 @@
     "known_allergies": [
       "Penicillin"
     ],
-    "chronic_conditions": [
-      "Hypertension"
-    ],
+    "chronic_conditions": [],
     "past_complaints": [
       "High blood pressure routine check",
-      "Seenay mein jalan aur tez acid"
+      "Seenay mein jalan aur tez acid",
+      "sar mein dard",
+      "bukhar"
     ],
-    "last_visit_date": "2026-09-06",
-    "last_updated": "2026-10-08T07:53:26.527732+00:00"
+    "last_visit_date": "2026-09-06"
   },
   "p2": {
     "patient_id": "p2",
@@ -35,15 +34,13 @@
     "known_allergies": [
       "Sulfa drugs"
     ],
-    "chronic_conditions": [
-      "PCOD"
-    ],
+    "chronic_conditions": [],
     "past_complaints": [
       "Mahwari mein bayqaidgi",
-      "Pelvic scan review"
+      "Pelvic scan review",
+      "CBC blood report aur WBC count"
     ],
-    "last_visit_date": "2026-08-18",
-    "last_updated": "2026-10-08T07:53:26.527732+00:00"
+    "last_visit_date": "2026-08-18"
   },
   "p3": {
     "patient_id": "p3",

@@ -550,5 +550,518 @@
     "total_cost_usd": 3.6e-05,
     "total_latency_ms": 0.0,
     "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452412200",
+    "thread_id": "sess_p1_1791452381836",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:40:12.200416+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:40:12.213024+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:40:13.627408+00:00",
+        "latency_ms": 1409.38,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:41:00.047889+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:41:01.655357+00:00",
+        "latency_ms": 1601.46,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 720,
+    "total_completion_tokens": 280,
+    "total_cost_usd": 0.000138,
+    "total_latency_ms": 3010.84,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452492755",
+    "thread_id": "sess_016905f2",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:41:32.756006+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:41:32.757853+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:41:34.006320+00:00",
+        "latency_ms": 1243.31,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 1243.31,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452555646",
+    "thread_id": "sess_p1_1791452532744",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:42:35.646287+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:42:35.648552+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:42:36.894390+00:00",
+        "latency_ms": 1242.43,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 1242.43,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452605702",
+    "thread_id": "sess_e48b9ed0",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:43:25.702006+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:43:25.705010+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:43:27.876663+00:00",
+        "latency_ms": 2169.7,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 2169.7,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452662141",
+    "thread_id": "sess_p1_1791452629904",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:44:22.141338+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:44:22.144817+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:44:23.499895+00:00",
+        "latency_ms": 1349.72,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:44:43.168373+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:44:44.748110+00:00",
+        "latency_ms": 1575.35,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:44:57.297288+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:44:58.607262+00:00",
+        "latency_ms": 1304.39,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:45:05.545740+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:45:06.911062+00:00",
+        "latency_ms": 1359.76,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:45:13.502014+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:45:14.811694+00:00",
+        "latency_ms": 1303.8,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:45:30.087190+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:45:33.347692+00:00",
+        "latency_ms": 3255.97,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:45:40.033557+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:45:41.399798+00:00",
+        "latency_ms": 1361.41,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:45:49.939964+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:45:51.170627+00:00",
+        "latency_ms": 1227.66,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 2880,
+    "total_completion_tokens": 1120,
+    "total_cost_usd": 0.000552,
+    "total_latency_ms": 12738.06,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452794368",
+    "thread_id": "sess_p2_1791452792262",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T09:46:34.368223+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:46:34.370319+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:46:35.797487+00:00",
+        "latency_ms": 1423.35,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:46:38.207797+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:46:39.372746+00:00",
+        "latency_ms": 1160.94,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:46:43.476155+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:46:44.728319+00:00",
+        "latency_ms": 1247.24,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 1080,
+    "total_completion_tokens": 420,
+    "total_cost_usd": 0.000207,
+    "total_latency_ms": 3831.53,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791452928973",
+    "thread_id": "sess_abd16efc",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:48:48.973537+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:48:48.975562+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:48:51.623753+00:00",
+        "latency_ms": 2646.19,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 2646.19,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791453003288",
+    "thread_id": "test_s1",
+    "patient_identifier": null,
+    "start_time": "2026-10-08T09:50:03.288454+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:50:03.290570+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:50:04.649622+00:00",
+        "latency_ms": 1355.95,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:50:04.656786+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:50:05.788462+00:00",
+        "latency_ms": 1128.93,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 720,
+    "total_completion_tokens": 280,
+    "total_cost_usd": 0.000138,
+    "total_latency_ms": 2484.88,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791453256389",
+    "thread_id": "sess_021ca0c8",
+    "patient_identifier": "Ahmed Raza",
+    "start_time": "2026-10-08T09:54:16.389144+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T09:54:16.391152+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "IntakeAgent",
+        "timestamp": "2026-10-08T09:54:17.882397+00:00",
+        "latency_ms": 1488.22,
+        "prompt_tokens": 240,
+        "completion_tokens": 110,
+        "cost_usd": 5.1e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 360,
+    "total_completion_tokens": 140,
+    "total_cost_usd": 6.9e-05,
+    "total_latency_ms": 1488.22,
+    "status": "IN_PROGRESS"
   }
 ]
