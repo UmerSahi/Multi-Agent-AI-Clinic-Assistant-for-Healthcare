@@ -2027,5 +2027,90 @@
     "total_cost_usd": 3.6e-05,
     "total_latency_ms": 0.0,
     "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791454911785",
+    "thread_id": "test_par_1791454911",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T10:21:51.785301+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:21:51.790731+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T10:21:53.123760+00:00",
+        "latency_ms": 1329.88,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1329.88,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1329.88,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791454913128",
+    "thread_id": "test_hitl_1791454913",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T10:21:53.128463+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:21:53.130468+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T10:21:53.137436+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [
+      {
+        "task_type": "LAB_EXPLANATION",
+        "action": "EDITED",
+        "doctor": "Dr. Maryam Naveed (Medical Director)",
+        "notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+        "timestamp": "2026-10-08T10:21:53.140441+00:00"
+      }
+    ],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
   }
 ]

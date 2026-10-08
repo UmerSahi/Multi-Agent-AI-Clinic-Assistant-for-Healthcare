@@ -8,6 +8,7 @@ Handles:
 """
 
 import sys
+import re
 import json
 from pathlib import Path
 from datetime import datetime, timezone
@@ -19,12 +20,6 @@ ROOT_DIR = DAY4_DIR.parent
 DATA_DIR = DAY4_DIR / "data"
 DATA_DIR.mkdir(parents=True, exist_ok=True)
 MEMORY_FILE = DATA_DIR / "patient_long_term_memory.json"
-
-sys.path.append(str(ROOT_DIR / "Day 2"))
-try:
-    import db_client
-except ImportError:
-    pass
 
 
 class MemoryManager:
@@ -139,7 +134,6 @@ class MemoryManager:
         if clean_id in self._memory_cache:
             return self._memory_cache[clean_id]
 
-        import re
         digits_id = re.sub(r"\D", "", clean_id)
 
         # Attribute search
