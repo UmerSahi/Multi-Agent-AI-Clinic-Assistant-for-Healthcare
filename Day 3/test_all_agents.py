@@ -37,23 +37,23 @@ for p in [str(CURRENT_DIR), str(DAY3_AGENTS_DIR), str(DAY2_DIR), str(ROOT_DIR)]:
         sys.path.insert(0, p)
 
 try:
-    from intake_agent import intake_agent
-    from triage_agent import triage_agent
-    from scheduling_agent import scheduling_agent
-    from records_agent import records_agent
-    from clinical_summary_agent import clinical_summary_agent
-    from prescription_safety_agent import prescription_safety_agent
-    from followup_agent import followup_agent
+    from intake_agent import intake_agent  # type: ignore
+    from triage_agent import triage_agent  # type: ignore
+    from scheduling_agent import scheduling_agent  # type: ignore
+    from records_agent import records_agent  # type: ignore
+    from clinical_summary_agent import clinical_summary_agent  # type: ignore
+    from prescription_safety_agent import prescription_safety_agent  # type: ignore
+    from followup_agent import followup_agent  # type: ignore
 except ImportError:
-    from agents.intake_agent import intake_agent
-    from agents.triage_agent import triage_agent
-    from agents.scheduling_agent import scheduling_agent
-    from agents.records_agent import records_agent
-    from agents.clinical_summary_agent import clinical_summary_agent
-    from agents.prescription_safety_agent import prescription_safety_agent
-    from agents.followup_agent import followup_agent
+    from agents.intake_agent import intake_agent  # type: ignore
+    from agents.triage_agent import triage_agent  # type: ignore
+    from agents.scheduling_agent import scheduling_agent  # type: ignore
+    from agents.records_agent import records_agent  # type: ignore
+    from agents.clinical_summary_agent import clinical_summary_agent  # type: ignore
+    from agents.prescription_safety_agent import prescription_safety_agent  # type: ignore
+    from agents.followup_agent import followup_agent  # type: ignore
 
-import db_client
+import db_client  # type: ignore
 
 
 def ensure_database_ready():

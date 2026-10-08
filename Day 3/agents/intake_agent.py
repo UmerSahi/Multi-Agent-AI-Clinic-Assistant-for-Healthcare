@@ -16,7 +16,7 @@ from pydantic import BaseModel, Field
 # Add parent directories to sys.path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
-from llm_factory import get_llm, get_structured_llm
+from llm_factory import get_llm, get_structured_llm  # type: ignore
 
 # =====================================================================
 # Pydantic Schemas for Structured Intake

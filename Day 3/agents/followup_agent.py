@@ -17,7 +17,7 @@ from pydantic import BaseModel, Field
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 
-from llm_factory import get_llm
+from llm_factory import get_llm  # type: ignore
 
 class MedicineScheduleItem(BaseModel):
     drug_name: str

@@ -14,7 +14,7 @@ from typing import Dict, List, Any, Optional, Literal
 from pydantic import BaseModel, Field
 
 sys.path.append(str(Path(__file__).resolve().parent.parent))
-from llm_factory import get_llm, get_structured_llm
+from llm_factory import get_llm, get_structured_llm  # type: ignore
 
 # =====================================================================
 # Pydantic Schemas

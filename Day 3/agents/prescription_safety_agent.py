@@ -19,8 +19,8 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent / "Day 2"))
 
-from prescription_safety_engine import safety_engine
-from llm_factory import get_llm
+from prescription_safety_engine import safety_engine  # type: ignore
+from llm_factory import get_llm  # type: ignore
 
 class PrescriptionCheckReport(BaseModel):
     is_safe: bool

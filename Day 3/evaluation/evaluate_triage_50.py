@@ -28,9 +28,9 @@ for p in [str(DAY3_DIR), str(DAY3_DIR / "agents"), str(CURRENT_DIR), str(ROOT_DI
         sys.path.insert(0, p)
 
 try:
-    from triage_agent import triage_agent
+    from triage_agent import triage_agent  # type: ignore
 except ImportError:
-    from agents.triage_agent import triage_agent
+    from agents.triage_agent import triage_agent  # type: ignore
 
 REPORT_FILE = CURRENT_DIR / "triage_evaluation_report.md"
 

@@ -11,6 +11,8 @@ from typing import Type, TypeVar, Optional, Any
 from pydantic import BaseModel
 
 # Load environment variables
+ROOT_ENV = Path(__file__).resolve().parent.parent / ".env"
+load_dotenv(ROOT_ENV)
 load_dotenv()
 
 from langchain_google_genai import ChatGoogleGenerativeAI

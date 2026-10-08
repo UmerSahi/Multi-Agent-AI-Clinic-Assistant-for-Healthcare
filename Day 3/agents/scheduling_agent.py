@@ -21,7 +21,7 @@ sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent / "Day 2"))
 
 # Safe import from Day 2
-from db_client import db
+from db_client import db  # type: ignore
 
 SPECIALTY_KEYWORDS = {
     "Paediatrics": ["bacha", "child", "infant", "toddler", "beta", "beti", "pediatric", "teething", "growth milestone"],

@@ -15,7 +15,7 @@ from pathlib import Path
 sys.path.append(str(Path(__file__).resolve().parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent / "agents"))
 
-from clinical_summary_agent import clinical_summary_agent
+from clinical_summary_agent import clinical_summary_agent  # type: ignore
 
 REPORT_FILE = Path(__file__).resolve().parent / "soap_evaluation_report.md"
 

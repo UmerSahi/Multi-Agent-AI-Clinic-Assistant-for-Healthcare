@@ -15,8 +15,8 @@ sys.path.append(str(Path(__file__).resolve().parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent))
 sys.path.append(str(Path(__file__).resolve().parent.parent.parent / "Day 2"))
 
-from db_client import db
-from llm_factory import get_llm, get_structured_llm
+from db_client import db  # type: ignore
+from llm_factory import get_llm, get_structured_llm  # type: ignore
 
 class SOAPNote(BaseModel):
     patient_id: Optional[str] = None
