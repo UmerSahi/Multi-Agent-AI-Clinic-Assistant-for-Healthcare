@@ -1,0 +1,469 @@
+[
+  {
+    "trace_id": "TRC-1791446308604",
+    "thread_id": "test_par_1791446308",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T07:58:28.604367+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T07:58:28.608969+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T07:58:30.571802+00:00",
+        "latency_ms": 1961.4,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1961.4,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1961.4,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446387910",
+    "thread_id": "test_par_1791446387",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T07:59:47.910790+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T07:59:47.913791+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T07:59:49.228147+00:00",
+        "latency_ms": 1313.35,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1313.35,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1313.35,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446389229",
+    "thread_id": "test_hitl_1791446389",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T07:59:49.229147+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T07:59:49.232354+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T07:59:49.236330+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446469491",
+    "thread_id": "test_par_1791446469",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T08:01:09.491151+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:01:09.500635+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T08:01:11.096316+00:00",
+        "latency_ms": 1593.17,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1593.17,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1593.17,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446471099",
+    "thread_id": "test_hitl_1791446471",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T08:01:11.099852+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:01:11.102095+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:01:11.109408+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446524150",
+    "thread_id": "test_par_1791446524",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T08:02:04.150080+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:04.155871+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T08:02:05.481957+00:00",
+        "latency_ms": 1323.1,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1323.1,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1323.1,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446525483",
+    "thread_id": "test_hitl_1791446525",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T08:02:05.483958+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:05.487958+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:05.491958+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SchedulingAgent",
+        "timestamp": "2026-10-08T08:02:05.522196+00:00",
+        "latency_ms": 29.17,
+        "prompt_tokens": 210,
+        "completion_tokens": 140,
+        "cost_usd": 5.8e-05,
+        "tool_called": "book_appointment"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "SchedulingAgent",
+        "tool": "book_appointment",
+        "latency_ms": 29.17,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 450,
+    "total_completion_tokens": 200,
+    "total_cost_usd": 9.4e-05,
+    "total_latency_ms": 29.17,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446550537",
+    "thread_id": "test_par_1791446550",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T08:02:30.537401+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:30.543030+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T08:02:32.003797+00:00",
+        "latency_ms": 1458.71,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1458.71,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1458.71,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446552006",
+    "thread_id": "test_hitl_1791446552",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T08:02:32.006257+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:32.009315+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:02:32.014315+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SchedulingAgent",
+        "timestamp": "2026-10-08T08:02:32.032630+00:00",
+        "latency_ms": 17.31,
+        "prompt_tokens": 210,
+        "completion_tokens": 140,
+        "cost_usd": 5.8e-05,
+        "tool_called": "book_appointment"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "SchedulingAgent",
+        "tool": "book_appointment",
+        "latency_ms": 17.31,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 450,
+    "total_completion_tokens": 200,
+    "total_cost_usd": 9.4e-05,
+    "total_latency_ms": 17.31,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446589763",
+    "thread_id": "test_par_1791446589",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-08T08:03:09.763511+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:03:09.771812+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-08T08:03:11.433228+00:00",
+        "latency_ms": 1659.29,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 1659.29,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 1659.29,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791446591435",
+    "thread_id": "test_hitl_1791446591",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-08T08:03:11.435997+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:03:11.438266+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-08T08:03:11.442172+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [
+      {
+        "task_type": "LAB_EXPLANATION",
+        "action": "EDITED",
+        "doctor": "Dr. Maryam Naveed (Medical Director)",
+        "notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+        "timestamp": "2026-10-08T08:03:11.443190+00:00"
+      }
+    ],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  }
+]

@@ -113,10 +113,20 @@
 * **[agents/followup_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/followup_agent.py):** Post-visit care plan generator with daily medication schedules (meal timings in UrduLish), diagnostic lab reminders, WhatsApp outreach sequences (Day 1, 3, 7), and feedback analysis with automatic **Re-Triage Escalation**.
 * **[test_all_agents.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/test_all_agents.py):** End-to-end automated verification test suite verifying all 7 specialist agents in a cohesive pipeline (**100% Tests Passed**).
 
-### Day 4: Multi-Agent Supervisor Orchestration & HITL Gates ⏳
-* LangGraph Supervisor state graph coordinating all 7 specialist agents.
-* Shared `ClinicalState` with conversation history and dynamic checkpointing.
-* Doctor review, edit, and approve interface with interactive LangGraph interrupts.
+### [Day 4: Orchestration, Memory & Human-in-the-Loop](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204) ✅
+* **[01_day_4_orchestration_architecture.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/01_day_4_orchestration_architecture.md):** Full architecture report detailing the LangGraph Supervisor topology, parallel execution benchmarks, memory privacy filters, HITL pause/resume mechanics, and channel integrations.
+* **[clinical_state.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/clinical_state.py):** Unified `ClinicalState` TypedDict maintaining conversational state, patient identity, long-term memory, intake facts, triage urgency, EHR records, appointments, SOAP notes, prescription safety checks, and HITL review queues.
+* **[langgraph_workflow.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/langgraph_workflow.py):** Production-compiled LangGraph `StateGraph` linking all 7 specialist agents, parallel fan-out nodes, and checkpointed interrupt gates with transition latency logging.
+* **[supervisor_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/supervisor_agent.py):** Intelligent routing engine coordinating agent transitions, exponential backoff retries, and graceful fallbacks.
+* **[memory_manager.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/memory_manager.py):** Short-term session memory + privacy-preserving long-term clinical memory across visits (`patient_long_term_memory.json`) generating empathetic returning-patient UrduLish greetings (*"Assalam-o-Alaikum Ahmed sahib! Pichli dafa aap Dr. Bilal ko dikhaye thay..."*).
+* **[hitl_manager.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/hitl_manager.py):** Doctor review queue manager handling mandatory pause-and-approve gates for lab explanations, prescription advice, and low-confidence triage (<0.85) with Approve, Edit, and Reject capabilities.
+* **[email_notifier.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/email_notifier.py):** Multi-channel notification service generating HTML appointment confirmations with Google Calendar links and scheduled post-visit reminders.
+* **[observability.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/observability.py) & [annotated_patient_traces.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/evaluation/annotated_patient_traces.md):** Telemetry tracker monitoring agent latencies, tool calls, token usage, and USD cost per conversation for Gemini 3.5 Flash Lite, featuring 3 end-to-end annotated patient journey traces.
+* **[api_server.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/api_server.py):** FastAPI backend exposing chat endpoints, patient memory lookup, doctor review queues, and live telemetry.
+* **[frontend/](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/frontend):** Production Next.js web application with a rich clinical cyan/slate theme featuring:
+  * **Patient Portal:** Conversational UrduLish chat, returning patient switcher, emergency 1122 strip, appointment confirmation cards, and Google Calendar links.
+  * **Doctor HITL Command Center:** Real-time queue for pending lab/med reviews, inline guidance editor, pre-visit SOAP brief viewer, and system observability dashboard.
+* **[test_day_4_orchestration.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%204/test_day_4_orchestration.py):** Comprehensive automated verification suite verifying all 5 Day 4 requirements (**100% Tests Passed**).
 
 ### Day 5: Evaluation, Guardrails, Docker & Deployment ⏳
 * Safety red-teaming, DeepEval / Ragas evaluation pipelines.

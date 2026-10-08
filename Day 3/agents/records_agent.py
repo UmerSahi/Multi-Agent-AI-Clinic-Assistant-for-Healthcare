@@ -23,8 +23,8 @@ class RecordsAgent:
         self.llm = get_llm()
 
     def get_patient_summary(self, patient_identifier: str) -> Optional[Dict[str, Any]]:
-        """Finds patient by MRN or phone and aggregates medical chart."""
-        p = db.find_patient_by_mrn(patient_identifier) or db.find_patient_by_phone(patient_identifier)
+        """Finds patient by MRN, phone, or ID and aggregates medical chart."""
+        p = db.find_patient_by_id(patient_identifier) or db.find_patient_by_mrn(patient_identifier) or db.find_patient_by_phone(patient_identifier)
         if not p:
             return None
 

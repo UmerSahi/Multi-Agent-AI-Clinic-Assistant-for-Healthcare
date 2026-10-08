@@ -1,0 +1,97 @@
+{
+  "HITL-7AF9A3BB": {
+    "task_id": "HITL-7AF9A3BB",
+    "thread_id": "test_hitl_1791446389",
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "task_type": "LAB_EXPLANATION",
+    "urgency_level": "ROUTINE",
+    "proposed_message_urdulish": "Aap ke pelvic ultrasound report mein cysts nazar aaye hain jo PCOD ko zahir karte hain.",
+    "clinical_context": {
+      "findings": "Polycystic ovaries bilateral"
+    },
+    "status": "EDITED",
+    "created_at": "2026-10-08T07:59:49.229147+00:00",
+    "resolved_at": "2026-10-08T07:59:49.233356+00:00",
+    "doctor_action": "edited",
+    "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+    "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
+    "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  },
+  "HITL-693F4A37": {
+    "task_id": "HITL-693F4A37",
+    "thread_id": "test_hitl_1791446471",
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "task_type": "LAB_EXPLANATION",
+    "urgency_level": "ROUTINE",
+    "proposed_message_urdulish": "Aap ke pelvic ultrasound report mein cysts nazar aaye hain jo PCOD ko zahir karte hain.",
+    "clinical_context": {
+      "findings": "Polycystic ovaries bilateral"
+    },
+    "status": "EDITED",
+    "created_at": "2026-10-08T08:01:11.099852+00:00",
+    "resolved_at": "2026-10-08T08:01:11.106112+00:00",
+    "doctor_action": "edited",
+    "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+    "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
+    "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  },
+  "HITL-6C5F2E34": {
+    "task_id": "HITL-6C5F2E34",
+    "thread_id": "test_hitl_1791446525",
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "task_type": "LAB_EXPLANATION",
+    "urgency_level": "ROUTINE",
+    "proposed_message_urdulish": "Aap ke pelvic ultrasound report mein cysts nazar aaye hain jo PCOD ko zahir karte hain.",
+    "clinical_context": {
+      "findings": "Polycystic ovaries bilateral"
+    },
+    "status": "EDITED",
+    "created_at": "2026-10-08T08:02:05.483958+00:00",
+    "resolved_at": "2026-10-08T08:02:05.489958+00:00",
+    "doctor_action": "edited",
+    "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+    "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
+    "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  },
+  "HITL-A33A2EEC": {
+    "task_id": "HITL-A33A2EEC",
+    "thread_id": "test_hitl_1791446552",
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "task_type": "LAB_EXPLANATION",
+    "urgency_level": "ROUTINE",
+    "proposed_message_urdulish": "Aap ke pelvic ultrasound report mein cysts nazar aaye hain jo PCOD ko zahir karte hain.",
+    "clinical_context": {
+      "findings": "Polycystic ovaries bilateral"
+    },
+    "status": "EDITED",
+    "created_at": "2026-10-08T08:02:32.006257+00:00",
+    "resolved_at": "2026-10-08T08:02:32.012314+00:00",
+    "doctor_action": "edited",
+    "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+    "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
+    "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  },
+  "HITL-9EA014E7": {
+    "task_id": "HITL-9EA014E7",
+    "thread_id": "test_hitl_1791446591",
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "task_type": "LAB_EXPLANATION",
+    "urgency_level": "ROUTINE",
+    "proposed_message_urdulish": "Aap ke pelvic ultrasound report mein cysts nazar aaye hain jo PCOD ko zahir karte hain.",
+    "clinical_context": {
+      "findings": "Polycystic ovaries bilateral"
+    },
+    "status": "EDITED",
+    "created_at": "2026-10-08T08:03:11.435997+00:00",
+    "resolved_at": "2026-10-08T08:03:11.439759+00:00",
+    "doctor_action": "edited",
+    "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+    "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
+    "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  }
+}

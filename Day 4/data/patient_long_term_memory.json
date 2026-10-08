@@ -1,0 +1,69 @@
+{
+  "p1": {
+    "patient_id": "p1",
+    "patient_name": "Ahmed Raza",
+    "phone": "+923001234567",
+    "mrn": "CCC-PK-100001",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "UrduLish",
+    "known_allergies": [
+      "Penicillin"
+    ],
+    "chronic_conditions": [
+      "Hypertension"
+    ],
+    "past_complaints": [
+      "High blood pressure routine check",
+      "Seenay mein jalan aur tez acid"
+    ],
+    "last_visit_date": "2026-09-06",
+    "last_updated": "2026-10-08T07:53:26.527732+00:00"
+  },
+  "p2": {
+    "patient_id": "p2",
+    "patient_name": "Fatima Bibi",
+    "phone": "+923219876543",
+    "mrn": "CCC-PK-100002",
+    "preferred_doctor_id": "doc2",
+    "preferred_doctor_name": "Dr. Ayesha Tariq",
+    "preferred_specialty": "Gynaecology",
+    "preferred_branch": "DHA Lahore",
+    "preferred_language": "UrduLish",
+    "known_allergies": [
+      "Sulfa drugs"
+    ],
+    "chronic_conditions": [
+      "PCOD"
+    ],
+    "past_complaints": [
+      "Mahwari mein bayqaidgi",
+      "Pelvic scan review"
+    ],
+    "last_visit_date": "2026-08-18",
+    "last_updated": "2026-10-08T07:53:26.527732+00:00"
+  },
+  "p3": {
+    "patient_id": "p3",
+    "patient_name": "Hamza Abbasi",
+    "phone": "+923334567890",
+    "mrn": "CCC-PK-100003",
+    "preferred_doctor_id": "doc3",
+    "preferred_doctor_name": "Dr. Usman Sheikh",
+    "preferred_specialty": "Paediatrics",
+    "preferred_branch": "F-8 Markaz Islamabad",
+    "preferred_language": "UrduLish",
+    "known_allergies": [],
+    "chronic_conditions": [
+      "Bronchial Asthma"
+    ],
+    "past_complaints": [
+      "Raat ko khansi aur seeti ki awaz",
+      "Vaccination schedule"
+    ],
+    "last_visit_date": "2026-09-22",
+    "last_updated": "2026-10-08T07:53:26.527732+00:00"
+  }
+}

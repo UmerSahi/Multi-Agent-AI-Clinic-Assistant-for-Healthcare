@@ -1,0 +1,214 @@
+"""
+Memory Manager Module for City Care Clinics
+Handles:
+1. Short-term conversational memory checkpointing
+2. Long-term patient memory across outpatient visits (preferences, past complaints, preferred doctor, language)
+3. Privacy-preserving storage (scrubs unnecessary PII, retains clinical continuity facts)
+4. Returning patient detection and empathetic personalized UrduLish greetings
+"""
+
+import sys
+import json
+from pathlib import Path
+from datetime import datetime, timezone
+from typing import Dict, List, Any, Optional
+
+# Ensure paths
+DAY4_DIR = Path(__file__).resolve().parent
+ROOT_DIR = DAY4_DIR.parent
+DATA_DIR = DAY4_DIR / "data"
+DATA_DIR.mkdir(parents=True, exist_ok=True)
+MEMORY_FILE = DATA_DIR / "patient_long_term_memory.json"
+
+sys.path.append(str(ROOT_DIR / "Day 2"))
+try:
+    import db_client
+except ImportError:
+    pass
+
+
+class MemoryManager:
+    """Manages short-term conversation state and long-term clinical memory."""
+
+    def __init__(self):
+        self._memory_cache: Dict[str, Dict[str, Any]] = {}
+        self._load_memory()
+
+    def _load_memory(self):
+        """Loads long-term memory store; seeds initial profiles from synthetic database if empty."""
+        if MEMORY_FILE.exists():
+            try:
+                with open(MEMORY_FILE, "r", encoding="utf-8") as f:
+                    self._memory_cache = json.load(f)
+                    return
+            except Exception as e:
+                print(f"[Memory Warning] Could not parse memory file: {e}. Reinitializing.")
+
+        self._seed_default_memory()
+
+    def _seed_default_memory(self):
+        """Seeds realistic initial long-term memory for returning patients."""
+        default_memories = {
+            "p1": {
+                "patient_id": "p1",
+                "patient_name": "Ahmed Raza",
+                "phone": "+923001234567",
+                "mrn": "CCC-PK-100001",
+                "preferred_doctor_id": "doc1",
+                "preferred_doctor_name": "Dr. Bilal Saeed",
+                "preferred_specialty": "General Medicine",
+                "preferred_branch": "Gulberg Lahore",
+                "preferred_language": "UrduLish",
+                "known_allergies": ["Penicillin"],
+                "chronic_conditions": ["Hypertension"],
+                "past_complaints": ["High blood pressure routine check", "Seenay mein jalan aur tez acid"],
+                "last_visit_date": "2026-09-06",
+                "last_updated": datetime.now(timezone.utc).isoformat()
+            },
+            "p2": {
+                "patient_id": "p2",
+                "patient_name": "Fatima Bibi",
+                "phone": "+923219876543",
+                "mrn": "CCC-PK-100002",
+                "preferred_doctor_id": "doc2",
+                "preferred_doctor_name": "Dr. Ayesha Tariq",
+                "preferred_specialty": "Gynaecology",
+                "preferred_branch": "DHA Lahore",
+                "preferred_language": "UrduLish",
+                "known_allergies": ["Sulfa drugs"],
+                "chronic_conditions": ["PCOD"],
+                "past_complaints": ["Mahwari mein bayqaidgi", "Pelvic scan review"],
+                "last_visit_date": "2026-08-18",
+                "last_updated": datetime.now(timezone.utc).isoformat()
+            },
+            "p3": {
+                "patient_id": "p3",
+                "patient_name": "Hamza Abbasi",
+                "phone": "+923334567890",
+                "mrn": "CCC-PK-100003",
+                "preferred_doctor_id": "doc3",
+                "preferred_doctor_name": "Dr. Usman Sheikh",
+                "preferred_specialty": "Paediatrics",
+                "preferred_branch": "F-8 Markaz Islamabad",
+                "preferred_language": "UrduLish",
+                "known_allergies": [],
+                "chronic_conditions": ["Bronchial Asthma"],
+                "past_complaints": ["Raat ko khansi aur seeti ki awaz", "Vaccination schedule"],
+                "last_visit_date": "2026-09-22",
+                "last_updated": datetime.now(timezone.utc).isoformat()
+            }
+        }
+        self._memory_cache = default_memories
+        self._save_memory()
+
+    def _save_memory(self):
+        """Persists long-term patient memories to disk."""
+        try:
+            with open(MEMORY_FILE, "w", encoding="utf-8") as f:
+                json.dump(self._memory_cache, f, indent=2, ensure_ascii=False)
+        except Exception as e:
+            print(f"[Memory Error] Could not save memory: {e}")
+
+    def sanitize_for_privacy(self, raw_data: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Privacy-Respecting Filter:
+        Retains only clinically relevant information (specialty, doctor, branch,
+        allergies, chronic illnesses, and medical complaint summaries).
+        Removes payment data, arbitrary non-clinical text, and extraneous PII.
+        """
+        allowed_keys = {
+            "patient_id", "patient_name", "phone", "mrn",
+            "preferred_doctor_id", "preferred_doctor_name", "preferred_specialty",
+            "preferred_branch", "preferred_language", "known_allergies",
+            "chronic_conditions", "past_complaints", "last_visit_date"
+        }
+        sanitized = {k: v for k, v in raw_data.items() if k in allowed_keys}
+        # Keep past complaints concise (last 5 complaints only)
+        if "past_complaints" in sanitized and isinstance(sanitized["past_complaints"], list):
+            sanitized["past_complaints"] = sanitized["past_complaints"][-5:]
+        return sanitized
+
+    def find_patient_memory(self, identifier: str) -> Optional[Dict[str, Any]]:
+        """
+        Looks up patient by patient_id, phone, MRN, or patient name.
+        """
+        clean_id = identifier.strip().lower()
+        # Direct key match
+        if clean_id in self._memory_cache:
+            return self._memory_cache[clean_id]
+
+        # Attribute search
+        for mem in self._memory_cache.values():
+            if mem.get("phone", "").lower() == clean_id or clean_id in mem.get("phone", ""):
+                return mem
+            if mem.get("mrn", "").lower() == clean_id:
+                return mem
+            if clean_id in mem.get("patient_name", "").lower():
+                return mem
+
+        return None
+
+    def update_patient_memory(self, patient_id: str, updates: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Updates long-term patient memory with sanitized clinical details.
+        """
+        existing = self._memory_cache.get(patient_id, {
+            "patient_id": patient_id,
+            "patient_name": updates.get("patient_name", "Valued Patient"),
+            "known_allergies": [],
+            "chronic_conditions": [],
+            "past_complaints": []
+        })
+
+        # Merge updates
+        for key, val in updates.items():
+            if key == "past_complaints" and isinstance(val, (str, list)):
+                current = existing.get("past_complaints", [])
+                new_items = [val] if isinstance(val, str) else val
+                for item in new_items:
+                    if item and item not in current:
+                        current.append(item)
+                existing["past_complaints"] = current[-5:]
+            elif key == "known_allergies" and isinstance(val, list):
+                curr_allg = set(existing.get("known_allergies", []))
+                curr_allg.update(val)
+                existing["known_allergies"] = list(curr_allg)
+            else:
+                existing[key] = val
+
+        existing["last_updated"] = datetime.now(timezone.utc).isoformat()
+        sanitized = self.sanitize_for_privacy(existing)
+        self._memory_cache[patient_id] = sanitized
+        self._save_memory()
+        return sanitized
+
+    def generate_returning_patient_greeting(self, memory: Dict[str, Any]) -> str:
+        """
+        Generates personalized, empathetic UrduLish greeting using long-term memory:
+        e.g., 'Assalam-o-Alaikum Ahmed sahib! Pichli dafa aap Dr. Bilal ko dikhaye thay.
+               Kya isi doctor ke saath appointment chahiye?'
+        """
+        full_name = memory.get("patient_name", "Sahib")
+        first_name = full_name.split()[0] if full_name else "Sahib"
+        doc_name = memory.get("preferred_doctor_name", "Doctor Sahab")
+        branch = memory.get("preferred_branch", "clinic")
+        last_date = memory.get("last_visit_date")
+
+        greeting = (
+            f"Assalam-o-Alaikum {first_name} sahib! City Care Clinics mein khush-amdeed.\n"
+            f"Record ke mutabiq aap pichli dafa {f'({last_date}) ' if last_date else ''}"
+            f"**{doc_name}** ko dikhaye thay ({branch} branch mein).\n\n"
+            f"Kya aap dobara **{doc_name}** ke saath appointment book karna chahte hain, ya koi nayi takleef ke liye doosray specialist se mashwara chahiye?"
+        )
+        return greeting
+
+
+# Singleton instance
+memory_manager = MemoryManager()
+
+if __name__ == "__main__":
+    print("Testing Memory Manager...")
+    mem = memory_manager.find_patient_memory("Ahmed Raza")
+    if mem:
+        print("Found Patient Memory:", mem["patient_name"])
+        print("\nGenerated Personalized Greeting:\n", memory_manager.generate_returning_patient_greeting(mem))
