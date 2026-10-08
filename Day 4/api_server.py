@@ -205,9 +205,27 @@ def handle_patient_chat(req: ChatRequest):
     # Update session in memory
     active_sessions[session_id] = updated_state
 
+    def _serialize_msg(m: Any) -> Dict[str, Any]:
+        if isinstance(m, dict):
+            return m
+        role = "assistant" if getattr(m, "type", "") == "ai" else "user"
+        res = {
+            "role": role,
+            "content": getattr(m, "content", str(m)),
+            "agent": getattr(m, "name", "ClinicalAssistant"),
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        for attr in ["is_pending_review", "is_approved_by_doctor", "is_emergency", "appointment_card"]:
+            if hasattr(m, attr):
+                res[attr] = getattr(m, attr)
+        return res
+
+    raw_msgs = updated_state.get("messages", [])
+    serialized_msgs = [_serialize_msg(m) for m in raw_msgs]
+
     # 4. Extract latest assistant message
     latest_reply = "Hum aap ki madad ke liye hazir hain."
-    for m in reversed(updated_state.get("messages", [])):
+    for m in reversed(serialized_msgs):
         if m.get("role") == "assistant":
             latest_reply = m.get("content", "")
             break
@@ -217,7 +235,7 @@ def handle_patient_chat(req: ChatRequest):
     return {
         "session_id": session_id,
         "reply": latest_reply,
-        "messages": updated_state.get("messages", []),
+        "messages": serialized_msgs,
         "current_agent": updated_state.get("current_agent"),
         "intake_form": updated_state.get("intake_form"),
         "triage_result": updated_state.get("triage_result"),
@@ -265,8 +283,9 @@ def post_doctor_decision(req: DoctorDecisionRequest):
         active_sessions[thread_id] = resumed_state
 
         for m in reversed(resumed_state.get("messages", [])):
-            if m.get("role") == "assistant":
-                resumed_reply = m.get("content", "")
+            role = m.get("role") if isinstance(m, dict) else getattr(m, "type", "")
+            if role in ("assistant", "ai"):
+                resumed_reply = m.get("content", "") if isinstance(m, dict) else getattr(m, "content", "")
                 break
 
     return {
