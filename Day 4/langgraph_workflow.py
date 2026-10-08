@@ -103,6 +103,7 @@ def supervisor_node(state: ClinicalState) -> Dict[str, Any]:
     return {
         "current_agent": "supervisor",
         "next_agent": next_node,
+        "triage_result": state.get("triage_result"),
         "node_transitions": transitions
     }
 
@@ -661,7 +662,7 @@ def emergency_escalation_node(state: ClinicalState) -> Dict[str, Any]:
     Direct emergency pathway for red-flag conditions.
     """
     t0 = time.time()
-    triage = state.get("triage_result", {})
+    triage = state.get("triage_result") or {}
     esc_msg = triage.get("escalation_message_urdulish") or (
         "🚨 **SHADEED EMERGENCY NOTICE (1122 RESCUE)** 🚨\n"
         "Aap ki alamaat jaan-lewa khatray ki nishandahi karti hain. "

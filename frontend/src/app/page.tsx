@@ -150,19 +150,7 @@ export default function Home() {
     const newSess = `sess_${p.patient_id}_${Date.now()}`;
     setSessionId(newSess);
     setTriageResult(null);
-
-    // Initial greeting from long-term memory
-    const firstName = p.patient_name.split(" ")[0];
-    const initialGreeting = `Assalam-o-Alaikum ${firstName} sahib! City Care Clinics mein khush-amdeed.\nRecord ke mutabiq aap pichli dafa (${p.last_visit_date}) **${p.preferred_doctor}** ko dikhaye thay (${p.preferred_branch} branch mein).\n\nKya aap dobara **${p.preferred_doctor}** ke saath appointment book karna chahte hain, ya koi nayi takleef ke liye doosray specialist se mashwara chahiye?`;
-
-    setMessages([
-      {
-        role: "assistant",
-        content: initialGreeting,
-        agent: "MemoryManager",
-        timestamp: new Date().toISOString()
-      }
-    ]);
+    setMessages([]); // Start clean: patient sends the first message!
   };
 
   const fetchPendingTasks = async () => {
@@ -209,8 +197,8 @@ export default function Home() {
         body: JSON.stringify({
           session_id: activeSess,
           message: text,
-          patient_identifier: selectedPatient?.patient_name || "Valued Patient",
-          is_returning_patient: true,
+          patient_identifier: selectedPatient?.patient_id || selectedPatient?.patient_name || "Valued Patient",
+          is_returning_patient: !!selectedPatient,
           trigger_type: triggerType
         })
       });
@@ -438,6 +426,39 @@ export default function Home() {
 
               {/* Messages Area */}
               <div className="chat-messages-scroll">
+                {messages.length === 0 && (
+                  <div style={{ margin: "auto", textAlign: "center", padding: "28px 16px", maxWidth: "480px" }}>
+                    <div style={{ fontSize: "40px", marginBottom: "10px" }}>💬</div>
+                    <h3 style={{ fontSize: "1.1rem", fontWeight: "700", color: "#f8fafc", marginBottom: "6px" }}>
+                      Start Chat with City Care Assistant
+                    </h3>
+                    <p style={{ fontSize: "0.82rem", color: "#94a3b8", lineHeight: 1.5, marginBottom: "18px" }}>
+                      {selectedPatient
+                        ? `Logged in as ${selectedPatient.patient_name} (${selectedPatient.mrn}). Send your first message below:`
+                        : "Type your query below or pick a suggestion to begin:"}
+                    </p>
+                    <div style={{ display: "grid", gap: "8px" }}>
+                      <button
+                        style={{ padding: "10px 16px", borderRadius: "8px", background: "rgba(6, 182, 212, 0.12)", border: "1px solid rgba(6, 182, 212, 0.3)", color: "#38bdf8", cursor: "pointer", fontSize: "0.85rem", textAlign: "left" }}
+                        onClick={() => handleSendMessage("Assalam-o-Alaikum, mujhe checkup karwana hai")}
+                      >
+                        👋 "Assalam-o-Alaikum, mujhe checkup karwana hai"
+                      </button>
+                      <button
+                        style={{ padding: "10px 16px", borderRadius: "8px", background: "rgba(255, 255, 255, 0.05)", border: "1px solid rgba(255, 255, 255, 0.1)", color: "#cbd5e1", cursor: "pointer", fontSize: "0.85rem", textAlign: "left" }}
+                        onClick={() => handleSendMessage("Dr. Bilal ke sath appointment chahiye")}
+                      >
+                        📅 "Dr. Bilal ke sath appointment chahiye"
+                      </button>
+                      <button
+                        style={{ padding: "10px 16px", borderRadius: "8px", background: "rgba(255, 255, 255, 0.05)", border: "1px solid rgba(255, 255, 255, 0.1)", color: "#cbd5e1", cursor: "pointer", fontSize: "0.85rem", textAlign: "left" }}
+                        onClick={() => handleSendMessage("Mujhe 2 din se tez bukhar hai")}
+                      >
+                        🩺 "Mujhe 2 din se tez bukhar hai"
+                      </button>
+                    </div>
+                  </div>
+                )}
                 {messages.map((msg, idx) => (
                   <div key={idx} className={`message-row ${msg.role}`}>
                     <div className={`msg-avatar ${msg.role}`}>

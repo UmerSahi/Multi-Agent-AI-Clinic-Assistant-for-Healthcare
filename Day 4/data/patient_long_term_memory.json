@@ -10,14 +10,16 @@
     "preferred_branch": "Gulberg Lahore",
     "preferred_language": "UrduLish",
     "known_allergies": [
-      "Penicillin"
+      "Penicillin",
+      "None"
     ],
     "chronic_conditions": [],
     "past_complaints": [
       "High blood pressure routine check",
       "Seenay mein jalan aur tez acid",
       "sar mein dard",
-      "bukhar"
+      "bukhar",
+      "seenay mein dard"
     ],
     "last_visit_date": "2026-09-06"
   },
@@ -38,7 +40,8 @@
     "past_complaints": [
       "Mahwari mein bayqaidgi",
       "Pelvic scan review",
-      "CBC blood report aur WBC count"
+      "CBC blood report aur WBC count",
+      "bukhar"
     ],
     "last_visit_date": "2026-08-18"
   },

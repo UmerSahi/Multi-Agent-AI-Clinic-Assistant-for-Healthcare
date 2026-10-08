@@ -132,18 +132,32 @@ class MemoryManager:
         """
         Looks up patient by patient_id, phone, MRN, or patient name.
         """
+        if not identifier:
+            return None
         clean_id = identifier.strip().lower()
         # Direct key match
         if clean_id in self._memory_cache:
             return self._memory_cache[clean_id]
 
+        import re
+        digits_id = re.sub(r"\D", "", clean_id)
+
         # Attribute search
         for mem in self._memory_cache.values():
-            if mem.get("phone", "").lower() == clean_id or clean_id in mem.get("phone", ""):
+            if mem.get("patient_id", "").lower() == clean_id:
                 return mem
             if mem.get("mrn", "").lower() == clean_id:
                 return mem
             if clean_id in mem.get("patient_name", "").lower():
+                return mem
+            
+            # Match phone number (e.g. comparing last 9-10 digits)
+            mem_phone = mem.get("phone", "")
+            mem_digits = re.sub(r"\D", "", mem_phone)
+            if digits_id and mem_digits:
+                if len(digits_id) >= 7 and (digits_id in mem_digits or mem_digits.endswith(digits_id[-9:])):
+                    return mem
+            if clean_id in mem_phone.lower():
                 return mem
 
         return None

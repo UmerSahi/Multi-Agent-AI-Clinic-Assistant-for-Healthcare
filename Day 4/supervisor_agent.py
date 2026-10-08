@@ -62,18 +62,41 @@ class SupervisorAgent:
             m = messages[-1]
             last_msg = (m.get("content", "") if isinstance(m, dict) else getattr(m, "content", "")).lower()
 
-        # 1. Returning patient greeting check
-        if state.get("is_returning_patient") and not state.get("intake_form", {}).get("chief_complaint") and not messages:
-            return "returning_greeting"
+        # Emergency check
+        emergency_keywords = [
+            "chest pain", "seene mein", "seenay mein", "seena dard", "heart attack",
+            "saans ruk", "saans band", "saans lene mein shadeed", "behosh", "unconscious"
+        ]
+        if any(ek in last_msg for ek in emergency_keywords):
+            return "emergency_escalation"
 
-        # 2. Check if Human-in-the-Loop review is active (either pending review or applying decision)
+        # 1. Check if Human-in-the-Loop review is active
         if state.get("hitl_required"):
             return "hitl_gate"
 
-        # 3. Direct booking / scheduling intent (if already triaged or routine appointment requested)
-        booking_keywords = ["appointment", "booking", "tarikh", "slot", "doctor time", "milna hai", "cancel", "reschedule"]
-        if any(kw in last_msg for kw in booking_keywords) and state.get("triage_result"):
+        # 2. Direct booking / scheduling intent (runs first if patient explicitly asks for booking/appointment)
+        booking_keywords = ["appointment", "booking", "tarikh", "slot", "doctor time", "milna hai", "book kar", "cancel", "reschedule"]
+        if any(kw in last_msg for kw in booking_keywords):
+            if not state.get("triage_result"):
+                pref_spec = state.get("long_term_memory", {}).get("preferred_specialty", "General Medicine")
+                state["triage_result"] = {
+                    "urgency_tier": "ROUTINE",
+                    "confidence_score": 1.0,
+                    "reason": "Routine outpatient follow-up / preferred doctor consultation",
+                    "recommended_specialty": pref_spec
+                }
             return "scheduling"
+
+        # 3. Returning patient greeting check:
+        # Trigger on patient's first message when no assistant reply has been emitted yet
+        assistant_msgs = [
+            m for m in messages
+            if (isinstance(m, dict) and m.get("role") == "assistant")
+            or (hasattr(m, "type") and m.type == "ai")
+        ]
+        has_complaint_in_msg = any(k in last_msg for k in ["bukhar", "fever", "dard", "pain", "khansi", "cough", "jalan", "vomit", "ulti", "seeti", "asthma"])
+        if state.get("is_returning_patient") and len(assistant_msgs) == 0 and not has_complaint_in_msg:
+            return "returning_greeting"
 
         # 4. Check if intake is incomplete
         intake_form = state.get("intake_form", {})

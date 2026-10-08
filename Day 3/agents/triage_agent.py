@@ -45,7 +45,7 @@ RED_FLAG_PATTERNS = [
     # 1. Cardiovascular / Chest Pain
     {
         "category": "Cardiovascular",
-        "regex": r"(seene mein|chest pain|chhati pe|pressure on chest|dard bayen baazu|left arm pain|heart attack|paseenay aa rahe)",
+        "regex": r"(seen[ea]y? mein|seena dard|chest pain|chhati pe|pressure on chest|dard bayen baazu|left arm pain|heart attack|paseen[ea]y?)",
         "reason": "Acute chest pain/pressure with potential myocardial ischemia or acute coronary syndrome."
     },
     # 2. Respiratory Distress
