@@ -34,7 +34,7 @@ from memory_manager import memory_manager
 from hitl_manager import hitl_manager
 from observability import observability
 from email_notifier import email_notifier
-from clinical_summary_agent import clinical_summary_agent
+from clinical_summary_agent import clinical_summary_agent  # type: ignore
 
 app = FastAPI(
     title="City Care Clinics Multi-Agent Healthcare API",
