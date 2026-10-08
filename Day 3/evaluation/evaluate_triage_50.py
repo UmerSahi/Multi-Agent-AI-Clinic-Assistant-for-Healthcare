@@ -5,15 +5,34 @@ Generates triage_evaluation_report.md.
 """
 
 import sys
-import json
+if hasattr(sys.stdout, 'reconfigure'):
+    sys.stdout.reconfigure(encoding='utf-8')
+if hasattr(sys.stderr, 'reconfigure'):
+    sys.stderr.reconfigure(encoding='utf-8')
+
+import time
 from pathlib import Path
+from dotenv import load_dotenv
 
-# Add paths
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-sys.path.append(str(Path(__file__).resolve().parent.parent / "agents"))
-from triage_agent import triage_agent
+# Ensure root directories and .env are always resolved correctly
+CURRENT_DIR = Path(__file__).resolve().parent
+DAY3_DIR = CURRENT_DIR.parent
+ROOT_DIR = DAY3_DIR.parent
 
-REPORT_FILE = Path(__file__).resolve().parent / "triage_evaluation_report.md"
+# Load environment variables explicitly from root
+load_dotenv(ROOT_DIR / ".env")
+
+# Configure sys.path for direct script and IDE execution
+for p in [str(DAY3_DIR), str(DAY3_DIR / "agents"), str(CURRENT_DIR), str(ROOT_DIR)]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+try:
+    from triage_agent import triage_agent
+except ImportError:
+    from agents.triage_agent import triage_agent
+
+REPORT_FILE = CURRENT_DIR / "triage_evaluation_report.md"
 
 # 50 Clinically Validated Scenarios
 SCENARIOS_50 = [
@@ -75,7 +94,9 @@ SCENARIOS_50 = [
 ]
 
 def run_benchmark():
+    print("=" * 70)
     print("=== Running 50-Scenario Triage Benchmark Suite ===")
+    print("=" * 70)
     total_cases = len(SCENARIOS_50)
     
     true_emergencies = [s for s in SCENARIOS_50 if s["expected"] == "EMERGENCY"]
@@ -89,7 +110,7 @@ def run_benchmark():
     exact_matches = 0
     results = []
 
-    for s in SCENARIOS_50:
+    for i, s in enumerate(SCENARIOS_50):
         res = triage_agent.evaluate({"chief_complaint": s["text"], "patient_age": s.get("age")})
         actual = res.urgency_tier
         expected = s["expected"]
@@ -107,6 +128,9 @@ def run_benchmark():
         elif actual == "EMERGENCY" and expected != "EMERGENCY":
             over_triage_to_emergency += 1
 
+        status_icon = "✅" if is_match else "⚠️"
+        print(f"[{i+1:02d}/{total_cases:02d}] Scenario {s['id']:02d}: Expected={expected:<9} | System={actual:<9} | Conf={res.confidence_score:.2f} {status_icon}")
+
         results.append({
             "id": s["id"],
             "text": s["text"],
@@ -117,18 +141,21 @@ def run_benchmark():
             "match": is_match
         })
 
-    # Calculations
-    emergency_recall = (detected_emergencies / len(true_emergencies)) * 100
-    under_triage_rate = (under_triage_emergencies / len(true_emergencies)) * 100
-    over_triage_rate = (over_triage_to_emergency / (len(true_urgents) + len(true_routines))) * 100
-    overall_accuracy = (exact_matches / total_cases) * 100
+    # Calculations with division-by-zero protection
+    emergency_recall = (detected_emergencies / len(true_emergencies) * 100) if true_emergencies else 100.0
+    under_triage_rate = (under_triage_emergencies / len(true_emergencies) * 100) if true_emergencies else 0.0
+    non_emergency_count = len(true_urgents) + len(true_routines)
+    over_triage_rate = (over_triage_to_emergency / non_emergency_count * 100) if non_emergency_count else 0.0
+    overall_accuracy = (exact_matches / total_cases * 100) if total_cases else 100.0
 
-    print(f"\nBenchmark Results:")
-    print(f"Total Scenarios: {total_cases}")
-    print(f"Overall Accuracy: {overall_accuracy:.1f}% ({exact_matches}/{total_cases})")
-    print(f"Emergency Recall: {emergency_recall:.1f}% ({detected_emergencies}/{len(true_emergencies)}) [TARGET: 100%]")
-    print(f"Under-Triage Rate: {under_triage_rate:.1f}% [TARGET: 0%]")
-    print(f"Over-Triage Rate: {over_triage_rate:.1f}%")
+    print("\n" + "=" * 70)
+    print("📊 Triage Benchmark Results Summary:")
+    print(f"Total Scenarios Evaluated: {total_cases}")
+    print(f"Overall Accuracy:          {overall_accuracy:.1f}% ({exact_matches}/{total_cases})")
+    print(f"Emergency Recall:          {emergency_recall:.1f}% ({detected_emergencies}/{len(true_emergencies)}) [TARGET: 100%]")
+    print(f"Under-Triage Rate:         {under_triage_rate:.1f}% [TARGET: 0%]")
+    print(f"Over-Triage Rate:          {over_triage_rate:.1f}%")
+    print("=" * 70)
 
     # Generate Markdown Report
     report_md = f"""# 50-Scenario Clinical Triage Benchmark Report

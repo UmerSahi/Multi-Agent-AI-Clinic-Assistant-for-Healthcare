@@ -17,24 +17,62 @@ if hasattr(sys.stdout, 'reconfigure'):
 if hasattr(sys.stderr, 'reconfigure'):
     sys.stderr.reconfigure(encoding='utf-8')
 
-import os
-import json
+import subprocess
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from dotenv import load_dotenv
 
-# Add directories to path
-sys.path.append(str(Path(__file__).resolve().parent))
-sys.path.append(str(Path(__file__).resolve().parent / "agents"))
-sys.path.append(str(Path(__file__).resolve().parent.parent / "Day 2"))
+# Ensure root directories and .env are always resolved correctly
+CURRENT_DIR = Path(__file__).resolve().parent
+ROOT_DIR = CURRENT_DIR.parent
+DAY2_DIR = ROOT_DIR / "Day 2"
+DAY3_AGENTS_DIR = CURRENT_DIR / "agents"
 
-from intake_agent import intake_agent, IntakeForm
-from triage_agent import triage_agent
-from scheduling_agent import scheduling_agent
-from records_agent import records_agent
-from clinical_summary_agent import clinical_summary_agent
-from prescription_safety_agent import prescription_safety_agent
-from followup_agent import followup_agent
+# Load environment variables explicitly from root
+load_dotenv(ROOT_DIR / ".env")
+
+# Configure sys.path for direct script and IDE execution
+for p in [str(CURRENT_DIR), str(DAY3_AGENTS_DIR), str(DAY2_DIR), str(ROOT_DIR)]:
+    if p not in sys.path:
+        sys.path.insert(0, p)
+
+try:
+    from intake_agent import intake_agent
+    from triage_agent import triage_agent
+    from scheduling_agent import scheduling_agent
+    from records_agent import records_agent
+    from clinical_summary_agent import clinical_summary_agent
+    from prescription_safety_agent import prescription_safety_agent
+    from followup_agent import followup_agent
+except ImportError:
+    from agents.intake_agent import intake_agent
+    from agents.triage_agent import triage_agent
+    from agents.scheduling_agent import scheduling_agent
+    from agents.records_agent import records_agent
+    from agents.clinical_summary_agent import clinical_summary_agent
+    from agents.prescription_safety_agent import prescription_safety_agent
+    from agents.followup_agent import followup_agent
+
 import db_client
+
+
+def ensure_database_ready():
+    """Verifies that the synthetic clinic database is populated; auto-seeds if empty."""
+    try:
+        with db_client.db.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("SELECT count(*) FROM practitioners")
+            count = cur.fetchone()[0]
+            if count > 0:
+                return
+    except Exception:
+        pass
+
+    print("[Setup] Seeding local clinic database for testing...")
+    seed_script = DAY2_DIR / "seed_database.py"
+    if seed_script.exists():
+        subprocess.run([sys.executable, str(seed_script)], check=True)
+
 
 def test_1_intake_agent():
     print("\n--- [Test 1] Intake Agent ---")
@@ -62,11 +100,13 @@ def test_1_intake_agent():
         turn5 = intake_agent.process_turn("Koi aur beemari nahi hai, sab bata diya hai.", final_form)
         final_form = turn5["form"]
 
-    assert final_form["chief_complaint"] is not None, "Chief complaint must be extracted"
-    assert "bukhar" in final_form["chief_complaint"].lower() or "fever" in final_form["chief_complaint"].lower() or "gala" in final_form["chief_complaint"].lower()
+    assert final_form.get("chief_complaint") is not None, "Chief complaint must be extracted"
+    extracted_text = final_form["chief_complaint"].lower()
+    assert any(term in extracted_text for term in ["bukhar", "fever", "gala", "throat"]), "Should capture chief complaint"
     print(f"Extracted Form: Complaint='{final_form['chief_complaint']}', Severity={final_form.get('severity')}, Allergies={final_form.get('allergies')}")
     print("✅ Intake Agent: Passed!")
     return final_form
+
 
 def test_2_triage_agent():
     print("\n--- [Test 2] Triage Agent ---")
@@ -102,6 +142,7 @@ def test_2_triage_agent():
     assert rout_res.urgency_tier == "ROUTINE", "Acne should triage as ROUTINE"
     
     print("✅ Triage Agent: Passed!")
+
 
 def test_3_scheduling_agent():
     print("\n--- [Test 3] Scheduling Agent ---")
@@ -141,7 +182,7 @@ def test_3_scheduling_agent():
         reason="Fever and throat pain consultation"
     )
     print(f"Booking Status: Success={booking.get('success')}, Appt ID: {booking.get('appointment_id')}")
-    assert booking["success"] is True, "Booking must succeed"
+    assert booking.get("success") is True, f"Booking must succeed: {booking.get('error')}"
     assert "google_calendar_url" in booking, "Must include Google Calendar URL"
     
     # 5. Anti-Double Booking Test
@@ -153,7 +194,7 @@ def test_3_scheduling_agent():
         reason="Checkup attempt on same slot"
     )
     print(f"Double-Booking Prevention Check: Success={double_booking.get('success')} (Error: {double_booking.get('error')})")
-    assert double_booking["success"] is False, "Must prevent double booking on the same slot"
+    assert double_booking.get("success") is False, "Must prevent double booking on the same slot"
     
     # 6. Anti-Past-Booking Test
     past_slot = (datetime.now(timezone.utc) - timedelta(days=2)).isoformat()
@@ -165,7 +206,7 @@ def test_3_scheduling_agent():
         reason="Past date checkup"
     )
     print(f"Past-Booking Prevention Check: Success={past_booking.get('success')}")
-    assert past_booking["success"] is False, "Must reject booking in the past"
+    assert past_booking.get("success") is False, "Must reject booking in the past"
     
     # 7. Cancellation
     cancel_res = scheduling_agent.cancel_appointment(
@@ -173,9 +214,10 @@ def test_3_scheduling_agent():
         reason="Patient has travel emergency"
     )
     print(f"Cancellation Check: Success={cancel_res.get('success')}")
-    assert cancel_res["success"] is True, "Cancellation must succeed"
+    assert cancel_res.get("success") is True, "Cancellation must succeed"
     
     print("✅ Scheduling Agent: Passed!")
+
 
 def test_4_records_and_summary_agents():
     print("\n--- [Test 4] Records & Clinical Summary Agents ---")
@@ -184,8 +226,9 @@ def test_4_records_and_summary_agents():
     with db_client.db.get_connection() as conn:
         cur = conn.cursor()
         cur.execute("SELECT * FROM patients LIMIT 1")
-        sample_pt = dict(cur.fetchone())
-    assert sample_pt is not None, "Synthetic database must have patients"
+        row = cur.fetchone()
+    assert row is not None, "Synthetic database must have patients"
+    sample_pt = dict(row)
     pt_id = sample_pt["id"]
     pt_mrn = sample_pt["mrn"]
     pt_name = sample_pt["full_name"]
@@ -196,8 +239,8 @@ def test_4_records_and_summary_agents():
         query="Meri pichli reports aur dawaiyon ki maloomat batayein."
     )
     print(f"Records Agent Response (Excerpt): {rec_ans['answer'][:200]}...")
-    assert len(rec_ans["answer"]) > 50, "Should return informative UrduLish response"
-    assert rec_ans["success"] is True, "Patient record should be found"
+    assert len(rec_ans.get("answer", "")) > 50, "Should return informative UrduLish response"
+    assert rec_ans.get("success") is True, "Patient record should be found"
     
     # 2. Clinical Summary Agent (Pre-visit SOAP note)
     intake_data = {
@@ -221,6 +264,7 @@ def test_4_records_and_summary_agents():
     assert "DISCLAIMER" in soap.formatted_markdown
     print("✅ Records & Clinical Summary Agents: Passed!")
     return soap
+
 
 def test_5_prescription_safety_and_followup():
     print("\n--- [Test 5] Prescription Safety & Follow-up Agents ---")
@@ -266,11 +310,13 @@ def test_5_prescription_safety_and_followup():
     
     print("✅ Prescription Safety & Follow-up Agents: Passed!")
 
+
 def main():
     print("=" * 70)
     print("🏥 CITY CARE CLINICS — DAY 3 SPECIALIST AGENTS END-TO-END SUITE")
     print("=" * 70)
     
+    ensure_database_ready()
     test_1_intake_agent()
     test_2_triage_agent()
     test_3_scheduling_agent()
@@ -280,6 +326,7 @@ def main():
     print("\n" + "=" * 70)
     print("🎉 ALL DAY 3 SPECIALIST AGENT VERIFICATION TESTS PASSED SUCCESSFULLY!")
     print("=" * 70)
+
 
 if __name__ == "__main__":
     main()

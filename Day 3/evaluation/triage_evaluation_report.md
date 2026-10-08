@@ -52,21 +52,21 @@
 | 31 | Known asthmatic having moderate wheezing partially responding to ... | URGENT | URGENT | 0.90 | ✅ Match |
 | 32 | Eye trauma from dust scratch with redness, photophobia and wateri... | URGENT | URGENT | 0.90 | ✅ Match |
 | 33 | Shadeed gale mein soojan jis ki waja se thook nigalna mushkil ho ... | URGENT | URGENT | 0.95 | ✅ Match |
-| 34 | Uncontrolled persistent vomiting in early pregnancy (hyperemesis)... | URGENT | URGENT | 0.90 | ✅ Match |
+| 34 | Uncontrolled persistent vomiting in early pregnancy (hyperemesis)... | URGENT | URGENT | 0.95 | ✅ Match |
 | 35 | High fever 102 F in a diabetic with foot blister swelling... | URGENT | URGENT | 0.95 | ✅ Match |
 | 36 | Halka bukhar aur khansi 4 din se hai, saans bilkul theek hai... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
-| 37 | Dry tickly cough for 2 weeks after a mild common cold... | ROUTINE | ROUTINE | 0.75 | ✅ Match |
-| 38 | Chehre par keel, daanay aur blackheads pichle 3 mahine se... | ROUTINE | ROUTINE | 0.99 | ✅ Match |
-| 39 | Routine follow-up for stable Type 2 Diabetes blood sugar review... | ROUTINE | ROUTINE | 0.99 | ✅ Match |
+| 37 | Dry tickly cough for 2 weeks after a mild common cold... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
+| 38 | Chehre par keel, daanay aur blackheads pichle 3 mahine se... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
+| 39 | Routine follow-up for stable Type 2 Diabetes blood sugar review... | ROUTINE | ROUTINE | 1.00 | ✅ Match |
 | 40 | Kamar mein halka dard rehta hai daftar mein zyada baithne se... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
-| 41 | Chronic mild dandruff and itchy scalp on and off for 6 months... | ROUTINE | ROUTINE | 0.98 | ✅ Match |
-| 42 | Routine prenatal 2nd trimester ultrasound and checkup booking... | ROUTINE | ROUTINE | 0.99 | ✅ Match |
+| 41 | Chronic mild dandruff and itchy scalp on and off for 6 months... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
+| 42 | Routine prenatal 2nd trimester ultrasound and checkup booking... | ROUTINE | ROUTINE | 1.00 | ✅ Match |
 | 43 | Ear wax blockage causing slightly reduced hearing in right ear... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
 | 44 | Gradual hair thinning and loss at the crown over past year... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
 | 45 | Fasting blood sugar 125 mg/dL, wants doctor advice on diet... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
 | 46 | Mild seasonal allergic sneezing in spring mornings... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
 | 47 | Routine child growth milestone checkup and vaccination counseling... | ROUTINE | ROUTINE | 1.00 | ✅ Match |
-| 48 | Fungal ringworm rash on arm for past 2 weeks... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
+| 48 | Fungal ringworm rash on arm for past 2 weeks... | ROUTINE | ROUTINE | 0.98 | ✅ Match |
 | 49 | Fatigue and generalized mild weakness after long work hours... | ROUTINE | ROUTINE | 0.95 | ✅ Match |
 | 50 | Refill prescription inquiry for ongoing cholesterol medicine... | ROUTINE | ROUTINE | 1.00 | ✅ Match |
 
