@@ -1,9 +1,9 @@
 [
   {
-    "id": "46bc934d-e018-4acd-b199-2b26c900f8c5",
-    "patient_id": "cbe26d94-af41-40c5-8080-e4e06d3a133d",
-    "encounter_id": "08e5c0a2-429b-4636-8f97-fdbbd72d94e3",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "3864eb3c-9f9d-4fb5-8322-8ab13d0e0e67",
+    "patient_id": "d30a2be6-44a6-45e4-a1c6-7edfbf5a7073",
+    "encounter_id": "49fbc822-3fbb-426a-9918-c244d163f7ca",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -14,10 +14,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "de1add32-d4e8-4175-bd3d-6732adc24864",
-    "patient_id": "ad0be5d2-cf66-4acf-9a7f-81bea8124507",
-    "encounter_id": "1e09c707-89ec-44b7-8621-2001a0eaf021",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "322b1d02-0c6e-4943-858f-2b950d9c22e0",
+    "patient_id": "ec7a9450-207f-4518-a485-3b8b83b49c40",
+    "encounter_id": "e27c428d-1c46-4562-9460-444cbb7a3f19",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -28,10 +28,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ab708731-21d3-4b36-b1c2-55bd7a58acaa",
-    "patient_id": "9c212615-75f3-4ba1-b241-982b9a17908e",
-    "encounter_id": "94842e82-0ea3-4001-9442-3e0d320ae25d",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "75fd5ad1-a9b3-48ee-bcd5-d87874d32f77",
+    "patient_id": "d313c4b7-2a17-432c-a539-91f5f18b354f",
+    "encounter_id": "1288ac7d-5988-4015-a0e1-298f1601834f",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -42,10 +42,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "05963f13-45cc-4985-9c41-0b9bb3753a2f",
-    "patient_id": "3312747b-6cfa-4617-8b69-dfb8fc58dd64",
-    "encounter_id": "989834fb-c987-40fa-8feb-5a09d3e3717b",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "219121ea-2a95-47e8-b843-ba0683c5b024",
+    "patient_id": "d6c8df02-b5a4-4d80-bd3a-59c1bb85f7f9",
+    "encounter_id": "0f877f47-6662-4943-84c9-c14063179f71",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -56,10 +56,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c0a1c489-8eee-4049-93c4-4a64bcb1e679",
-    "patient_id": "651db015-5a69-4d09-b6b4-c386ee863cc5",
-    "encounter_id": "1c132061-19b8-4a9e-8516-417f9b382859",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "1c622154-7483-45a8-b7c5-73da97846da4",
+    "patient_id": "dd274686-d784-4db0-bcaa-c2eee6da9908",
+    "encounter_id": "9d73fee5-fdf4-443c-8dd7-d9a8634635d8",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -70,10 +70,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d4d99f71-25a2-4b14-a3a5-07788645a151",
-    "patient_id": "a8d06e5f-1fe7-47eb-a6bd-17f2b9223812",
-    "encounter_id": "edb23d3e-1717-48e8-8338-a6f420067607",
-    "practitioner_id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "id": "440b332a-c5e5-4e84-a172-5e08abb48235",
+    "patient_id": "d352209e-663d-41bd-a785-6fb3a8fbd998",
+    "encounter_id": "f10a592e-df2c-42ae-b230-d253df414a59",
+    "practitioner_id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -84,10 +84,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "06f992ca-6ea8-4047-a639-33fcb825de2f",
-    "patient_id": "1f36b4a7-3162-4587-899d-893b432bbbff",
-    "encounter_id": "fee2893e-b392-43db-b6c4-d62a8d1de170",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "72368dc0-3c96-4ee3-9228-5e601b5c963d",
+    "patient_id": "4d8ee2aa-37fe-4394-bc5f-f31fe8a003ae",
+    "encounter_id": "63f21f1f-631b-407e-a548-efb6842e56df",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -98,10 +98,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "4db36c35-0473-40d5-8543-9dbfe07a57bf",
-    "patient_id": "9d804467-b51b-4e74-bfae-eda047144cd2",
-    "encounter_id": "796c2811-021d-403e-b417-808fbc3ff45b",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "32f3e96f-1432-4c44-877e-0913fec333d8",
+    "patient_id": "98b0f73c-a4c4-4a1a-91e9-c71acab21eb0",
+    "encounter_id": "27092ab4-665b-449f-ac32-bcd74f540be0",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -112,10 +112,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6ebec634-8f67-437b-a6d8-0f275156000a",
-    "patient_id": "7914dc93-1255-4601-ba53-a3bb8167a5fe",
-    "encounter_id": "9f670296-0324-4df3-9334-5a68b21aeaca",
-    "practitioner_id": "8eadf2a8-6831-4384-aae2-4004e3802494",
+    "id": "ed0df97e-a28a-4f80-b7fe-3aee6dbfe80c",
+    "patient_id": "d153c75e-6d08-4f91-b455-d9b2b0994c2f",
+    "encounter_id": "5034f51b-4601-43ff-b94a-e740daaeecec",
+    "practitioner_id": "1b5109f5-1432-4cd5-bac2-c4ed4001ed16",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -126,10 +126,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "997382ad-bb76-4556-9544-3a9ef9cf2aa8",
-    "patient_id": "124fcc22-d54d-43a0-9093-80305235e0d8",
-    "encounter_id": "0d6c6987-acd8-4987-bcfe-fdc9cabb40ae",
-    "practitioner_id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "id": "d1a1afc6-6fe2-4207-a84d-1e6cd634dcc0",
+    "patient_id": "0d2d8e98-d454-4f1c-afc6-d509f2a33e0a",
+    "encounter_id": "52ae94b7-2e46-44f1-bab3-8fcde7c0f9e0",
+    "practitioner_id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -140,10 +140,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f8aee748-f75e-4d6d-abb1-9e34f5d09a43",
-    "patient_id": "17b08d5d-e411-40cb-80c0-9a831d794282",
-    "encounter_id": "0f21b9c0-a7ce-483b-b270-7fdb0380b47c",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "bc214666-f563-4e17-9373-8920a7785acd",
+    "patient_id": "ed8c6a8a-fe5c-422d-8ad7-934cff5542c6",
+    "encounter_id": "92b582ee-1f70-473c-9d96-6fb0a586d0d7",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -154,10 +154,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "41c8911f-a566-4b29-8a79-a5756342279d",
-    "patient_id": "86f2b651-f0be-4dee-a9a3-3f323b0a92a0",
-    "encounter_id": "e1633851-3915-4a64-b6ef-8cabc969788e",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "c9101019-9bfa-4a0c-9773-c071513db99d",
+    "patient_id": "0032380f-8cc8-49b6-8cf1-53ade02e0987",
+    "encounter_id": "22ac2696-fce7-4e38-89d9-add3b12d0487",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -168,10 +168,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f36b86d0-6cd7-49f6-893f-a0c44e259602",
-    "patient_id": "84bf5f3d-83bd-4cc0-b49c-a9c75048a05d",
-    "encounter_id": "d833ae39-8daa-4982-86c9-a519a8dec77d",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "6c084ed3-fd17-4481-9a6b-3ecb5d122d11",
+    "patient_id": "b85919d2-4ce4-4797-b333-cb84667ffb24",
+    "encounter_id": "4399cdf4-b16c-4e48-83d6-c5886c8f51bf",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -182,10 +182,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3b92b5c7-e426-49b7-a297-031297725637",
-    "patient_id": "24beda3e-d48a-476e-be27-f9386383f278",
-    "encounter_id": "689888d6-d0ed-472e-ae89-a49f1d0bc667",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "40c15ad7-7483-4906-8aab-8ff4c13f43f4",
+    "patient_id": "c54818e5-a409-4add-bed8-ac11008c3868",
+    "encounter_id": "41b4c103-6afd-4561-915a-b42de25408f7",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -196,10 +196,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2d9c0837-f5bb-44e1-a8f9-bb2e67d5f76f",
-    "patient_id": "1c97b8c4-c250-4c34-9e38-5e6c5e463618",
-    "encounter_id": "2a2e8445-fdc6-4762-b4a5-481c50cd9294",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "e65c0447-8c87-4c12-b3b1-03c8054ad8f4",
+    "patient_id": "0f88fd4b-186b-46cb-91cb-5823e9c8adc3",
+    "encounter_id": "507c6f35-b016-49b6-927d-365ac2317638",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -210,10 +210,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "490d3a4d-be5e-4561-be2b-5d4f0e627084",
-    "patient_id": "f47a60eb-d3c4-4850-8b14-88e50987bbe9",
-    "encounter_id": "839d058b-df2b-404d-94c6-ae8d67f90cbb",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "ad9ced9c-c9bd-461e-8451-30cd09fe944f",
+    "patient_id": "0261dafb-7eb6-4202-9969-490f5883827a",
+    "encounter_id": "c7c4ef58-3f08-4f88-ba16-1dce266596bd",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -224,10 +224,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c8b7673c-1df7-43f7-988f-02633256a199",
-    "patient_id": "175af197-5125-4b67-bab6-a5786f589ee6",
-    "encounter_id": "95040718-a47f-4cce-889f-9d0ebe70edc1",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "f424b8a8-a90e-4745-be6c-0373ec665122",
+    "patient_id": "6579da4e-6557-4f51-be10-638bf48fb2f0",
+    "encounter_id": "7a8f54e7-8187-430c-b7a2-2733e5d999f4",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -238,10 +238,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "01b4ee5e-b0b5-4804-a735-66ae5dec5f2d",
-    "patient_id": "3c321c0d-5eaf-4873-9c41-e49af5434422",
-    "encounter_id": "de97f24a-16e0-4e88-b830-119ea2ba07f3",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "b52e77a4-dda8-410f-b6c6-b8a99e9bdacd",
+    "patient_id": "2064b6e8-e1a8-4699-9afe-4e58bebe1dfb",
+    "encounter_id": "e392417d-5f76-41a5-8335-2cca9b9f8232",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -252,10 +252,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d818a511-57b7-4897-803d-7d12ad38ebe7",
-    "patient_id": "3052a226-77f8-4eeb-a838-0dc10b7b6855",
-    "encounter_id": "dc2e4ecc-b5b4-45bb-8f24-ba7f2d474003",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "61f3f90c-27c4-43cb-8d1d-0c8298a3119a",
+    "patient_id": "f65f4bce-6da9-4a22-a2c5-d23af121cbbf",
+    "encounter_id": "cda59021-6598-44aa-b8a4-c20eaa33ca47",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -266,10 +266,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f8d8bb4c-1b6b-4e5c-8487-75acb498c1cd",
-    "patient_id": "25abd447-31a6-4d0d-938e-e9b78fc49a5b",
-    "encounter_id": "4d8bf0c7-bdeb-4167-bb65-eff106d47542",
-    "practitioner_id": "2a39b104-560a-44a0-9347-6c121bae9096",
+    "id": "1c9e886f-7596-4613-8c33-b68a34f7f029",
+    "patient_id": "2427e645-a8fe-4785-bc94-af302e9c6501",
+    "encounter_id": "fd91c245-f33b-4dd8-9e0b-082d19c4cc90",
+    "practitioner_id": "2128563b-5e81-4c3d-b5e2-ce0f9461a546",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -280,10 +280,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3cb4b862-7651-4dff-bbd2-ecf2bb020d23",
-    "patient_id": "3b7d67b4-ab18-4b97-9e3e-77f62de6d28f",
-    "encounter_id": "37216c54-b8e5-4d94-9119-1f0110556301",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "c646f118-3353-4637-bc54-fc3924eb15d4",
+    "patient_id": "cdfc39a1-e413-4b2e-99c4-359fc2d7e4a6",
+    "encounter_id": "4ad46309-6094-4fb4-95ce-8e9c35ab7776",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -294,10 +294,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "7a25fdfb-09c0-4606-8c53-09335c7b9d7b",
-    "patient_id": "c01edf2c-8e69-4f62-abc6-bf1a2c731898",
-    "encounter_id": "2f455b8d-13c5-4d9e-8899-976a8512082c",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "5ccdc5aa-9f2c-4b18-8d41-d0975157e99c",
+    "patient_id": "50f0d6f5-7103-40cd-8546-a718c842c37b",
+    "encounter_id": "2c2a484c-d7c7-41df-ba38-076d0a7af632",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -308,10 +308,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "97b8f04f-c234-4f4c-88d0-9d30db584c8b",
-    "patient_id": "810843bf-155e-4cfd-80df-52831b9eb956",
-    "encounter_id": "a01abb39-0451-4b50-8313-89e093e8f7c2",
-    "practitioner_id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "id": "79277415-f179-4d40-9086-8e78504adb74",
+    "patient_id": "9edaeb9c-938e-4bd5-997e-77c8d739eab0",
+    "encounter_id": "23529d65-edec-4435-9ad0-caf6c26f112f",
+    "practitioner_id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -322,10 +322,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e3dd8ad9-2643-4a63-9d1f-9efc6237f992",
-    "patient_id": "f1c5f1bb-b743-48d7-9cef-89738df51744",
-    "encounter_id": "884d480c-021f-4686-ba91-0168c558f875",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "38978b80-2d2c-42ca-80ce-15e8fadea8d4",
+    "patient_id": "3295f40d-059e-45d1-9986-6f5e88fa4354",
+    "encounter_id": "5f0a3df2-51e2-4cc3-af28-719e890627a1",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -336,10 +336,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "81d46eb9-f7bf-4cc5-9cb7-3bb5f53bac79",
-    "patient_id": "d54cc624-dc79-45e6-a582-e9b3502ee373",
-    "encounter_id": "561c0064-1c25-4d54-b1a0-863eb6cb6615",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "e95001a1-196d-4077-8412-9af4dde28c1d",
+    "patient_id": "485c5112-e427-4098-93c8-8f8d5a1ef3ae",
+    "encounter_id": "0b8c9a0f-6f4c-42d3-9652-506ad496a808",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -350,10 +350,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "86c47278-f5a3-4012-846a-5d9beb96deac",
-    "patient_id": "22c3285d-ead7-4817-ab70-3b6bb646a3fd",
-    "encounter_id": "4bb4a842-0cf6-4fd8-902a-4eac8247cdd9",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "ec480819-5518-4e34-bb0e-6ef0012079fc",
+    "patient_id": "3251700b-7eb7-4d45-8489-2fe6549815b9",
+    "encounter_id": "2d702135-d92e-4ac6-9a58-e6b45e4c0af6",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -364,10 +364,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "4381ebf8-0f25-4df0-8e1b-0ae1078006f1",
-    "patient_id": "4cb26f22-9987-4333-910d-fe931291a559",
-    "encounter_id": "856eeeb2-f08b-4f11-ab1b-56bb84670b87",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "28e5fc73-013e-4207-baad-7b376400d397",
+    "patient_id": "7c4ccb86-d6d2-4d0f-bf39-64145100857f",
+    "encounter_id": "c3545ddc-66a7-4795-9c4e-8c5a2bb132c0",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -378,10 +378,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "49b4fce2-9d70-4e07-9395-f403bd7c1e03",
-    "patient_id": "0ebf66e3-5ec0-4247-a245-80364df1ef44",
-    "encounter_id": "4f524dc9-24a9-4285-a91a-513acaf41e41",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "24a1b876-fcf3-4787-ac05-a56bdf2d3dd6",
+    "patient_id": "eccb09dd-04b3-474d-a990-70ff1fdf7d0e",
+    "encounter_id": "7eac861d-0115-4fb8-9e6a-97c9d7abb45c",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -392,10 +392,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5f85b854-d6e0-4519-8482-05c2ccee8db8",
-    "patient_id": "cca69fad-dedd-4a23-a0ff-a539a5821db8",
-    "encounter_id": "b67ff065-d198-4995-9851-488f56f78aff",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "58d20350-fb83-4174-a7f1-1127080b81f0",
+    "patient_id": "bcf93582-e54d-45f6-beb3-c968033ade9f",
+    "encounter_id": "42d3bd55-9cec-4b5e-a19b-fa754295f571",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -406,10 +406,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ef87a07b-69ea-4bd9-979b-1c5e872908e9",
-    "patient_id": "bc980424-7d22-428b-abcf-77914f8db0e9",
-    "encounter_id": "3b6e3b9e-dd43-40dc-9b86-5eebe78bcd18",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "29d45825-71b9-4e11-aee4-35cd561db802",
+    "patient_id": "0f5fb824-ef6e-4c34-b0ac-842a74e4850d",
+    "encounter_id": "1f264d8a-fc04-4a5c-b483-42bba895543c",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -420,10 +420,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a245de85-82ac-4402-a857-b81c2a354d7c",
-    "patient_id": "3908bcce-2e8a-4213-80b0-51fccd41cac8",
-    "encounter_id": "f89c0615-ad49-4fd0-92ea-2e7ea0a6ee24",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "35aa16a1-a988-46ac-bc6c-edce9a179736",
+    "patient_id": "c96de071-4809-4c32-8dfe-04cea7363a8e",
+    "encounter_id": "034c3062-0357-4072-a200-cd20e29e28c2",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -434,10 +434,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "dd6c9475-98f0-4c78-9f79-f3eea54e217f",
-    "patient_id": "8932f35a-9f40-4d4a-8fdc-19eb32eb36f0",
-    "encounter_id": "ddf255ad-7086-4a25-9eeb-f9c846fc16c1",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "6e313f2a-f3f1-4cfb-98aa-194718bb536b",
+    "patient_id": "6800ec7b-e73f-41e4-960c-1d7fae512d83",
+    "encounter_id": "6c80a637-2951-4c82-8252-faca74ea8774",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -448,10 +448,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a64215a0-5bae-48d8-b7c4-15162988ed4c",
-    "patient_id": "a87f5b56-185c-4f5c-bfe8-0ec648845c9b",
-    "encounter_id": "65b5ec71-aca0-49cd-97e9-586f5cafe783",
-    "practitioner_id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "id": "cd6232cc-4ea9-44a3-8ace-dec6215b83b3",
+    "patient_id": "a3ccad29-5024-486d-82c8-79b7b7fb41b0",
+    "encounter_id": "b58e8986-42e9-4c7e-8068-fd9ff70dfc68",
+    "practitioner_id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -462,10 +462,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "9e848d61-72e9-4cb3-8971-4f538ae3b7b4",
-    "patient_id": "b51293be-52f5-426e-b0dc-4c3cea0259de",
-    "encounter_id": "353b04c4-c699-49b6-8e0e-765eb38fe0fb",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "9ba364c5-fe2c-4caa-a84e-eaeca7bed1ef",
+    "patient_id": "1b606b9f-65bb-427b-80cc-d848eae57418",
+    "encounter_id": "ba757090-6e4a-4cdc-aca8-a6f0d4ed6338",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -476,10 +476,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ecec5499-47c5-402e-9584-89bf4c2566e4",
-    "patient_id": "81709c96-dd66-4e19-ba2e-c6329f87ca80",
-    "encounter_id": "aab9ce1a-9291-481b-abb8-dfee2d68ddb2",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "5d1830f2-3417-44d3-8382-b5e51163d3c0",
+    "patient_id": "a778a7e1-9e46-4c4d-9a24-14f193542cc7",
+    "encounter_id": "190a832b-b2b3-444e-99b3-80854a7721f7",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -490,10 +490,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d4327d10-000e-4042-b4b3-836b93e09355",
-    "patient_id": "972dcfaf-6667-42f3-9ccd-43dad5ded3a4",
-    "encounter_id": "5dde8bb0-8325-4282-b8fa-21163aeb6ff4",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "8e15c146-987e-4c3d-b97a-0fd1e5fa8bfa",
+    "patient_id": "3582739f-d86e-46db-903c-a8a40393721d",
+    "encounter_id": "78bf56bf-ea34-488b-9777-7aba9970b327",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -504,10 +504,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "fa4ffb20-2fb9-41f2-91a8-682674b45751",
-    "patient_id": "6d2f9631-c76d-4d5c-8e1d-a068fa82e230",
-    "encounter_id": "63e33e6e-540e-4c36-8c2c-f590816a7dd4",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "de23a78e-dc60-4447-bc33-7f17526a2c48",
+    "patient_id": "f8aec38f-1d5c-4d28-8bd4-839188a54630",
+    "encounter_id": "42b005e9-b90d-4e11-88aa-14e37584bf5f",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -518,10 +518,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "cd6864b6-ce5a-4680-a70d-d0c409f14bbe",
-    "patient_id": "5a34e3c1-0926-419e-9f38-c23f41a12117",
-    "encounter_id": "c6287405-b00a-4fd5-98d6-a1ca0ffcb88e",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "2407765d-fae9-4ea9-8a2a-f2204baaf93c",
+    "patient_id": "cd18a920-d77e-4370-a911-40632e3dbcb2",
+    "encounter_id": "e057ad61-dbee-416c-bdd2-557aa96e97cb",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -532,10 +532,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5b611862-0858-4227-9b62-8f88d90f015f",
-    "patient_id": "ef756719-eb7b-412c-8863-97ef594359fa",
-    "encounter_id": "6bcbb89a-3a2b-4fb9-af6d-42d4cb191608",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "38c68d7c-bb4f-4084-9f02-1e4df8a42d29",
+    "patient_id": "85126751-f508-4d5f-9701-449641e3c8f6",
+    "encounter_id": "eef65931-6085-4803-bb37-2aaa1b26c773",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -546,10 +546,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "42fb2353-b34e-426e-9b82-b0684b62f022",
-    "patient_id": "7b360809-e38a-46f6-bc44-480d187e3470",
-    "encounter_id": "863450f6-bfeb-4efc-a367-bb25cd15663f",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "0d3e9b17-0b8a-4141-a933-917499f392a8",
+    "patient_id": "783537fc-f090-4a10-bcb8-d1b35484da8d",
+    "encounter_id": "9417ac1d-8186-486a-ba60-abcc26c47ea8",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -560,10 +560,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1fb9ecfa-c51f-43bf-a266-f74a94243b9b",
-    "patient_id": "85e12363-c650-4e71-b7cf-d3ad5908a2dd",
-    "encounter_id": "57b9db6e-3b49-47fd-a0a4-35cd5ae098b5",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "3f022d07-40ca-4986-97ff-44cc23b5450e",
+    "patient_id": "c100f6f6-001a-4ebe-a7b1-a61d744c29ab",
+    "encounter_id": "fd261be2-b29d-4411-bc93-9ae4835c0840",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -574,10 +574,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "510b4021-9713-4662-885c-c3cfac9109b0",
-    "patient_id": "bbc4b574-7add-4f10-ba29-0d3d8a8677c6",
-    "encounter_id": "c5c81141-ae6d-40d2-842a-bd8d93224daf",
-    "practitioner_id": "6b8eb1e2-b1a6-4f3f-9a83-0359ff449251",
+    "id": "541b5eaf-fd53-4061-9bb0-96d771c84702",
+    "patient_id": "143101f0-1f17-4130-b6da-3c0896999d76",
+    "encounter_id": "74e833fe-0ad1-49bd-9e4e-f1b2a26a347c",
+    "practitioner_id": "5d3e697d-ba73-4835-92d1-8f235f89e2e0",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -588,10 +588,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5de09a86-0598-4769-beeb-93e2e35a4638",
-    "patient_id": "454edf76-45f3-48b8-9b2a-48a9dc4bfb3e",
-    "encounter_id": "211d059d-99e4-4389-bc8c-add99905e9a9",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "70480ade-70bd-425b-a89c-be5cc6bfd201",
+    "patient_id": "06a3560a-2ff5-44f9-b756-da3917ec071f",
+    "encounter_id": "1c07380a-dbbe-4ae0-a658-e24aaabb82d7",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -602,10 +602,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1affdcdd-1eaf-4116-82c0-777d5703b9bd",
-    "patient_id": "11c5425c-34b8-4571-981f-a89011321b67",
-    "encounter_id": "7a80a034-228c-467f-8bec-468d46c1ec2d",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "0bf665cc-dbd1-442d-84ad-7e0676dca850",
+    "patient_id": "7323d4b5-35a4-4531-b96a-c2d93c2ff1c4",
+    "encounter_id": "1416dc9d-c7ae-4719-bf66-31c6182e3329",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -616,10 +616,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "06718c2d-fc95-4843-8a21-2b3cd05a5897",
-    "patient_id": "32605006-b1d3-4ecc-a6ac-a5f9ed7b6cc5",
-    "encounter_id": "f0effdff-2e91-4185-a10f-5c026cd62c1c",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "81ec3fbc-a9db-4bf0-8f12-d26299007982",
+    "patient_id": "a9371267-eac4-4b57-8d32-822a3b2fda03",
+    "encounter_id": "fbe3ae28-4ed2-49e9-ac45-6e2d0e3037fd",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -630,10 +630,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "add0f751-1c48-4257-9829-617f839f1e40",
-    "patient_id": "a5543e4e-c8c7-4af5-9e5f-6f5d721b5e62",
-    "encounter_id": "9d84aa25-b848-451d-953e-2cf3214bbbea",
-    "practitioner_id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "id": "0b52e500-bfd8-4d3a-87b1-11eb548b632a",
+    "patient_id": "14fc02b6-4d60-49aa-8e83-f1c84dda7039",
+    "encounter_id": "be2ab301-6ee5-499d-aede-8727bb55f6a4",
+    "practitioner_id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -644,10 +644,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "64e3df1a-0c17-40d3-bfe2-ceb834ad5199",
-    "patient_id": "426c592a-a5de-4142-b5d6-240a9f78166d",
-    "encounter_id": "dd95ff71-efff-4920-a0bc-eba9733cab9b",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "fe471f8a-dbcc-4eaf-a3f0-d64efface3ab",
+    "patient_id": "1c519719-6829-41d7-8b0a-4e9e50f89af0",
+    "encounter_id": "b6c6f355-c2e6-4062-8870-b8254e6e963f",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -658,10 +658,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0bda5352-f524-498d-98e5-3701fa5c3d1b",
-    "patient_id": "87f95474-aa95-46e5-9224-7c78f8d12c69",
-    "encounter_id": "190aa1a8-af04-40d6-bc14-5539324d0881",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "e32a812d-39af-40bf-bf9b-7b4d92a41241",
+    "patient_id": "169d7951-bf80-4da2-8df5-7abcc8a907c4",
+    "encounter_id": "c09a0cd6-f720-4686-8af0-77f2012eb40c",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -672,10 +672,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "4882d5b6-2b99-4eb2-b3ba-fe8c4230ce0e",
-    "patient_id": "eb87eb87-0e84-4e4b-8d75-69ac67249293",
-    "encounter_id": "366aa103-c02c-4865-9082-2084e93744e6",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "5703e62b-6999-41dc-aa5e-5bfdac900540",
+    "patient_id": "0d2bbc9e-7986-4cf3-aa3c-13c8216db1ee",
+    "encounter_id": "a2d63fe0-9495-4dd7-bb4a-3aa841f11b9c",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -686,10 +686,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1a599c5b-1fc1-4eb3-97af-aebeb646ca44",
-    "patient_id": "3799ce49-7041-421e-8fcf-a8d8de667aa7",
-    "encounter_id": "194d019e-58c9-4d35-8787-8ae0bfc3bb30",
-    "practitioner_id": "8eadf2a8-6831-4384-aae2-4004e3802494",
+    "id": "abb429bb-d022-4cb2-9143-22eac76f3495",
+    "patient_id": "8bac4eec-aaac-405e-9024-9931eea336fa",
+    "encounter_id": "cc9aa971-b10c-4acd-9286-0d76159796af",
+    "practitioner_id": "1b5109f5-1432-4cd5-bac2-c4ed4001ed16",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -700,10 +700,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f36f5262-e839-44f0-b216-4189e74cb725",
-    "patient_id": "ef45ee74-b3a2-4776-8096-b11a2f6b17b0",
-    "encounter_id": "b43c2f6e-a29b-4ffb-a736-e6e8a21fbe07",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "9d6884d4-152e-450b-b950-46db71bcdeb3",
+    "patient_id": "ca4582a1-77c8-4a3a-ba2e-071252d85594",
+    "encounter_id": "87592521-8377-468f-899f-92d8045d00de",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -714,10 +714,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b6ba3b14-1bd7-44a3-965e-535988bb342d",
-    "patient_id": "98308fda-0ea3-4c32-bd4e-d18b92ffe1a2",
-    "encounter_id": "9cdde463-8e63-4037-9859-bafa47d3da28",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "d1134b5d-97bf-40ab-b423-977fca1da26c",
+    "patient_id": "3dfd5f91-0d49-4574-a557-13859a43eabf",
+    "encounter_id": "e0fb40f0-9c6c-42fb-9800-42a0f0939f52",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -728,10 +728,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e9be8353-87b3-46b2-bff6-7eee870b6f04",
-    "patient_id": "016d430b-989a-48dd-bb64-d7b72f08c1ea",
-    "encounter_id": "99dcdfad-a0e9-44c2-bfdf-f995abd75420",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "906570da-1216-45c4-bd81-21d64352081a",
+    "patient_id": "10806c56-5c91-4c3c-afa1-cd720efc7c0e",
+    "encounter_id": "fe21eef7-e9dc-4f37-88dc-9ce2925c8bd4",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -742,10 +742,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e7d88b73-c3ad-441f-97c2-d6520ac2f3cb",
-    "patient_id": "884d5f8a-37ab-41e9-b269-be940adbe644",
-    "encounter_id": "27517f97-6f1f-48a1-a93e-b7aa8688efbe",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "c0fe925b-1eaf-49c7-8d79-8c10150501e6",
+    "patient_id": "c06b5876-136d-464b-8898-c6165a5afec8",
+    "encounter_id": "fdee3a39-c287-4a08-89a5-98fa07077369",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -756,10 +756,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "901bac43-27d6-46b8-b73a-de6151ee5144",
-    "patient_id": "c41f6619-c62b-4128-b46a-2ef95bbd55ed",
-    "encounter_id": "f8fbcee5-88db-4e27-ba6b-8b54de5d4c62",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "c6c43bed-215e-4c17-a324-899f57ab6205",
+    "patient_id": "0bfc36be-4e52-4564-81a4-422fdf9b8de0",
+    "encounter_id": "c7972ebe-ac9d-46db-ac6b-9f0e65cceb4d",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -770,10 +770,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2c125209-ab85-463f-8d54-ea43818d3c8e",
-    "patient_id": "cebda080-56b7-4da2-8018-6f25598f966d",
-    "encounter_id": "a9d5913b-470a-4f1e-b67d-f31aa416c258",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "9bbdc78a-1c8e-4bef-8998-dbc870b9f63c",
+    "patient_id": "8b54d350-6c18-4a18-8e23-67815d03cb4c",
+    "encounter_id": "73a7172c-f805-4c6e-9ff8-75ba7fafad87",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -784,10 +784,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "701f8b06-448c-4b25-87ec-287235575e16",
-    "patient_id": "4602e981-ee36-4f3b-b76c-2f42edf6cf88",
-    "encounter_id": "1e134a00-9647-4dfb-8f65-af58650717bc",
-    "practitioner_id": "8eadf2a8-6831-4384-aae2-4004e3802494",
+    "id": "5f0936d1-8f58-410c-982f-261f28a726b8",
+    "patient_id": "e5e782b7-5a8b-4839-80bc-01202e3da507",
+    "encounter_id": "f895cab6-fbc4-4da3-a87d-da7a4463ca58",
+    "practitioner_id": "1b5109f5-1432-4cd5-bac2-c4ed4001ed16",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -798,10 +798,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "30af905f-c51c-4133-9916-7d5735d55620",
-    "patient_id": "cad849de-ad91-4171-9693-99ac62362f02",
-    "encounter_id": "06e5726e-08be-4750-8949-6ed27a389336",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "f19245a9-65e3-41ec-9393-3e4f25d89e04",
+    "patient_id": "6c2df73a-298f-4651-8ca3-ee51a3db161f",
+    "encounter_id": "ef76e19b-30cf-4fd7-a8c9-0ada89637581",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -812,10 +812,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d10f36cf-fe32-4046-9bd2-23affe0ccf2b",
-    "patient_id": "bb4f189e-b813-48b3-a4a5-98a33034e725",
-    "encounter_id": "cadf0c17-0e4f-4e69-9b63-807ef144e3bd",
-    "practitioner_id": "8eadf2a8-6831-4384-aae2-4004e3802494",
+    "id": "4f07d598-2818-4a08-ba73-44df3f84f1c0",
+    "patient_id": "eec6a13f-5554-4a33-a953-953836b6df34",
+    "encounter_id": "546067aa-6520-46ed-9ab2-c0aebfc1e6e3",
+    "practitioner_id": "1b5109f5-1432-4cd5-bac2-c4ed4001ed16",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -826,10 +826,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "7e5b7ce8-e616-40e7-82c1-d5532d43ac8f",
-    "patient_id": "5265e163-b306-4e31-8f5b-210cfb422a10",
-    "encounter_id": "5fbecc62-4b18-49e9-99c8-d277abf567fc",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "5c3369fa-befd-4270-bee2-5000a2feac1a",
+    "patient_id": "d94ced5b-05f6-4d5f-adb6-58953c507865",
+    "encounter_id": "63d6d20b-452f-423b-a828-8c27a2f60dba",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -840,10 +840,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "aa6c7061-4d16-4eac-a95b-bbc8f56f6bee",
-    "patient_id": "add47e22-613e-464c-9608-c0d41bece38b",
-    "encounter_id": "11733203-b7f4-49f4-8993-dae7afc2e4ec",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "c4182944-4e08-44ca-992c-ba04da88bd02",
+    "patient_id": "ee99dcc4-b33b-40f7-babc-f0e83707a4ea",
+    "encounter_id": "8bf2c7a3-5d9f-4471-8d1e-74cfe4266e11",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -854,10 +854,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d0d7b8dd-7cb6-4c03-a45b-14ae2ea8f164",
-    "patient_id": "897eed13-f152-4e7b-95ad-4d96f112bfe9",
-    "encounter_id": "636f4029-2bdb-4688-955c-8004dc7ce84f",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "4c252196-b7f0-4f0c-84be-3fde1be9c4d0",
+    "patient_id": "b2ff8dfa-d4bf-42c6-a587-64661d6cd99c",
+    "encounter_id": "697a3cda-9953-4526-9a69-3d552c99788d",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -868,10 +868,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "84f98a86-2cac-4039-a28b-d1df562466af",
-    "patient_id": "c21113cd-5e40-4e66-892f-a9cfff1c72ad",
-    "encounter_id": "3ff0fffb-6437-4a56-acb3-8b22f619718d",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "d2c975f9-7b8b-4231-a0f0-cc584b14c55c",
+    "patient_id": "a2aca85e-27f8-4df5-af0c-70876a7bee2d",
+    "encounter_id": "ff4504b2-516f-4f8f-bd8b-866bb7d2a6b2",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -882,10 +882,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d9da7025-7cba-4c8f-9c1e-a2adf70d54eb",
-    "patient_id": "d4d5e53e-6b31-43f9-8f79-d45b3184c316",
-    "encounter_id": "0d2d5d3f-e2cd-4919-a198-3f4d29d41071",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "965a1b57-5377-453e-9510-524ff5f2eac6",
+    "patient_id": "a09d5ed3-f923-421f-8f04-5d9b477b7324",
+    "encounter_id": "58621e56-5c9b-4fc5-8083-3fdf80d95208",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -896,10 +896,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5c745ea0-57c9-4602-9409-5a44c1f967a4",
-    "patient_id": "1806e59b-8e3a-47ba-8994-3c3cd0189053",
-    "encounter_id": "b75e1d23-ca04-462d-965b-7c569e709931",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "efae20d6-0525-4bc5-bb5e-11d8fc8def9d",
+    "patient_id": "fa98852d-b686-487a-8dc3-753039632431",
+    "encounter_id": "3b6e26f8-f338-4afd-ace7-88a563871dc7",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -910,10 +910,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "48f1a125-0193-4895-911b-536958bd5749",
-    "patient_id": "8793d316-2b0b-4601-af4a-467ea5ddd731",
-    "encounter_id": "c5111aca-c917-4898-b006-129b1aa2b6f5",
-    "practitioner_id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "id": "ad4ee962-4c24-421a-b797-4f00295b9c47",
+    "patient_id": "0e1fa9f2-3c36-4132-a571-7482e7d91d4f",
+    "encounter_id": "22f2fbc1-eb3b-400a-84a1-85e7441d8b79",
+    "practitioner_id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -924,10 +924,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b300495a-2b52-4d58-8d08-605bed186083",
-    "patient_id": "6accfe15-40b3-423b-b3ef-d96ec7425604",
-    "encounter_id": "f69fb7ef-f930-40e5-91c1-db6daca9db49",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "4b9ae5bd-1cc0-40ee-99ac-190ba86cfdc4",
+    "patient_id": "df5d7b67-6ce2-4179-8396-16fa0b97d2d2",
+    "encounter_id": "9745f27b-cd98-41a6-ac57-3b4669b18fc8",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -938,10 +938,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b0711dcf-21c5-4ff7-b1f5-f3da22175052",
-    "patient_id": "8c800c26-b5b4-4b13-9e9a-0ecf8886f1f2",
-    "encounter_id": "226f48be-6cb4-4700-893b-91328b445612",
-    "practitioner_id": "8e19ea33-b9ee-470f-9639-6b1c0ed4e99d",
+    "id": "f38e8991-27d5-4a32-a635-36a7228c628b",
+    "patient_id": "6d93d9a6-9e28-48ae-8bea-56acbc4e2326",
+    "encounter_id": "54e08e88-8eea-460a-be73-418334e08c19",
+    "practitioner_id": "82d5f687-1e52-422f-8b12-1d449ebfed72",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -952,10 +952,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "9434f0d2-e731-45ea-bc11-3316e4bab427",
-    "patient_id": "7fbaa1ab-4f68-498e-9eb0-cff696dc6ec7",
-    "encounter_id": "fd97615a-bc18-496a-8f15-3bd5abcf9ed4",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "149e2826-722e-4a2c-8310-37bdf435326e",
+    "patient_id": "228220e2-c954-4054-a604-8643701c5600",
+    "encounter_id": "36b5047b-434a-4b10-b196-76d838a558d0",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -966,10 +966,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "70684653-c41f-463d-915d-1790fc4fe1cd",
-    "patient_id": "4ba0a850-5f96-41fd-9682-58d46ff79e95",
-    "encounter_id": "c7c2c105-4beb-47ae-bb05-fb40b70d0d5d",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "122d742d-f0a1-4810-a429-f92dd2159b47",
+    "patient_id": "b626bbce-27d5-4185-b0a9-71803db4aab3",
+    "encounter_id": "fe30c4d2-cb64-49f7-97e1-400fd74a6051",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -980,10 +980,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "24e2f997-7c98-4225-b4ed-c50b7c5efa79",
-    "patient_id": "7aabdc58-e8fe-4fdd-b4af-32bcfbef6f54",
-    "encounter_id": "6183434c-0d46-48df-81c1-89845d0652ad",
-    "practitioner_id": "2a39b104-560a-44a0-9347-6c121bae9096",
+    "id": "ce30dc90-fe71-4e7e-8a87-6098e2406e14",
+    "patient_id": "ee123170-1fe8-4019-8617-f1d620055963",
+    "encounter_id": "e2c17b81-900e-461f-97ae-61424299ae7e",
+    "practitioner_id": "2128563b-5e81-4c3d-b5e2-ce0f9461a546",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -994,10 +994,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "8406af18-af8c-4197-8e81-ae4e08795ff5",
-    "patient_id": "86115f93-8edb-4662-8bb5-928d8e1ecaa3",
-    "encounter_id": "ae4e79a7-7952-47bd-a869-3d119c4d8114",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "29bb4d6a-3e49-41de-abc2-32fb2a4e9e66",
+    "patient_id": "bc699dcc-2149-4a49-b6b2-6dac6951fee0",
+    "encounter_id": "b704a776-c264-4c09-b8dc-a5de6e5604ca",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1008,10 +1008,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "724bfe65-3b1c-4b9f-9bd8-dfe8ab681ccc",
-    "patient_id": "8559a5bc-0072-40a8-95c9-c66289c32491",
-    "encounter_id": "6302bb5c-7a17-425d-afbd-b23f308ec220",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "b77fd788-6950-436f-b3f2-3b8cd81a4d59",
+    "patient_id": "103bb5fc-2351-4e95-898d-294e1483942b",
+    "encounter_id": "1e56d5d3-d814-49da-ba67-da0d919487b4",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1022,10 +1022,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e27d78ae-f4d8-4ee0-bbdc-dff634e4f8f3",
-    "patient_id": "5d356096-6b46-4e33-bc37-113906fc7a62",
-    "encounter_id": "502b6d82-3263-4f0f-8689-03a3383f34c5",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "dbf9fde2-421c-4ac5-9e57-4d565691722d",
+    "patient_id": "181167ba-94dc-48cb-87f4-2ba6c1a38426",
+    "encounter_id": "3542de54-008c-44b0-91a0-d55ecd8ee91b",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1036,10 +1036,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a73076c1-6fb1-4d17-93e2-c994296d9e89",
-    "patient_id": "bbd8a148-7380-431c-9ec5-035bf69de535",
-    "encounter_id": "f8fc1c4a-e485-4c23-a0f4-0792ff2ac143",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "497d8981-3aa1-4e5d-956a-5db2cfd78c6a",
+    "patient_id": "9fb158d2-95c4-483b-b843-fbc91f366187",
+    "encounter_id": "a391cb88-a040-4cd6-b999-d680565efc84",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -1050,10 +1050,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "74f1b36d-bec4-4d0a-b369-ee8a92c34a2d",
-    "patient_id": "f235bf45-8db5-4162-adac-7f382e4e2886",
-    "encounter_id": "e608e887-c24d-407b-8b0d-8525213a2734",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "0c82dbb1-206a-4a9e-a08c-04917a851189",
+    "patient_id": "edfed014-5cd6-4cf3-a9dc-356319860ae7",
+    "encounter_id": "1f324d7e-8a58-4608-af97-c23e767b284a",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1064,10 +1064,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a3c3a727-d9f0-460b-b4f4-a0cc8cfbbc41",
-    "patient_id": "a3eddd98-f2f6-4c17-b204-4c4c06292e0c",
-    "encounter_id": "4131db2f-83bb-42ed-bf84-73d29bba237a",
-    "practitioner_id": "2a39b104-560a-44a0-9347-6c121bae9096",
+    "id": "b457ed83-733f-430d-baba-bd75c9419bd0",
+    "patient_id": "20d43c10-75e5-4dbd-83be-03dcc6fc8c76",
+    "encounter_id": "d2c91751-572e-4a5c-b871-9e21159720e6",
+    "practitioner_id": "2128563b-5e81-4c3d-b5e2-ce0f9461a546",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -1078,10 +1078,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "245a44b7-7feb-4e44-aaed-e2b97cbb9fd8",
-    "patient_id": "ca8038f7-b074-44da-b9e3-10288dbcd9f9",
-    "encounter_id": "0f696257-7878-448c-92e2-9dc30accee10",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "6f6f0dd2-dffd-4342-82cd-135257ef3412",
+    "patient_id": "371866fc-da78-452b-b23e-399e7b92b48d",
+    "encounter_id": "251950f7-1ee1-4880-8650-ecd760495010",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -1092,10 +1092,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "178c7a53-f43c-412a-9044-15bc0cc86399",
-    "patient_id": "719caae7-ac43-4df6-bcde-1abd4566ee69",
-    "encounter_id": "3bf25e66-f565-474a-90b8-ecf47c45723f",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "53efa5d7-388e-48cd-a133-7c980838df91",
+    "patient_id": "257dbf8f-1e8f-4a6c-9866-76bb079a48f5",
+    "encounter_id": "92f032e0-7ec3-417d-bdcb-9ff4f07a7c9a",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1106,10 +1106,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2780031b-9a05-4250-a146-83d9a4430379",
-    "patient_id": "ce7b3723-c5b3-4352-a90f-d049bbcae77a",
-    "encounter_id": "4a24c0f4-d3be-456f-aee0-60a8cafcec5a",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "d38d60bf-7598-4e4b-9808-e269a0210050",
+    "patient_id": "b8f8f092-7241-4cbc-b465-a0565fd1057c",
+    "encounter_id": "522f6d54-f70a-4db4-9478-0954cc37d49c",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1120,10 +1120,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1eaf5a56-c7e7-4d6e-bd1d-c99069f59006",
-    "patient_id": "aaa94c50-e205-45d4-a8fb-79d5d0b0b39c",
-    "encounter_id": "7d76f3a9-404b-4bea-82b5-7b76ed0cb1c1",
-    "practitioner_id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "id": "aa52c783-510b-48a6-94dc-81d2967767c3",
+    "patient_id": "ee018b96-2500-45c4-9c09-b16486f346ce",
+    "encounter_id": "13fd8c83-e186-4829-924e-d2d8529d071b",
+    "practitioner_id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1134,10 +1134,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "dd0cfee5-4782-46ff-94c4-fc0964976bac",
-    "patient_id": "f9aa1ccf-4757-4d28-b50a-99ecbf1b14d6",
-    "encounter_id": "890d8aff-3c32-4e19-b36a-e250c5c4f700",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "456749c3-401a-47c4-b3c0-f81de1cee395",
+    "patient_id": "ee043ac0-3220-40a6-9ce1-5fc9cfc0e0e4",
+    "encounter_id": "ebde34fc-1fbf-4f57-ab4e-ef92d6838d29",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1148,10 +1148,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c48983bd-6039-4c4e-9f34-fd1cbcd949c7",
-    "patient_id": "f11b4e98-a685-46bb-b628-88056f7a2c99",
-    "encounter_id": "ddcf225a-dc20-4c25-ab64-cca235d3fa57",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "c9281521-18f9-432d-8ddb-60883f75535c",
+    "patient_id": "9f577cd3-12a7-4295-9525-c2f9846ceec8",
+    "encounter_id": "43006333-0b4f-4911-8342-6e4bd63ce8ab",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1162,10 +1162,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "cc3f539d-7f38-4ee1-841a-33d6373e580c",
-    "patient_id": "70bcd19e-cb1e-4964-8ece-9d6e6506066b",
-    "encounter_id": "b38270e5-419f-471c-bfc8-9ea297c5393e",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "f1fdf611-7f3a-452c-ae88-ea74278b13b4",
+    "patient_id": "117d9299-73e2-44bd-8a5f-a5b15d4a901b",
+    "encounter_id": "c40e1d31-9d8d-48cb-a35b-46aa74af818f",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1176,10 +1176,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ac1c98f5-7e4b-4549-b902-da3c523665d1",
-    "patient_id": "7419d51e-fb75-4f4e-84e6-b4a045a291c9",
-    "encounter_id": "11091743-d41a-43a8-bbfc-d862feb9dd8d",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "8270cd14-1ed6-41d6-a83d-fb11a4e43064",
+    "patient_id": "7a3ebc0c-c26a-4a96-aa5d-881e3d0e4e6f",
+    "encounter_id": "389f2f15-97b0-407e-baa1-97a9c1297b3d",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -1190,10 +1190,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "443e4728-38af-41fa-87bd-4d5c7a7fa11a",
-    "patient_id": "78a97b4d-a715-42e3-8396-b1d3beab603c",
-    "encounter_id": "8a2ceb85-5bff-4b9a-a7a7-1ffa37fa45e4",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "6a315575-f816-4e50-9ec8-0fa4d4e5b4f6",
+    "patient_id": "7a10af3c-e2ea-49c7-9ee6-e1c58af93c99",
+    "encounter_id": "59de4d0e-ca42-430d-8550-0a3a15a3717b",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1204,10 +1204,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d2bd1f51-e0cc-4e55-b7de-eb6dbd38e5d0",
-    "patient_id": "090954fb-0f58-4623-a3f0-4f022836faae",
-    "encounter_id": "eea823a1-9b9c-42a3-8fea-39d340e76c8f",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "64c14838-df08-4aec-86b0-09cb2115f0c0",
+    "patient_id": "1168e269-e52a-41ea-a75f-562dad05a823",
+    "encounter_id": "3d05e69e-c795-43ee-98d9-e7fd298aacc0",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1218,10 +1218,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6fb247f7-b367-4d8c-9d6a-cdc531885abe",
-    "patient_id": "f2e21291-b15b-4f88-a96d-f584b8010de8",
-    "encounter_id": "453b2db8-7c58-415a-b0db-407eab22ffab",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "61f27c0a-8b43-4e19-9e83-a6819338c3a0",
+    "patient_id": "2d5c1f14-6839-484f-a0ea-ac9c0b42c927",
+    "encounter_id": "36748a9e-abcf-486a-a809-738b992e051e",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -1232,10 +1232,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f678fb7e-eaf2-45be-9a9b-ae4d3c37e2a9",
-    "patient_id": "1f547601-4966-40e9-96eb-440f50df2acf",
-    "encounter_id": "f5de6975-62ad-4a86-a6bd-3504dca28546",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "6da72a6e-93e8-4660-b75f-3fb640dcbc12",
+    "patient_id": "774648a4-665c-4c2d-9971-ed0e35ed97f6",
+    "encounter_id": "1c65e1af-a7bb-4b85-a74f-5ebc193bad54",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1246,10 +1246,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c3068246-6b77-45f3-8b3a-ff97cb4683b6",
-    "patient_id": "56e0439b-29d6-41b7-b6fe-0bb32d40c4ab",
-    "encounter_id": "4c051c9d-e5e4-4624-b618-51d7f0de1dd1",
-    "practitioner_id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "id": "679713fb-b6f6-4880-88f2-b8272a07df95",
+    "patient_id": "71cdfca9-9cec-4e5c-9f03-9a301d823ce5",
+    "encounter_id": "d21c6317-82a9-459a-8f80-56d41739bba2",
+    "practitioner_id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1260,10 +1260,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2c6a95ee-6ad3-4593-979b-db5ecb3884bd",
-    "patient_id": "f6e9769a-5a79-42a1-991e-99d1d4765b3f",
-    "encounter_id": "4c5ade1b-dc0a-4b64-9cb3-5ebf4d6f9cf6",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "a7cbed35-a02c-42d9-b30e-1b7d316d729d",
+    "patient_id": "f68f97b2-ae86-4a25-8c8d-48faab6e321a",
+    "encounter_id": "09c7f3c8-dff5-4446-aabf-29c41fca02b1",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -1274,10 +1274,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5cadf80d-7d4c-4b3d-8622-7416c890e82e",
-    "patient_id": "d07047f5-9d71-430c-a9ce-75542e75e051",
-    "encounter_id": "90663fcc-d9a8-4d6e-8571-eb2c752b4dee",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "ca85f73a-e453-4239-8d00-da835a8bf462",
+    "patient_id": "d81082e5-8aca-40d7-a2ca-f4df8877c9ca",
+    "encounter_id": "ea14c8ef-48b3-464f-a44c-505940b75b76",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1288,10 +1288,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b1ad2fb1-51d3-4072-8439-9df8ab60423a",
-    "patient_id": "91f3af1c-e5ca-4a9e-a2a9-ef02671c0305",
-    "encounter_id": "af0eb6a7-4158-4bd7-bc06-71027a357074",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "aa0784cf-d64b-4ee3-a812-eebcf2e67973",
+    "patient_id": "2d1bfdaf-05e4-482a-be34-22fcd888d542",
+    "encounter_id": "08b0e7fa-ac42-42d3-a147-24bd77cc3620",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1302,10 +1302,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "15f5c52f-2b92-4bd2-b876-da5deeef2780",
-    "patient_id": "86aa8b4f-7434-49de-bb80-cf2424e68cae",
-    "encounter_id": "f608a497-9cd8-4eb7-a9f8-125b62e554c3",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "c20ba7b5-df4b-4d63-b6b0-130dc842b853",
+    "patient_id": "2345a74b-0c2f-4ceb-94cc-fdfc74773660",
+    "encounter_id": "dbba269e-7bee-4caa-8d9b-6d819ebbdf29",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1316,10 +1316,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "98c45d99-7b4d-45b2-9850-d1da2de1769d",
-    "patient_id": "91303081-6c10-476b-b827-59f0c8035e09",
-    "encounter_id": "fae543fb-809d-4d6c-bf1b-8e3c0ebb3462",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "0ecebce7-f606-4169-b93f-b86fb0b52b22",
+    "patient_id": "a44b6d9f-064a-40c9-a300-99af92424e10",
+    "encounter_id": "af194029-7cf7-4ca8-8ba2-a1a9e55efdf9",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -1330,10 +1330,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "aa146b32-96cc-4f22-be8b-2edf57714870",
-    "patient_id": "bbb1393d-5dfd-4886-a6da-86a877545cee",
-    "encounter_id": "3acec42e-9188-4d4b-937f-06ca2f589301",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "38c61dd8-f572-420f-b8b2-8ed29a99ff2b",
+    "patient_id": "c9445732-592c-43d4-9515-6d1a8c03871f",
+    "encounter_id": "feee76be-d9ba-4eea-8b9e-fe976ba7abc7",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1344,10 +1344,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ea2ffd7d-48dc-4a46-82fd-ba59475e4f3c",
-    "patient_id": "71a12034-4339-45a9-9249-6d2f8d6583e1",
-    "encounter_id": "ec5e3b00-dcb4-4510-ab77-c7d6591869c7",
-    "practitioner_id": "84609be6-8493-40c8-9a38-591cc71d9d3a",
+    "id": "2c049745-8903-454f-a050-9d70d778ad5b",
+    "patient_id": "5f6c8f60-71b1-4863-a865-211a168123b7",
+    "encounter_id": "cb51386e-df1b-49bb-b725-13f4e9da70e4",
+    "practitioner_id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1358,10 +1358,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2406b42b-03a6-4d9f-aadd-f21929b16c38",
-    "patient_id": "478a811f-00ab-4df6-97a4-c85ba795d651",
-    "encounter_id": "4b59ca36-7731-46fb-9344-610b9c4ec26d",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "03c339e3-815c-44af-ae06-73ea2aeb7930",
+    "patient_id": "8e0d4b31-f8f4-4c1f-91c4-ba97112e79ec",
+    "encounter_id": "25deee09-21d3-447e-93e7-2175b185e565",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1372,10 +1372,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "fb5ba101-29e6-4582-8aa2-877f0a8a9c62",
-    "patient_id": "1ed03d2c-254a-4a7f-a644-86d828395a71",
-    "encounter_id": "779481a3-e771-4f7d-ad17-141417601228",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "117c30e4-5326-495a-adae-6ea48221085f",
+    "patient_id": "0692330a-4365-4ba0-a00f-5644fad19773",
+    "encounter_id": "65f08373-b8b3-4300-9acb-2a89ebb0adb1",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1386,10 +1386,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d6a5fd95-699e-43e5-9b0a-5481b9fabdf0",
-    "patient_id": "962bfa2b-0801-4a55-a112-cf2c0543b984",
-    "encounter_id": "70b0b6a1-7c9b-4e22-916c-bcef2a6bf5e5",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "405acb10-5d19-4c7f-b87d-e5e0a1e4fe21",
+    "patient_id": "4b830429-52c3-47c0-ba75-6896cf62411c",
+    "encounter_id": "19d6dbf6-4055-402b-ace2-c7df9ba80077",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1400,10 +1400,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "fbe48503-bc8d-4c73-9680-fa48f086a187",
-    "patient_id": "e857c0c7-c22e-43fc-bef3-13c680181da1",
-    "encounter_id": "9675adab-cb1f-485f-a3aa-be95e2cdae2e",
-    "practitioner_id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "id": "1f53f0f1-7219-4d06-b7c7-014a4fb44d5f",
+    "patient_id": "5cd78f52-1152-4850-be6b-9e1201203e25",
+    "encounter_id": "2ffa3e55-c8a2-42d0-b481-f3691feef081",
+    "practitioner_id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1414,10 +1414,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "080711db-f405-4db5-aa5b-1a1330029479",
-    "patient_id": "60b1542f-409e-41ee-8132-07471b1dcc0b",
-    "encounter_id": "003c4209-3c6e-4d2c-b897-7457ff46d641",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "7c444ea7-fa6b-4fb5-b5fe-a7ac789425d9",
+    "patient_id": "3a29abfc-dd1e-4d2f-9d4d-1147abb106c4",
+    "encounter_id": "dbac8521-4d5a-48f6-baf4-31fad7715b3d",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1428,10 +1428,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3b53bb3f-65ad-4f14-b65b-bbd2d5b4b51d",
-    "patient_id": "c941c961-c832-4c75-8cb9-919032638318",
-    "encounter_id": "9bb173bb-d4ce-4600-9424-c43c795f2f9f",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "b999e282-e375-4a20-ba0a-f3f45f8db528",
+    "patient_id": "12db2d8e-89d9-44eb-8c0a-1cb0c221db10",
+    "encounter_id": "1f0e89a9-9468-4a2f-9a10-76190c9dedb1",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1442,10 +1442,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "647d9ce6-9c7c-4717-8bb1-34561bc69528",
-    "patient_id": "3eeda9c5-2e4b-4149-922b-15e2c46d7f24",
-    "encounter_id": "84c6b004-c65d-43a4-baa2-ccedc225e348",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "90153d1c-6f36-4c8c-9302-d7a51128507b",
+    "patient_id": "f83af5be-3abe-4e53-ba69-f81ac2a24427",
+    "encounter_id": "f837afcc-3264-4fd3-9206-79e1f8088db8",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1456,10 +1456,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "849ca2c4-ebca-48fa-b4c8-4dba0ccf1e37",
-    "patient_id": "b3e4d325-93ba-4682-a0ab-37cc1f5f12be",
-    "encounter_id": "2ddf0bd5-028d-411c-bb57-5df4dc81303e",
-    "practitioner_id": "2a39b104-560a-44a0-9347-6c121bae9096",
+    "id": "6e2fd1b4-36ef-42b5-b9dc-be05ea697927",
+    "patient_id": "247f7d66-e673-46e1-9d7e-73acddcc2865",
+    "encounter_id": "fb81bf42-02f9-43a8-a599-9d52ad9dfbdc",
+    "practitioner_id": "2128563b-5e81-4c3d-b5e2-ce0f9461a546",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -1470,10 +1470,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "8cc764e6-7697-4f5e-b7e6-e6070a7d85f8",
-    "patient_id": "b4ddb0b1-8b39-45dd-89ea-368eeed7bc90",
-    "encounter_id": "b1b06a2b-0d54-42c7-8169-c0b3826286ef",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "7ec174d4-da19-44a7-9f34-bc80e53d7032",
+    "patient_id": "fa48b536-b719-4dfa-8a71-0583c727136f",
+    "encounter_id": "8000e304-2ac1-4795-9a6c-dbacd62edc8e",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -1484,10 +1484,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "18a6b7d6-e024-4bcd-96cc-0614ec07b4e1",
-    "patient_id": "d8c1c124-dde9-4d11-80a8-29476599d261",
-    "encounter_id": "eb89a261-ca67-4f7b-8a3c-97cda4890ab0",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "aafc8ce9-ab79-4129-aadc-7c09732376b3",
+    "patient_id": "5cec1800-d738-49d1-85c6-953aac29a3a2",
+    "encounter_id": "96a7812f-6dd6-485b-b16d-30b297addea9",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1498,10 +1498,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "eb8e3a5e-8313-4015-bf9f-a8628e0a6510",
-    "patient_id": "8dcef073-b6fa-4fe0-9948-02b9a019b6af",
-    "encounter_id": "0d60cb16-6a7e-4bff-bf17-7fd4da4fa71d",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "22e57184-5abf-417f-85e2-34eeb6967cca",
+    "patient_id": "46645bdb-ca55-4b10-b013-cd67bdc5e3fc",
+    "encounter_id": "d37b80b4-c815-4226-81e9-29a8715ed8d9",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1512,10 +1512,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "70b93f97-b6e2-4f76-a7da-05594752b8c8",
-    "patient_id": "0d6ef12d-ea66-4039-9a60-a21eaaf9500a",
-    "encounter_id": "6e5926eb-5517-4eba-8415-1262cb3c28be",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "b7c1d459-5a35-4944-aa8f-02669b4f7106",
+    "patient_id": "b2ddd00b-0d6f-4199-8773-0ac9b80eeb54",
+    "encounter_id": "fdcd1602-dd49-4a61-bd89-60221b7bebae",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1526,10 +1526,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1282e696-72c0-4fe4-b768-bed94f1057fb",
-    "patient_id": "cb13eba2-480f-4261-bf57-67a4daf5ef50",
-    "encounter_id": "c4c6aeea-6ce5-479f-8e8b-d383863d0208",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "a45025f5-face-41aa-aac0-615474f0266d",
+    "patient_id": "c765e255-da39-43a8-b592-1ee1c463de45",
+    "encounter_id": "dcf6fa36-4a10-49eb-8851-f035fd823568",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1540,10 +1540,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "27a7bb98-d144-4080-9e71-85b7bef7649c",
-    "patient_id": "3c966a52-4f5c-4a4d-aae9-a8ec974eacc5",
-    "encounter_id": "6a75c43d-ed10-4e8a-a2ed-674863197edd",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "d63b826e-c1b3-407e-b7d7-ab8798f83916",
+    "patient_id": "58e1b5fe-5269-4c1e-aded-ee821824d24f",
+    "encounter_id": "3df7ba99-08dc-4a25-8d97-2144ce7c79cc",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1554,10 +1554,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "269995bf-d972-44c7-ab8f-d06cab047d38",
-    "patient_id": "d9f6b619-74b6-4f70-ae6f-e40114a3154e",
-    "encounter_id": "ff94dbf8-23e7-4747-897d-4272c9c6fcdd",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "441d84fd-4fa3-47b3-8c27-a311ff03500f",
+    "patient_id": "ad0a3dec-273d-4873-b703-46a3cb4371b2",
+    "encounter_id": "edd6aacf-a1da-4f63-9d91-b4653e3e83ea",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1568,10 +1568,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c3e44615-e130-4356-a7ab-9e0eeda224bd",
-    "patient_id": "94c60dcd-8e4d-4f72-ba3d-e10b933677da",
-    "encounter_id": "ae10241c-474b-409a-b09c-8eca97a97fd7",
-    "practitioner_id": "3710517b-b4c6-4bb3-8bd4-684f70f2a7e7",
+    "id": "7116a165-6e39-46e0-ab2c-03decf882d60",
+    "patient_id": "02c3120d-aa47-4269-aea5-ec60319d786b",
+    "encounter_id": "f5097248-d222-43e0-8c0f-74cf849596fe",
+    "practitioner_id": "ec4b8147-c45e-4406-ad3e-95e333924c0f",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1582,10 +1582,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "176128ee-2838-4189-9d85-f3eae78a27b7",
-    "patient_id": "24464993-0b08-4bc2-bd12-779b51749f55",
-    "encounter_id": "eba2ac83-14cd-4dcb-8392-69950dd525c3",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "2f89ffd2-34ae-427a-91a2-ce470ac52038",
+    "patient_id": "2904f245-c99c-483f-a8f1-a927af6079eb",
+    "encounter_id": "2b2ca369-c353-4023-9d1c-ba5473df5cdf",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1596,10 +1596,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "20851091-4a17-4217-a362-7dcc3c969d62",
-    "patient_id": "e26454f9-7f1a-413e-bf99-566ce5647b18",
-    "encounter_id": "dd85976a-5f60-44d0-86ff-8393440ebc6c",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "7dc2eec8-b723-4891-a0a1-d0a03aed15ba",
+    "patient_id": "16857061-514f-49f7-b182-543fcb57a3c9",
+    "encounter_id": "d400c9ac-1e4c-4b6c-92f2-2b9aba025e28",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1610,10 +1610,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "211af110-c222-43e4-95e2-8d8d69b54d51",
-    "patient_id": "cc26a2b2-067f-47d5-bcb5-bb9f278bc4e6",
-    "encounter_id": "3f2161f5-6299-4599-9c9a-25f9291612c8",
-    "practitioner_id": "629f2930-2502-4f1a-beb6-5d2a427c6772",
+    "id": "e4b80b03-702f-4049-88e7-d33039ad6380",
+    "patient_id": "feea52b5-ab38-45bf-97d1-dfcc788fcddb",
+    "encounter_id": "66a0f3fb-fa03-466b-84a0-ce71b94dca17",
+    "practitioner_id": "f5cb65e7-0965-46c7-833a-1709d29b1b4f",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -1624,10 +1624,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6185f993-b832-4118-b6f5-d6e180643beb",
-    "patient_id": "c0c6bc66-ff0f-4f46-80ed-938235116195",
-    "encounter_id": "531877d8-ade0-4ab1-9769-bc94dcc21622",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "4e0198f5-2641-43ff-b1b5-b0ed5c8da921",
+    "patient_id": "ec2b1221-e5c3-4108-b819-9490d96a5b7b",
+    "encounter_id": "7e73da26-556a-4d6d-8e11-bb02e95849b7",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -1638,10 +1638,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3339ed4a-7033-47bf-889f-622ff6f9bb72",
-    "patient_id": "c66446d8-bbf7-4046-9d73-61eba41e73bc",
-    "encounter_id": "17e48d1f-d477-4e21-8e4e-d2d93d20c175",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "8e017bf9-6da7-49a4-b452-0ca04dd30908",
+    "patient_id": "2e6de7de-aa2c-4ca7-8d43-71eee8a94f16",
+    "encounter_id": "9334493d-a8a4-4476-b6a7-11e15e14b04a",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1652,10 +1652,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "fd62dd02-f9b3-46e6-b8f9-fa93451bedec",
-    "patient_id": "549e206d-e876-4bc7-bda4-8bf94a1cff8f",
-    "encounter_id": "87825294-f33a-411f-8266-6cbe07755a2d",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "d57ff6f4-27b4-48a8-8ecf-8d0cb472724d",
+    "patient_id": "b20c22f9-9942-4948-9035-ec68f0ec784f",
+    "encounter_id": "5d87f079-af17-47da-a866-9603aac8003b",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -1666,10 +1666,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "34a579b5-c56c-40cd-8ad0-d8a74efd12c0",
-    "patient_id": "b02176fd-68d2-42c1-869f-329aaa735301",
-    "encounter_id": "8af55338-b468-48bb-a33b-0559b863cf5e",
-    "practitioner_id": "3710517b-b4c6-4bb3-8bd4-684f70f2a7e7",
+    "id": "930f8028-d930-4002-9011-f9527f87f708",
+    "patient_id": "40162111-0d8d-4dcb-948a-19e6144146d7",
+    "encounter_id": "ba412410-7140-4ad6-bce0-62493c3c0e26",
+    "practitioner_id": "ec4b8147-c45e-4406-ad3e-95e333924c0f",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1680,10 +1680,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0f945eed-b904-42d2-9f75-cea19814864f",
-    "patient_id": "9afec0e0-8c9b-4a56-8560-60faa9d07319",
-    "encounter_id": "a7a24d21-15f6-4850-9dc3-89eae3270f67",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "670b80da-49c8-4f83-9016-e9c42ca67c13",
+    "patient_id": "94399dc7-72cb-45d0-8ee6-e8da3ded3dae",
+    "encounter_id": "a8e5311a-919f-4069-aebd-84d8a61984c7",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -1694,10 +1694,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "406678bf-9c2a-4beb-baad-291799d3d146",
-    "patient_id": "4fec1fb0-9481-4a46-a1f7-2e920a8df689",
-    "encounter_id": "aea3d4cc-35d4-4bc4-b8f0-400c32c3e910",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "df3110f3-fa38-48af-92ee-ee7546ad3f94",
+    "patient_id": "81f4c30d-a1f4-4314-aa60-118f3bed6c4c",
+    "encounter_id": "ad105dcb-b078-4036-9696-335c672cc612",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1708,10 +1708,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f1f89ce7-ef68-413e-a89f-605a4c660ffa",
-    "patient_id": "d31c9cc9-abd8-4678-95dd-039113b808bd",
-    "encounter_id": "b6deffd2-ede7-46f2-b68f-c71f6b9d6dcd",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "43b0873d-2070-4b8e-bab5-0214b6e22baf",
+    "patient_id": "f65b0a61-9947-45e3-9c5c-f651b1ca2446",
+    "encounter_id": "a5a7254f-f23b-4718-a275-3a85e09cc292",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1722,10 +1722,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "33a39633-01eb-4fe5-a3ea-e2aa944640f3",
-    "patient_id": "516a9f69-3596-45f6-954c-d4b10bf83659",
-    "encounter_id": "68c96916-9772-4f85-a714-804a84d10754",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "5cbbecb8-c03b-400a-a41a-faf780b83283",
+    "patient_id": "98ce3aca-7cb4-4b46-a63d-9e4424863cc3",
+    "encounter_id": "e2f2043b-3b7d-45e9-9879-d8bfbce6c7ac",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1736,10 +1736,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "7bee7705-171e-420d-abc1-7517f57c7610",
-    "patient_id": "eb22427f-4d8a-44b9-98d1-9f5eae09410c",
-    "encounter_id": "3a9e5ae3-a49d-4af1-aac7-01337362b22d",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "b93e93fe-6fc6-4ceb-b000-c003c8ee5f94",
+    "patient_id": "a5a50663-c612-4106-bee9-6d5866fc28e9",
+    "encounter_id": "4ae8a293-3423-45f1-a48e-080286e9ac13",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1750,10 +1750,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0dac0a2f-f0e6-41ec-a57b-c2a06d58a949",
-    "patient_id": "818a5e16-9ff0-410a-9bac-0785a832c891",
-    "encounter_id": "218369cb-faaa-4695-8aed-0398d4e163d5",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "3e76154c-9ec5-42b5-9496-ff8f0ceafa8a",
+    "patient_id": "a15c1660-3c06-460f-b7e2-9abe777b4c3f",
+    "encounter_id": "e865af70-2ed1-45fa-a4a9-dc6129574ad3",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1764,10 +1764,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0a790af6-4b8d-4b2c-8b6c-144498ee83fc",
-    "patient_id": "ce0f86f0-3337-4049-bfe3-1ed113c6dbcb",
-    "encounter_id": "bdabfef1-7c28-4871-81f2-ede5cbcfb430",
-    "practitioner_id": "8e19ea33-b9ee-470f-9639-6b1c0ed4e99d",
+    "id": "dcaf1800-63a7-446e-a084-a05fa5caa4e0",
+    "patient_id": "4391ee42-3648-46f7-a628-3748bcfe36ee",
+    "encounter_id": "ba0c75e3-8846-4d7c-9046-3220aa92327b",
+    "practitioner_id": "82d5f687-1e52-422f-8b12-1d449ebfed72",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1778,10 +1778,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0c6ee711-491e-48fb-a84a-3dc679628e21",
-    "patient_id": "c34e0341-ee02-47a4-84c5-a9ae9d89beae",
-    "encounter_id": "0de9669c-3270-465d-99c8-fcd28d0f4bd6",
-    "practitioner_id": "0ad47e5c-5c05-4399-af21-ba394e56183d",
+    "id": "c1043445-cef0-48c1-81e2-52c7198617c3",
+    "patient_id": "bdeddf3e-9b4a-4633-a665-dc54226023e7",
+    "encounter_id": "93e2bd3a-6a8a-4881-8a0e-ae25ef891c61",
+    "practitioner_id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1792,10 +1792,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c99ff14a-80fb-4f71-b1ec-605e8ffbcee8",
-    "patient_id": "078e1235-bc96-4b51-9caf-62ec1b28244e",
-    "encounter_id": "4c7025f5-4783-417c-a871-713dfa7377fe",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "a9f558a5-a71f-47a7-bb15-54dd31702da7",
+    "patient_id": "6f5ff7a0-75d6-45e5-a54d-0771d4edfebd",
+    "encounter_id": "f6b168ff-270c-45cd-bcf3-e219903ceb02",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1806,10 +1806,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "63ddb1d9-0f43-4741-b815-4c23e99931ac",
-    "patient_id": "68d6033a-1cea-4949-ac4b-974f0c44e403",
-    "encounter_id": "b1be096c-7b0c-49fd-824c-e7c4cb7eb350",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "ada411f9-0391-4b92-9b0a-f2ca14bd8ef5",
+    "patient_id": "ae7a0119-4dc2-4320-97f6-4e4939d70f79",
+    "encounter_id": "5074b477-cee7-49f0-8cab-211a9d0d7ac6",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -1820,10 +1820,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "491eb2e9-2760-439d-8a14-dea3cf4af945",
-    "patient_id": "135a9882-79e9-401c-bd51-4dcfba7f8520",
-    "encounter_id": "848ed1a8-3455-4288-bf92-604f36ea116c",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "0a7f7003-3007-4353-97fe-17a47b87b99f",
+    "patient_id": "a7dfa7c2-01c4-451b-b005-43fff8232a9d",
+    "encounter_id": "44190e38-fb2b-4682-84f4-ecf96c6a04d3",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1834,10 +1834,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "34f04dae-4bb4-43e1-b423-c58144ab75f3",
-    "patient_id": "32a6ec39-baf6-48db-af3d-8368b5f0f5a5",
-    "encounter_id": "e51db44f-185b-4894-afa4-35acf76bd371",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "6822eb2d-f052-417a-82f2-40802ef3679f",
+    "patient_id": "05b44b08-f83c-4a8e-935e-31466a25a2d9",
+    "encounter_id": "bf0443a0-1b4f-46e7-9f65-e2b72111e2fa",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1848,10 +1848,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6732ac22-e076-47c6-9eb9-4a322fc239fa",
-    "patient_id": "cb09dd50-8ddf-45f8-bc9d-0b30a4778a35",
-    "encounter_id": "75ac6183-a519-466f-999c-7adc915207eb",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "ce01b6dd-ec11-4f19-8022-99f311046c5d",
+    "patient_id": "ed2a3d14-0f31-4440-8575-bb26bd4edc3e",
+    "encounter_id": "1ae1954f-0f66-4526-a54b-8161326e346f",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -1862,10 +1862,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "361ea8fd-addf-469f-95ba-a0e1efe87fbf",
-    "patient_id": "6295f54e-ab5c-4f5f-a0f2-b24977b6f1b1",
-    "encounter_id": "3cb0745d-4cf2-400a-952e-424c64e9fb01",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "98aa3453-6e1b-4c25-9c55-2054874a121e",
+    "patient_id": "241c3b5c-a39f-4f36-a0eb-3beaa4f9771b",
+    "encounter_id": "8fef4b0d-de58-4e78-8cb0-26c28e63f566",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -1876,10 +1876,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3b1879d6-b744-4928-9e64-88c66dae0c49",
-    "patient_id": "8db7aee6-03b7-41e6-9ad8-ae5f65b68b0d",
-    "encounter_id": "c7d1ee84-9d05-4906-a765-276620329952",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "c12a4e87-1fb4-439c-882c-ff4266842087",
+    "patient_id": "c4f7358b-38fd-428f-9204-27a1a5df6341",
+    "encounter_id": "77d676b5-8020-44dd-b660-5a541ea2a132",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1890,10 +1890,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e149f751-b7bb-4acb-a354-701538e99964",
-    "patient_id": "cfbe2c54-69ec-443a-84d2-bde13b4478f7",
-    "encounter_id": "47476e57-9bd0-4d7c-aa08-9e5b2451422e",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "aee97531-9a34-4d69-be4c-477c68377397",
+    "patient_id": "08bfa440-9d7a-47df-9cfb-0ebfe2ff306f",
+    "encounter_id": "4cf224be-2f1d-40a8-a4d0-00b0dba06575",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -1904,10 +1904,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "48782fea-c2d3-41fa-90bd-c12a256efcda",
-    "patient_id": "e9cafe79-4501-4e89-a745-e3a0715054ca",
-    "encounter_id": "a065721d-cce7-4ace-9f0b-adc5e0bd895e",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "9287e2f2-523c-488b-8a8b-68939b4a144f",
+    "patient_id": "bbfd7caa-0905-440e-a9d0-f807a3dd4371",
+    "encounter_id": "d6b316c2-8316-487d-93ec-7c25b7868d95",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -1918,10 +1918,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "61a16947-0158-4e10-8e7c-08eda5509f79",
-    "patient_id": "22f8f9fa-6d8e-4bf4-b17e-dbc774c3cb4e",
-    "encounter_id": "b71f5b20-e5e5-4317-9161-2739c0b21795",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "1b95976e-9194-469a-bc8c-50eaeda8ba69",
+    "patient_id": "71863f89-e9bf-4729-a01c-6f4f9812277e",
+    "encounter_id": "5b0b39a1-d543-43bb-9af1-c15bc6eb56d5",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -1932,10 +1932,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "00ffbe41-c16f-44f4-b297-0afbbe3d87a1",
-    "patient_id": "dcfb001c-4111-4c1c-8d00-abcec471c925",
-    "encounter_id": "3a01cd4f-69e3-42f8-a3b1-e23f2bb9a551",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "9d989663-0e03-48b7-ad2e-1e00299d9704",
+    "patient_id": "77ab7dbd-4982-4e95-9118-3438846e2f7f",
+    "encounter_id": "928d5793-2b14-486c-9503-f1cfe4a2b3b7",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -1946,10 +1946,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f3995951-f813-443f-b045-b1ad86d7781f",
-    "patient_id": "f68e5525-aa6b-468e-965d-71b7077408db",
-    "encounter_id": "194c59b9-49c3-4626-adaa-cdefa0e02024",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "4d837c73-5b44-4387-8f54-9816b3f79243",
+    "patient_id": "7ed775a8-ce7b-4dda-9a16-a42819e58e77",
+    "encounter_id": "c7ca3e44-8bc2-46c4-a60c-f97db243c676",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -1960,10 +1960,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "9b05bbf7-6290-4f6d-8da1-563d34054c09",
-    "patient_id": "89636828-ed90-48b4-a327-b73da20da227",
-    "encounter_id": "ecbcb913-1e20-4d72-a603-3dc8b652ac64",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "ec75deb2-01e9-4b51-b42c-35bee9e448b1",
+    "patient_id": "909858ee-ce1e-414e-b629-7cf8edb6e3a2",
+    "encounter_id": "6f432fed-1875-4f72-b477-4c329e91ad8b",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -1974,10 +1974,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6198e555-da83-4775-8339-a6fff8a41645",
-    "patient_id": "6dbcef09-87b8-4f15-a271-83a4430d0998",
-    "encounter_id": "d9dc9128-0cb6-45b3-958e-eac1cb89cf7f",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "dbdc40c4-fd7c-4a15-bac9-b527213db8fb",
+    "patient_id": "e904d5c0-6a33-40be-846d-7f377c6a94ae",
+    "encounter_id": "d4111ae3-363e-47d7-a623-e5fef09511c6",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -1988,10 +1988,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "36d15eb1-6140-4580-b290-d40976da1fd4",
-    "patient_id": "df2dff1d-55d8-4126-991e-189f068a472c",
-    "encounter_id": "a9c390dd-1764-4660-9e5a-89b2433e3f2c",
-    "practitioner_id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "id": "2a313fbb-2cfc-4e22-8375-fab537673a5e",
+    "patient_id": "4fa244af-4008-4947-b47f-64668cf49721",
+    "encounter_id": "83a98e7a-aa33-4592-9e3b-93c68aad39cc",
+    "practitioner_id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2002,10 +2002,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "66297266-2498-44cf-be01-f5c98ebcad3f",
-    "patient_id": "62652dd8-b946-4c54-b2c3-743a3d86fb7b",
-    "encounter_id": "759973c4-19a6-49f6-8e32-453737a679f0",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "e7615f75-b982-4c0f-90f0-f635b001c136",
+    "patient_id": "16b3b22c-afc7-49a9-954b-57b271319365",
+    "encounter_id": "3e3eb938-17a0-483c-a258-f378ef9ba1b5",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2016,10 +2016,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a0939a03-00ae-407a-a5e8-ffa3a8e2338a",
-    "patient_id": "90803726-0256-4646-9714-9184d9722035",
-    "encounter_id": "a9186536-8fff-4ae9-ba2a-99c3d3194ab3",
-    "practitioner_id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "id": "e8e69b6f-05ea-4c20-85dd-7ccb5344d8bd",
+    "patient_id": "b8e8dfcb-3043-4100-848d-1c9339284a96",
+    "encounter_id": "b5543771-286a-484c-a009-5ad80aff9e4e",
+    "practitioner_id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -2030,10 +2030,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0a7ff1b5-a5a8-4347-951a-ceb94162d854",
-    "patient_id": "6485cfdc-0490-4573-8e3b-9c9f18ab2846",
-    "encounter_id": "3b803518-9bc4-4aa7-b468-e7919e399222",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "6f91d6ed-e779-410d-a63d-135fa42afaa4",
+    "patient_id": "a51e5426-4e02-4dad-a39a-491a9fec3a8f",
+    "encounter_id": "d5c8c18b-c6fd-47ff-b822-d89e706fc4ab",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -2044,10 +2044,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ea7e8b8c-ff38-4722-a818-8596b61be4fc",
-    "patient_id": "dc2f85ed-d900-48a2-a8f6-4d550b78fa93",
-    "encounter_id": "e64319e5-2f40-4754-8573-93cfabaa1d20",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "8b501c27-ae59-4988-89c1-a21121019216",
+    "patient_id": "7bb3a71d-e1c0-4b3d-b280-b668972d78f8",
+    "encounter_id": "b0576d50-f56b-4b89-b9ac-8d273eb5ab0d",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2058,10 +2058,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "31f9459f-c2e4-41ee-a7ce-46b1368ecd9b",
-    "patient_id": "3da97bcd-90d8-460c-82e0-1add7ca1f6e4",
-    "encounter_id": "a7d9cdd4-9e3b-42d0-a1ad-427b7393d332",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "6c59c3a6-a384-4d11-b015-37ee0ce65b63",
+    "patient_id": "835b3512-3ba1-47a5-bd24-b5cfa2749cf7",
+    "encounter_id": "cff9648c-8715-40a7-a4eb-45a8ad3c6c2c",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -2072,10 +2072,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6870c276-8388-4809-b1c5-ac771134018e",
-    "patient_id": "5fbf53e7-e1c5-42ba-947a-751eb00f9041",
-    "encounter_id": "de82b9a8-6316-478e-8ccd-9306b4b630c3",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "6021fb99-8582-43d7-8b5f-0801770efe25",
+    "patient_id": "bb4ce8e2-19a8-4853-b6b0-a36fa04d8bae",
+    "encounter_id": "4b22bfd4-0a6b-45b0-be95-1e2076d915e2",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -2086,10 +2086,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "9bc79b6f-11f9-4c5c-855a-6f5aed0f612d",
-    "patient_id": "410e418e-1629-426a-9b9d-a16c905cc8e1",
-    "encounter_id": "bc108f05-f909-4943-a159-d17900f05282",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "e5062020-cfec-427f-a454-424db7e975e2",
+    "patient_id": "c9c6ecbe-24ea-4861-ba28-c84522810a1d",
+    "encounter_id": "f4409a09-dad5-466f-9b29-05879df83548",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2100,10 +2100,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "74c8aa6a-dcae-4526-b6ae-b2d0b344ade9",
-    "patient_id": "7d557aca-17ea-46db-8cf0-ff323c958f84",
-    "encounter_id": "8dba431a-64db-4cfd-9555-5b5df8f5aaef",
-    "practitioner_id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "id": "cf7d11cf-5692-4d60-9ac7-2e459964f51f",
+    "patient_id": "12f05a2d-b752-4be6-bb0b-647f47902642",
+    "encounter_id": "8b41fcc8-9bb1-4310-9fc5-273bfdda9c45",
+    "practitioner_id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -2114,10 +2114,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6643e217-53ce-4147-873c-fbaf1cca9626",
-    "patient_id": "58ebbf1c-ddd0-4c31-99bb-50abec0ff07b",
-    "encounter_id": "238bed17-3d86-48b4-bee9-8b91147c8705",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "c65620b0-51f7-4cf0-b510-27d05391654a",
+    "patient_id": "90d5ae3d-f140-4381-af45-2707b4ba95cc",
+    "encounter_id": "b4085e05-d688-4d21-85dc-18590949e439",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -2128,10 +2128,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "308aa9f7-ca01-4a4a-8dc3-038f3d303f39",
-    "patient_id": "eacbb88b-179f-4223-ae20-871db8bf4668",
-    "encounter_id": "777b2194-8565-4fb7-bf89-6a98e8d01c0f",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "3f2977c3-663f-493d-9d9e-ea20ba3c4687",
+    "patient_id": "738867bd-748a-40c5-86c0-4fbd5c89d82c",
+    "encounter_id": "d74bc102-1970-41a9-9b98-f1ad6adbbcb9",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2142,10 +2142,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f0ab99f1-a643-4982-bbf3-2d4fabc3c333",
-    "patient_id": "0a7d9efb-4a15-4a3d-93e8-9f7002256c75",
-    "encounter_id": "b76bf198-3f22-4db9-8589-9b5f266e0c56",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "ff954a86-555e-4463-ad11-cfbb135aa8b5",
+    "patient_id": "c7cf2d2a-dfd5-498a-bbb1-270baaba90d3",
+    "encounter_id": "8ceac827-d418-4da7-9622-f105c54251eb",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -2156,10 +2156,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "10c850a2-8bbb-45d5-ba13-60022ba89ba1",
-    "patient_id": "fdf7f358-b48a-48be-93a5-adbbc4d385ef",
-    "encounter_id": "e7657ad3-db2c-445b-9c4a-c6f0eb37a92e",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "f2ca62d3-a7ee-424b-a214-035f50cffb03",
+    "patient_id": "369ad5b0-4052-4eb9-bfa6-1fa42568418f",
+    "encounter_id": "2eae48c0-b119-43f3-925c-5eea85270ad9",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2170,10 +2170,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d335acc1-2a0d-4334-b67b-4bd707f9bf99",
-    "patient_id": "f71b2e66-31cd-4109-86b5-2bcd5a35d337",
-    "encounter_id": "8cc3a0aa-fd76-49e8-99bf-1f4d771d2d1e",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "394b1e4b-0682-476c-be89-10fa5b494422",
+    "patient_id": "a4b8236c-acfa-4aa3-b8e7-6291ea4fc324",
+    "encounter_id": "ce050902-950f-45c7-a20c-cb1f1c96ae04",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -2184,10 +2184,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a64eb5f5-be13-40cc-9493-e6655bcd19cb",
-    "patient_id": "c309beee-cfe7-4920-a453-980119ba6719",
-    "encounter_id": "940e7206-2fb2-4561-9443-b66d1e0f77b5",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "e89d3ea0-3d4a-4bd9-b617-98c021c8bd51",
+    "patient_id": "0c8dd885-ef72-40ff-a2dc-08784be8bcc9",
+    "encounter_id": "f382ff88-3651-4aa0-b92b-c9506e504b4b",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2198,10 +2198,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "911f0916-5dd1-4a32-8d8f-e24d5255a7dd",
-    "patient_id": "5c69d7b2-a003-49b6-98e3-f37da8032aa7",
-    "encounter_id": "4d4ccb51-3fd8-40a6-8445-a96373339bae",
-    "practitioner_id": "c2d3f9cf-2dc4-48a3-9284-f0b47276eced",
+    "id": "83d7b763-51a0-41d9-978e-4e0e42c21c15",
+    "patient_id": "6b38ff34-bcde-4f7e-afa8-2b9f32c0837e",
+    "encounter_id": "36eae240-e44f-4916-aeb5-bd0e82a66c86",
+    "practitioner_id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -2212,10 +2212,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "68a40b2d-0b55-4723-a0df-f2593fa5d822",
-    "patient_id": "a8420eb0-17ae-4dd0-837e-aeb1ea38d5fe",
-    "encounter_id": "3109d391-05c6-4a46-8fbd-50efabc7c388",
-    "practitioner_id": "a744f353-0492-41a3-bccd-38fd18ce6f12",
+    "id": "7868c35f-8082-4943-8ebd-6a28f3a60b32",
+    "patient_id": "0bcbe86d-a96d-40db-804c-793ce788db41",
+    "encounter_id": "7d1df7d8-5d38-4fb6-9f00-23a73c9c8e1a",
+    "practitioner_id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -2226,10 +2226,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "af50c18c-9c9e-4c86-a2d7-6aea7d0c0d7a",
-    "patient_id": "9cc2dd47-7298-4121-9d60-647af002b683",
-    "encounter_id": "125921ae-6079-4064-afd7-4cf043ddae5f",
-    "practitioner_id": "b00cf928-d6d0-4706-b3d1-c98ee5b5751f",
+    "id": "6734c582-9bbb-47ad-9c53-50e46f919694",
+    "patient_id": "141a64e9-1ecf-47cc-abc8-49e2621cceb7",
+    "encounter_id": "c100e4c7-b58d-4e7f-b499-c6f4a3680e33",
+    "practitioner_id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2240,10 +2240,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "8c82c919-323a-48b7-a310-7a25edcfda6a",
-    "patient_id": "7f89dd85-d807-4b0a-b2b6-8e156bb3abd0",
-    "encounter_id": "2cd15c8d-091e-4963-b272-4fd0920b512e",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "1754c996-9fd9-4f1e-8187-83036c4cb555",
+    "patient_id": "b1701636-32f7-49ce-8a34-4fa1e9521e21",
+    "encounter_id": "06f62dee-4b79-4826-8196-d395ef7747b8",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2254,10 +2254,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d084d9f3-2cfd-47d7-8a37-0607d4fac39d",
-    "patient_id": "e8a8729e-df84-4bf2-b7ea-8b68e069adf6",
-    "encounter_id": "f0941404-cea7-445b-9abd-9bdbd2596b23",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "04248f56-7534-4027-b5a6-7e6386c62c22",
+    "patient_id": "9f3496d0-ec83-420c-8395-cb949602dfe9",
+    "encounter_id": "3d6342d5-c8cf-4347-949d-897512f6bfa9",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -2268,10 +2268,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f0364138-6b05-4760-9735-5457b6633b0d",
-    "patient_id": "0cd610fc-02ec-4783-aef0-0661e71965fc",
-    "encounter_id": "edfc24f6-3e76-4d94-a1b0-29573a0106c8",
-    "practitioner_id": "4a3513e2-97fe-458a-ae12-c8a74f057947",
+    "id": "b78a5a88-3be5-42aa-9114-174f524bae9d",
+    "patient_id": "afd8466a-d2e4-4690-88fc-5d374cd0bf49",
+    "encounter_id": "c8742508-29eb-4e08-af1f-f24b4669d83a",
+    "practitioner_id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2282,10 +2282,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e0f3ae1b-b7e8-4efe-8e66-0da6216a810e",
-    "patient_id": "ee79452c-c406-48d8-9bcb-475970416c1c",
-    "encounter_id": "f41e2eaf-4c02-4e61-a2cd-24c7cf8a8efd",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "c5385e54-b657-4280-a25d-8d082a34f725",
+    "patient_id": "bfe29879-daff-45b2-9933-7a2401991dc7",
+    "encounter_id": "b9042e89-7be7-4fb6-b506-75782404250d",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -2296,10 +2296,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f5768c6e-f281-420b-aa2d-92345531a22f",
-    "patient_id": "ecae6e64-0a7c-463c-98a8-aff8cc4154ad",
-    "encounter_id": "56c90e2a-0d60-4273-8585-49c13e521e71",
-    "practitioner_id": "19d547f1-a95c-4d63-8fb4-4dfa9ca77eb9",
+    "id": "7d3aee8c-ccc2-425f-bb54-51186d808e79",
+    "patient_id": "4d9cc551-8978-43dd-9199-04d79ffd0952",
+    "encounter_id": "fbbe90fa-97bf-494c-87b9-5046d8d9313b",
+    "practitioner_id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -2310,10 +2310,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "8e01f179-d42c-499b-9710-fed0ebe1f2fe",
-    "patient_id": "d9d4729e-858c-4472-9ed5-94de34403225",
-    "encounter_id": "231e54ed-4b26-4d6d-9b85-afd2c3279195",
-    "practitioner_id": "3710517b-b4c6-4bb3-8bd4-684f70f2a7e7",
+    "id": "a2267108-c4f1-4cef-ad81-163094be3f82",
+    "patient_id": "fef13f6b-fa55-4d39-a4c7-77cc7bb94ddb",
+    "encounter_id": "7ad743ce-c258-4b40-91d9-e2d3562445f6",
+    "practitioner_id": "ec4b8147-c45e-4406-ad3e-95e333924c0f",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -2324,10 +2324,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b68499d4-ba5b-4769-b837-857818eb3038",
-    "patient_id": "e409bde9-2f3c-42ca-ba94-f30c11c7a1d6",
-    "encounter_id": "be204c0b-c8e4-4ffd-8a86-529dde95f805",
-    "practitioner_id": "6b8eb1e2-b1a6-4f3f-9a83-0359ff449251",
+    "id": "06c0b2b3-d50f-48f3-9262-431fe8483de5",
+    "patient_id": "a90e0c91-7942-40bf-9f60-d878b44ce1e6",
+    "encounter_id": "fdd9d42b-0446-4a27-8f62-d3d943547d05",
+    "practitioner_id": "5d3e697d-ba73-4835-92d1-8f235f89e2e0",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -2338,10 +2338,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "5d2ccd08-237f-4869-974a-d465e2e90bcd",
-    "patient_id": "150b3a47-4c51-4d08-990b-34d4dfe382ed",
-    "encounter_id": "6da514e1-744e-4341-b1a3-8e7c7c9d267c",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "4cfe67f7-415d-4b1d-939a-fcf8ad0a5166",
+    "patient_id": "89c60b80-126f-497e-afd4-3ca9179bf71f",
+    "encounter_id": "784fd999-d6cb-4cf4-a555-9ed1b154ded7",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -2352,10 +2352,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1c82cc8e-b953-4203-bf67-08d6c39f8c64",
-    "patient_id": "199fa473-ae55-4570-a149-f49876f4baff",
-    "encounter_id": "8dc0b77b-47f7-4bbb-a018-d67bb7493aad",
-    "practitioner_id": "3710517b-b4c6-4bb3-8bd4-684f70f2a7e7",
+    "id": "000fe673-6b0d-4976-8cf0-67edeadf57c1",
+    "patient_id": "707cd69f-7595-4943-bd6d-7f247d604b7e",
+    "encounter_id": "9c928e39-bb99-4f83-ab81-ad174b639709",
+    "practitioner_id": "ec4b8147-c45e-4406-ad3e-95e333924c0f",
     "drug_name": "Pediatric ORS sachets",
     "generic_name": "Pediatric",
     "dosage_mg": 500.0,
@@ -2366,10 +2366,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c8f0d76b-c133-44ba-abf1-67a9216b9e58",
-    "patient_id": "eda8b6c6-4670-4cfd-9946-3d407ec86cf5",
-    "encounter_id": "3d1c71f1-a3f1-43aa-a067-9227c8668f17",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "4314923c-1724-4f88-8b5e-64a1e1d0b87d",
+    "patient_id": "c9d37fad-6203-46a4-be39-511bfe6ab691",
+    "encounter_id": "526222bc-7446-4e6f-924f-24e2b23c29bb",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2380,10 +2380,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "63d094b3-c22d-484d-b198-fdb5111d2b3c",
-    "patient_id": "1f0754f3-c4f8-4e15-8114-54cb28ed59ef",
-    "encounter_id": "bdc78d4c-a094-40e3-81f3-74c6378cda75",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "d0c98625-641a-4c03-b0d4-3f29c62c014a",
+    "patient_id": "777ee36e-a4e7-4400-8cca-8cbe13e92428",
+    "encounter_id": "a62ef54c-3db3-4808-9da5-35c434b68b68",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2394,10 +2394,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "50552d06-b6c1-43b5-97bf-92cd196a2412",
-    "patient_id": "87f951c1-a1da-4123-87a3-5bc832f5cfa2",
-    "encounter_id": "30ed6b89-70ba-4e77-abf0-3bc3b3b6bceb",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "9605b37d-0239-47c2-8429-31d5927cbcce",
+    "patient_id": "cd1aa588-1f24-46e8-980a-cadc0a362e4f",
+    "encounter_id": "8649b51c-237c-412d-a0a2-baa41e64bbfd",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2408,10 +2408,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b9c6cf91-09d4-4c08-9b85-5bfe6b28d4d5",
-    "patient_id": "74f5524e-a9d9-480f-9be3-982247b4855b",
-    "encounter_id": "c05f6d53-0f53-47b6-88bb-30753fa79915",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "b67432c4-21bc-4e58-9849-2d8bc72c5a03",
+    "patient_id": "70ff80d7-c9d5-4b46-aa45-dd638eca645e",
+    "encounter_id": "09cc4aaf-8be2-4bc6-b189-1cf5be748fed",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2422,10 +2422,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1399ff1e-7f2b-4a5e-839d-f542724257d7",
-    "patient_id": "50d541ec-cc79-4737-b8c7-4a9bb11e277c",
-    "encounter_id": "c2ff8794-48b3-4c54-9719-dea97cc86341",
-    "practitioner_id": "dba4b24b-6f92-4e90-b161-0b05fe3f8190",
+    "id": "cb9bd629-b9fe-4034-a03a-b83c708fab72",
+    "patient_id": "b28e7231-a02c-43d3-a5d0-9254875a2f95",
+    "encounter_id": "ec59ee43-af0d-4e0e-9410-84a340e6bf70",
+    "practitioner_id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
     "drug_name": "Fefol-Vit capsules",
     "generic_name": "Fefol-Vit",
     "dosage_mg": 500.0,
@@ -2436,10 +2436,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1dad5b10-88e1-4aa2-b56f-956a05de1e44",
-    "patient_id": "269250d7-c9fd-4f71-9108-84cbd9e4c01e",
-    "encounter_id": "cdcc3a57-17e7-4649-9566-996cb82d39a3",
-    "practitioner_id": "d8c97e17-d69e-465e-8f4b-85118dab3dc4",
+    "id": "5f9446e1-0899-4d01-a575-fb28302dc4c7",
+    "patient_id": "b4bec874-a135-4937-a6b7-4dbd4d862752",
+    "encounter_id": "55cf1b3e-c2c8-4f28-83cf-bbb1c5126398",
+    "practitioner_id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2450,10 +2450,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "de2b04bd-71d0-4b6e-b1b2-9e056d5f5fbe",
-    "patient_id": "0ce10916-fbbc-4381-8104-eb3832ff91e7",
-    "encounter_id": "711554e4-dcf1-4c58-9784-13c7f4a60c9b",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "d6bc87dc-7a8c-4419-b8bb-5c7284aa2fd3",
+    "patient_id": "5e654edc-dfe8-441f-a20e-4549490ae016",
+    "encounter_id": "3752cfc7-8c4d-4a6e-a464-f15ceecdea49",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -2464,10 +2464,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "2de729a3-9edb-4854-9d75-b460b43d7f7a",
-    "patient_id": "60160423-fb35-4f64-82fe-508033a8906a",
-    "encounter_id": "aba197cb-cb2c-43b1-8793-5b9f553cd56c",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "7c8e0a58-e9bc-4cee-8450-00a56299e010",
+    "patient_id": "3b2eadf2-24fc-430c-8235-a2ab6a974cd8",
+    "encounter_id": "9a892d37-9a4d-4aa8-8684-de0d7d79931a",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2478,10 +2478,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "98c54671-26f8-4540-b4de-5f0a92347388",
-    "patient_id": "8fcb65b6-6cc1-4b5e-a2d4-fdba48135b70",
-    "encounter_id": "630ca241-d200-407f-b347-efc3c98cf756",
-    "practitioner_id": "8e19ea33-b9ee-470f-9639-6b1c0ed4e99d",
+    "id": "de2262ab-5895-4d07-aa77-089d9cbfde50",
+    "patient_id": "11f88f86-b188-4be0-b7fb-5d09ef77ce5f",
+    "encounter_id": "6fec8ae5-c841-4337-99fb-b41af1482211",
+    "practitioner_id": "82d5f687-1e52-422f-8b12-1d449ebfed72",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -2492,10 +2492,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0be30854-5191-4a07-a768-f03a6ec301b2",
-    "patient_id": "e87eeeb1-cf05-435c-87c3-1cc698c35f68",
-    "encounter_id": "ddc03a50-77c5-4691-aa84-8e54a9dfc4fa",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "51cc5a39-39c6-4d6d-b58b-959370f8d520",
+    "patient_id": "e8b9dfa7-fcc6-4c14-937e-7bc28daefabb",
+    "encounter_id": "d2b7fb73-9753-4c3f-9a47-58ff17bd41a3",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2506,10 +2506,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b2bd1fbb-be19-410c-895d-a3dfc395813c",
-    "patient_id": "3122d042-5a5c-4a6a-a3b3-7e4a950c47e0",
-    "encounter_id": "69ca0d3a-5b3b-4ae9-a462-f468088d7bb9",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "e57f2f4d-c2dd-4baa-ad2d-d019fc08f588",
+    "patient_id": "0ed6e5a4-4476-4dc7-80de-87b9c3c9aca7",
+    "encounter_id": "fdce9a24-7bcb-4b38-b962-e0df9e32e9fc",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -2520,10 +2520,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "b575a41f-3d31-4443-aba8-9408f125ae26",
-    "patient_id": "fd3c3d8b-cea5-4fa0-8e7c-06125bf8f152",
-    "encounter_id": "370b843a-a3c7-44a3-910c-3b478c16294e",
-    "practitioner_id": "0f8e872e-3abe-4305-a4b7-05ba724d06fc",
+    "id": "c666d068-1b6d-4a92-9e65-6dc6ce53f0ab",
+    "patient_id": "d1d99caa-fc4c-4b47-9b57-1c468d98ec9c",
+    "encounter_id": "06876bd5-6478-4545-bb69-4045b754b620",
+    "practitioner_id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2534,10 +2534,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f0d06b72-bd17-4429-954a-357317597bba",
-    "patient_id": "732f7064-cb00-492c-992d-9183a5707ab2",
-    "encounter_id": "94d7ce9d-b8b0-4b3c-87fd-52c5053c17fc",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "9020e25f-6d1a-4e2d-abbf-b27a585fd048",
+    "patient_id": "51304994-1e60-4491-9038-e56e9480a25c",
+    "encounter_id": "779fe52e-19ae-43e3-b449-5364614e3e6b",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -2548,10 +2548,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "f1493d47-4575-47f1-a10e-849a2b903d4a",
-    "patient_id": "62e0a848-9933-4db0-9b5b-77ffc8c9b6ff",
-    "encounter_id": "4af1537b-5e86-49d5-82fa-f157ec4778c8",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "d814bcfe-23f1-4044-992a-0bce7f2eb03e",
+    "patient_id": "623e9243-0bc6-435b-9ff6-9368e8f3ef44",
+    "encounter_id": "17187a1a-d459-4bbf-a9fb-b1013ce8d141",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Loprin 75mg",
     "generic_name": "Loprin",
     "dosage_mg": 500.0,
@@ -2562,10 +2562,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "c59bcf33-2e0e-4739-a768-b306cecffe07",
-    "patient_id": "3862816f-5187-4f20-90aa-c2125abc91c1",
-    "encounter_id": "95900eb1-46e6-48b4-9f6e-0ec7726a949d",
-    "practitioner_id": "28dda9fb-848c-4691-81ed-d5baa1f21148",
+    "id": "1092c3d2-37ee-42d8-9731-f63a75f1af45",
+    "patient_id": "d92a3532-f507-44ba-b1d3-fb6bed304555",
+    "encounter_id": "addc6eee-f156-4623-9ba9-e7ea21d64a1a",
+    "practitioner_id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -2576,10 +2576,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "3c9451f6-87ab-479a-92d2-5307d04cebf9",
-    "patient_id": "16b3173b-06af-4100-b6f0-e88d42126f11",
-    "encounter_id": "565a7761-9f16-48f0-baf6-e3a0c6547565",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "dd3b2e14-7df7-46d9-8a3e-e963156937a8",
+    "patient_id": "4d799ac3-98a9-4280-921d-3579aa0ee771",
+    "encounter_id": "b5cde23d-30a0-4dcb-94a4-4264af6f8e4d",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -2590,10 +2590,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "d2c98a50-18f8-46c3-ba74-874b01915667",
-    "patient_id": "a5285a6e-a320-4aca-8deb-db46dca135b9",
-    "encounter_id": "dfeea476-25dc-429d-8187-f410ff40b2b2",
-    "practitioner_id": "02d822b4-f557-4573-9e50-f646b2dcbe63",
+    "id": "af62e5f5-2ee6-4c2b-afa1-8debdfcd2ba6",
+    "patient_id": "3d9385e9-adb6-4416-8048-38846c2b6e15",
+    "encounter_id": "f3b3359c-a1b5-47e1-9a80-2480bf112c1c",
+    "practitioner_id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2604,10 +2604,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "71fb9551-11fa-4790-bc1a-49272f15c1a1",
-    "patient_id": "fea4762e-f3e3-4b31-9dd0-d015ce96339b",
-    "encounter_id": "e64ca7d4-85ad-4875-b766-5b19fdbd7247",
-    "practitioner_id": "04c1ed9c-034b-423a-9786-08673f09eaaa",
+    "id": "195fcebe-90ee-420c-8d70-705bbd28f05e",
+    "patient_id": "7e440161-797d-4e9c-931c-10d15f4e9841",
+    "encounter_id": "8a0b667a-6c52-4b12-b2d6-cc65588313c8",
+    "practitioner_id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -2618,10 +2618,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "189013fe-12ec-47e9-b811-66e289a6bd6d",
-    "patient_id": "2caba725-5c3b-4038-b6fa-c1a8c64a4b31",
-    "encounter_id": "d20e2831-be32-4601-a372-6c24780ab80a",
-    "practitioner_id": "633937e7-809b-41a7-b805-3a8aee8a2f69",
+    "id": "8020bd81-9948-4701-bbb6-5d55ad0d770b",
+    "patient_id": "9d15012b-a4e7-4508-8b3c-ac989620a0cd",
+    "encounter_id": "b50aa082-2f7e-4a8c-95cd-9efc6b01061d",
+    "practitioner_id": "ae6e9264-3526-481d-9c12-5030d796c366",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,
@@ -2632,10 +2632,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "20c2a3ec-c090-43ce-80f8-edeb1144bf38",
-    "patient_id": "f9ac661f-f2db-4c05-8c0a-d38535fb2b04",
-    "encounter_id": "759ec47d-4cf6-42d9-8d50-c4bc49b9d541",
-    "practitioner_id": "5cafafc8-a42d-4b53-bdd6-c26522f10e69",
+    "id": "dd96fe4d-ab76-4f6e-9841-5d96a5144803",
+    "patient_id": "e1ca7c4b-1fb3-4049-ab4c-59148802588f",
+    "encounter_id": "1d93e961-afd3-4449-be66-b86018a3fb3c",
+    "practitioner_id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -2646,10 +2646,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "ef841bd5-71b3-4808-bd56-65a9cd65b205",
-    "patient_id": "938f68b3-7ed2-44c3-ab63-7384744118f2",
-    "encounter_id": "d2a3ba59-8688-4834-82ad-50fbc4f9d5a8",
-    "practitioner_id": "8e19ea33-b9ee-470f-9639-6b1c0ed4e99d",
+    "id": "289e03c5-c19b-4dd9-9cb9-cc15c118b101",
+    "patient_id": "8b5f309e-22e1-4490-9c16-e783fade522f",
+    "encounter_id": "2b7ff8a5-36c3-49c6-b770-a22b39f60884",
+    "practitioner_id": "82d5f687-1e52-422f-8b12-1d449ebfed72",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -2660,10 +2660,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "1ce1f357-285a-46b0-b23c-dd6d85bc7836",
-    "patient_id": "b0798ec3-e361-4371-b796-ac3c8d1b446e",
-    "encounter_id": "f91e1eae-db07-438c-b355-384d9e219363",
-    "practitioner_id": "6d9f2d62-0e33-49cf-8917-56d40a8339d9",
+    "id": "eb3da7d5-ccf8-4e87-887d-f7777f06bb3a",
+    "patient_id": "3bb090f2-630b-43c0-8f0c-f0e6ec4c9ddd",
+    "encounter_id": "29159dd5-ad54-4c09-8ab7-ebe61dd2c380",
+    "practitioner_id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
     "drug_name": "Flagyl 400mg",
     "generic_name": "Flagyl",
     "dosage_mg": 500.0,
@@ -2674,10 +2674,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "181c29a0-cb3d-4140-a5d7-72ed4d4384e6",
-    "patient_id": "788116e3-856c-410f-97d7-9c008e981c66",
-    "encounter_id": "a72b9718-dcc2-4937-8e40-29bea0c4b039",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "d67c07e1-5a87-47c5-9139-9aa2408dffda",
+    "patient_id": "db7976fd-266c-43d2-924e-92fec850212c",
+    "encounter_id": "523efa93-961f-4d7d-b337-5b03424f5a6a",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -2688,10 +2688,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "faf907ec-5827-47fb-a8b8-cbb0e25267ef",
-    "patient_id": "86d94d5d-835e-4a7d-99f8-0a8cc0d6841d",
-    "encounter_id": "3819f18b-deb0-4b8c-8a5c-dcc210fafa5e",
-    "practitioner_id": "59689af3-bb0a-4ea6-ac44-82dc6dd5142c",
+    "id": "2d9b61cb-f425-47f4-a2b7-63c47ed45ccd",
+    "patient_id": "ddab7c3e-e906-42f4-be71-78f308ec24e0",
+    "encounter_id": "9c1e8d53-a88d-40cc-86c1-636989d842f9",
+    "practitioner_id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2702,10 +2702,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "a5cdfcc7-1ab5-457e-817c-6130c8f083a6",
-    "patient_id": "7677249b-ff5e-47f4-a68f-4407a1838262",
-    "encounter_id": "e353f240-16ea-4c22-ad92-64f1df9a60b0",
-    "practitioner_id": "3f687462-3857-4c7e-8d18-b339eb27ef5d",
+    "id": "b791cf72-2b85-40c1-b402-fce3be4c6d02",
+    "patient_id": "bc5ff9c8-341c-4103-aefa-f6d9f905d58b",
+    "encounter_id": "495751f9-f5b9-43b6-af05-d9e91e81c050",
+    "practitioner_id": "168868d7-9994-4539-96c9-cfeb261f200c",
     "drug_name": "Ventolin Nebulizer",
     "generic_name": "Ventolin",
     "dosage_mg": 500.0,
@@ -2716,10 +2716,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "19070dae-ce51-4ab9-a24b-5096155e6b3e",
-    "patient_id": "25e9efb0-cbd4-45a0-a884-8c45a94b367a",
-    "encounter_id": "b54021a4-bb01-4a47-af02-6d76eb7bda66",
-    "practitioner_id": "3923e3b3-3801-415f-8353-a9863423f151",
+    "id": "aeb38d25-b6c2-4b1d-92e7-23f85de23973",
+    "patient_id": "f78f8a52-ae2d-49ba-bb40-a1658ebd5131",
+    "encounter_id": "3a2792e3-7b18-497b-bfcf-60a1e9c38ffd",
+    "practitioner_id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
     "drug_name": "Ponstan 500mg",
     "generic_name": "Ponstan",
     "dosage_mg": 500.0,
@@ -2730,10 +2730,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "cf831bfd-8dc9-494c-81e2-285da0818163",
-    "patient_id": "f7bbce71-ed09-4644-a5c0-63dbc965fb4c",
-    "encounter_id": "20dcc04d-32e6-42c9-b287-2c46848026b1",
-    "practitioner_id": "a604c24e-7906-4a6c-bbd9-51f058faf599",
+    "id": "9ed8c413-c1a7-49bc-9865-e4adf7173b51",
+    "patient_id": "91e78bf9-02b1-4663-b6d4-f6f658e070af",
+    "encounter_id": "872268cc-9f42-4447-9026-9cd4e46904b9",
+    "practitioner_id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
     "drug_name": "Claritek 10mg",
     "generic_name": "Claritek",
     "dosage_mg": 500.0,
@@ -2744,10 +2744,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "aa39d53c-3e9c-40a5-8818-6fe449b34e00",
-    "patient_id": "0d5b7ca4-23f5-4762-9230-e00283d0e456",
-    "encounter_id": "be38a670-8462-4cd9-8934-df4e3804c5d0",
-    "practitioner_id": "2bc77987-761d-461b-adcc-8af72729a604",
+    "id": "ee69cf94-dea5-422f-98ad-c3b9f1cd4f50",
+    "patient_id": "90cb212a-a56a-4d91-85e4-66b225ed7205",
+    "encounter_id": "714d5e3e-4636-450b-b899-11835f9c6c72",
+    "practitioner_id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
     "drug_name": "Dalacin T lotion",
     "generic_name": "Dalacin",
     "dosage_mg": 500.0,
@@ -2758,10 +2758,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "6b13905c-185e-42cd-ab28-98367a163bbf",
-    "patient_id": "3baeaf37-865f-4113-bd93-0abbf105bd75",
-    "encounter_id": "071deba6-863d-490e-b4e3-b66ea5bce2c8",
-    "practitioner_id": "4e19a273-6fe0-43f3-a399-75790c888e61",
+    "id": "512c894b-8b41-4f26-b6eb-c63f22970b40",
+    "patient_id": "b23e96e2-f551-4567-bd49-ebba37d9c8e4",
+    "encounter_id": "156cf02b-9c6b-4078-a1c6-c942b28e1cc2",
+    "practitioner_id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
     "drug_name": "Augmentin 625mg",
     "generic_name": "Augmentin",
     "dosage_mg": 500.0,
@@ -2772,10 +2772,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "0e259f70-25e8-409e-9427-7f7511fc3938",
-    "patient_id": "f934deba-69a7-4387-ab61-c884d67b507d",
-    "encounter_id": "4d75629e-ac8e-4d6c-b308-d6cc5b8a1521",
-    "practitioner_id": "78186daa-3866-48a2-800b-3c1b7b66e332",
+    "id": "83937fca-0acb-42ab-a14c-d80c133c9676",
+    "patient_id": "4b91b830-c40f-4606-8a3e-9cd047845043",
+    "encounter_id": "c7558b07-10e8-4673-b1b3-41a9ecaf1ced",
+    "practitioner_id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
     "drug_name": "Panadol 500mg",
     "generic_name": "Panadol",
     "dosage_mg": 500.0,
@@ -2786,10 +2786,10 @@
     "safety_check_notes": "Prescription safety verified against allergies and dosage limits."
   },
   {
-    "id": "e1767e7b-aa79-41ff-a200-11b8d37bd390",
-    "patient_id": "f7480d4b-043b-42c1-9246-9645c8262635",
-    "encounter_id": "0dcebb31-2170-458a-a522-188813875255",
-    "practitioner_id": "ae62b5e4-dc74-4367-a0d5-644e45e3e822",
+    "id": "f7004840-6d93-47d2-9557-d506eb23de08",
+    "patient_id": "ede3d6cf-d79e-47bb-aaf5-e9e6a98cf5b1",
+    "encounter_id": "fb915a71-e2e3-4b71-abed-6f3c05e1999a",
+    "practitioner_id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
     "drug_name": "Concor 5mg",
     "generic_name": "Concor",
     "dosage_mg": 500.0,

@@ -101,15 +101,22 @@
 * **[mcp_servers/](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/mcp_servers):** 4 decoupled Model Context Protocol (MCP) servers (`patient-records`, `scheduling`, `drug-database`, `notifications`) verified via [`test_mcp_servers.py`](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/test_mcp_servers.py) (**9/9 tools passed**).
 * **[prescription_safety_engine.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%202/prescription_safety_engine.py):** Deterministic clinical safety rule engine covering 100+ Pakistani medicines, allergy conflicts, DDIs, max daily dose, duplicate therapy, and pregnancy/pediatric contraindications (11/11 unit tests passed).
 
-### Day 3: LangGraph Core Engine & Worker Agents ⏳
-* Supervisor router graph implementation.
-* Intake, Triage, Scheduling, and Records agents with tool integration.
-* Dynamic UrduLish conversational memory and state management.
+### [Day 3: Building the Specialist Agents](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203) ✅
+* **[01_day_3_specialist_agents_architecture.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/01_day_3_specialist_agents_architecture.md):** Complete architectural specification for all 7 specialist agents, structured I/O contracts, two-tier deterministic triage engine, and benchmark evaluation summaries.
+* **[llm_factory.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/llm_factory.py):** Singleton LangChain LLM factory powered by `gemini-3.5-flash-lite` with structured output Pydantic bindings.
+* **[agents/intake_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/intake_agent.py):** Multi-turn conversational UrduLish intake collector asking **one question at a time**; captures chief complaint, duration, severity (1-10), associated symptoms, allergies, meds, chronic conditions, and patient relation into a validated `IntakeForm`.
+* **[agents/triage_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/triage_agent.py) & [triage_evaluation_report.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/evaluation/triage_evaluation_report.md):** Two-tier triage engine (Tier 1: Non-overridable deterministic red flags + Tier 2: Gemini 3.5 Flash Lite urgency classifier). Benchmarked on 50 clinical scenarios achieving **100.0% Emergency Recall**, **0.0% Under-Triage**, **0.0% Over-Triage**, and **100.0% Overall Accuracy**.
+* **[agents/scheduling_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/scheduling_agent.py):** Comprehensive booking engine with symptom-to-specialty routing (6 specialties), doctor preference filters (branch, gender, fee), anti-double-booking and anti-past-booking guarantees, direct Google Calendar event URLs, and UrduLish confirmations.
+* **[agents/records_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/records_agent.py):** Patient file & lab observation Q&A agent retrieving historical encounters, vitals, and diagnostic tests with patient-friendly UrduLish explanations.
+* **[agents/clinical_summary_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/clinical_summary_agent.py) & [soap_evaluation_report.md](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/evaluation/soap_evaluation_report.md):** Pre-visit SOAP note generator strictly demarcating patient-reported facts from AI differential suggestions. Multi-rater evaluation with 3 clinical evaluators (Physician, Medical Director, Nursing Lead) across 10 cases achieved **4.97/5 Factual Separation**, **4.80/5 Clinical Utility**, and **5.00/5 Safety Compliance** (98.4% clinical satisfaction).
+* **[agents/prescription_safety_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/prescription_safety_agent.py):** Evaluates doctor draft prescriptions against the clinical safety engine, generating physician alert banners (🚨 CRITICAL / ⚠️ WARNING) and patient-facing explanations.
+* **[agents/followup_agent.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/agents/followup_agent.py):** Post-visit care plan generator with daily medication schedules (meal timings in UrduLish), diagnostic lab reminders, WhatsApp outreach sequences (Day 1, 3, 7), and feedback analysis with automatic **Re-Triage Escalation**.
+* **[test_all_agents.py](file:///c:/Users/PMYLS/Downloads/AI%20Clinic%20Assistant%20for%20Healthcare/Day%203/test_all_agents.py):** End-to-end automated verification test suite verifying all 7 specialist agents in a cohesive pipeline (**100% Tests Passed**).
 
-### Day 4: Clinical Summary, Prescription Safety & HITL Gates ⏳
-* Automated SOAP note generation for attending doctors.
-* Drug-drug interaction and allergy screening engine.
-* Doctor review, edit, and approve interface with LangGraph interrupts.
+### Day 4: Multi-Agent Supervisor Orchestration & HITL Gates ⏳
+* LangGraph Supervisor state graph coordinating all 7 specialist agents.
+* Shared `ClinicalState` with conversation history and dynamic checkpointing.
+* Doctor review, edit, and approve interface with interactive LangGraph interrupts.
 
 ### Day 5: Evaluation, Guardrails, Docker & Deployment ⏳
 * Safety red-teaming, DeepEval / Ragas evaluation pipelines.
