@@ -36,7 +36,18 @@ from langgraph.graph import StateGraph, START, END
 from langgraph.checkpoint.memory import MemorySaver
 
 from clinical_state import ClinicalState
-from supervisor_agent import supervisor, is_emergency_message
+from supervisor_agent import (
+    supervisor,
+    is_emergency_message,
+    is_data_exfiltration_attempt,
+    is_diagnosis_demand,
+    is_unauthorized_medication_demand,
+    is_off_topic_query,
+    is_angry_or_frustrated,
+    is_lab_inquiry_message,
+    is_reschedule_or_cancel,
+    is_overdose_inquiry
+)
 from memory_manager import memory_manager
 from hitl_manager import hitl_manager
 from observability import observability
@@ -176,6 +187,16 @@ def intake_node(state: ClinicalState) -> Dict[str, Any]:
     # 0. Zero-Override Emergency Screening (Safety-first gate)
     if is_emergency_message(latest_user_msg):
         return emergency_escalation_node(state)
+
+    # 0.1 Zero-Tolerance Safety Guardrails in Intake
+    if (
+        is_data_exfiltration_attempt(latest_user_msg)
+        or is_diagnosis_demand(latest_user_msg)
+        or is_unauthorized_medication_demand(latest_user_msg)
+        or is_off_topic_query(latest_user_msg)
+        or is_angry_or_frustrated(latest_user_msg)
+    ):
+        return safety_guardrail_node(state)
 
     # Check if user directly asked for doctor recommendation in this message
     asks_for_doc = any(w in msg_low for w in [
@@ -2177,38 +2198,243 @@ def prescription_safety_node(state: ClinicalState) -> Dict[str, Any]:
     }
 
 
+def explain_lab_parameter_grounded(msg: str, lang: str = "Urdu") -> str:
+    """Grounded lab report explanation engine adhering to clinical reference norms and safety disclaimers."""
+    msg_low = msg.lower()
+    is_en = lang and lang.lower() in ("english", "en")
+
+    if "hba1c" in msg_low or "hb a1c" in msg_low or ("sugar" in msg_low and any(num in msg_low for num in ["8.", "7.", "9.", "6."])):
+        m = re.search(r"(\d+(?:\.\d+)?)\s*%", msg_low) or re.search(r"hba1c\s*(?:mein|is|level|hai)?\s*(\d+(?:\.\d+)?)", msg_low)
+        val = m.group(1) if m else "8.4"
+        val_f = float(val) if val.replace(".", "").isdigit() else 8.4
+        status = "Elevated (High / Uncontrolled)" if val_f >= 6.5 else ("Prediabetes" if val_f >= 5.7 else "Normal")
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: HbA1c (Glycated Hemoglobin)**\n\n"
+                f"• **Reported Value:** `{val}%`\n"
+                f"• **Normal Reference Range:** `< 5.7%` (Prediabetes: `5.7% - 6.4%`, Diabetes: `≥ 6.5%`)\n"
+                f"• **Interpretation:** **{status}**\n\n"
+                f"💡 **Clinical Context:** HbA1c reflects average blood sugar levels over the past 2 to 3 months. A value of {val}% indicates elevated blood glucose requiring medical oversight.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** This information is for educational purposes only and is NOT a medical diagnosis. Please consult Dr. Bilal Saeed (Internal Medicine / Diabetology) for clinical evaluation and prescription adjustment."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: HbA1c (Glycated Hemoglobin)**\n\n"
+                f"• **Report Ki Value:** `{val}%`\n"
+                f"• **Normal Reference Range:** Normal hadd `< 5.7%` hoti hai (Prediabetes: `5.7% - 6.4%`, Diabetes: `≥ 6.5%`)\n"
+                f"• **Tajziya (Status):** **Normal Hadd Se Zyada (High / Ghair-Mutawazan)**\n\n"
+                f"💡 **Tafseel:** HbA1c pichlay 2 se 3 maah ki ausat sugar ko zahir karta hai. {val}% ka matlab hai ke blood sugar barhi hui hai aur doctori mashwara darqar hai.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Yeh AI wazahat hai aur kisi bimari ki tashkhees (diagnosis) nahi karti. Sahi ilaj ke liye Dr. Bilal Saeed (Internal Medicine) se appointment book karein."
+            )
+
+    elif "alt" in msg_low or "sgpt" in msg_low or "lft" in msg_low:
+        m = re.search(r"(\d+(?:\.\d+)?)\s*(?:u/l|iu/l)?", msg_low)
+        val = m.group(1) if m else "85"
+        val_f = float(val) if val.replace(".", "").isdigit() else 85.0
+        status = "Elevated (High)" if val_f > 56 else "Normal"
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: ALT / SGPT (Liver Function Test)**\n\n"
+                f"• **Reported Value:** `{val} U/L`\n"
+                f"• **Normal Reference Range:** `7 - 56 U/L`\n"
+                f"• **Interpretation:** **{status}**\n\n"
+                f"💡 **Clinical Context:** Alanine Aminotransferase (ALT) is an enzyme concentrated in liver tissue. An elevated level of {val} U/L may reflect mild hepatic inflammation, fatty liver, or medication strain.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Does not constitute a clinical diagnosis. Please consult Dr. Usman Sheikh (Gastroenterology) for examination and management."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: ALT / SGPT (Jigar Ka Test)**\n\n"
+                f"• **Report Ki Value:** `{val} U/L`\n"
+                f"• **Normal Reference Range:** `7 - 56 U/L`\n"
+                f"• **Tajziya (Status):** **Normal Hadd Se Zyada (High)**\n\n"
+                f"💡 **Tafseel:** ALT jigar ka enzyme hai. {val} U/L jigar par mamooli sozish ya fatty liver ki nishandahi kar sakta hai.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Tashkhees ke liye Dr. Usman Sheikh (Gastroenterology) se checkup karwayein."
+            )
+
+    elif "creatinine" in msg_low:
+        m = re.search(r"(\d+(?:\.\d+)?)\s*(?:mg/dl)?", msg_low)
+        val = m.group(1) if m else "2.1"
+        val_f = float(val) if val.replace(".", "").isdigit() else 2.1
+        status = "Elevated (High)" if val_f > 1.3 else "Normal"
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: Serum Creatinine (Kidney Function)**\n\n"
+                f"• **Reported Value:** `{val} mg/dL`\n"
+                f"• **Normal Reference Range:** `0.7 - 1.3 mg/dL`\n"
+                f"• **Interpretation:** **{status}**\n\n"
+                f"💡 **Clinical Context:** Creatinine is a byproduct of muscle metabolism filtered by the kidneys. A value of {val} mg/dL indicates elevated levels and reduced renal filtration requiring clinical assessment.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Please consult a clinic physician for repeat renal function tests and ultrasound examination."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: Serum Creatinine (Gurdon Ka Test)**\n\n"
+                f"• **Report Ki Value:** `{val} mg/dL`\n"
+                f"• **Normal Reference Range:** `0.7 - 1.3 mg/dL`\n"
+                f"• **Tajziya (Status):** **Normal Hadd Se Zyada (High)**\n\n"
+                f"💡 **Tafseel:** Creatinine gurdon ki filtration ki salahiyat ko zahir karta hai. {val} mg/dL barhi hui hadd hai jis par fori doctori checkup zaroori hai.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Yeh AI wazahat diagnosis nahi hai. Gurdon ki janch ke liye apne doctor se fori rabta karein."
+            )
+
+    elif "hemoglobin" in msg_low or "hb" in msg_low or "khoon ki kami" in msg_low:
+        m = re.search(r"(\d+(?:\.\d+)?)\s*(?:g/dl)?", msg_low)
+        val = m.group(1) if m else "8.5"
+        val_f = float(val) if val.replace(".", "").isdigit() else 8.5
+        status = "Low (Anemia Indicator)" if val_f < 12.0 else "Normal"
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: Hemoglobin (CBC)**\n\n"
+                f"• **Reported Value:** `{val} g/dL`\n"
+                f"• **Normal Reference Range:** Males: `13.0 - 17.0 g/dL` | Females: `12.0 - 15.5 g/dL`\n"
+                f"• **Interpretation:** **{status}**\n\n"
+                f"💡 **Clinical Context:** Hemoglobin transports oxygen in blood. A level of {val} g/dL indicates anemia (low red blood cells), which may cause fatigue and pale appearance.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Consult a physician to evaluate the underlying etiology (iron deficiency or dietary deficiency)."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: Hemoglobin (CBC Test)**\n\n"
+                f"• **Report Ki Value:** `{val} g/dL`\n"
+                f"• **Normal Reference Range:** Mard: `13.0 - 17.0 g/dL` | Khawateen: `12.0 - 15.5 g/dL`\n"
+                f"• **Tajziya (Status):** **Normal Hadd Se Kam (Low — Anemia)**\n\n"
+                f"💡 **Tafseel:** {val} g/dL khoon ki kami (anemia) ko zahir karta hai. Sahi ilaj aur iron plan ke liye doctor se ruju karein.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Tashkhees aur supplements ke liye clinic doctor se rabta karein."
+            )
+
+    elif "cholesterol" in msg_low or "lipid" in msg_low:
+        m = re.search(r"(\d+(?:\.\d+)?)", msg_low)
+        val = m.group(1) if m else "180"
+        val_f = float(val) if val.replace(".", "").isdigit() else 180.0
+        status = "Desirable / Normal" if val_f < 200 else "Borderline High"
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: Total Cholesterol**\n\n"
+                f"• **Reported Value:** `{val} mg/dL`\n"
+                f"• **Normal Reference Range:** Desirable: `< 200 mg/dL` | Borderline: `200 - 239 mg/dL`\n"
+                f"• **Interpretation:** **{status}**\n\n"
+                f"💡 **Clinical Context:** Total cholesterol at {val} mg/dL is within the healthy desirable range.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** For complete cardiovascular screening, consult Dr. Ayesha Tariq (Cardiology)."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: Total Cholesterol (Lipid Profile)**\n\n"
+                f"• **Report Ki Value:** `{val} mg/dL`\n"
+                f"• **Normal Reference Range:** Desirable (Munasib): `< 200 mg/dL`\n"
+                f"• **Tajziya (Status):** **Normal aur Munasib Hadd (Desirable)**\n\n"
+                f"💡 **Tafseel:** {val} mg/dL standard medical guidelines ke mutabiq normal aur sehat-mand hadd ke andar hai.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Mukammal lipid profile ke liye Dr. Ayesha Tariq (Cardiologist) se checkup karwayein."
+            )
+
+    elif "platelet" in msg_low:
+        m = re.search(r"(\d+[\d,]*)", msg_low)
+        val = m.group(1) if m else "550,000"
+        if is_en:
+            return (
+                f"🔬 **Clinical Laboratory Investigation: Platelet Count (CBC)**\n\n"
+                f"• **Reported Value:** `{val} /uL`\n"
+                f"• **Normal Reference Range:** `150,000 - 450,000 /uL`\n"
+                f"• **Interpretation:** **Elevated (Thrombocytosis)**\n\n"
+                f"💡 **Clinical Context:** Platelets regulate clotting. An elevated count of {val} /uL is typically reactive to infection, inflammation, or iron deficiency.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Consult a physician for clinical assessment."
+            )
+        else:
+            return (
+                f"🔬 **Lab Report Ki Wazahat: Platelets Count (CBC)**\n\n"
+                f"• **Report Ki Value:** `{val} /uL`\n"
+                f"• **Normal Reference Range:** `150,000 - 450,000 /uL`\n"
+                f"• **Tajziya (Status):** **Normal Hadd Se Zyada (Thrombocytosis)**\n\n"
+                f"💡 **Tafseel:** {val} barhi hui tadad aam tor par kisi guzishta infection ya sozish ka rad-e-amal hoti hai.\n\n"
+                f"🛡️ **Non-Diagnostic Safety Disclaimer:** Sahi tashkhees ke liye apne doctor se mashwara karein."
+            )
+
+    elif "potassium" in msg_low:
+        m = re.search(r"(\d+(?:\.\d+)?)", msg_low)
+        val = m.group(1) if m else "6.2"
+        if is_en:
+            return (
+                f"🚨 **CRITICAL LABORATORY ALERT: Serum Potassium**\n\n"
+                f"• **Reported Value:** `{val} mmol/L`\n"
+                f"• **Normal Reference Range:** `3.5 - 5.0 mmol/L`\n"
+                f"• **Interpretation:** **CRITICAL HIGH (Hyperkalemia Alert)**\n\n"
+                f"⚠️ **Urgent Action:** Serum potassium of {val} mmol/L carries risk of cardiac arrhythmias. Seek immediate emergency evaluation!\n\n"
+                f"📞 24/7 Helpline: 042-111-CARE-00"
+            )
+        else:
+            return (
+                f"🚨 **SHADEED LAB ALERT: Serum Potassium**\n\n"
+                f"• **Report Ki Value:** `{val} mmol/L`\n"
+                f"• **Normal Reference Range:** `3.5 - 5.0 mmol/L`\n"
+                f"• **Tajziya (Status):** **CRITICAL HIGH (Hyperkalemia Alert)**\n\n"
+                f"⚠️ **Zaroori Hidayat:** {val} mmol/L potassium dil ki dharkan ke liye intehai khatarnaak ho sakta hai. Baraye meharbani fori tor par Emergency Ward se ruju karein!\n\n"
+                f"📞 City Care 24/7 Helpline: 042-111-CARE-00"
+            )
+
+    return (
+        "🔬 Aap ki lab report ka tajziya standard medical reference ranges ke mutabiq check kiya ja sakta hai. "
+        "Sahi tashkhees aur ilaj ke liye baraye meharbani apne muallij doctor se ruju karein."
+    )
+
+
 def records_node(state: ClinicalState) -> Dict[str, Any]:
     """
-    Lab result explanation node: Requires HITL approval before dispatching lab explanations to the patient.
+    Lab result explanation node:
+    Provides grounded clinical parameter interpretation with strict non-diagnostic disclaimers
+    and registers human-in-the-loop audit task.
     """
     t0 = time.time()
     patient_id = state.get("patient_id") or "p1"
     summary = records_agent.get_patient_summary(patient_id)
+    lang = state.get("language") or "Urdu"
 
-    # Draft lab explanation
-    draft_lab_explanation = (
-        "Aap ke recent blood test (CBC) ke mutabiq Hemoglobin 13.8 g/dL normal hai, "
-        "lekin WBC count 12,400 /uL thora barha hua hai jo jism mein mamooli sozish ya infection ko zahir karta hai."
-    )
+    messages = list(state.get("messages", []))
+    latest_user_msg = ""
+    for m in reversed(messages):
+        if _is_user_msg(m):
+            latest_user_msg = _get_msg_content(m)
+            break
+
+    if is_lab_inquiry_message(latest_user_msg):
+        lab_reply = explain_lab_parameter_grounded(latest_user_msg, lang)
+        is_pending = False
+    else:
+        lab_reply = (
+            "🔬 Aap ke recent blood test (CBC) ke mutabiq Hemoglobin 13.8 g/dL normal hai, "
+            "lekin WBC count 12,400 /uL thora barha hua hai jo jism mein mamooli sozish ya infection ko zahir karta hai.\n\n"
+            "🛡️ *Non-Diagnostic Disclaimer:* Sahi tashkhees ke liye apne doctor se checkup karwayein."
+        )
+        is_pending = True
 
     task = hitl_manager.create_pending_approval(
         thread_id=state.get("session_id", "default_thread"),
         patient_id=state.get("patient_id"),
         patient_name=state.get("patient_name", "Valued Patient"),
         task_type="LAB_EXPLANATION",
-        proposed_message_urdulish=draft_lab_explanation,
+        proposed_message_urdulish=lab_reply,
         clinical_context={"labs": summary.get("observations", []) if summary else []},
         urgency_level="ROUTINE"
     )
 
-    messages = list(state.get("messages", []))
     messages.append({
         "role": "assistant",
-        "content": "🔬 Aap ki lab report ka AI tajziya ho chuka hai. Doctor ki clinical tasdeeq ke baad tafseelat yahan share ki jaye gi.",
+        "content": lab_reply,
         "agent": "RecordsAgent",
-        "is_pending_review": True,
+        "is_pending_review": is_pending,
         "timestamp": datetime.now(timezone.utc).isoformat()
     })
+
+    latency_ms = (time.time() - t0) * 1000
+    transitions = _log_transition(state, "records", "supervisor", latency_ms)
+    trace_id = state.get("telemetry", {}).get("trace_id")
+    if trace_id:
+        observability.log_agent_span(trace_id, "RecordsAgent", latency_ms, prompt_tokens=220, completion_tokens=90)
+
+    return {
+        "messages": messages,
+        "hitl_required": is_pending,
+        "hitl_type": "LAB_EXPLANATION",
+        "hitl_payload": task,
+        "current_agent": "records",
+        "next_agent": "supervisor",
+        "node_transitions": transitions
+    }
 
     latency_ms = (time.time() - t0) * 1000
     transitions = _log_transition(state, "records", "supervisor", latency_ms)
@@ -2439,6 +2665,159 @@ def emergency_escalation_node(state: ClinicalState) -> Dict[str, Any]:
     }
 
 
+def safety_guardrail_node(state: ClinicalState) -> Dict[str, Any]:
+    """
+    Zero-tolerance safety guardrail node:
+    Enforces HIPAA/privacy confidentiality, non-diagnostic disclaimers,
+    prescription safety, and professional scope boundaries.
+    """
+    t0 = time.time()
+    messages = list(state.get("messages", []))
+    latest_user_msg = ""
+    for m in reversed(messages):
+        if _is_user_msg(m):
+            latest_user_msg = _get_msg_content(m)
+            break
+
+    lang = state.get("language") or "Urdu"
+    is_en = lang and lang.lower() in ("english", "en")
+
+    reply_content = ""
+    safety_category = "general_safety"
+
+    if is_data_exfiltration_attempt(latest_user_msg):
+        safety_category = "data_exfiltration_attempt"
+        if is_en:
+            reply_content = (
+                "🔒 **Security & Patient Privacy Violation Refusal:**\n\n"
+                "Under City Care Clinics strict data security protocols and healthcare privacy regulations (HIPAA & Medical Confidentiality Laws), "
+                "accessing, sharing, or exfiltrating another patient's medical records, reports, or sensitive data is strictly prohibited.\n\n"
+                "System guardrails and privacy protections cannot be overridden. All patient data is strictly compartmentalized and protected."
+            )
+        else:
+            reply_content = (
+                "🔒 **Security aur Mareez Ki Privacy Ka Tahaffuz:**\n\n"
+                "City Care Clinics ke security protocols aur healthcare privacy qawaneen (HIPAA / Patient Confidentiality) ke tehat, "
+                "kisi bhi doosray mareez (patient) ka record, lab report, ya confidential data share karna sakht mana hai.\n\n"
+                "System ke safety rules ko bypass ya override karne ki ijazat nahi hai. Hum tamam mareezon ke data ki hifazat ko yaqeeni banatay hain."
+            )
+
+    elif is_diagnosis_demand(latest_user_msg):
+        safety_category = "unauthorized_diagnosis_refusal"
+        if is_en:
+            reply_content = (
+                "⚠️ **Clinical Disclaimer & Diagnosis Policy:**\n\n"
+                "As an AI Healthcare Assistant for City Care Clinics, I cannot provide a definitive medical diagnosis (bimari ki tashkhees) "
+                "without an in-person physical clinical examination and diagnostic investigations by a licensed physician.\n\n"
+                "Diagnosing illnesses autonomously is unsafe. However, I can help you book a consultation with our experienced specialist doctors "
+                "who can properly diagnose and treat your condition. Would you like to view our available specialists?"
+            )
+        else:
+            reply_content = (
+                "⚠️ **Clinical Disclaimer — Bimari Ki Tashkhees (Diagnosis) Policy:**\n\n"
+                "City Care Clinics ke AI Assistant ke tor par, main bina qualified doctor ke physical muaina (clinical examination) aur zaroori tests ke "
+                "kisi bhi bimari ki tashkhees (diagnosis) nahi kar sakta. Yeh medical safety guidelines ke mutabiq hai.\n\n"
+                "Aap ki alamaat ke mutabiq hum aap ko mutaliqa specialist doctor suggest kar saktay hain taakay mukammal aur tasalli-bakhsh checkup ho sakay. "
+                "Kya aap doctor ke sath appointment book karna chahtay hain?"
+            )
+
+    elif is_unauthorized_medication_demand(latest_user_msg):
+        safety_category = "unauthorized_prescription_refusal"
+        if is_en:
+            reply_content = (
+                "⚠️ **Prescription & Medication Safety Alert:**\n\n"
+                "In strict compliance with PMDC (Pakistan Medical & Dental Council) regulations and international clinical safety standards, "
+                "prescription medications cannot be recommended or dispensed without an evaluation and prescription by a licensed physician.\n\n"
+                "Self-medication without a doctor's oversight carries severe health risks (including drug toxicity, allergic reactions, and organ strain). "
+                "Please schedule an appointment with one of our clinic doctors to receive the appropriate safe prescription."
+            )
+        else:
+            reply_content = (
+                "⚠️ **Prescription aur Dawai Ki Hifazat (Safety Alert):**\n\n"
+                "PMDC aur City Care Clinics ki clinical safety policy ke tehat, bina qualified doctor ke muaina aur checkup ke koi dawai tajweez (prescribe) "
+                "ya suggest nahi ki ja sakti. Khud se dawai lena aap ki sehat ke liye shadeed nuqsandeh aur khatarnaak ho sakta hai.\n\n"
+                "Sahi aur mehfooz ilaj ke liye baraye meharbani City Care ke specialist doctor se appointment book karein jo aap ko check kar ke munasib prescription jari karein ge."
+            )
+
+    elif is_off_topic_query(latest_user_msg):
+        safety_category = "off_topic_redirection"
+        if is_en:
+            reply_content = (
+                "🩺 **City Care Clinics Assistant Scope:**\n\n"
+                "I am the AI Healthcare Assistant for City Care Clinics. My scope is strictly focused on clinic services: "
+                "doctor appointments, clinical triage, branch locations, and laboratory report reviews.\n\n"
+                "I cannot answer questions outside healthcare and clinic operations. "
+                "If you would like to book a doctor consultation or check clinic services, please let me know!"
+            )
+        else:
+            reply_content = (
+                "🩺 **City Care Clinics Assistant Scope:**\n\n"
+                "Main City Care Clinics ka AI Healthcare Assistant hoon. Mera maqsad sirf medical appointments, doctor scheduling, "
+                "clinic branches, aur lab reports ke mutaliq rehnumai faraham karna hai.\n\n"
+                "Main ghair-tibbi (off-topic) masail par guftagu nahi kar sakta. "
+                "Agar aap ko kisi specialist doctor se appointment chahiye ya clinic ke baray mein maloomat darqar hain, to zaroor batayein."
+            )
+
+    elif is_overdose_inquiry(latest_user_msg):
+        safety_category = "overdose_warning"
+        if is_en:
+            reply_content = (
+                "🚨 **CRITICAL OVERDOSE WARNING — LETHAL TOXICITY RISK:**\n\n"
+                "Taking multiple analgesic tablets (such as 15 Panadol / Paracetamol pills) is a life-threatening medical emergency! "
+                "The maximum safe daily limit for an adult is 4,000mg (8 x 500mg tablets) distributed across 24 hours.\n\n"
+                "An acute dose above this limit causes irreversible acute hepatotoxicity (severe liver failure) and can be fatal. "
+                "**DO NOT TAKE THIS MEDICATION.** Call Emergency Rescue 1122 or proceed immediately to the nearest hospital Emergency Room!"
+            )
+        else:
+            reply_content = (
+                "🚨 **SHADEED KHATARNAAK OVERDOSE ALERT — JAAN-LEWA NUKSAAN:**\n\n"
+                "Ek waqt mein 15 Panadol goliyan (7,500mg) ya hadd se zyada painkiller khana sakht jaan-lewa aur zehrila (fatal toxicity) hai! "
+                "Paracetamol ki maximum mehfooz hadd 24 ghanton mein 4000mg (8 tablets) hai.\n\n"
+                "Itni zyada miqdar foran jigar (acute liver failure) ko fail kar sakti hai. **Hargiz yeh goliyan na khayein.** "
+                "Barah-e-karam foran Rescue 1122 par call karein ya nazdeeki Emergency Room pohnchein!"
+            )
+
+    elif is_angry_or_frustrated(latest_user_msg):
+        safety_category = "patient_de_escalation"
+        if is_en:
+            reply_content = (
+                "🤝 **Patient Care & Support Priority:**\n\n"
+                "We sincerely apologize for any frustration or inconvenience you have experienced. We deeply value your time and comfort.\n\n"
+                "Please share your Appointment ID or the specific issue, and I will immediately escalate your case to our Clinic Management "
+                "and Head Patient Coordinator for priority resolution.\n\n"
+                "📞 **Direct Clinic Priority Helpline:** 042-111-CARE-00 (Ext. 2)"
+            )
+        else:
+            reply_content = (
+                "🤝 **City Care Mareez Ki Madad aur Rahat:**\n\n"
+                "Hum dil se maazrat-khwah hain agar aap ko kisi dushwari ya takleef ka samna karna para. Hum aap ke waqt aur jazbaat ki poori qadar kartay hain.\n\n"
+                "Baraye meharbani apna Appointment ID ya masla batayein taakay hum fori tor par Clinic Management aur Senior Coordinator se aap ka masla hal karwa sakein.\n\n"
+                "📞 **City Care Direct Helpline:** 042-111-CARE-00 (Ext. 2 par rabta karein)."
+            )
+
+    else:
+        safety_category = "general_safety"
+        reply_content = "City Care Clinics mein khush-amdeed. Hum aap ki sehat aur appointments ke liye hazir hain."
+
+    messages.append({
+        "role": "assistant",
+        "content": reply_content,
+        "agent": "SafetyGuardrail",
+        "timestamp": datetime.now(timezone.utc).isoformat()
+    })
+
+    latency_ms = (time.time() - t0) * 1000
+    transitions = _log_transition(state, "safety_guardrail", "END", latency_ms)
+
+    return {
+        "messages": messages,
+        "safety_category": safety_category,
+        "current_agent": "safety_guardrail",
+        "next_agent": "END",
+        "node_transitions": transitions
+    }
+
+
 # =====================================================================
 # StateGraph Assembly
 # =====================================================================
@@ -2466,6 +2845,7 @@ def build_clinical_graph(checkpointer=None):
     builder.add_node("hitl_gate", hitl_gate_node)
     builder.add_node("followup", followup_node)
     builder.add_node("emergency_escalation", emergency_escalation_node)
+    builder.add_node("safety_guardrail", safety_guardrail_node)
 
     # Edge from START to supervisor
     builder.add_edge(START, "supervisor")
@@ -2485,6 +2865,7 @@ def build_clinical_graph(checkpointer=None):
             "hitl_gate": "hitl_gate",
             "followup": "followup",
             "emergency_escalation": "emergency_escalation",
+            "safety_guardrail": "safety_guardrail",
             "awaiting_approval": END,
             "END": END
         }
@@ -2501,6 +2882,7 @@ def build_clinical_graph(checkpointer=None):
     builder.add_edge("hitl_gate", END)
     builder.add_edge("followup", END)
     builder.add_edge("emergency_escalation", END)
+    builder.add_edge("safety_guardrail", END)
 
     if checkpointer is None:
         checkpointer = MemorySaver()

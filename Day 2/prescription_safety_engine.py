@@ -7,6 +7,7 @@ and Special Population Safety Rules (Pregnancy, Pediatric, Elderly).
 """
 
 import json
+import re
 from typing import Dict, List, Any, Optional
 from pathlib import Path
 
@@ -34,6 +35,13 @@ PAKISTAN_DRUG_DATABASE: List[Dict[str, Any]] = [
     },
     {
         "brand_name": "Brufen", "generic_name": "Ibuprofen", "drug_class": "NSAID",
+        "common_dosage_mg": 400, "max_daily_dose_mg": 2400, "pediatric_max_mg_kg_day": 40,
+        "pregnancy_category": "D (Contraindicated in 3rd trimester)", "elderly_caution": True,
+        "contraindications": ["Active peptic ulcer", "Severe renal impairment", "Dengue fever", "Heart failure"],
+        "allergy_group": "NSAIDs"
+    },
+    {
+        "brand_name": "Advil", "generic_name": "Ibuprofen", "drug_class": "NSAID",
         "common_dosage_mg": 400, "max_daily_dose_mg": 2400, "pediatric_max_mg_kg_day": 40,
         "pregnancy_category": "D (Contraindicated in 3rd trimester)", "elderly_caution": True,
         "contraindications": ["Active peptic ulcer", "Severe renal impairment", "Dengue fever", "Heart failure"],
@@ -525,11 +533,23 @@ class PrescriptionSafetyEngine:
 
     def lookup_drug(self, name: str) -> Optional[Dict[str, Any]]:
         clean = name.strip().lower()
+        clean_word = re.sub(r"\b\d+(?:\.\d+)?\s*(?:mg|g|ml)?\b", "", clean).strip()
+
         if clean in self.brand_index:
             return self.brand_index[clean]
-        # Partial match
+        if clean_word and clean_word in self.brand_index:
+            return self.brand_index[clean_word]
+
+        # Check generic matches
+        for g, dlist in self.generic_index.items():
+            if clean == g or clean in g or g in clean:
+                return dlist[0]
+            if clean_word and (clean_word == g or clean_word in g or g in clean_word):
+                return dlist[0]
+
+        # Partial match on brand
         for b, data in self.brand_index.items():
-            if clean in b or b in clean:
+            if clean in b or b in clean or (clean_word and (clean_word in b or b in clean_word)):
                 return data
         return None
 
@@ -726,7 +746,8 @@ class PrescriptionSafetyEngine:
         dose_violations = []
         if dosages:
             for d in dosages:
-                v = self.check_maximum_daily_dose(d["drug_name"], d["dose_mg"], d["frequency"], age)
+                freq = d.get("frequency") or d.get("frequency_per_day", 1)
+                v = self.check_maximum_daily_dose(d["drug_name"], d["dose_mg"], freq, age)
                 if v:
                     dose_violations.append(v)
 

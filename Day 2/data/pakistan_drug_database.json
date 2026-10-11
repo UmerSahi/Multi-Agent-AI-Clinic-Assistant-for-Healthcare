@@ -46,6 +46,23 @@
     "allergy_group": "NSAIDs"
   },
   {
+    "brand_name": "Advil",
+    "generic_name": "Ibuprofen",
+    "drug_class": "NSAID",
+    "common_dosage_mg": 400,
+    "max_daily_dose_mg": 2400,
+    "pediatric_max_mg_kg_day": 40,
+    "pregnancy_category": "D (Contraindicated in 3rd trimester)",
+    "elderly_caution": true,
+    "contraindications": [
+      "Active peptic ulcer",
+      "Severe renal impairment",
+      "Dengue fever",
+      "Heart failure"
+    ],
+    "allergy_group": "NSAIDs"
+  },
+  {
     "brand_name": "Ponstan",
     "generic_name": "Mefenamic Acid",
     "drug_class": "NSAID",

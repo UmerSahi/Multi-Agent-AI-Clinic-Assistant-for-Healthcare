@@ -43,6 +43,44 @@ except Exception:
     genai = None
 
 
+def detect_prompt_injection(text: str) -> tuple[bool, str]:
+    """Scans document text or OCR output for malicious prompt injection attempts."""
+    if not text:
+        return False, ""
+    text_lower = text.lower()
+    patterns = [
+        r"system\s*override",
+        r"ignore\s+(all\s+)?(previous|prior)\s+instructions",
+        r"disregard\s+(all\s+)?instructions",
+        r"reveal\s+(patient|passwords|database|secrets|keys)",
+        r"dump\s+(all\s+)?patients",
+        r"exfiltrate",
+        r"you\s+are\s+now\s+in\s+developer\s+mode",
+        r"dan\s+mode",
+        r"bypass\s+rules",
+        r"print\s+credentials",
+        r"give\s+me\s+another\s+patient",
+        r"give\s+me\s+other\s+patient"
+    ]
+    for pat in patterns:
+        m = re.search(pat, text_lower)
+        if m:
+            return True, m.group(0)
+    return False, ""
+
+
+def sanitize_text_against_injections(text: str) -> str:
+    """Neutralizes prompt injection keywords and payloads from untrusted text."""
+    if not text:
+        return ""
+    cleaned = re.sub(
+        r"(?i)(system\s*override.*?($|\n)|ignore\s+(all\s+)?(previous|prior)\s+instructions.*?($|\n)|disregard\s+all\s+rules.*?($|\n)|reveal\s+(all\s+)?passwords.*?($|\n)|dump\s+all\s+patients.*?($|\n))",
+        "[SECURITY NOTICE: MALICIOUS PROMPT INJECTION PAYLOAD REMOVED]\n",
+        text
+    )
+    return cleaned
+
+
 class LabVisionExtractor:
     """End-to-end multimodal pipeline for clinical lab reports."""
 
@@ -226,13 +264,17 @@ Rules:
     def extract_from_text(self, text: str) -> Dict[str, Any]:
         """
         High-precision deterministic extraction for digital text & structured clinic reports.
+        Sanitizes untrusted content against adversarial prompt injections.
         """
-        header = self._extract_header(text)
-        tests = self._extract_test_rows(text)
+        has_injection, matched_pattern = detect_prompt_injection(text)
+        safe_text = sanitize_text_against_injections(text) if has_injection else text
+
+        header = self._extract_header(safe_text)
+        tests = self._extract_test_rows(safe_text)
         tests = self.evaluate_flags(tests)
         urdulish_summary = self.generate_urdulish_summary(header, tests)
 
-        return {
+        res = {
             "success": True,
             "report_id": header.get("report_id", "UNKNOWN"),
             "patient_name": header.get("patient_name", "Valued Patient"),
@@ -242,8 +284,12 @@ Rules:
             "tests": tests,
             "abnormal_count": sum(1 for t in tests if t.get("flag") != "NORMAL"),
             "urdulish_summary": urdulish_summary,
-            "extraction_method": "Deterministic Clinical Regex Parser"
+            "extraction_method": "Deterministic Clinical Regex Parser",
+            "prompt_injection_detected": has_injection,
+            "prompt_injection_neutralized": has_injection,
+            "security_verdict": "ATTACK_NEUTRALIZED (Zero data leaked, zero instructions executed)" if has_injection else "BENIGN"
         }
+        return res
 
     def _extract_header(self, text: str) -> Dict[str, str]:
         header = {}

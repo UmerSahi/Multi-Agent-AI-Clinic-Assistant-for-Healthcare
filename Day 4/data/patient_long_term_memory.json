@@ -686,5 +686,260 @@
       "General Consultation"
     ],
     "last_visit_date": "2026-10-11"
+  },
+  "p_97e63c64": {
+    "patient_id": "p_97e63c64",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-542705",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_ac3fd027": {
+    "patient_id": "p_ac3fd027",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-904947",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_a8c62bf8": {
+    "patient_id": "p_a8c62bf8",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-677178",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_7bc4451b": {
+    "patient_id": "p_7bc4451b",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-216211",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_077ba722": {
+    "patient_id": "p_077ba722",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-296469",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_1f093c2b": {
+    "patient_id": "p_1f093c2b",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-648158",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_eb51a8ec": {
+    "patient_id": "p_eb51a8ec",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-508924",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_dd074fd5": {
+    "patient_id": "p_dd074fd5",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-493278",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_13dcf1e9": {
+    "patient_id": "p_13dcf1e9",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-430386",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_620277c6": {
+    "patient_id": "p_620277c6",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-478187",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_618d3901": {
+    "patient_id": "p_618d3901",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-663072",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_ff7a680a": {
+    "patient_id": "p_ff7a680a",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-277992",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_7c7cfa23": {
+    "patient_id": "p_7c7cfa23",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-693897",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_c9a4c4c2": {
+    "patient_id": "p_c9a4c4c2",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-981060",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Gulberg Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_eed5f689": {
+    "patient_id": "p_eed5f689",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-840800",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
   }
 }
