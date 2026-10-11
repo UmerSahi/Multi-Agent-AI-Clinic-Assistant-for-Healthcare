@@ -317,6 +317,77 @@ class SchedulingAgent:
             "message_urdulish": f"Aap ki appointment nayi tareeq {slot_dt.strftime('%A, %d %B %Y - %I:%M %p')} par tabdeel (reschedule) kar di gayi hai."
         }
 
+    def get_doctor_schedule_and_booked(self, doctor_id: str, target_date_str: str) -> Dict[str, Any]:
+        """
+        Retrieves doctor profile, already booked slots on target_date_str,
+        and available slots.
+        """
+        doc = db.get_practitioner_by_id(doctor_id)
+        if not doc:
+            return {"error": "Doctor not found"}
+        
+        # Check booked appointments
+        booked_rows = []
+        with db.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+            SELECT a.id, a.booking_reference, a.scheduled_start, a.scheduled_end, a.status,
+                   pt.full_name as patient_name, pt.mrn as patient_mrn
+            FROM appointments a
+            LEFT JOIN patients pt ON a.patient_id = pt.id OR a.patient_id = pt.mrn
+            WHERE a.practitioner_id = ? AND date(a.scheduled_start) = ? AND a.status != 'cancelled'
+            ORDER BY a.scheduled_start ASC
+            """, (doctor_id, target_date_str))
+            for r in cur.fetchall():
+                b_dict = dict(r)
+                try:
+                    s_dt = datetime.fromisoformat(b_dict["scheduled_start"].replace("Z", "+00:00"))
+                    e_dt = datetime.fromisoformat(b_dict["scheduled_end"].replace("Z", "+00:00"))
+                    b_dict["display_time"] = s_dt.strftime("%I:%M %p")
+                    b_dict["display_end"] = e_dt.strftime("%I:%M %p")
+                except:
+                    pass
+                booked_rows.append(b_dict)
+            
+        available_slots = self.get_available_slots(doctor_id, target_date_str)
+        
+        return {
+            "doctor": doc,
+            "date": target_date_str,
+            "booked_appointments": booked_rows,
+            "available_slots": available_slots,
+            "total_booked": len(booked_rows),
+            "total_available": len(available_slots),
+            "is_fully_booked": len(available_slots) == 0
+        }
+
+    def find_alternative_slots(self, doctor_id: str, requested_date_str: str, requested_time_str: Optional[str] = None, count: int = 3) -> List[Dict[str, Any]]:
+        """
+        When requested date/time is unavailable, scans the requested date and subsequent 7 days
+        to find `count` alternative slots.
+        """
+        alternatives = []
+        try:
+            curr_date = datetime.strptime(requested_date_str, "%Y-%m-%d").date()
+        except Exception:
+            curr_date = datetime.now(timezone.utc).date() + timedelta(days=1)
+            
+        # Check starting from requested date up to 7 days ahead
+        for day_offset in range(8):
+            check_date = curr_date + timedelta(days=day_offset)
+            date_str = check_date.strftime("%Y-%m-%d")
+            slots = self.get_available_slots(doctor_id, date_str)
+            for s in slots:
+                # If a specific time was requested on the same day, don't include that exact conflicting time
+                if day_offset == 0 and requested_time_str:
+                    s_dt = datetime.fromisoformat(s["slot_start"].replace("Z", "+00:00"))
+                    if s_dt.strftime("%H:%M") in requested_time_str or s["display_time"].lower() in requested_time_str.lower():
+                        continue
+                alternatives.append(s)
+                if len(alternatives) >= count:
+                    return alternatives
+        return alternatives
+
 
 # Singleton instance
 scheduling_agent = SchedulingAgent()

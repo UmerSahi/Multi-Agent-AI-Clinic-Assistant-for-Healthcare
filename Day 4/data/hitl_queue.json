@@ -169,5 +169,454 @@
     "doctor_notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
     "final_message_urdulish": "Ultrasound report mein bilateral micro-follicles hain jo hormonal imbalance (PCOD) ki alamat hain. Yeh aam masla hai aur ghabrane ki baat nahi. Dr. Ayesha Tariq ke sath consultation mein dawai aur diet plan tajweez kiya jaye ga.",
     "doctor_name": "Dr. Maryam Naveed (Medical Director)"
+  },
+  "HITL-E72FAEF2": {
+    "task_id": "HITL-E72FAEF2",
+    "thread_id": "test_symptoms_flow",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The patient intake details are largely missing, but a severity score of 5 without acute red flags indicates a stable presentation suitable for routine outpatient scheduling.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:00:43.661434+00:00",
+    "resolved_at": "2026-10-09T05:14:42.774605+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The patient intake details are largely missing, but a severity score of 5 without acute red flags indicates a stable presentation suitable for routine outpatient scheduling.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-8032E779": {
+    "task_id": "HITL-8032E779",
+    "thread_id": "test_symptom_doc",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (Insufficient clinical details provided in the chief complaint and associated symptoms to warrant a same-day urgent visit, therefore defaulting to a routine stable evaluation.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "REJECTED",
+    "created_at": "2026-10-09T05:01:24.378478+00:00",
+    "resolved_at": "2026-10-09T05:14:48.452115+00:00",
+    "doctor_action": "rejected",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Aap ka case hamaray senior doctor (Dr. Bilal Saeed) ne review kiya hai. Doctor ki hidayat ke mutabiq yeh maloomat clinic mein direct mashwaray ke baad di jaye gi. Baraye meharbani clinic visit ke liye appointment schedule karein.\n\nDoctor Note: Approved by Dr. Bilal Saeed",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-C59D06F3": {
+    "task_id": "HITL-C59D06F3",
+    "thread_id": "test_symptom_doc",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, but the reported severity of 5 out of 10 and absence of acute emergency red flags suggest a stable condition suitable for routine outpatient scheduling.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "REJECTED",
+    "created_at": "2026-10-09T05:02:36.099833+00:00",
+    "resolved_at": "2026-10-09T05:14:50.698352+00:00",
+    "doctor_action": "rejected",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Aap ka case hamaray senior doctor (Dr. Bilal Saeed) ne review kiya hai. Doctor ki hidayat ke mutabiq yeh maloomat clinic mein direct mashwaray ke baad di jaye gi. Baraye meharbani clinic visit ke liye appointment schedule karein.\n\nDoctor Note: Approved by Dr. Bilal Saeed",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-BAB28609": {
+    "task_id": "HITL-BAB28609",
+    "thread_id": "test_full_journey",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The chief complaint and associated symptoms were not provided by the patient, making a definitive acute assessment impossible. However, given a severity score of 5 with no acute red flags or emergency symptoms stated, a routine outpatient evaluation is the safest and most reasonable default triage category.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:02:51.971829+00:00",
+    "resolved_at": "2026-10-09T05:14:52.332626+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The chief complaint and associated symptoms were not provided by the patient, making a definitive acute assessment impossible. However, given a severity score of 5 with no acute red flags or emergency symptoms stated, a routine outpatient evaluation is the safest and most reasonable default triage category.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-09DC2C42": {
+    "task_id": "HITL-09DC2C42",
+    "thread_id": "test_check_node",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (Insufficient clinical details provided in the intake to determine acute illness; lacking chief complaint and specific associated symptoms, default to routine outpatient evaluation.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:03:08.768008+00:00",
+    "resolved_at": "2026-10-09T05:14:53.687357+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (Insufficient clinical details provided in the intake to determine acute illness; lacking chief complaint and specific associated symptoms, default to routine outpatient evaluation.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-3B665771": {
+    "task_id": "HITL-3B665771",
+    "thread_id": "test_check_node",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, making a definitive acute assessment impossible. However, based on the moderate severity score of 5 and absence of emergency red flags, the case defaults to a routine outpatient evaluation for further clarification.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:03:59.251939+00:00",
+    "resolved_at": "2026-10-09T05:14:55.666129+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, making a definitive acute assessment impossible. However, based on the moderate severity score of 5 and absence of emergency red flags, the case defaults to a routine outpatient evaluation for further clarification.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-DAF4C4F3": {
+    "task_id": "HITL-DAF4C4F3",
+    "thread_id": "test_journey_3",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The patient provided insufficient details regarding the chief complaint, associated symptoms, and medical history. However, with a moderate severity rating of 5 and no reported emergency red flags, the case defaults to a stable outpatient evaluation.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:04:13.686051+00:00",
+    "resolved_at": "2026-10-09T05:14:56.398660+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The patient provided insufficient details regarding the chief complaint, associated symptoms, and medical history. However, with a moderate severity rating of 5 and no reported emergency red flags, the case defaults to a stable outpatient evaluation.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-69DD15FF": {
+    "task_id": "HITL-69DD15FF",
+    "thread_id": "test_symptoms_flow",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (Insufficient chief complaint and symptom details provided to determine an acute condition, therefore defaulting to a stable routine outpatient assessment.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:06:03.257346+00:00",
+    "resolved_at": "2026-10-09T05:14:57.696511+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (Insufficient chief complaint and symptom details provided to determine an acute condition, therefore defaulting to a stable routine outpatient assessment.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-26A08422": {
+    "task_id": "HITL-26A08422",
+    "thread_id": "sess_p1_1791522748973",
+    "patient_id": "p1",
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The intake details lack a chief complaint, associated symptoms, duration, and severity. Without active clinical symptoms, this cannot be classified as urgent and defaults to a routine administrative or general inquiry.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {
+        "patient_relation": "self",
+        "patient_age": null,
+        "chief_complaint": null,
+        "duration": null,
+        "severity": null,
+        "associated_symptoms": [],
+        "allergies": [],
+        "current_medications": [],
+        "medical_history": [],
+        "is_pregnant": null,
+        "is_complete": false
+      },
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": "p1"
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T05:12:49.022998+00:00",
+    "resolved_at": "2026-10-09T05:14:59.139371+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The intake details lack a chief complaint, associated symptoms, duration, and severity. Without active clinical symptoms, this cannot be classified as urgent and defaults to a routine administrative or general inquiry.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-9390A0CE": {
+    "task_id": "HITL-9390A0CE",
+    "thread_id": "sess_p1_1791525589085",
+    "patient_id": "p1",
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (No chief complaint, associated symptoms, duration, or severity provided by the patient. Assuming a routine outpatient checkup due to lack of acute symptoms.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {
+        "patient_relation": "self",
+        "patient_age": null,
+        "chief_complaint": null,
+        "duration": null,
+        "severity": null,
+        "associated_symptoms": [],
+        "allergies": [],
+        "current_medications": [],
+        "medical_history": [],
+        "is_pregnant": null,
+        "is_complete": false
+      },
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": "p1"
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T06:00:02.068435+00:00",
+    "resolved_at": "2026-10-09T06:40:13.597611+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (No chief complaint, associated symptoms, duration, or severity provided by the patient. Assuming a routine outpatient checkup due to lack of acute symptoms.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-5373C745": {
+    "task_id": "HITL-5373C745",
+    "thread_id": "test_s5_single",
+    "patient_id": null,
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, making it impossible to assess for acute danger or urgent criteria. Given the severity score of 5 and absence of emergency indicators, a routine outpatient evaluation is the safest default approach.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": null
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T06:01:25.476948+00:00",
+    "resolved_at": "2026-10-09T06:40:18.983498+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, making it impossible to assess for acute danger or urgent criteria. Given the severity score of 5 and absence of emergency indicators, a routine outpatient evaluation is the safest default approach.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-9948201F": {
+    "task_id": "HITL-9948201F",
+    "thread_id": "sess_http_b",
+    "patient_id": "p1",
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, but the reported severity of 5 out of 10 in an adult without listed acute red flags suggests a stable, non-emergent presentation suitable for a routine outpatient appointment.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": "p1"
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T06:03:32.649206+00:00",
+    "resolved_at": "2026-10-09T06:40:15.476777+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The provided intake details lack a specific chief complaint and associated symptoms, but the reported severity of 5 out of 10 in an adult without listed acute red flags suggests a stable, non-emergent presentation suitable for a routine outpatient appointment.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-CAD2088E": {
+    "task_id": "HITL-CAD2088E",
+    "thread_id": "test_direct_bdb84e",
+    "patient_id": "p1",
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The patient provided insufficient details regarding the chief complaint, associated symptoms, and medical history. However, with a moderate severity rating of 5 and no reported red flag symptoms, the case defaults to a stable outpatient evaluation.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "full_name": "Valued Patient",
+          "id": "p1"
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "APPROVED",
+    "created_at": "2026-10-09T06:22:32.604766+00:00",
+    "resolved_at": "2026-10-09T06:40:17.609372+00:00",
+    "doctor_action": "approved",
+    "doctor_notes": "Approved by Dr. Bilal Saeed",
+    "final_message_urdulish": "Triage assessment: ROUTINE (The patient provided insufficient details regarding the chief complaint, associated symptoms, and medical history. However, with a moderate severity rating of 5 and no reported red flag symptoms, the case defaults to a stable outpatient evaluation.). Recommended specialty: General Medicine.",
+    "doctor_name": "Dr. Bilal Saeed"
+  },
+  "HITL-25264027": {
+    "task_id": "HITL-25264027",
+    "thread_id": "session_1791727972620",
+    "patient_id": "p1",
+    "patient_name": "Valued Patient",
+    "task_type": "LOW_CONFIDENCE_TRIAGE",
+    "urgency_level": "URGENT",
+    "proposed_message_urdulish": "Triage assessment: ROUTINE (The patient provided insufficient details regarding the chief complaint, associated symptoms, and medical history. However, with a moderate severity rating of 5 and no reported red flag symptoms, the case defaults to a routine outpatient evaluation.). Recommended specialty: General Medicine.",
+    "clinical_context": {
+      "confidence": 0.5,
+      "intake": {},
+      "records": {
+        "patient": {
+          "id": "p1",
+          "mrn": "CCC-PK-100001",
+          "cnic": "61101-4553384-9",
+          "full_name": "Ahmed Raza",
+          "gender": "Male",
+          "date_of_birth": "1981-04-12",
+          "phone": "+923001234567",
+          "email": "ahmed.raza@example.com",
+          "city": "Lahore",
+          "address": "Gulberg III, Lahore",
+          "emergency_contact_name": "Kamran Iqbal",
+          "emergency_contact_phone": "+92-312-8350099",
+          "known_allergies": [
+            "Penicillin"
+          ],
+          "chronic_conditions": [
+            "Hypertension"
+          ],
+          "current_medications": [],
+          "created_at": null,
+          "updated_at": null,
+          "password_hash": "477ef5c4aa844ee399451f8e805086ba:daa102b910b3aa4b4f4db4dd317c028f4bd721fdef98616af3e1ae5cd2e68657"
+        },
+        "encounters": [],
+        "observations": [],
+        "medications": []
+      }
+    },
+    "status": "PENDING",
+    "created_at": "2026-10-11T14:13:39.883575+00:00",
+    "resolved_at": null,
+    "doctor_action": null,
+    "doctor_notes": null,
+    "final_message_urdulish": null
   }
 }

@@ -15,11 +15,11 @@
     ],
     "chronic_conditions": [],
     "past_complaints": [
-      "sar mein dard",
       "bukhar",
       "seenay mein dard",
       "CBC blood report aur WBC count",
-      "high fever"
+      "high fever",
+      "chest pain"
     ],
     "last_visit_date": "2026-09-06"
   },
@@ -107,5 +107,584 @@
       "General Consultation"
     ],
     "last_visit_date": "2026-10-08"
+  },
+  "p6_0cc4": {
+    "patient_id": "p6_0cc4",
+    "patient_name": "Zainab Qureshi",
+    "phone": "+923009988776",
+    "mrn": "CCC-PK-100006",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Ayesha Tariq",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "DHA Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Ibuprofen"
+    ],
+    "chronic_conditions": [
+      "Migraine"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08",
+    "email": "zainab.q@example.com"
+  },
+  "p7_c4e9": {
+    "patient_id": "p7_c4e9",
+    "patient_name": "Zainab Qureshi",
+    "phone": "+923009988776",
+    "mrn": "CCC-PK-100007",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Ayesha Tariq",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "DHA Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Ibuprofen"
+    ],
+    "chronic_conditions": [
+      "Migraine"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08"
+  },
+  "p_187e5e45": {
+    "patient_id": "p_187e5e45",
+    "patient_name": "Zainab Qureshi",
+    "phone": "+923009988776",
+    "mrn": "CCC-PK-662441",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Ayesha Tariq",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "DHA Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Ibuprofen"
+    ],
+    "chronic_conditions": [
+      "Migraine"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08",
+    "email": "zainab.q@example.com"
+  },
+  "p_c3e2f6d0": {
+    "patient_id": "p_c3e2f6d0",
+    "patient_name": "Kamran Akmal",
+    "phone": "+923005544332",
+    "mrn": "CCC-PK-359283",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "English",
+    "known_allergies": [
+      "Dust",
+      "Pollen"
+    ],
+    "chronic_conditions": [
+      "Allergic Rhinitis"
+    ],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-08"
+  },
+  "p_12cff108": {
+    "patient_id": "p_12cff108",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-323590",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_2279d781": {
+    "patient_id": "p_2279d781",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-833505",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_0f687868": {
+    "patient_id": "p_0f687868",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-424919",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_98d0d56a": {
+    "patient_id": "p_98d0d56a",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-328090",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_e6a45bb9": {
+    "patient_id": "p_e6a45bb9",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-853132",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_c57bd83f": {
+    "patient_id": "p_c57bd83f",
+    "patient_name": "Usman Ali",
+    "phone": "03009876543",
+    "mrn": "CCC-PK-791561",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "male"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_f6261883": {
+    "patient_id": "p_f6261883",
+    "patient_name": "Usman Ali",
+    "phone": "03009876543",
+    "mrn": "CCC-PK-512147",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — DHA Phase 5 Branch",
+    "preferred_language": "English",
+    "known_allergies": [
+      "male"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_81446623": {
+    "patient_id": "p_81446623",
+    "patient_name": "Zainab Bibi",
+    "phone": "03123456789",
+    "mrn": "CCC-PK-625805",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_cef16d57": {
+    "patient_id": "p_cef16d57",
+    "patient_name": "Zainab Bibi",
+    "phone": "03123456789",
+    "mrn": "CCC-PK-842730",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_d8c87b14": {
+    "patient_id": "p_d8c87b14",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-559917",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_6bb94b48": {
+    "patient_id": "p_6bb94b48",
+    "patient_name": "Usman Ali",
+    "phone": "03009876543",
+    "mrn": "CCC-PK-631843",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — DHA Phase 5 Branch",
+    "preferred_language": "English",
+    "known_allergies": [
+      "male"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_ae1a97b1": {
+    "patient_id": "p_ae1a97b1",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-270191",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_0c8d793a": {
+    "patient_id": "p_0c8d793a",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-398289",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_1e0b0f6d": {
+    "patient_id": "p_1e0b0f6d",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-381526",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_217a5986": {
+    "patient_id": "p_217a5986",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-404365",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_4b2b635c": {
+    "patient_id": "p_4b2b635c",
+    "patient_name": "Usman Ali",
+    "phone": "03009876543",
+    "mrn": "CCC-PK-962592",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — DHA Phase 5 Branch",
+    "preferred_language": "English",
+    "known_allergies": [
+      "male"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_cdc08ecb": {
+    "patient_id": "p_cdc08ecb",
+    "patient_name": "Hamza Tariq Saal",
+    "phone": "03219988776",
+    "mrn": "CCC-PK-826480",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_cabd95aa": {
+    "patient_id": "p_cabd95aa",
+    "patient_name": "Zain Baloch",
+    "phone": "03001234567",
+    "mrn": "CCC-PK-538921",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_5a998ed9": {
+    "patient_id": "p_5a998ed9",
+    "patient_name": "Zain Baloch",
+    "phone": "03008877665",
+    "mrn": "CCC-PK-667514",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "None"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_3f594e5d": {
+    "patient_id": "p_3f594e5d",
+    "patient_name": "Umer Sahi",
+    "phone": "03006736738",
+    "mrn": "CCC-PK-315342",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "None"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_6a4a70ce": {
+    "patient_id": "p_6a4a70ce",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-915779",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_e35a86b2": {
+    "patient_id": "p_e35a86b2",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-492151",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": null,
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_6c570f38": {
+    "patient_id": "p_6c570f38",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-564406",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": null,
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_8fc29f14": {
+    "patient_id": "p_8fc29f14",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-980988",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": null,
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_6e25940c": {
+    "patient_id": "p_6e25940c",
+    "patient_name": "Valued Patient",
+    "phone": "",
+    "mrn": "CCC-PK-849403",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": null,
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_3a274346": {
+    "patient_id": "p_3a274346",
+    "patient_name": "Atif Iqbal",
+    "phone": "+92-333-6229731",
+    "mrn": "CCC-PK-336986",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "City Care Clinics — Johar Town Branch",
+    "preferred_language": "English",
+    "known_allergies": [],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-09"
+  },
+  "p_76d6601a": {
+    "patient_id": "p_76d6601a",
+    "patient_name": "Zain Rao",
+    "phone": "03456782145",
+    "mrn": "CCC-PK-283969",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "None"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
+  },
+  "p_24cfdacd": {
+    "patient_id": "p_24cfdacd",
+    "patient_name": "Usama Zain",
+    "phone": "03007654321",
+    "mrn": "CCC-PK-812322",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "None"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-11"
   }
 }

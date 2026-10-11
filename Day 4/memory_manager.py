@@ -92,6 +92,38 @@ class MemoryManager:
                 "past_complaints": ["Raat ko khansi aur seeti ki awaz", "Vaccination schedule"],
                 "last_visit_date": "2026-09-22",
                 "last_updated": datetime.now(timezone.utc).isoformat()
+            },
+            "p4": {
+                "patient_id": "p4",
+                "patient_name": "Nazia Abbasi",
+                "phone": "+92-301-8434500",
+                "mrn": "CCC-PK-100004",
+                "preferred_doctor_id": "doc1",
+                "preferred_doctor_name": "Dr. Bilal Saeed",
+                "preferred_specialty": "General Medicine",
+                "preferred_branch": "Johar Town Lahore",
+                "preferred_language": "UrduLish",
+                "known_allergies": ["Aspirin"],
+                "chronic_conditions": ["Type 2 Diabetes"],
+                "past_complaints": ["Fasting blood sugar fluctuation", "HbA1c quarterly review"],
+                "last_visit_date": "2026-08-05",
+                "last_updated": datetime.now(timezone.utc).isoformat()
+            },
+            "p5": {
+                "patient_id": "p5",
+                "patient_name": "Tariq Mahmood",
+                "phone": "+92-300-7194416",
+                "mrn": "CCC-PK-100005",
+                "preferred_doctor_id": "doc_omer_latif",
+                "preferred_doctor_name": "Dr. Omer Latif",
+                "preferred_specialty": "Cardiology",
+                "preferred_branch": "Blue Area Islamabad",
+                "preferred_language": "UrduLish",
+                "known_allergies": [],
+                "chronic_conditions": ["Coronary Artery Disease"],
+                "past_complaints": ["Post-angioplasty routine checkup", "Mild exertion shortness of breath"],
+                "last_visit_date": "2026-09-28",
+                "last_updated": datetime.now(timezone.utc).isoformat()
             }
         }
         self._memory_cache = default_memories
@@ -195,9 +227,9 @@ class MemoryManager:
         """
         Registers a new patient, generates unique MRN, and saves long-term memory.
         """
-        existing_count = len(self._memory_cache) + 1
-        new_id = f"p{existing_count}_{uuid.uuid4().hex[:4]}"
-        mrn = f"CCC-PK-1000{existing_count:02d}"
+        import random
+        new_id = f"p_{uuid.uuid4().hex[:8]}"
+        mrn = f"CCC-PK-{random.randint(200000, 999999)}"
 
         # Clean allergies and conditions
         allergies = data.get("known_allergies", [])

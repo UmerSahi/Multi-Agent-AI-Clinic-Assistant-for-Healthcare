@@ -1,7 +1,13 @@
-# Environment variables
+# Environment variables & Credentials
 .env
 .env.*
 !.env.example
+doctor_credentials.json
+*doctor_credentials*.json
+Day 4/data/doctor_credentials.json
+patient_credentials.json
+*patient_credentials*.json
+Day 4/data/patient_credentials.json
 
 # Python
 __pycache__/

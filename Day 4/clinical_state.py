@@ -65,3 +65,6 @@ class ClinicalState(TypedDict):
     error_state: Optional[Dict[str, Any]]
     node_transitions: List[Dict[str, Any]]  # History of transitions [timestamp, node, latency_ms]
     telemetry: Dict[str, Any]  # Token counts, estimated cost, latency tracking
+    awaiting_intake_details: Optional[bool]
+    patient_type: Optional[str]
+    intake_stage: Optional[str]

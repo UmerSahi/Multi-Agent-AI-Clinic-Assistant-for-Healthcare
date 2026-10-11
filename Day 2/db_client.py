@@ -197,6 +197,25 @@ class DatabaseClient:
         )
         """)
 
+        cursor.execute("""
+        CREATE TABLE IF NOT EXISTS prescriptions (
+            id TEXT PRIMARY KEY,
+            appointment_id TEXT NOT NULL,
+            booking_reference TEXT NOT NULL,
+            patient_id TEXT NOT NULL,
+            practitioner_id TEXT NOT NULL,
+            doctor_name TEXT NOT NULL,
+            doctor_specialty TEXT,
+            pmdc_number TEXT,
+            branch_name TEXT,
+            diagnosis TEXT,
+            medicines_json TEXT NOT NULL,
+            advice TEXT,
+            status TEXT DEFAULT 'fulfilled',
+            created_at TEXT NOT NULL
+        )
+        """)
+
         conn.commit()
         conn.close()
 
@@ -354,6 +373,32 @@ class DatabaseClient:
             """, (patient_id,))
             return [dict(r) for r in cur.fetchall()]
 
+    def find_appointment_by_id_or_ref(self, ref_or_id: str) -> Optional[Dict[str, Any]]:
+        """Look up appointment details by Booking Reference or ID, joining doctor and patient records."""
+        clean_ref = ref_or_id.strip().upper().replace("#", "")
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+            SELECT a.*, 
+                   p.full_name as doctor_name, p.specialty as doctor_specialty, p.consultation_fee,
+                   b.name as branch_name, b.city as branch_city, b.address as branch_address,
+                   pt.full_name as patient_name, pt.mrn as patient_mrn, pt.phone as patient_phone,
+                   pt.gender as patient_gender, pt.date_of_birth as patient_dob,
+                   pt.known_allergies, pt.chronic_conditions
+            FROM appointments a
+            LEFT JOIN practitioners p ON a.practitioner_id = p.id
+            LEFT JOIN clinic_branches b ON a.branch_id = b.id
+            LEFT JOIN patients pt ON a.patient_id = pt.id OR a.patient_id = pt.mrn
+            WHERE UPPER(a.booking_reference) = ? OR UPPER(a.id) = ? 
+               OR a.id LIKE ? OR a.booking_reference LIKE ?
+            LIMIT 1
+            """, (clean_ref, clean_ref, f"%{clean_ref}%", f"%{clean_ref}%"))
+            row = cur.fetchone()
+            if row:
+                return dict(row)
+        return None
+
+
     def update_appointment_status(self, appointment_id: str, status: str, cancellation_reason: Optional[str] = None) -> bool:
         if self.is_supabase:
             update_data = {"status": status}
@@ -450,6 +495,163 @@ class DatabaseClient:
                 conn.commit()
         except Exception as e:
             print(f"[Audit Error Local] {e}")
+
+    # ------------------ Prescription Operations ------------------
+    def save_prescription(self, p_data: Dict[str, Any]) -> Dict[str, Any]:
+        """Saves a doctor's prescription, updates appointment status to 'fulfilled', and inserts medication records."""
+        import uuid
+        p_id = p_data.get("id") or f"RX-{uuid.uuid4().hex[:8].upper()}"
+        app_id = p_data.get("appointment_id", "")
+        booking_ref = p_data.get("booking_reference", "")
+        patient_id = p_data.get("patient_id", "")
+        practitioner_id = p_data.get("practitioner_id", "")
+        doctor_name = p_data.get("doctor_name", "")
+        doctor_spec = p_data.get("doctor_specialty", "Specialist")
+        pmdc = p_data.get("pmdc_number", "PMDC-REG")
+        branch = p_data.get("branch_name", "City Care Clinics")
+        diagnosis = p_data.get("diagnosis", "Clinical Consultation")
+        medicines = p_data.get("medicines") or []
+        meds_json = json.dumps(medicines) if isinstance(medicines, list) else str(medicines)
+        advice = p_data.get("advice", "")
+        created_at = p_data.get("created_at") or datetime.now(timezone.utc).isoformat()
+
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+            CREATE TABLE IF NOT EXISTS prescriptions (
+                id TEXT PRIMARY KEY,
+                appointment_id TEXT NOT NULL,
+                booking_reference TEXT NOT NULL,
+                patient_id TEXT NOT NULL,
+                practitioner_id TEXT NOT NULL,
+                doctor_name TEXT NOT NULL,
+                doctor_specialty TEXT,
+                pmdc_number TEXT,
+                branch_name TEXT,
+                diagnosis TEXT,
+                medicines_json TEXT NOT NULL,
+                advice TEXT,
+                status TEXT DEFAULT 'fulfilled',
+                created_at TEXT NOT NULL
+            )
+            """)
+
+            cur.execute("""
+            INSERT OR REPLACE INTO prescriptions (
+                id, appointment_id, booking_reference, patient_id, practitioner_id,
+                doctor_name, doctor_specialty, pmdc_number, branch_name,
+                diagnosis, medicines_json, advice, status, created_at
+            ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'fulfilled', ?)
+            """, (
+                p_id, app_id, booking_ref, patient_id, practitioner_id,
+                doctor_name, doctor_spec, pmdc, branch,
+                diagnosis, meds_json, advice, created_at
+            ))
+
+            # Update appointment status to 'fulfilled'
+            cur.execute("""
+            UPDATE appointments SET status = 'fulfilled' 
+            WHERE id = ? OR booking_reference = ? OR id = ? OR booking_reference = ?
+            """, (app_id, booking_ref, booking_ref, app_id))
+
+            # Also record each medicine in medication_requests
+            if isinstance(medicines, list):
+                for m in medicines:
+                    med_id = f"MED-{uuid.uuid4().hex[:8].upper()}"
+                    d_name = m.get("drug_name") or m.get("name") or "Medicine"
+                    g_name = m.get("generic_name") or d_name
+                    dose = float(m.get("dosage_mg") or 500.0) if str(m.get("dosage_mg", "")).replace(".", "").isdigit() else 500.0
+                    freq = int(m.get("frequency_per_day") or 2) if str(m.get("frequency_per_day", "")).isdigit() else 2
+                    dur = int(m.get("duration_days") or 5) if str(m.get("duration_days", "")).isdigit() else 5
+                    instructions = m.get("instructions") or m.get("timing") or "Take after meals"
+                    try:
+                        cur.execute("""
+                        INSERT INTO medication_requests (
+                            id, patient_id, encounter_id, practitioner_id, drug_name, generic_name,
+                            dosage_mg, frequency_per_day, duration_days, instructions, safety_check_status, prescribed_at
+                        ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, 'SAFE', ?)
+                        """, (med_id, patient_id, app_id, practitioner_id, d_name, g_name, dose, freq, dur, instructions, created_at))
+                    except Exception:
+                        pass
+
+            conn.commit()
+
+        p_data["id"] = p_id
+        p_data["status"] = "fulfilled"
+        p_data["created_at"] = created_at
+        return p_data
+
+    def get_prescription_by_appointment(self, ref_or_id: str) -> Optional[Dict[str, Any]]:
+        """Look up prescription by appointment ID or booking reference."""
+        clean = ref_or_id.strip().upper().replace("#", "")
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+            CREATE TABLE IF NOT EXISTS prescriptions (
+                id TEXT PRIMARY KEY,
+                appointment_id TEXT NOT NULL,
+                booking_reference TEXT NOT NULL,
+                patient_id TEXT NOT NULL,
+                practitioner_id TEXT NOT NULL,
+                doctor_name TEXT NOT NULL,
+                doctor_specialty TEXT,
+                pmdc_number TEXT,
+                branch_name TEXT,
+                diagnosis TEXT,
+                medicines_json TEXT NOT NULL,
+                advice TEXT,
+                status TEXT DEFAULT 'fulfilled',
+                created_at TEXT NOT NULL
+            )
+            """)
+            cur.execute("""
+            SELECT * FROM prescriptions 
+            WHERE UPPER(booking_reference) = ? OR UPPER(appointment_id) = ? OR UPPER(id) = ?
+               OR booking_reference LIKE ? OR appointment_id LIKE ?
+            ORDER BY created_at DESC
+            LIMIT 1
+            """, (clean, clean, clean, f"%{clean}%", f"%{clean}%"))
+            row = cur.fetchone()
+            if row:
+                res = dict(row)
+                try:
+                    res["medicines"] = json.loads(res["medicines_json"])
+                except Exception:
+                    res["medicines"] = []
+                return res
+        return None
+
+    def get_patient_prescriptions(self, patient_id: str) -> List[Dict[str, Any]]:
+        with self.get_connection() as conn:
+            cur = conn.cursor()
+            cur.execute("""
+            CREATE TABLE IF NOT EXISTS prescriptions (
+                id TEXT PRIMARY KEY,
+                appointment_id TEXT NOT NULL,
+                booking_reference TEXT NOT NULL,
+                patient_id TEXT NOT NULL,
+                practitioner_id TEXT NOT NULL,
+                doctor_name TEXT NOT NULL,
+                doctor_specialty TEXT,
+                pmdc_number TEXT,
+                branch_name TEXT,
+                diagnosis TEXT,
+                medicines_json TEXT NOT NULL,
+                advice TEXT,
+                status TEXT DEFAULT 'fulfilled',
+                created_at TEXT NOT NULL
+            )
+            """)
+            cur.execute("""
+            SELECT * FROM prescriptions WHERE patient_id = ? ORDER BY created_at DESC
+            """, (patient_id,))
+            rows = [dict(r) for r in cur.fetchall()]
+            for r in rows:
+                try:
+                    r["medicines"] = json.loads(r["medicines_json"])
+                except Exception:
+                    r["medicines"] = []
+            return rows
 
 
 # Singleton instance

@@ -5,6 +5,12 @@
 
 ---
 
+## 🖥️ Patient Portal & Clinic Assistant UI
+
+![City Care Clinics AI Assistant Interface](docs/screenshots/clinic_assistant_ui.png)
+
+---
+
 ## 📌 Project Overview & Scenario
 
 * **Client:** City Care Clinics (5 outpatient clinics in Lahore & Islamabad)

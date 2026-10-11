@@ -1258,5 +1258,88 @@
       ]
     },
     "is_active": true
+  },
+  {
+    "id": "doc_ayesha_tariq",
+    "pmdc_number": "PMDC-31415-P",
+    "full_name": "Dr. Ayesha Tariq",
+    "gender": "Female",
+    "specialty": "Gynaecology",
+    "qualification": "MBBS, FCPS (Obs & Gynae), MRCOG (UK)",
+    "experience_years": 16,
+    "consultation_fee": 3500,
+    "languages": [
+      "Urdu",
+      "English",
+      "Punjabi"
+    ],
+    "branch_id": "22222222-2222-4222-a222-222222222222",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "17:00-21:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
+  },
+  {
+    "id": "doc_usman_sheikh",
+    "pmdc_number": "PMDC-41829-P",
+    "full_name": "Dr. Usman Sheikh",
+    "gender": "Male",
+    "specialty": "Paediatrics",
+    "qualification": "MBBS, FCPS (Paediatrics)",
+    "experience_years": 15,
+    "consultation_fee": 3000,
+    "languages": [
+      "Urdu",
+      "English"
+    ],
+    "branch_id": "44444444-4444-4444-a444-444444444444",
+    "weekly_schedule": {
+      "Monday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Tuesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Wednesday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Thursday": [
+        "09:00-13:00",
+        "17:00-21:00"
+      ],
+      "Friday": [
+        "09:00-12:30",
+        "17:00-21:00"
+      ],
+      "Saturday": [
+        "10:00-16:00"
+      ]
+    },
+    "is_active": true
   }
 ]
