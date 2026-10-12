@@ -33,7 +33,7 @@ class EmailNotifier:
         except ValueError:
             self.smtp_port = 587
         self.smtp_user = os.getenv("SMTP_USER", "").strip()
-        self.smtp_password = os.getenv("SMTP_PASSWORD", "").strip()
+        self.smtp_password = os.getenv("SMTP_PASSWORD", "").replace(" ", "").strip()
         self.smtp_from_email = os.getenv("SMTP_FROM_EMAIL", self.smtp_user).strip()
         self.smtp_from_name = os.getenv("SMTP_FROM_NAME", "City Care Clinics").strip()
         self.smtp_use_tls = os.getenv("SMTP_USE_TLS", "true").lower() in ("true", "1", "yes")
@@ -64,9 +64,11 @@ class EmailNotifier:
                     server.sendmail(self.smtp_from_email, [to_email], msg.as_string())
             else:
                 with smtplib.SMTP(self.smtp_host, self.smtp_port, timeout=15) as server:
+                    server.ehlo()
                     if self.smtp_use_tls:
                         context = ssl.create_default_context()
                         server.starttls(context=context)
+                        server.ehlo()
                     server.login(self.smtp_user, self.smtp_password)
                     server.sendmail(self.smtp_from_email, [to_email], msg.as_string())
 
