@@ -355,6 +355,10 @@ class SupervisorAgent:
                 state["intake_form"] = {"chief_complaint": last_msg}
             return "parallel_triage_records"
 
+        # If intake is already completed and no triage result yet, fan-out to parallel triage + records!
+        if state.get("intake_complete") and not state.get("triage_result"):
+            return "parallel_triage_records"
+
         # If user mentions symptom without asking for doctor yet:
         # Route to intake to ask "kitni or kb sy ha"
         if has_complaint_in_msg and not state.get("triage_result"):
@@ -374,10 +378,6 @@ class SupervisorAgent:
         intake_form = state.get("intake_form", {})
         if not state.get("intake_complete"):
             return "intake"
-
-        # 7. Parallel Triage & Records Fan-Out (once intake has chief complaint but no triage result yet)
-        if state.get("intake_complete") and not state.get("triage_result"):
-            return "parallel_triage_records"
 
         # 8. Post-triage routing:
         triage = state.get("triage_result", {})

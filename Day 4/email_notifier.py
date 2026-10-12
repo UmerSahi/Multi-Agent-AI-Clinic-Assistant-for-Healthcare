@@ -184,7 +184,8 @@ class EmailNotifier:
             "subject": subject,
             "html_body": html_body,
             "sent_at": datetime.now(timezone.utc).isoformat(),
-            "status": "DELIVERED_VIA_SMTP" if smtp_success else "SENT_LOCAL_SIMULATION",
+            "status": "SENT",
+            "delivery_mode": "DELIVERED_VIA_SMTP" if smtp_success else "SENT_LOCAL_SIMULATION",
             "smtp_sent": smtp_success
         }
         self._sent_emails.append(record)
@@ -213,7 +214,8 @@ class EmailNotifier:
             "recipient": patient_email,
             "subject": subject,
             "sent_at": datetime.now(timezone.utc).isoformat(),
-            "status": "DELIVERED_VIA_SMTP" if smtp_success else "SENT_LOCAL_SIMULATION",
+            "status": "SENT",
+            "delivery_mode": "DELIVERED_VIA_SMTP" if smtp_success else "SENT_LOCAL_SIMULATION",
             "smtp_sent": smtp_success
         }
         self._sent_emails.append(record)

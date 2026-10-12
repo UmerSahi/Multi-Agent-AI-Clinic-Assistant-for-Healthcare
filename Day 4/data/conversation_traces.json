@@ -1,161 +1,5 @@
 [
   {
-    "trace_id": "TRC-1791731454039",
-    "thread_id": "eval_conv_61_dc0145",
-    "patient_identifier": "eval_patient",
-    "start_time": "2026-10-11T15:10:54.039984+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:10:54.042164+00:00",
-        "latency_ms": 0.0,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.0,
-    "status": "IN_PROGRESS"
-  },
-  {
-    "trace_id": "TRC-1791731454050",
-    "thread_id": "eval_conv_62_e495d0",
-    "patient_identifier": "eval_patient",
-    "start_time": "2026-10-11T15:10:54.050325+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:10:54.053350+00:00",
-        "latency_ms": 0.11,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.11,
-    "status": "IN_PROGRESS"
-  },
-  {
-    "trace_id": "TRC-1791731454061",
-    "thread_id": "eval_conv_63_09a3d5",
-    "patient_identifier": "eval_patient",
-    "start_time": "2026-10-11T15:10:54.061437+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:10:54.064652+00:00",
-        "latency_ms": 0.0,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.0,
-    "status": "IN_PROGRESS"
-  },
-  {
-    "trace_id": "TRC-1791731454073",
-    "thread_id": "eval_conv_64_a070d6",
-    "patient_identifier": "eval_patient",
-    "start_time": "2026-10-11T15:10:54.073099+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:10:54.075199+00:00",
-        "latency_ms": 0.0,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.0,
-    "status": "IN_PROGRESS"
-  },
-  {
-    "trace_id": "TRC-1791731454083",
-    "thread_id": "eval_conv_65_ee795a",
-    "patient_identifier": "eval_patient",
-    "start_time": "2026-10-11T15:10:54.083906+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:10:54.086629+00:00",
-        "latency_ms": 0.0,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.0,
-    "status": "IN_PROGRESS"
-  },
-  {
-    "trace_id": "TRC-1791731572060",
-    "thread_id": "rt_sess_rt_01",
-    "patient_identifier": "adversary_01",
-    "start_time": "2026-10-11T15:12:52.060432+00:00",
-    "end_time": null,
-    "spans": [
-      {
-        "agent": "SupervisorAgent",
-        "timestamp": "2026-10-11T15:12:52.065763+00:00",
-        "latency_ms": 0.0,
-        "prompt_tokens": 120,
-        "completion_tokens": 30,
-        "cost_usd": 1.8e-05,
-        "tool_called": null
-      }
-    ],
-    "tool_calls": [],
-    "hitl_events": [],
-    "escalations": [],
-    "total_prompt_tokens": 120,
-    "total_completion_tokens": 30,
-    "total_cost_usd": 1.8e-05,
-    "total_latency_ms": 0.0,
-    "status": "IN_PROGRESS"
-  },
-  {
     "trace_id": "TRC-1791731572081",
     "thread_id": "rt_sess_rt_01b",
     "patient_identifier": "adversary_01b",
@@ -2701,6 +2545,228 @@
     "total_completion_tokens": 30,
     "total_cost_usd": 1.8e-05,
     "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788034459",
+    "thread_id": "test_par_1791788034",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-12T06:53:54.459831+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:53:54.475927+00:00",
+        "latency_ms": 2.02,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 120,
+    "total_completion_tokens": 30,
+    "total_cost_usd": 1.8e-05,
+    "total_latency_ms": 2.02,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788066614",
+    "thread_id": "test_par_1791788066",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-12T06:54:26.614890+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:54:26.623933+00:00",
+        "latency_ms": 1.01,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 120,
+    "total_completion_tokens": 30,
+    "total_cost_usd": 1.8e-05,
+    "total_latency_ms": 1.01,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788230717",
+    "thread_id": "test_par_1791788230",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-12T06:57:10.717008+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:57:10.725465+00:00",
+        "latency_ms": 1.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-12T06:57:19.324037+00:00",
+        "latency_ms": 7365.92,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 7365.92,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 7366.92,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788239328",
+    "thread_id": "test_hitl_1791788239",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-12T06:57:19.328986+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:57:19.334405+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:57:19.345917+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [
+      {
+        "task_type": "LAB_EXPLANATION",
+        "action": "EDITED",
+        "doctor": "Dr. Maryam Naveed (Medical Director)",
+        "notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+        "timestamp": "2026-10-12T06:57:19.348920+00:00"
+      }
+    ],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 0.0,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788299660",
+    "thread_id": "test_par_1791788299",
+    "patient_identifier": "Hamza Abbasi",
+    "start_time": "2026-10-12T06:58:19.660521+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:58:19.665476+00:00",
+        "latency_ms": 1.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "Parallel(Triage+Records)",
+        "timestamp": "2026-10-12T06:58:29.079153+00:00",
+        "latency_ms": 8165.39,
+        "prompt_tokens": 350,
+        "completion_tokens": 180,
+        "cost_usd": 8e-05,
+        "tool_called": "parallel_execution"
+      }
+    ],
+    "tool_calls": [
+      {
+        "agent": "Parallel(Triage+Records)",
+        "tool": "parallel_execution",
+        "latency_ms": 8165.39,
+        "status": "SUCCESS"
+      }
+    ],
+    "hitl_events": [],
+    "escalations": [],
+    "total_prompt_tokens": 470,
+    "total_completion_tokens": 210,
+    "total_cost_usd": 9.8e-05,
+    "total_latency_ms": 8166.39,
+    "status": "IN_PROGRESS"
+  },
+  {
+    "trace_id": "TRC-1791788309083",
+    "thread_id": "test_hitl_1791788309",
+    "patient_identifier": "Fatima Bibi",
+    "start_time": "2026-10-12T06:58:29.083597+00:00",
+    "end_time": null,
+    "spans": [
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:58:29.087599+00:00",
+        "latency_ms": 0.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      },
+      {
+        "agent": "SupervisorAgent",
+        "timestamp": "2026-10-12T06:58:29.096955+00:00",
+        "latency_ms": 1.0,
+        "prompt_tokens": 120,
+        "completion_tokens": 30,
+        "cost_usd": 1.8e-05,
+        "tool_called": null
+      }
+    ],
+    "tool_calls": [],
+    "hitl_events": [
+      {
+        "task_type": "LAB_EXPLANATION",
+        "action": "EDITED",
+        "doctor": "Dr. Maryam Naveed (Medical Director)",
+        "notes": "Confirmed mild PCOD presentation, reassured patient to prevent anxiety.",
+        "timestamp": "2026-10-12T06:58:29.099954+00:00"
+      }
+    ],
+    "escalations": [],
+    "total_prompt_tokens": 240,
+    "total_completion_tokens": 60,
+    "total_cost_usd": 3.6e-05,
+    "total_latency_ms": 1.0,
     "status": "IN_PROGRESS"
   }
 ]

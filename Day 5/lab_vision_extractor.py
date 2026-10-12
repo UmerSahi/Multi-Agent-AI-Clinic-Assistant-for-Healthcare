@@ -23,6 +23,10 @@ dotenv.load_dotenv()
 DAY5_DIR = Path(__file__).resolve().parent
 ROOT_DIR = DAY5_DIR.parent
 
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
+warnings.filterwarnings("ignore", message=".*deprecated.*")
+
 # Try imports
 try:
     import pypdf
@@ -30,9 +34,12 @@ except ImportError:
     pypdf = None
 
 try:
-    import fitz  # pymupdf
+    import pymupdf as fitz
 except ImportError:
-    fitz = None
+    try:
+        import fitz
+    except ImportError:
+        fitz = None
 
 try:
     import google.generativeai as genai
