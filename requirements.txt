@@ -2,8 +2,10 @@
 fastapi>=0.115.0
 uvicorn>=0.30.0
 gunicorn>=23.0.0
+python-multipart>=0.0.12
 pydantic>=2.8.0
 pydantic-settings>=2.4.0
+
 
 # Supabase Database and Environment
 supabase>=2.8.0
