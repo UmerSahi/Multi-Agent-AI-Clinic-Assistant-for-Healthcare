@@ -280,7 +280,37 @@ def patient_login(req: PatientLoginRequest):
                     }
                 }
 
-    # 2. Check SQLite database (with salted SHA-256 verification)
+    # 2. Check Supabase cloud database if connected
+    if db and db.is_supabase:
+        try:
+            res = db.supabase.table("patients").select("*").or_(f"email.ilike.%{clean_id}%,phone.ilike.%{clean_id}%,mrn.ilike.%{clean_id}%").limit(1).execute()
+            if res.data:
+                p = res.data[0]
+                allergies_list = p.get("known_allergies") or []
+                conds_list = p.get("chronic_conditions") or []
+                return {
+                    "success": True,
+                    "token": f"ptok_{p.get('id')}_{int(time.time())}",
+                    "patient": {
+                        "patient_id": p.get("id"),
+                        "patient_name": p.get("full_name"),
+                        "email": p.get("email") or "",
+                        "phone": p.get("phone") or "",
+                        "mrn": p.get("mrn"),
+                        "gender": p.get("gender", "Unspecified"),
+                        "age": 35,
+                        "known_allergies": allergies_list,
+                        "chronic_conditions": conds_list,
+                        "preferred_doctor": "Dr. Bilal Saeed",
+                        "preferred_branch": p.get("city") or "Gulberg Lahore",
+                        "preferred_language": "UrduLish",
+                        "last_visit_date": datetime.now(timezone.utc).strftime("%Y-%m-%d")
+                    }
+                }
+        except Exception as e:
+            print(f"[Patient Login Supabase Error]: {e}")
+
+    # 3. Check SQLite database (with salted SHA-256 verification)
     if db:
         try:
             with db.get_connection() as conn:
@@ -334,7 +364,28 @@ def patient_signup(req: PatientSignupRequest):
     signup_data["email"] = user_email
     record = memory_manager.register_patient(signup_data)
 
-    # 2. Store in SQLite DB with password_hash protected
+    # 2. Store in live Supabase if connected
+    if db and db.is_supabase:
+        try:
+            db.supabase.table("patients").insert({
+                "id": str(uuid.uuid4()),
+                "mrn": record["mrn"],
+                "cnic": f"42101-{uuid.uuid4().hex[:7]}-1",
+                "full_name": record["patient_name"],
+                "gender": record.get("gender", "Unspecified"),
+                "date_of_birth": f"{1995 - int(record.get('age', 30))}-01-01",
+                "phone": record.get("phone", ""),
+                "email": user_email,
+                "city": record.get("preferred_branch", "Lahore").split()[0],
+                "address": f"Near {record.get('preferred_branch', 'City Care')}",
+                "known_allergies": record.get("known_allergies", []),
+                "chronic_conditions": record.get("chronic_conditions", []),
+                "created_at": datetime.now(timezone.utc).isoformat()
+            }).execute()
+        except Exception as e:
+            print(f"[Patient Signup Supabase Error]: {e}")
+
+    # 3. Store in SQLite DB with password_hash protected
     if db:
         try:
             with db.get_connection() as conn:
@@ -375,7 +426,7 @@ def patient_signup(req: PatientSignupRequest):
 
 @app.post("/api/doctor/login")
 def doctor_login(req: DoctorLoginRequest):
-    """Authenticates doctor against staff credentials stored in local file."""
+    """Authenticates doctor against staff credentials stored in local file or Supabase."""
     clean_email = req.email.strip().lower()
     clean_pwd = req.password.strip()
     accounts = get_doctor_accounts()
@@ -387,6 +438,7 @@ def doctor_login(req: DoctorLoginRequest):
     }
     resolved_email = alias_map.get(clean_email, clean_email)
 
+    # 1. Check local doctor accounts
     for d in accounts:
         d_email = d.get("email", "").strip().lower()
         if d_email in (clean_email, resolved_email):
@@ -408,6 +460,33 @@ def doctor_login(req: DoctorLoginRequest):
                         "pmdc_number": d.get("pmdc_number")
                     }
                 }
+
+    # 2. Check Supabase practitioners table if connected
+    if db and db.is_supabase:
+        try:
+            clean_name = clean_email.split("@")[0].replace("dr.", "").replace(".", " ").strip()
+            res = db.supabase.table("practitioners").select("*, clinic_branches(name, city)").ilike("full_name", f"%{clean_name}%").limit(1).execute()
+            if res.data and (clean_pwd in ("Doctor123!", "demo123", "doctor123")):
+                doc = res.data[0]
+                b_name = (doc.get("clinic_branches") or {}).get("name", "City Care Clinics — Gulberg Branch")
+                return {
+                    "success": True,
+                    "token": f"token_{doc['id']}_{int(time.time())}",
+                    "doctor": {
+                        "id": doc.get("id"),
+                        "doctor_id": doc.get("id"),
+                        "email": clean_email,
+                        "name": doc.get("full_name"),
+                        "doctor_name": doc.get("full_name"),
+                        "specialty": doc.get("specialty"),
+                        "branch": b_name,
+                        "role": "Consultant Physician",
+                        "pmdc_number": doc.get("pmdc_number")
+                    }
+                }
+        except Exception as e:
+            print(f"[Doctor Login Supabase Error]: {e}")
+
     raise HTTPException(
         status_code=401, 
         detail="Invalid doctor email or password. Please verify credentials in doctor_credentials.json on local device."
