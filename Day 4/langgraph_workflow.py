@@ -1542,7 +1542,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 start_time_iso=selected_slot_to_book["slot_start"],
                 booking_ref=booking_ref,
                 consultation_fee=fee,
-                calendar_url=gcal_link
+                calendar_url=gcal_link,
+                patient_id=reg_p.get("mrn") or reg_p.get("id"),
+                mrn=reg_p.get("mrn")
             )
 
             if is_en:
@@ -1758,7 +1760,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 start_time_iso=selected_slot_to_book["slot_start"],
                 booking_ref=booking_ref,
                 consultation_fee=fee,
-                calendar_url=gcal_link
+                calendar_url=gcal_link,
+                patient_id=state.get("patient_mrn") or state.get("patient_id"),
+                mrn=state.get("patient_mrn")
             )
 
             if is_en:

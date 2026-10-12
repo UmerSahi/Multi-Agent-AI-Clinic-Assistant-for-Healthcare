@@ -665,7 +665,8 @@ def book_appointment_endpoint(req: AppointmentBookingPayload):
             start_time_iso=req.slot_iso,
             booking_ref=res.get("booking_reference", "CCC-BK"),
             consultation_fee=res.get("fee", 2000),
-            calendar_url=res.get("google_calendar_url", "#")
+            calendar_url=res.get("google_calendar_url", "#"),
+            patient_id=req.patient_id
         )
     except Exception as e:
         print(f"[Email Notification Error]: {e}")

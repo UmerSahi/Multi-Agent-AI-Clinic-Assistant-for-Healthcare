@@ -88,15 +88,25 @@ class EmailNotifier:
         start_time_iso: str,
         booking_ref: str,
         consultation_fee: int,
-        calendar_url: str
+        calendar_url: str,
+        patient_id: Optional[str] = None,
+        mrn: Optional[str] = None
     ) -> Dict[str, Any]:
         """Creates and dispatches rich appointment confirmation email."""
         dt = datetime.fromisoformat(start_time_iso.replace("Z", "+00:00"))
         time_display = dt.strftime("%A, %d %B %Y at %I:%M %p")
 
         clean_ref = str(booking_ref).replace("#", "").strip()
+        clean_pid = str(mrn or patient_id or "CCC-PK-NEW").replace("#", "").strip()
         subject = f"Appointment Confirmed: Dr. {doctor_name} — City Care Clinics (#{clean_ref})"
         
+        patient_id_row = f"""
+                            <tr>
+                                <td style="padding: 8px 0; color: #64748b; font-size: 14px;"><strong>Patient ID / MRN:</strong></td>
+                                <td style="padding: 8px 0; color: #0f172a; font-size: 15px; font-weight: bold;">{clean_pid}</td>
+                            </tr>
+        """ if clean_pid else ""
+
         html_body = f"""
         <!DOCTYPE html>
         <html>
@@ -118,6 +128,7 @@ class EmailNotifier:
                     
                     <div style="background-color: #f0fdfa; border: 1px solid #ccfbf1; border-radius: 8px; padding: 16px; margin: 20px 0;">
                         <table style="width: 100%; border-collapse: collapse;">
+                            {patient_id_row}
                             <tr>
                                 <td style="padding: 8px 0; color: #64748b; font-size: 14px; width: 38%;"><strong>Doctor:</strong></td>
                                 <td style="padding: 8px 0; color: #0f172a; font-size: 15px; font-weight: bold;">Dr. {doctor_name} ({specialty})</td>
@@ -168,6 +179,8 @@ class EmailNotifier:
 
         record = {
             "recipient": recipient,
+            "patient_name": patient_name,
+            "patient_id": clean_pid,
             "subject": subject,
             "html_body": html_body,
             "sent_at": datetime.now(timezone.utc).isoformat(),
