@@ -53,6 +53,65 @@ export const DoctorPortal: React.FC<DoctorPortalProps> = ({
   const [editedText, setEditedText] = useState<string>("");
   const [doctorNotes, setDoctorNotes] = useState<string>("");
 
+  const isDoctorAssigned = (app: any, doctor: DoctorAccount | null): boolean => {
+    if (!doctor) return false;
+    const docId = (doctor.doctor_id || doctor.id || "").toLowerCase().trim();
+    const appDocId = (app.doctor_id || app.practitioner_id || "").toLowerCase().trim();
+    if (docId && appDocId && docId === appDocId) {
+      return true;
+    }
+
+    const cleanDocName = (doctor.doctor_name || (doctor as any).name || "")
+      .toLowerCase()
+      .replace(/^dr\.\s*|^doctor\s*/i, "")
+      .trim();
+    const cleanAppDocName = (app.doctor_name || "")
+      .toLowerCase()
+      .replace(/^dr\.\s*|^doctor\s*/i, "")
+      .trim();
+
+    if (cleanDocName && cleanAppDocName) {
+      if (
+        cleanDocName === cleanAppDocName ||
+        cleanDocName.includes(cleanAppDocName) ||
+        cleanAppDocName.includes(cleanDocName)
+      ) {
+        return true;
+      }
+    }
+
+    return false;
+  };
+
+  const myAppointmentsList = appointments.filter((app) => isDoctorAssigned(app, doctorUser));
+  const myAppointmentsCount = myAppointmentsList.length;
+  const allAppointmentsCount = appointments.length;
+
+  const filteredAppointments = appointments.filter((app) => {
+    if (appointmentFilter === "my" && !isDoctorAssigned(app, doctorUser)) {
+      return false;
+    }
+    if (appointmentSearch.trim()) {
+      const q = appointmentSearch.toLowerCase().trim();
+      const ptName = (app.patient_name || "").toLowerCase();
+      const ptMrn = (app.mrn || app.patient_mrn || "").toLowerCase();
+      const ptPhone = (app.phone || app.patient_phone || "").toLowerCase();
+      const docName = (app.doctor_name || "").toLowerCase();
+      const bookingRef = (app.booking_reference || app.booking_ref || app.appointment_id || "").toLowerCase();
+      const date = (app.date || app.display_date || "").toLowerCase();
+
+      return (
+        ptName.includes(q) ||
+        ptMrn.includes(q) ||
+        ptPhone.includes(q) ||
+        docName.includes(q) ||
+        bookingRef.includes(q) ||
+        date.includes(q)
+      );
+    }
+    return true;
+  });
+
   if (!doctorUser) {
     return (
       <div
@@ -231,7 +290,7 @@ export const DoctorPortal: React.FC<DoctorPortalProps> = ({
               transition: "all 0.15s ease",
             }}
           >
-            🗓️ Consultations & Prescriptions ({appointments.length})
+            🗓️ Consultations & Prescriptions ({allAppointmentsCount})
           </button>
 
           <button
@@ -381,14 +440,14 @@ export const DoctorPortal: React.FC<DoctorPortalProps> = ({
                 style={{ padding: "6px 14px", fontSize: "0.78rem" }}
                 onClick={() => setAppointmentFilter("my")}
               >
-                My Patients
+                My Patients ({myAppointmentsCount})
               </button>
               <button
                 className={appointmentFilter === "all" ? "btn-primary" : "btn-secondary"}
                 style={{ padding: "6px 14px", fontSize: "0.78rem" }}
                 onClick={() => setAppointmentFilter("all")}
               >
-                All Clinic Appointments
+                All Clinic Appointments ({allAppointmentsCount})
               </button>
             </div>
 
@@ -403,61 +462,135 @@ export const DoctorPortal: React.FC<DoctorPortalProps> = ({
           </div>
 
           {/* Appointments Grid */}
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "16px" }}>
-            {appointments.map((app: any, idx: number) => {
-              const hasRx = !!app.prescription || !!app.prescription_id;
-              return (
-                <div key={app.appointment_id || idx} style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "16px", padding: "18px", display: "flex", flexDirection: "column", justifyContent: "space-between", gap: "12px", boxShadow: "0 2px 6px rgba(0,0,0,0.02)" }}>
-                  <div>
-                    <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
-                      <span style={{ fontSize: "0.72rem", background: "#f1f5f9", color: "#0f766e", fontWeight: 700, padding: "2px 8px", borderRadius: "6px", fontFamily: "var(--font-mono)" }}>
-                        {app.booking_reference || app.booking_ref || app.appointment_id}
-                      </span>
-                      <span style={{ fontSize: "0.7rem", fontWeight: 700, color: "#059669", background: "#ecfdf5", padding: "2px 8px", borderRadius: "10px" }}>
-                        {app.status || "CONFIRMED"}
-                      </span>
-                    </div>
+          {filteredAppointments.length === 0 ? (
+            <div style={{ background: "#ffffff", border: "1px solid #e2e8f0", borderRadius: "18px", padding: "40px 20px", textAlign: "center" }}>
+              <div style={{ fontSize: "2rem", marginBottom: "8px" }}>📋</div>
+              <h4 style={{ fontWeight: 700, color: "#334155" }}>
+                {appointmentFilter === "my" ? "No Assigned Appointments Found" : "No Clinic Appointments Found"}
+              </h4>
+              <p style={{ fontSize: "0.8rem", color: "#64748b", marginTop: "4px" }}>
+                {appointmentFilter === "my"
+                  ? `No upcoming or pending appointments currently assigned to ${doctorUser?.doctor_name || "you"}. Switch to 'All Clinic Appointments' to view consultations clinic-wide.`
+                  : "No appointments match your search criteria. Clear the search bar to view all records."}
+              </p>
+            </div>
+          ) : (
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(320px, 1fr))", gap: "16px" }}>
+              {filteredAppointments.map((app: any, idx: number) => {
+                const hasRx = !!app.prescription || !!app.prescription_id || !!app.has_prescription;
+                const isMine = isDoctorAssigned(app, doctorUser);
+                const isFulfilled = (app.status || "").toLowerCase() === "fulfilled";
+                const cleanRef = (app.booking_reference || app.booking_ref || app.appointment_id || "").replace("#", "").trim();
 
-                    <h4 style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0f172a" }}>
-                      {app.patient_name || "Patient"}
-                    </h4>
-                    <div style={{ fontSize: "0.78rem", color: "#64748b" }}>
-                      MRN: {app.mrn || "P001"} • Phone: {app.phone}
-                    </div>
-
-                    <div style={{ marginTop: "10px", fontSize: "0.78rem", color: "#334155" }}>
-                      📅 {app.date} • ⏰ {app.time_slot || app.time}
-                    </div>
-
-                    {app.reason && (
-                      <div style={{ fontSize: "0.74rem", color: "#64748b", marginTop: "6px", background: "#f8fafc", padding: "6px 8px", borderRadius: "6px" }}>
-                        Chief Complaint: {app.reason}
+                return (
+                  <div
+                    key={app.appointment_id || app.id || idx}
+                    style={{
+                      background: "#ffffff",
+                      border: isMine ? "1.5px solid #ccfbf1" : "1px solid #e2e8f0",
+                      borderRadius: "16px",
+                      padding: "18px",
+                      display: "flex",
+                      flexDirection: "column",
+                      justifyContent: "space-between",
+                      gap: "12px",
+                      boxShadow: isMine ? "0 4px 12px rgba(15, 118, 110, 0.05)" : "0 2px 6px rgba(0,0,0,0.02)",
+                    }}
+                  >
+                    <div>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "flex-start", marginBottom: "8px" }}>
+                        <span style={{ fontSize: "0.72rem", background: "#f1f5f9", color: "#0f766e", fontWeight: 700, padding: "2px 8px", borderRadius: "6px", fontFamily: "var(--font-mono)" }}>
+                          {cleanRef}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: "0.7rem",
+                            fontWeight: 700,
+                            color: isFulfilled ? "#059669" : "#2563eb",
+                            background: isFulfilled ? "#ecfdf5" : "#eff6ff",
+                            padding: "2px 8px",
+                            borderRadius: "10px",
+                          }}
+                        >
+                          {app.status || "CONFIRMED"}
+                        </span>
                       </div>
-                    )}
-                  </div>
 
-                  <div style={{ display: "flex", gap: "8px", borderTop: "1px solid #f1f5f9", paddingTop: "12px" }}>
-                    <button
-                      className="btn-primary"
-                      style={{ flex: 1, padding: "8px 12px", fontSize: "0.78rem" }}
-                      onClick={() => onOpenPrescribeModal(app)}
-                    >
-                      💊 Write Rx
-                    </button>
-                    {hasRx && (
-                      <button
-                        className="btn-secondary"
-                        style={{ padding: "8px 12px", fontSize: "0.78rem" }}
-                        onClick={() => onViewPrescription(app)}
-                      >
-                        View Rx
-                      </button>
-                    )}
+                      <h4 style={{ fontSize: "0.98rem", fontWeight: 700, color: "#0f172a" }}>
+                        {app.patient_name || "Patient"}
+                      </h4>
+                      <div style={{ fontSize: "0.78rem", color: "#64748b" }}>
+                        MRN: {app.mrn || app.patient_mrn || "P001"} • Phone: {app.phone || app.patient_phone || "N/A"}
+                      </div>
+
+                      <div style={{ marginTop: "10px", fontSize: "0.78rem", color: "#334155" }}>
+                        📅 {app.date || app.display_date || "Scheduled Date"} • ⏰ {app.time_slot || app.time || app.display_time || "Scheduled Time"}
+                      </div>
+
+                      <div style={{ display: "flex", alignItems: "center", gap: "6px", fontSize: "0.76rem", color: isMine ? "#0f766e" : "#64748b", marginTop: "6px" }}>
+                        <span>👨‍⚕️</span>
+                        <span>
+                          Attending: <strong>{app.doctor_name || "Clinic Specialist"}</strong>
+                          {isMine && (
+                            <span style={{ marginLeft: "6px", color: "#059669", fontWeight: 700, fontSize: "0.68rem", background: "#ecfdf5", border: "1px solid #a7f3d0", padding: "1px 6px", borderRadius: "8px" }}>
+                              Your Patient
+                            </span>
+                          )}
+                        </span>
+                      </div>
+
+                      {app.reason && (
+                        <div style={{ fontSize: "0.74rem", color: "#64748b", marginTop: "8px", background: "#f8fafc", padding: "6px 8px", borderRadius: "6px" }}>
+                          Chief Complaint: {app.reason}
+                        </div>
+                      )}
+                    </div>
+
+                    <div style={{ display: "flex", gap: "8px", borderTop: "1px solid #f1f5f9", paddingTop: "12px", alignItems: "center" }}>
+                      {isMine ? (
+                        <button
+                          className="btn-primary"
+                          style={{ flex: 1, padding: "8px 12px", fontSize: "0.78rem" }}
+                          onClick={() => onOpenPrescribeModal(app)}
+                        >
+                          💊 Write Rx
+                        </button>
+                      ) : (
+                        <div
+                          style={{
+                            flex: 1,
+                            padding: "7px 10px",
+                            fontSize: "0.72rem",
+                            borderRadius: "10px",
+                            background: "#f8fafc",
+                            border: "1px dashed #cbd5e1",
+                            color: "#64748b",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            gap: "5px",
+                          }}
+                          title={`Prescribing is restricted to ${app.doctor_name || "the assigned physician"}`}
+                        >
+                          <span>🔒</span>
+                          <span>Restricted to {app.doctor_name || "Assigned Doctor"}</span>
+                        </div>
+                      )}
+                      {hasRx && (
+                        <button
+                          className="btn-secondary"
+                          style={{ padding: "8px 12px", fontSize: "0.78rem" }}
+                          onClick={() => onViewPrescription(app)}
+                        >
+                          View Rx
+                        </button>
+                      )}
+                    </div>
                   </div>
-                </div>
-              );
-            })}
-          </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       )}
 

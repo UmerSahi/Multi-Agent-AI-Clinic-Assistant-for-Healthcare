@@ -48,7 +48,7 @@ export const PrescribeModal: React.FC<PrescribeModalProps> = ({
               💊 Issue Electronic Prescription (Rx)
             </h2>
             <div style={{ fontSize: "0.78rem", color: "#64748b" }}>
-              Patient: <strong>{appointment.patient_name}</strong> (MRN: {appointment.mrn || "P001"})
+              Patient: <strong>{appointment.patient_name}</strong> (MRN: {appointment.mrn || appointment.patient_mrn || "P001"}) • Attending: <strong>{appointment.doctor_name || "Clinic Specialist"}</strong>
             </div>
           </div>
           <button

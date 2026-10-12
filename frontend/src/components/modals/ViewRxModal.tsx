@@ -118,26 +118,32 @@ export const ViewRxModal: React.FC<ViewRxModalProps> = ({
             >
               🖨️ Print Rx
             </button>
-            <a
-              href={`http://127.0.0.1:8000/api/prescriptions/${(appointment.booking_reference || appointment.booking_ref || rx.booking_reference || "").replace("#", "").trim()}/pdf`}
-              target="_blank"
-              rel="noreferrer"
-              className="btn-primary"
-              style={{
-                fontSize: "0.82rem",
-                textDecoration: "none",
-                display: "inline-flex",
-                alignItems: "center",
-                gap: "6px",
-                background: "#0f766e",
-                color: "#ffffff",
-                padding: "8px 14px",
-                borderRadius: "10px"
-              }}
-            >
-              <span>📥</span>
-              <span>Download Official PDF</span>
-            </a>
+            {(() => {
+              const cleanRef = (appointment.booking_reference || appointment.booking_ref || rx.booking_reference || "").replace("#", "").trim();
+              return (
+                <a
+                  href={`/api/prescriptions/${encodeURIComponent(cleanRef)}/pdf?download=true`}
+                  download={`CityCare_Prescription_${cleanRef}.pdf`}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="btn-primary"
+                  style={{
+                    fontSize: "0.82rem",
+                    textDecoration: "none",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "6px",
+                    background: "#0f766e",
+                    color: "#ffffff",
+                    padding: "8px 14px",
+                    borderRadius: "10px"
+                  }}
+                >
+                  <span>📥</span>
+                  <span>Download Official PDF</span>
+                </a>
+              );
+            })()}
             <button
               className="btn-secondary"
               onClick={onClose}

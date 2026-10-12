@@ -798,9 +798,12 @@ export default function ClinicApp() {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          appointment_id: prescribingApp.appointment_id || prescribingApp.id,
+          appointment_id: prescribingApp.appointment_id || prescribingApp.id || prescribingApp.booking_reference,
           patient_id: prescribingApp.patient_id || prescribingApp.mrn || "p1",
-          doctor_id: doctorUser?.doctor_id || prescribingApp.doctor_id || "DOC-1",
+          doctor_id: doctorUser?.doctor_id || doctorUser?.id || prescribingApp.doctor_id,
+          doctor_name: doctorUser?.doctor_name || (doctorUser as any)?.name,
+          doctor_specialty: doctorUser?.specialty,
+          pmdc_number: doctorUser?.pmdc_number,
           diagnosis: prescriptionForm.diagnosis,
           advice: prescriptionForm.advice,
           medicines: prescriptionForm.medicines,
@@ -812,9 +815,13 @@ export default function ClinicApp() {
         fetchDoctorAppointments();
         fetchMyAppointments();
         alert("Electronic Prescription (Rx) issued successfully!");
+      } else {
+        const errData = await res.json().catch(() => ({}));
+        alert(errData.detail || "Failed to issue prescription. You are only authorized to prescribe for your own booked patients.");
       }
     } catch (err) {
       console.error("Prescribe error:", err);
+      alert("Network or connection error while issuing prescription.");
     } finally {
       setPrescribeSubmitting(false);
     }

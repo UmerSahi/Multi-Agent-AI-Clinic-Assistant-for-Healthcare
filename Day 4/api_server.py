@@ -16,10 +16,10 @@ import hashlib
 import secrets
 from pathlib import Path
 from datetime import datetime, timezone, timedelta, date
-from typing import Dict, List, Any, Optional, Literal
+from typing import Dict, List, Any, Optional, Literal, Union
 from fastapi import FastAPI, HTTPException, Query, BackgroundTasks, UploadFile, File, Response
 from fastapi.middleware.cors import CORSMiddleware
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, model_validator
 
 # Ensure imports
 DAY4_DIR = Path(__file__).resolve().parent
@@ -188,11 +188,24 @@ class AppointmentBookingPayload(BaseModel):
     patient_email: Optional[str] = None
 
 class MedicationItem(BaseModel):
-    drug_name: str
+    drug_name: Optional[str] = None
+    medicine_name: Optional[str] = None
+    name: Optional[str] = None
     dosage: Optional[str] = "500mg"
+    dosage_mg: Optional[Union[float, int, str]] = None
     frequency: Optional[str] = "Twice daily"
+    frequency_per_day: Optional[int] = None
     duration: Optional[str] = "5 days"
+    duration_days: Optional[int] = None
     instructions: Optional[str] = "Take after meals"
+
+    @model_validator(mode="after")
+    def populate_drug_name(self):
+        if not self.drug_name:
+            self.drug_name = self.medicine_name or self.name or "Prescribed Medication"
+        if not self.medicine_name:
+            self.medicine_name = self.drug_name
+        return self
 
 class PrescribeRequest(BaseModel):
     appointment_id: str  # id or booking reference
@@ -200,9 +213,11 @@ class PrescribeRequest(BaseModel):
     medicines: List[MedicationItem]
     advice: Optional[str] = "Take medicines on time as prescribed. Keep hydrated and get adequate rest."
     doctor_name: Optional[str] = None
+    doctor_id: Optional[str] = None
     doctor_specialty: Optional[str] = None
     pmdc_number: Optional[str] = None
     branch_name: Optional[str] = None
+
 
 
 
@@ -1024,6 +1039,7 @@ def doctor_prescribe_endpoint(req: PrescribeRequest):
     """
     Issues a clinical prescription for a patient appointment.
     Updates appointment status from 'booked' to 'fulfilled' and records medication requests.
+    Validates that the prescribing doctor is assigned to this appointment.
     """
     if not db:
         raise HTTPException(status_code=500, detail="Database client unavailable")
@@ -1031,6 +1047,26 @@ def doctor_prescribe_endpoint(req: PrescribeRequest):
     apt = db.find_appointment_by_id_or_ref(req.appointment_id)
     if not apt:
         raise HTTPException(status_code=404, detail=f"Appointment '{req.appointment_id}' not found")
+
+    # Safety check: enforce that doctor can only prescribe for their own booked appointments
+    req_doc_name = (req.doctor_name or "").strip()
+    apt_doc_name = (apt.get("doctor_name") or "").strip()
+    apt_doc_id = str(apt.get("practitioner_id") or apt.get("doctor_id") or "").strip()
+    req_doc_id = str(req.doctor_id or "").strip()
+
+    clean_req = req_doc_name.lower().replace("dr.", "").replace("doctor", "").strip()
+    clean_apt = apt_doc_name.lower().replace("dr.", "").replace("doctor", "").strip()
+    matches_name = bool(clean_req and clean_apt and (clean_req in clean_apt or clean_apt in clean_req))
+    matches_id = bool(req_doc_id and apt_doc_id and req_doc_id.lower() == apt_doc_id.lower())
+
+    if (apt_doc_name or apt_doc_id) and (req_doc_name or req_doc_id):
+        if not (matches_name or matches_id):
+            doc_display = apt_doc_name or f"Doctor ({apt_doc_id})"
+            req_display = req_doc_name or f"Doctor ({req_doc_id})"
+            raise HTTPException(
+                status_code=403,
+                detail=f"Clinical Safety Restriction: Only {doc_display} can issue prescriptions for this appointment. You are logged in as {req_display}."
+            )
 
     meds_list = [m.model_dump() for m in req.medicines]
 
@@ -1043,7 +1079,7 @@ def doctor_prescribe_endpoint(req: PrescribeRequest):
         "appointment_id": apt.get("id"),
         "booking_reference": apt.get("booking_reference"),
         "patient_id": apt.get("patient_id"),
-        "practitioner_id": apt.get("practitioner_id") or "doc_1",
+        "practitioner_id": apt.get("practitioner_id") or apt.get("doctor_id") or "doc_1",
         "doctor_name": doc_name,
         "doctor_specialty": doc_spec,
         "pmdc_number": pmdc,
@@ -1060,10 +1096,11 @@ def doctor_prescribe_endpoint(req: PrescribeRequest):
     }
 
     saved = db.save_prescription(p_data)
+    clean_booking_ref = str(apt.get("booking_reference") or req.appointment_id).replace("#", "").strip()
     return {
         "success": True,
-        "message": f"Prescription successfully issued for appointment #{apt.get('booking_reference')}. Status updated to fulfilled.",
-        "booking_reference": apt.get("booking_reference"),
+        "message": f"Prescription successfully issued for appointment {clean_booking_ref}. Status updated to fulfilled.",
+        "booking_reference": clean_booking_ref,
         "status": "fulfilled",
         "prescription": saved
     }
@@ -1081,7 +1118,7 @@ def get_prescription_endpoint(booking_ref: str):
 
 
 @app.get("/api/prescriptions/{booking_ref}/pdf")
-def download_prescription_pdf_endpoint(booking_ref: str):
+def download_prescription_pdf_endpoint(booking_ref: str, download: Optional[bool] = False):
     """
     Generates and downloads a hospital-grade official PDF prescription
     complete with clinic branding, patient MRN, doctor PMDC number, ℞ schedule, and signature block.
@@ -1106,11 +1143,12 @@ def download_prescription_pdf_endpoint(booking_ref: str):
         raise HTTPException(status_code=500, detail=f"Failed to generate prescription PDF: {e}")
 
     clean_ref = (rx.get("booking_reference") or booking_ref).replace("#", "").strip()
+    disp_type = "attachment" if download else "inline"
     return Response(
         content=pdf_bytes,
         media_type="application/pdf",
         headers={
-            "Content-Disposition": f'inline; filename="CityCare_Prescription_{clean_ref}.pdf"'
+            "Content-Disposition": f'{disp_type}; filename="CityCare_Prescription_{clean_ref}.pdf"'
         }
     )
 

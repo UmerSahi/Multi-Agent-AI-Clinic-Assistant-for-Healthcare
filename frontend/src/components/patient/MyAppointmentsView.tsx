@@ -331,7 +331,7 @@ export const MyAppointmentsView: React.FC<MyAppointmentsViewProps> = ({
             const rx = app.prescription || {};
             const medicines = rx.medicines || rx.medications || [];
             const bookingRef = (app.booking_reference || app.booking_ref || app.id || "").replace("#", "").trim();
-            const pdfUrl = `http://127.0.0.1:8000/api/prescriptions/${bookingRef}/pdf`;
+            const pdfUrl = `/api/prescriptions/${encodeURIComponent(bookingRef)}/pdf?download=true`;
 
             return (
               <div
@@ -552,6 +552,7 @@ export const MyAppointmentsView: React.FC<MyAppointmentsViewProps> = ({
 
                       <a
                         href={pdfUrl}
+                        download={`CityCare_Prescription_${bookingRef}.pdf`}
                         target="_blank"
                         rel="noreferrer"
                         className="btn-secondary"
@@ -568,9 +569,10 @@ export const MyAppointmentsView: React.FC<MyAppointmentsViewProps> = ({
                           borderRadius: "10px",
                           fontWeight: 700,
                         }}
+                        title="Download official PDF prescription"
                       >
                         <span>📥</span>
-                        <span>PDF</span>
+                        <span>Download PDF</span>
                       </a>
                     </div>
                   )}

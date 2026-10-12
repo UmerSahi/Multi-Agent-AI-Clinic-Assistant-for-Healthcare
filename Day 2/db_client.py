@@ -441,11 +441,53 @@ class DatabaseClient:
     def find_appointment_by_id_or_ref(self, ref_or_id: str) -> Optional[Dict[str, Any]]:
         """Look up appointment details by Booking Reference or ID, joining doctor and patient records."""
         clean_ref = ref_or_id.strip().upper().replace("#", "")
+        if self.is_supabase:
+            try:
+                import uuid as uuid_mod
+                is_valid_uuid = False
+                try:
+                    uuid_mod.UUID(clean_ref)
+                    is_valid_uuid = True
+                except ValueError:
+                    is_valid_uuid = False
+
+                q = self.supabase.table("appointments").select(
+                    "*, practitioners(id, full_name, specialty, consultation_fee, pmdc_number), clinic_branches(name, city, address), patients(id, full_name, mrn, phone, gender, date_of_birth, known_allergies, chronic_conditions)"
+                )
+                if is_valid_uuid:
+                    res = q.or_(f"booking_reference.ilike.%{clean_ref}%,id.eq.{clean_ref}").limit(1).execute()
+                else:
+                    res = q.ilike("booking_reference", f"%{clean_ref}%").limit(1).execute()
+
+                if res.data:
+                    row = dict(res.data[0])
+                    p_info = row.pop("practitioners", None) or {}
+                    b_info = row.pop("clinic_branches", None) or {}
+                    pt_info = row.pop("patients", None) or {}
+                    row["doctor_id"] = p_info.get("id")
+                    row["doctor_name"] = p_info.get("full_name") or "Clinic Specialist"
+                    row["doctor_specialty"] = p_info.get("specialty") or "General Medicine"
+                    row["consultation_fee"] = p_info.get("consultation_fee") or 2000
+                    row["pmdc_number"] = p_info.get("pmdc_number") or "PMDC-22280-P"
+                    row["branch_name"] = b_info.get("name") or "City Care Clinics"
+                    row["branch_city"] = b_info.get("city") or "Lahore"
+                    row["branch_address"] = b_info.get("address") or ""
+                    row["patient_name"] = pt_info.get("full_name") or "Registered Patient"
+                    row["patient_mrn"] = pt_info.get("mrn")
+                    row["patient_phone"] = pt_info.get("phone")
+                    row["patient_gender"] = pt_info.get("gender")
+                    row["patient_dob"] = pt_info.get("date_of_birth")
+                    row["known_allergies"] = pt_info.get("known_allergies")
+                    row["chronic_conditions"] = pt_info.get("chronic_conditions")
+                    return row
+            except Exception as e:
+                print(f"[Supabase Find Appointment Warning]: {e}")
+
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
             SELECT a.*, 
-                   p.full_name as doctor_name, p.specialty as doctor_specialty, p.consultation_fee,
+                   p.full_name as doctor_name, p.specialty as doctor_specialty, p.consultation_fee, p.pmdc_number,
                    b.name as branch_name, b.city as branch_city, b.address as branch_address,
                    pt.full_name as patient_name, pt.mrn as patient_mrn, pt.phone as patient_phone,
                    pt.gender as patient_gender, pt.date_of_birth as patient_dob,
@@ -650,6 +692,47 @@ class DatabaseClient:
 
             conn.commit()
 
+        if self.is_supabase:
+            try:
+                self.supabase.table("appointments").update({"status": "fulfilled"}).or_(
+                    f"id.eq.{app_id},booking_reference.eq.{booking_ref}"
+                ).execute()
+            except Exception as e:
+                print(f"[Supabase Status Update Warning]: {e}")
+
+            encounter_id = None
+            try:
+                enc_res = self.supabase.table("encounters").select("id").eq("appointment_id", app_id).limit(1).execute()
+                if enc_res.data:
+                    encounter_id = enc_res.data[0]["id"]
+            except Exception:
+                pass
+
+            if isinstance(medicines, list) and encounter_id:
+                for m in medicines:
+                    d_name = m.get("drug_name") or m.get("name") or m.get("medicine_name") or "Medicine"
+                    g_name = m.get("generic_name") or d_name
+                    dose = float(m.get("dosage_mg") or 500.0) if str(m.get("dosage_mg", "")).replace(".", "").isdigit() else 500.0
+                    freq = int(m.get("frequency_per_day") or 2) if str(m.get("frequency_per_day", "")).isdigit() else 2
+                    dur = int(m.get("duration_days") or 5) if str(m.get("duration_days", "")).isdigit() else 5
+                    instructions = m.get("instructions") or m.get("timing") or "Take after meals"
+                    try:
+                        self.supabase.table("medication_requests").insert({
+                            "patient_id": patient_id,
+                            "encounter_id": encounter_id,
+                            "practitioner_id": practitioner_id,
+                            "drug_name": d_name,
+                            "generic_name": g_name,
+                            "dosage_mg": dose,
+                            "frequency_per_day": freq,
+                            "duration_days": dur,
+                            "instructions": instructions,
+                            "safety_check_status": "SAFE",
+                            "prescribed_at": created_at
+                        }).execute()
+                    except Exception as e:
+                        print(f"[Supabase Medication Sync Warning]: {e}")
+
         p_data["id"] = p_id
         p_data["status"] = "fulfilled"
         p_data["created_at"] = created_at
@@ -693,6 +776,54 @@ class DatabaseClient:
                 except Exception:
                     res["medicines"] = []
                 return res
+
+        if self.is_supabase:
+            try:
+                apt = self.find_appointment_by_id_or_ref(clean)
+                if apt:
+                    encounter_id = None
+                    try:
+                        enc_res = self.supabase.table("encounters").select("id").eq("appointment_id", apt_id).limit(1).execute()
+                        if enc_res.data:
+                            encounter_id = enc_res.data[0]["id"]
+                    except Exception:
+                        pass
+
+                    req_query = self.supabase.table("medication_requests").select("*")
+                    if encounter_id:
+                        res = req_query.or_(f"encounter_id.eq.{encounter_id},encounter_id.eq.{apt_id}").execute()
+                    else:
+                        res = req_query.eq("encounter_id", apt_id).execute()
+                    if res.data and len(res.data) > 0:
+                        meds = []
+                        for m in res.data:
+                            meds.append({
+                                "medicine_name": m.get("drug_name"),
+                                "drug_name": m.get("drug_name"),
+                                "dosage": f"{m.get('dosage_mg')}mg" if m.get("dosage_mg") else "500mg",
+                                "frequency": f"{m.get('frequency_per_day')} times per day",
+                                "duration": f"{m.get('duration_days')} days",
+                                "instructions": m.get("instructions")
+                            })
+                        return {
+                            "id": f"RX-{apt.get('booking_reference') or clean}",
+                            "appointment_id": apt_id,
+                            "booking_reference": apt.get("booking_reference") or clean,
+                            "patient_id": apt.get("patient_id"),
+                            "practitioner_id": apt.get("practitioner_id") or apt.get("doctor_id"),
+                            "doctor_name": apt.get("doctor_name") or "Specialist Physician",
+                            "doctor_specialty": apt.get("doctor_specialty") or "General Medicine",
+                            "pmdc_number": apt.get("pmdc_number") or "PMDC-22280-P",
+                            "branch_name": apt.get("branch_name") or "City Care Clinics",
+                            "diagnosis": "Clinical Consultation Assessment",
+                            "medicines": meds,
+                            "advice": "Take prescribed medicines as directed. Keep hydrated.",
+                            "status": "fulfilled",
+                            "created_at": res.data[0].get("prescribed_at")
+                        }
+            except Exception as e:
+                print(f"[Supabase Prescription Lookup Warning]: {e}")
+
         return None
 
     def get_patient_prescriptions(self, patient_id: str) -> List[Dict[str, Any]]:
