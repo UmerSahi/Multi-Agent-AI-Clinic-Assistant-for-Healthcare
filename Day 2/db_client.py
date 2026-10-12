@@ -272,8 +272,11 @@ class DatabaseClient:
 
     def get_practitioner_by_id(self, practitioner_id: str) -> Optional[Dict[str, Any]]:
         if self.is_supabase:
-            res = self.supabase.table("practitioners").select("*").eq("id", practitioner_id).execute()
-            return res.data[0] if res.data else None
+            try:
+                res = self.supabase.table("practitioners").select("*").eq("id", practitioner_id).execute()
+                return res.data[0] if res.data else None
+            except Exception:
+                return None
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("SELECT * FROM practitioners WHERE id = ?", (practitioner_id,))
@@ -312,8 +315,11 @@ class DatabaseClient:
 
     def find_patient_by_id(self, patient_id: str) -> Optional[Dict[str, Any]]:
         if self.is_supabase:
-            res = self.supabase.table("patients").select("*").eq("id", patient_id).execute()
-            return res.data[0] if res.data else None
+            try:
+                res = self.supabase.table("patients").select("*").eq("id", patient_id).execute()
+                return self._parse_patient_json_fields(res.data[0]) if res.data else None
+            except Exception:
+                return None
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("SELECT * FROM patients WHERE id = ?", (patient_id,))
@@ -332,8 +338,11 @@ class DatabaseClient:
     # ------------------ Appointments ------------------
     def create_appointment(self, appointment_data: Dict[str, Any]) -> Dict[str, Any]:
         if self.is_supabase:
-            res = self.supabase.table("appointments").insert(appointment_data).execute()
-            return res.data[0]
+            try:
+                res = self.supabase.table("appointments").insert(appointment_data).execute()
+                return res.data[0]
+            except Exception:
+                pass
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
@@ -359,8 +368,11 @@ class DatabaseClient:
 
     def get_patient_appointments(self, patient_id: str) -> List[Dict[str, Any]]:
         if self.is_supabase:
-            res = self.supabase.table("appointments").select("*, practitioners(full_name, specialty), clinic_branches(name, city)").eq("patient_id", patient_id).order("scheduled_start", desc=True).execute()
-            return res.data
+            try:
+                res = self.supabase.table("appointments").select("*, practitioners(full_name, specialty), clinic_branches(name, city)").eq("patient_id", patient_id).order("scheduled_start", desc=True).execute()
+                return res.data
+            except Exception:
+                return []
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
@@ -417,11 +429,14 @@ class DatabaseClient:
     # ------------------ Observations & Encounters ------------------
     def get_patient_observations(self, patient_id: str, test_code: Optional[str] = None) -> List[Dict[str, Any]]:
         if self.is_supabase:
-            q = self.supabase.table("observations").select("*").eq("patient_id", patient_id).order("issued_at", desc=True)
-            if test_code:
-                q = q.eq("test_code", test_code)
-            res = q.execute()
-            return res.data
+            try:
+                q = self.supabase.table("observations").select("*").eq("patient_id", patient_id).order("issued_at", desc=True)
+                if test_code:
+                    q = q.eq("test_code", test_code)
+                res = q.execute()
+                return res.data
+            except Exception:
+                return []
         with self.get_connection() as conn:
             cur = conn.cursor()
             query = "SELECT * FROM observations WHERE patient_id = ?"
@@ -435,8 +450,11 @@ class DatabaseClient:
 
     def get_patient_encounters(self, patient_id: str) -> List[Dict[str, Any]]:
         if self.is_supabase:
-            res = self.supabase.table("encounters").select("*, practitioners(full_name, specialty)").eq("patient_id", patient_id).order("encounter_date", desc=True).execute()
-            return res.data
+            try:
+                res = self.supabase.table("encounters").select("*, practitioners(full_name, specialty)").eq("patient_id", patient_id).order("encounter_date", desc=True).execute()
+                return res.data
+            except Exception:
+                return []
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("""
@@ -450,8 +468,11 @@ class DatabaseClient:
 
     def get_patient_medications(self, patient_id: str) -> List[Dict[str, Any]]:
         if self.is_supabase:
-            res = self.supabase.table("medication_requests").select("*").eq("patient_id", patient_id).order("prescribed_at", desc=True).execute()
-            return res.data
+            try:
+                res = self.supabase.table("medication_requests").select("*").eq("patient_id", patient_id).order("prescribed_at", desc=True).execute()
+                return res.data
+            except Exception:
+                return []
         with self.get_connection() as conn:
             cur = conn.cursor()
             cur.execute("SELECT * FROM medication_requests WHERE patient_id = ? ORDER BY prescribed_at DESC", (patient_id,))

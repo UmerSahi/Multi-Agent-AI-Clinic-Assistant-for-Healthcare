@@ -1,6 +1,6 @@
 [
   {
-    "id": "d3be6f35-7c81-4215-a24d-31676d7524ae",
+    "id": "6cf4f601-61f6-4772-8779-95ff9ef8fe67",
     "pmdc_number": "13278-P",
     "full_name": "Dr. Junaid Bhatti",
     "gender": "Male",
@@ -42,7 +42,7 @@
     "is_active": true
   },
   {
-    "id": "580ff1db-c872-4442-a9d1-66cd9f0c061a",
+    "id": "aa8944d3-b42b-45a6-b8b2-53b77f1e168d",
     "pmdc_number": "23434-P",
     "full_name": "Dr. Bilal Saeed",
     "gender": "Male",
@@ -84,7 +84,7 @@
     "is_active": true
   },
   {
-    "id": "2f289711-8d3e-4a6b-974e-333e3ad9396e",
+    "id": "79e7fdc6-11a1-440c-9348-688054760933",
     "pmdc_number": "22280-P",
     "full_name": "Dr. Ali Khan",
     "gender": "Male",
@@ -126,7 +126,7 @@
     "is_active": true
   },
   {
-    "id": "0eb71e55-c2d1-4133-ac5d-5d32e9d40e12",
+    "id": "2a1dd07f-a578-44f7-9cdd-5f19756a10a3",
     "pmdc_number": "95181-P",
     "full_name": "Dr. Waleed Sheikh",
     "gender": "Male",
@@ -168,7 +168,7 @@
     "is_active": true
   },
   {
-    "id": "065818c2-f87a-42a6-9f3d-0881b667ed11",
+    "id": "43cea16d-18a8-4570-a341-1b536352923b",
     "pmdc_number": "10851-P",
     "full_name": "Dr. Haris Ansari",
     "gender": "Male",
@@ -210,7 +210,7 @@
     "is_active": true
   },
   {
-    "id": "82d5f687-1e52-422f-8b12-1d449ebfed72",
+    "id": "c4f4c0ff-e2b2-447f-bea7-c8e30063e531",
     "pmdc_number": "38221-P",
     "full_name": "Dr. Hassan Qureshi",
     "gender": "Male",
@@ -252,7 +252,7 @@
     "is_active": true
   },
   {
-    "id": "168868d7-9994-4539-96c9-cfeb261f200c",
+    "id": "c76d69bd-e6a9-45af-9be1-2f2875e6d7e1",
     "pmdc_number": "57052-P",
     "full_name": "Dr. Sidra Bhatti",
     "gender": "Female",
@@ -294,7 +294,7 @@
     "is_active": true
   },
   {
-    "id": "ec4b8147-c45e-4406-ad3e-95e333924c0f",
+    "id": "e791de4e-dc09-4a00-8cf5-e347f9def2cc",
     "pmdc_number": "70217-P",
     "full_name": "Dr. Salman Malik",
     "gender": "Male",
@@ -336,7 +336,7 @@
     "is_active": true
   },
   {
-    "id": "2128563b-5e81-4c3d-b5e2-ce0f9461a546",
+    "id": "ee183793-07bd-4b06-8aee-acdf93344b16",
     "pmdc_number": "92397-P",
     "full_name": "Dr. Mehwish Mirza",
     "gender": "Female",
@@ -378,7 +378,7 @@
     "is_active": true
   },
   {
-    "id": "1b4e80a2-81fc-4aed-8d8a-1dd3948e470d",
+    "id": "d55757c6-e722-4d36-8798-8a85307c1738",
     "pmdc_number": "16006-P",
     "full_name": "Dr. Farhan Chaudhry",
     "gender": "Male",
@@ -420,7 +420,7 @@
     "is_active": true
   },
   {
-    "id": "f5cb65e7-0965-46c7-833a-1709d29b1b4f",
+    "id": "17379b64-5e8b-4f53-8c76-cd542f18c1a3",
     "pmdc_number": "23238-P",
     "full_name": "Dr. Kiran Raza",
     "gender": "Female",
@@ -462,7 +462,7 @@
     "is_active": true
   },
   {
-    "id": "5425e58b-f73d-4aa6-bb14-f95fac9c17d8",
+    "id": "88140713-a854-421f-b4d0-47ad820ecb6c",
     "pmdc_number": "57819-P",
     "full_name": "Dr. Farah Latif",
     "gender": "Female",
@@ -504,7 +504,7 @@
     "is_active": true
   },
   {
-    "id": "ee6a51f2-ca81-4154-8f98-9cc5a5af0c6e",
+    "id": "d21a46b9-f65e-4bbc-9870-5799fb5c53b0",
     "pmdc_number": "44993-P",
     "full_name": "Dr. Sadia Rehman",
     "gender": "Female",
@@ -546,7 +546,7 @@
     "is_active": true
   },
   {
-    "id": "b0f550da-9768-4aaa-9481-65bbce35f82d",
+    "id": "8ca1e49a-6b16-49f7-bbb6-c9656660cb8f",
     "pmdc_number": "42087-P",
     "full_name": "Dr. Mehwish Saeed",
     "gender": "Female",
@@ -588,7 +588,7 @@
     "is_active": true
   },
   {
-    "id": "c9d2fde5-c7be-448f-935e-e03c55cbe69c",
+    "id": "67ebd49b-afdd-4c87-906d-fec0b132a03f",
     "pmdc_number": "93886-P",
     "full_name": "Dr. Mahnoor Hameed",
     "gender": "Female",
@@ -630,7 +630,7 @@
     "is_active": true
   },
   {
-    "id": "ae6e9264-3526-481d-9c12-5030d796c366",
+    "id": "96cb4d67-b237-4ab5-9e6d-509f79c2b60b",
     "pmdc_number": "14207-P",
     "full_name": "Dr. Omer Latif",
     "gender": "Male",
@@ -672,7 +672,7 @@
     "is_active": true
   },
   {
-    "id": "addca701-f7a7-4ffe-995d-3a14a9364e23",
+    "id": "a652b6ae-de93-4540-9967-66e62919035b",
     "pmdc_number": "84341-P",
     "full_name": "Dr. Ahmed Sheikh",
     "gender": "Male",
@@ -714,7 +714,7 @@
     "is_active": true
   },
   {
-    "id": "1b5109f5-1432-4cd5-bac2-c4ed4001ed16",
+    "id": "01d378d2-f10d-4561-a82a-79c42f18a3ba",
     "pmdc_number": "94259-P",
     "full_name": "Dr. Imran Afzal",
     "gender": "Male",
@@ -756,7 +756,7 @@
     "is_active": true
   },
   {
-    "id": "c21e85d0-6767-4bff-949b-efdec002d3c6",
+    "id": "5cc3111d-4eb8-427b-9b46-f43ca8dc6303",
     "pmdc_number": "83579-P",
     "full_name": "Dr. Bilal Raza",
     "gender": "Male",
@@ -798,7 +798,7 @@
     "is_active": true
   },
   {
-    "id": "16c2e4f7-3da3-4c6a-9d1f-3bd9610b8379",
+    "id": "72fd72d7-71d3-4697-bfe9-243b5d57dbe0",
     "pmdc_number": "62350-P",
     "full_name": "Dr. Rizwan Ashraf",
     "gender": "Male",
@@ -840,7 +840,7 @@
     "is_active": true
   },
   {
-    "id": "68ef4f50-fe45-45b7-8e60-68c253727b1c",
+    "id": "876f4dbc-eee1-4d91-9514-e3d537d31901",
     "pmdc_number": "21915-P",
     "full_name": "Dr. Saad Javed",
     "gender": "Male",
@@ -882,7 +882,7 @@
     "is_active": true
   },
   {
-    "id": "f7664e62-2eb0-42e2-8419-363d38aa7a1b",
+    "id": "8d9b42f2-d154-4590-9458-df2906d3d8bf",
     "pmdc_number": "99192-P",
     "full_name": "Dr. Farah Siddiqui",
     "gender": "Female",
@@ -924,7 +924,7 @@
     "is_active": true
   },
   {
-    "id": "864b1233-b496-4892-9bd5-4a53a594cdf6",
+    "id": "46998144-2c56-4e23-b918-0fb9b2dee269",
     "pmdc_number": "88104-P",
     "full_name": "Dr. Imran Dar",
     "gender": "Male",
@@ -966,7 +966,7 @@
     "is_active": true
   },
   {
-    "id": "5d3e697d-ba73-4835-92d1-8f235f89e2e0",
+    "id": "c9c7b8da-4987-42f5-80b2-ff97e2330ac9",
     "pmdc_number": "11504-P",
     "full_name": "Dr. Mehwish Ghaffar",
     "gender": "Female",
@@ -1008,7 +1008,7 @@
     "is_active": true
   },
   {
-    "id": "0917432d-1de8-455c-98a8-b7a7ae2dc781",
+    "id": "cd151fe2-d17d-4522-b240-d3013e7c0479",
     "pmdc_number": "54587-P",
     "full_name": "Dr. Atif Shah",
     "gender": "Male",
@@ -1050,7 +1050,7 @@
     "is_active": true
   },
   {
-    "id": "5c1c76d9-0c9b-4678-a37d-fbb614660427",
+    "id": "ce7f13e0-559e-42b9-9b31-1520633dadca",
     "pmdc_number": "10425-P",
     "full_name": "Dr. Hamza Gillani",
     "gender": "Male",
@@ -1092,7 +1092,7 @@
     "is_active": true
   },
   {
-    "id": "38e0d283-6c77-4c8c-87fb-ec801a01adfb",
+    "id": "1ef38987-8a80-49c2-89bb-3d5152f2cf91",
     "pmdc_number": "23947-P",
     "full_name": "Dr. Saad Hameed",
     "gender": "Male",
@@ -1134,7 +1134,7 @@
     "is_active": true
   },
   {
-    "id": "e05c7f22-5e96-4a0b-a1b6-7ae5fbca37bb",
+    "id": "8aa30c95-510c-4efe-b9e2-5c99cf50938a",
     "pmdc_number": "31174-P",
     "full_name": "Dr. Bilal Butt",
     "gender": "Male",
@@ -1176,7 +1176,7 @@
     "is_active": true
   },
   {
-    "id": "7ab5d5dc-e1ad-4b5f-943d-a0fef09134a2",
+    "id": "7f4ac0e0-396d-42fc-878f-dfe4a9ada53f",
     "pmdc_number": "24662-P",
     "full_name": "Dr. Faisal Khan",
     "gender": "Male",
@@ -1218,7 +1218,7 @@
     "is_active": true
   },
   {
-    "id": "d3c9b045-96b7-4e5c-8076-e9c8628ee480",
+    "id": "95709f64-4f6b-4cf8-ba18-938f330428bb",
     "pmdc_number": "84364-P",
     "full_name": "Dr. Ali Raza",
     "gender": "Male",
@@ -1252,89 +1252,6 @@
       "Friday": [
         "09:00-12:30",
         "15:30-20:00"
-      ],
-      "Saturday": [
-        "10:00-16:00"
-      ]
-    },
-    "is_active": true
-  },
-  {
-    "id": "doc_ayesha_tariq",
-    "pmdc_number": "PMDC-31415-P",
-    "full_name": "Dr. Ayesha Tariq",
-    "gender": "Female",
-    "specialty": "Gynaecology",
-    "qualification": "MBBS, FCPS (Obs & Gynae), MRCOG (UK)",
-    "experience_years": 16,
-    "consultation_fee": 3500,
-    "languages": [
-      "Urdu",
-      "English",
-      "Punjabi"
-    ],
-    "branch_id": "22222222-2222-4222-a222-222222222222",
-    "weekly_schedule": {
-      "Monday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Tuesday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Wednesday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Thursday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Friday": [
-        "09:00-12:30",
-        "17:00-21:00"
-      ],
-      "Saturday": [
-        "10:00-16:00"
-      ]
-    },
-    "is_active": true
-  },
-  {
-    "id": "doc_usman_sheikh",
-    "pmdc_number": "PMDC-41829-P",
-    "full_name": "Dr. Usman Sheikh",
-    "gender": "Male",
-    "specialty": "Paediatrics",
-    "qualification": "MBBS, FCPS (Paediatrics)",
-    "experience_years": 15,
-    "consultation_fee": 3000,
-    "languages": [
-      "Urdu",
-      "English"
-    ],
-    "branch_id": "44444444-4444-4444-a444-444444444444",
-    "weekly_schedule": {
-      "Monday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Tuesday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Wednesday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Thursday": [
-        "09:00-13:00",
-        "17:00-21:00"
-      ],
-      "Friday": [
-        "09:00-12:30",
-        "17:00-21:00"
       ],
       "Saturday": [
         "10:00-16:00"
