@@ -1,0 +1,67 @@
+services:
+  # -------------------------------------------------------------
+  # 1. FastAPI Multi-Agent Backend Service (Python 3.11+)
+  # -------------------------------------------------------------
+  - type: web
+    name: clinic-backend
+    env: python
+    plan: free
+    region: oregon
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: DEFAULT_CLINIC_CITY
+        value: Lahore
+      - key: DEFAULT_LANGUAGE
+        value: urdu_lish
+      - key: DEBUG
+        value: "false"
+      - key: GEMINI_MODEL
+        value: gemini-3.5-flash-lite
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_KEY
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: SMTP_HOST
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM_EMAIL
+        sync: false
+      - key: SMTP_FROM_NAME
+        value: City Care Clinics
+      - key: SMTP_USE_TLS
+        value: "true"
+
+  # -------------------------------------------------------------
+  # 2. Next.js Patient Portal Frontend Service
+  # -------------------------------------------------------------
+  - type: web
+    name: clinic-frontend
+    env: node
+    plan: free
+    region: oregon
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    startCommand: npm run start
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: 20.x
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          type: web
+          name: clinic-backend
+          property: host

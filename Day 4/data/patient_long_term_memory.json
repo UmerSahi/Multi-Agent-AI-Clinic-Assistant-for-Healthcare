@@ -941,5 +941,24 @@
       "General Consultation"
     ],
     "last_visit_date": "2026-10-11"
+  },
+  "p_ac6861e2": {
+    "patient_id": "p_ac6861e2",
+    "patient_name": "Umer Sahi",
+    "phone": "03001234567",
+    "mrn": "CCC-PK-870835",
+    "preferred_doctor_id": "doc1",
+    "preferred_doctor_name": "Dr. Bilal Saeed",
+    "preferred_specialty": "General Medicine",
+    "preferred_branch": "Gulberg Lahore",
+    "preferred_language": "Urdu",
+    "known_allergies": [
+      "None"
+    ],
+    "chronic_conditions": [],
+    "past_complaints": [
+      "General Consultation"
+    ],
+    "last_visit_date": "2026-10-12"
   }
 }

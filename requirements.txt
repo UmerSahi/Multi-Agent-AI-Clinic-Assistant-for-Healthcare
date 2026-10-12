@@ -1,0 +1,28 @@
+# FastAPI and Production ASGI Server
+fastapi>=0.115.0
+uvicorn[standard]>=0.30.0
+gunicorn>=23.0.0
+pydantic>=2.8.0
+pydantic-settings>=2.4.0
+
+# Supabase Database and Environment
+supabase>=2.8.0
+python-dotenv>=1.0.1
+
+# AI and Multi-Agent Frameworks
+langgraph>=0.2.0
+langchain>=0.2.14
+langchain-core>=0.2.35
+langchain-google-genai>=1.0.8
+google-genai>=0.1.0
+google-generativeai>=0.7.0
+
+# PDF Prescription Generation and Lab Vision
+reportlab>=4.2.0
+pillow>=10.3.0
+pypdf>=4.3.0
+pymupdf>=1.24.0
+
+# HTTP and Networking
+requests>=2.32.0
+httpx>=0.27.0
