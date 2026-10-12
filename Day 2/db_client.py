@@ -831,6 +831,7 @@ class DatabaseClient:
             try:
                 apt = self.find_appointment_by_id_or_ref(clean)
                 if apt:
+                    apt_id = apt.get("id") or clean
                     encounter_id = None
                     try:
                         enc_res = self.supabase.table("encounters").select("id").eq("appointment_id", apt_id).limit(1).execute()
