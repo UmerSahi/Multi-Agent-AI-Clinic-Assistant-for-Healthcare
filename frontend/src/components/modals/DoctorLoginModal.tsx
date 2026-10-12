@@ -28,10 +28,12 @@ export const DoctorLoginModal: React.FC<DoctorLoginModalProps> = ({
   if (!isOpen) return null;
 
   const demoDoctors = [
-    { name: "Dr. Bilal Saeed", specialty: "General Medicine", email: "dr.bilal.saeed@citycare.com", icon: "🩺" },
-    { name: "Dr. Ayesha Tariq", specialty: "Gynaecology", email: "dr.ayesha.tariq@citycare.com", icon: "🌸" },
-    { name: "Dr. Omer Latif", specialty: "Cardiology", email: "dr.omer.latif@citycare.com", icon: "🫀" },
-    { name: "Dr. Usman Sheikh", specialty: "Paediatrics", email: "dr.usman.sheikh@citycare.com", icon: "🧒" },
+    { name: "Dr. Saad Javed", specialty: "Dermatology", email: "dr.saad.javed@citycare.com", icon: "🩺" },
+    { name: "Dr. Bilal Saeed", specialty: "General Medicine", email: "dr.bilal.saeed@citycare.com", icon: "👨‍⚕️" },
+    { name: "Dr. Sadia Rehman", specialty: "Gynaecology & Obstetrics", email: "dr.sadia.rehman@citycare.com", icon: "👩‍⚕️" },
+    { name: "Dr. Ali Khan", specialty: "General Medicine", email: "dr.ali.khan@citycare.com", icon: "👨‍⚕️" },
+    { name: "Dr. Waleed Sheikh", specialty: "General Medicine", email: "dr.waleed.sheikh@citycare.com", icon: "🩺" },
+    { name: "Dr. Hassan Qureshi", specialty: "Paediatrics", email: "dr.hassan.qureshi@citycare.com", icon: "🧒" },
     { name: "Dr. Maryam Naveed", specialty: "Medical Director", email: "dr.maryam@citycare.com", icon: "🏥" },
   ];
 

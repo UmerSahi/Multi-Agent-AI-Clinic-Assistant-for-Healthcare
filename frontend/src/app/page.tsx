@@ -125,6 +125,8 @@ export default function ClinicApp() {
     ],
   });
   const [prescribeSubmitting, setPrescribeSubmitting] = useState<boolean>(false);
+  const [prescribeModalError, setPrescribeModalError] = useState<string>("");
+  const [prescribeModalSuccess, setPrescribeModalSuccess] = useState<boolean>(false);
   const [viewRxModalApp, setViewRxModalApp] = useState<any | null>(null);
 
   // HITL & Telemetry
@@ -792,7 +794,13 @@ export default function ClinicApp() {
     e.preventDefault();
     if (!prescribingApp) return;
 
+    if (!prescriptionForm.diagnosis || !prescriptionForm.diagnosis.trim()) {
+      setPrescribeModalError("Please provide a clinical diagnosis / assessment.");
+      return;
+    }
+
     setPrescribeSubmitting(true);
+    setPrescribeModalError("");
     try {
       const res = await fetch(`/api/doctor/prescribe`, {
         method: "POST",
@@ -810,18 +818,37 @@ export default function ClinicApp() {
         }),
       });
 
+      const data = await res.json().catch(() => ({}));
+
       if (res.ok) {
-        setShowPrescribeModal(false);
+        setPrescribeModalSuccess(true);
+        const targetRef = (prescribingApp.booking_reference || prescribingApp.id || "").replace("#", "").trim();
+        setDoctorAppointments((prev) =>
+          prev.map((a) => {
+            const ref = (a.booking_reference || a.id || "").replace("#", "").trim();
+            if (ref === targetRef) {
+              return {
+                ...a,
+                status: "fulfilled",
+                has_prescription: true,
+                prescription: data.prescription,
+              };
+            }
+            return a;
+          })
+        );
         fetchDoctorAppointments();
         fetchMyAppointments();
-        alert("Electronic Prescription (Rx) issued successfully!");
+        setTimeout(() => {
+          setShowPrescribeModal(false);
+          setPrescribeModalSuccess(false);
+        }, 1500);
       } else {
-        const errData = await res.json().catch(() => ({}));
-        alert(errData.detail || "Failed to issue prescription. You are only authorized to prescribe for your own booked patients.");
+        setPrescribeModalError(data.detail || "Failed to issue prescription. You are only authorized to prescribe for your own booked patients.");
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error("Prescribe error:", err);
-      alert("Network or connection error while issuing prescription.");
+      setPrescribeModalError("Network error: Could not reach the server. Please check your connection.");
     } finally {
       setPrescribeSubmitting(false);
     }
@@ -968,6 +995,16 @@ export default function ClinicApp() {
                   setAppointmentSearch={setDoctorAppointmentSearch}
                   onOpenPrescribeModal={(app) => {
                     setPrescribingApp(app);
+                    setPrescribeModalError("");
+                    setPrescribeModalSuccess(false);
+                    setPrescriptionForm({
+                      diagnosis: app.reason || app.reason_for_visit || "Clinical Consultation Assessment",
+                      advice: "Take medicines on time as prescribed. Keep well hydrated and take adequate rest. Contact clinic if symptoms worsen.",
+                      medicines: [
+                        { medicine_name: "Tab Panadol", dosage: "500mg", frequency: "1-0-1", duration: "5 days", instructions: "After meals" },
+                        { medicine_name: "Syp Hydryllin", dosage: "10ml", frequency: "1-1-1", duration: "5 days", instructions: "For cough relief" },
+                      ],
+                    });
                     setShowPrescribeModal(true);
                   }}
                   onViewPrescription={(app) => setViewRxModalApp(app)}
@@ -1058,8 +1095,13 @@ export default function ClinicApp() {
       {/* Prescribe Modal */}
       <PrescribeModal
         isOpen={showPrescribeModal}
-        onClose={() => setShowPrescribeModal(false)}
+        onClose={() => {
+          setShowPrescribeModal(false);
+          setPrescribeModalError("");
+          setPrescribeModalSuccess(false);
+        }}
         appointment={prescribingApp}
+        doctorUser={doctorUser}
         prescriptionForm={prescriptionForm}
         setPrescriptionForm={setPrescriptionForm}
         onAddMedicineRow={() =>
@@ -1084,6 +1126,8 @@ export default function ClinicApp() {
           }))
         }
         isSubmitting={prescribeSubmitting}
+        errorMessage={prescribeModalError}
+        successMessage={prescribeModalSuccess}
         onSubmit={handleSubmitPrescription}
       />
 
