@@ -499,6 +499,68 @@ def doctor_login(req: DoctorLoginRequest):
 def get_doctor_appointments(doctor_name: Optional[str] = None, doctor_id: Optional[str] = None):
     """Retrieves all scheduled appointments with patient details and status."""
     appointments = []
+
+    # 1. Primary: Query Supabase if active
+    if db and db.is_supabase:
+        try:
+            q = db.supabase.table("appointments").select(
+                "id, booking_reference, patient_id, practitioner_id, branch_id, scheduled_start, scheduled_end, urgency_tier, status, reason_for_visit, "
+                "practitioners(id, full_name, specialty), "
+                "clinic_branches(name, city), "
+                "patients(id, full_name, mrn, phone)"
+            ).order("scheduled_start", desc=True).limit(200)
+
+            res = q.execute()
+            if res.data:
+                for item in res.data:
+                    p_info = item.pop("practitioners", None) or {}
+                    b_info = item.pop("clinic_branches", None) or {}
+                    pt_info = item.pop("patients", None) or {}
+
+                    doc_name = p_info.get("full_name") or "Clinic Doctor"
+                    doc_id_val = p_info.get("id") or item.get("practitioner_id")
+
+                    if doctor_id and doc_id_val != doctor_id and item.get("practitioner_id") != doctor_id:
+                        continue
+                    if doctor_name and doctor_name.lower() not in doc_name.lower():
+                        continue
+
+                    r = dict(item)
+                    r["doctor_id"] = doc_id_val
+                    r["doctor_name"] = doc_name
+                    r["doctor_specialty"] = p_info.get("specialty") or "General Medicine"
+                    r["branch_name"] = b_info.get("name") or "City Care Clinics"
+                    r["patient_name"] = pt_info.get("full_name") or "Registered Patient"
+                    r["patient_mrn"] = pt_info.get("mrn")
+                    r["patient_phone"] = pt_info.get("phone")
+
+                    try:
+                        s_dt = datetime.fromisoformat(r["scheduled_start"].replace("Z", "+00:00"))
+                        e_dt = datetime.fromisoformat(r["scheduled_end"].replace("Z", "+00:00"))
+                        r["display_date"] = s_dt.strftime("%A, %d %B %Y")
+                        r["display_time"] = s_dt.strftime("%I:%M %p")
+                        r["date"] = r["display_date"]
+                        r["time"] = r["display_time"]
+                        r["display_end"] = e_dt.strftime("%I:%M %p")
+                        r["is_upcoming"] = s_dt > datetime.now(timezone.utc)
+                    except Exception:
+                        pass
+
+                    rx = db.get_prescription_by_appointment(r.get("booking_reference") or r.get("id"))
+                    if rx:
+                        r["has_prescription"] = True
+                        r["prescription"] = rx
+                        r["status"] = "fulfilled"
+                    else:
+                        r["has_prescription"] = False
+                    appointments.append(r)
+
+                if appointments:
+                    return {"appointments": appointments, "count": len(appointments)}
+        except Exception as e:
+            print(f"[Supabase Doctor Appointments Error]: {e}")
+
+    # 2. Fallback: Query local SQLite
     if db:
         try:
             with db.get_connection() as conn:
@@ -556,6 +618,30 @@ def get_doctors_directory(specialty: Optional[str] = None, search: Optional[str]
     """
     if not db:
         return {"doctors": []}
+
+    # 1. Primary: Query Supabase if active
+    if db.is_supabase:
+        try:
+            supabase_docs = db.get_practitioners(specialty=specialty)
+            if supabase_docs:
+                formatted = []
+                for d in supabase_docs:
+                    b = d.get("clinic_branches") or {}
+                    if isinstance(b, dict):
+                        d["branch_name"] = b.get("name")
+                        d["branch_city"] = b.get("city")
+                    if search:
+                        full_n = d.get("full_name", "").lower()
+                        spec_n = d.get("specialty", "").lower()
+                        if search.lower() not in full_n and search.lower() not in spec_n:
+                            continue
+                    formatted.append(d)
+                if formatted:
+                    return {"doctors": formatted, "count": len(formatted)}
+        except Exception as e:
+            print(f"[Supabase Doctors Directory Error]: {e}")
+
+    # 2. Fallback: Query local SQLite
     try:
         with db.get_connection() as conn:
             cur = conn.cursor()
@@ -699,6 +785,93 @@ def get_patient_appointments_endpoint(identifier: str):
         possible_ids.add(patient_id.lower())
         possible_ids.add(patient_id.upper())
 
+    # Map demo identifiers if applicable
+    demo_map = {
+        "p1": "CCC-PK-100001",
+        "p2": "CCC-PK-100002",
+        "p3": "CCC-PK-100003",
+        "p4": "CCC-PK-100004",
+        "p5": "CCC-PK-100005"
+    }
+    mapped_mrn = demo_map.get(identifier.lower().strip())
+
+    # 1. Primary: Query Supabase if active
+    if db and db.is_supabase:
+        try:
+            clean_id = identifier.strip()
+            p_res = None
+            if mapped_mrn:
+                p_res = db.supabase.table("patients").select("*").eq("mrn", mapped_mrn).execute()
+            if not p_res or not p_res.data:
+                p_res = db.supabase.table("patients").select("*").or_(
+                    f"mrn.eq.{clean_id},phone.ilike.%{clean_id[-9:]}%,full_name.ilike.%{clean_id}%"
+                ).execute()
+
+            p_data = p_res.data[0] if (p_res and p_res.data) else None
+            patient_uuid = p_data.get("id") if p_data else None
+
+            if patient_uuid:
+                apts_res = db.supabase.table("appointments").select(
+                    "*, practitioners(id, full_name, specialty, consultation_fee), clinic_branches(name, city, address)"
+                ).eq("patient_id", patient_uuid).order("scheduled_start", desc=True).execute()
+
+                if apts_res.data:
+                    supa_apts = []
+                    for r in apts_res.data:
+                        p_info = r.pop("practitioners", None) or {}
+                        b_info = r.pop("clinic_branches", None) or {}
+                        r["doctor_id"] = p_info.get("id")
+                        r["doctor_name"] = p_info.get("full_name") or "Clinic Specialist"
+                        r["doctor_specialty"] = p_info.get("specialty") or "General Medicine"
+                        r["consultation_fee"] = p_info.get("consultation_fee") or 2000
+                        r["branch_name"] = b_info.get("name") or "City Care Clinics"
+                        r["branch_city"] = b_info.get("city") or "Lahore"
+                        r["branch_address"] = b_info.get("address") or ""
+
+                        try:
+                            s_dt = datetime.fromisoformat(r["scheduled_start"].replace("Z", "+00:00"))
+                            e_dt = datetime.fromisoformat(r["scheduled_end"].replace("Z", "+00:00"))
+                            r["display_date"] = s_dt.strftime("%A, %d %B %Y")
+                            r["display_time"] = s_dt.strftime("%I:%M %p")
+                            r["date"] = r["display_date"]
+                            r["time"] = r["display_time"]
+                            r["specialty"] = r.get("doctor_specialty") or "Specialist"
+                            r["display_end"] = e_dt.strftime("%I:%M %p")
+                            r["is_upcoming"] = s_dt > datetime.now(timezone.utc)
+                        except Exception:
+                            pass
+
+                        rx = db.get_prescription_by_appointment(r.get("booking_reference") or r.get("id"))
+                        if rx:
+                            r["has_prescription"] = True
+                            r["prescription"] = rx
+                            r["status"] = "fulfilled"
+                            clean_ref = (r.get("booking_reference") or r.get("id")).replace("#", "").strip()
+                            r["prescription_pdf_url"] = f"/api/prescriptions/{clean_ref}/pdf"
+                        else:
+                            r["has_prescription"] = False
+                            r["prescription_pdf_url"] = None
+
+                        if scheduling_agent:
+                            try:
+                                r["google_calendar_url"] = scheduling_agent.generate_google_calendar_link(
+                                    title=f"Consultation: {r.get('doctor_name', 'Doctor')} — City Care Clinics",
+                                    start_dt=datetime.fromisoformat(r["scheduled_start"].replace("Z", "+00:00")),
+                                    end_dt=datetime.fromisoformat(r["scheduled_end"].replace("Z", "+00:00")),
+                                    details=f"Appointment Ref: {r.get('booking_reference')}. Reason: {r.get('reason_for_visit')}",
+                                    location=r.get("branch_name", "City Care Clinics")
+                                )
+                            except Exception:
+                                pass
+
+                        supa_apts.append(r)
+
+                    if supa_apts:
+                        return {"appointments": supa_apts, "count": len(supa_apts)}
+        except Exception as e:
+            print(f"[Supabase Patient Appointments Error]: {e}")
+
+    # 2. Fallback: Query local SQLite
     try:
         with db.get_connection() as conn:
             cur = conn.cursor()

@@ -218,6 +218,59 @@ class DatabaseClient:
 
         conn.commit()
         conn.close()
+        self._auto_seed_if_empty()
+
+    def _auto_seed_if_empty(self):
+        """Automatically populates SQLite if tables are empty, ensuring cloud container has baseline data."""
+        try:
+            with self.get_connection() as conn:
+                cur = conn.cursor()
+                cur.execute("SELECT COUNT(*) FROM practitioners")
+                count = cur.fetchone()[0]
+                if count > 0:
+                    return
+
+                branches_file = DATA_DIR / "clinic_branches.json"
+                docs_file = DATA_DIR / "practitioners.json"
+                patients_file = DATA_DIR / "patients.json"
+                apts_file = DATA_DIR / "appointments.json"
+
+                if branches_file.exists():
+                    with open(branches_file, "r", encoding="utf-8") as f:
+                        for b in json.load(f):
+                            cur.execute("""
+                            INSERT OR IGNORE INTO clinic_branches (id, branch_code, name, city, address, phone, emergency_helpline, opening_time, closing_time, is_active)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """, (b["id"], b["branch_code"], b["name"], b["city"], b["address"], b["phone"], b.get("emergency_helpline", "1122"), b.get("opening_time", "08:00:00"), b.get("closing_time", "22:00:00"), 1 if b.get("is_active", True) else 0))
+
+                if docs_file.exists():
+                    with open(docs_file, "r", encoding="utf-8") as f:
+                        for d in json.load(f):
+                            cur.execute("""
+                            INSERT OR IGNORE INTO practitioners (id, pmdc_number, full_name, gender, specialty, qualification, experience_years, consultation_fee, languages, branch_id, weekly_schedule, is_active)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """, (d["id"], d["pmdc_number"], d["full_name"], d.get("gender"), d["specialty"], d["qualification"], d.get("experience_years", 5), d.get("consultation_fee", 2000), json.dumps(d.get("languages", [])), d.get("branch_id"), json.dumps(d.get("weekly_schedule", {})), 1 if d.get("is_active", True) else 0))
+
+                if patients_file.exists():
+                    with open(patients_file, "r", encoding="utf-8") as f:
+                        for p in json.load(f):
+                            cur.execute("""
+                            INSERT OR IGNORE INTO patients (id, mrn, cnic, full_name, gender, date_of_birth, phone, email, city, address, known_allergies, chronic_conditions, created_at)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """, (p["id"], p["mrn"], p.get("cnic", ""), p["full_name"], p.get("gender"), p.get("date_of_birth"), p.get("phone"), p.get("email"), p.get("city"), p.get("address"), json.dumps(p.get("known_allergies", [])), json.dumps(p.get("chronic_conditions", [])), p.get("created_at", datetime.now(timezone.utc).isoformat())))
+
+                if apts_file.exists():
+                    with open(apts_file, "r", encoding="utf-8") as f:
+                        for a in json.load(f):
+                            cur.execute("""
+                            INSERT OR IGNORE INTO appointments (id, booking_reference, patient_id, practitioner_id, branch_id, scheduled_start, scheduled_end, urgency_tier, status, reason_for_visit)
+                            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                            """, (a["id"], a["booking_reference"], a["patient_id"], a["practitioner_id"], a.get("branch_id"), a["scheduled_start"], a["scheduled_end"], a.get("urgency_tier", "ROUTINE"), a.get("status", "booked"), a.get("reason_for_visit", "Consultation")))
+
+                conn.commit()
+                print("[DB Info] Successfully auto-seeded SQLite database from baseline JSON data.")
+        except Exception as e:
+            print(f"[DB Auto-Seed Warning]: {e}")
 
     def get_connection(self):
         conn = sqlite3.connect(SQLITE_DB_PATH)
