@@ -748,8 +748,14 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
     - allergies: List of strings (e.g. ['None'] or ['Penicillin']) or None
     """
     text_clean = text.strip()
-    
-    # 1. Phone extraction
+
+    # 1. Email extraction (extracted first to avoid interfering with name or allergy parsing)
+    email = None
+    email_m = re.search(r"\b([a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+)\b", text_clean)
+    if email_m:
+        email = email_m.group(1).lower().strip()
+
+    # 2. Phone extraction
     phone = None
     phone_m = re.search(r"(\+?92[-\s]?3\d{2}[-\s]?\d{7}|03\d{2}[-\s]?\d{7}|\b03\d{9}\b|\b\d{11}\b)", text_clean)
     if phone_m:
@@ -761,38 +767,41 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
         if len(raw_ph) == 11 and raw_ph.startswith("03"):
             phone = raw_ph
 
-    text_no_phone = text_clean
+    text_no_contact = text_clean
+    if email_m:
+        text_no_contact = text_no_contact.replace(email_m.group(0), " ")
     if phone_m:
-        text_no_phone = text_clean.replace(phone_m.group(0), " ")
+        text_no_contact = text_no_contact.replace(phone_m.group(0), " ")
 
-    # 2. Gender extraction
+    # 3. Gender extraction
     gender = None
-    if re.search(r"\b(female|aurat|khatoon|woman|girl|larki)\b", text_no_phone, re.I):
+    if re.search(r"\b(female|aurat|khatoon|woman|girl|larki)\b", text_no_contact, re.I):
         gender = "Female"
-    elif re.search(r"\b(male|mard|man|boy|larka)\b", text_no_phone, re.I):
+    elif re.search(r"\b(male|mard|man|boy|larka)\b", text_no_contact, re.I):
         gender = "Male"
 
-    # 3. Age extraction
+    # 4. Age extraction
     age = None
-    age_label_m = re.search(r"(?:umar|age|3[\.\)])\s*[:\-]?\s*(\d{1,3})", text_no_phone, re.I)
+    age_label_m = re.search(r"(?:umar|age|(?:3|4)[\.\)])\s*[:\-]?\s*(\d{1,3})", text_no_contact, re.I)
     if age_label_m:
         val = int(age_label_m.group(1))
         if 1 <= val <= 120:
             age = val
     if age is None:
-        age_word_m = re.search(r"\b(1[0-9]|[2-9][0-9])\s*(?:saal|years?|yrs?)\b", text_no_phone, re.I)
+        age_word_m = re.search(r"\b(1[0-9]|[2-9][0-9])\s*(?:saal|years?|yrs?)\b", text_no_contact, re.I)
         if age_word_m:
             age = int(age_word_m.group(1))
     if age is None and gender is not None:
-        age_adj_m = re.search(r"\b(1[0-9]|[2-9][0-9])\b", text_no_phone)
+        age_adj_m = re.search(r"\b(1[0-9]|[2-9][0-9])\b", text_no_contact)
         if age_adj_m:
             age = int(age_adj_m.group(1))
 
-    # 4. Allergies extraction
+    # 5. Allergies extraction
     allergies = None
-    allergy_label_m = re.search(r"(?:allergy|allergies|dawai|medicine|4[\.\)])\s*[:\-]?\s*([^\n,]+)", text_no_phone, re.I)
-    if allergy_label_m:
-        val = allergy_label_m.group(1).strip().lower()
+    # Priority A: Explicit allergy keyword
+    allergy_kw_m = re.search(r"(?:allergies|allergy|dawai|medicine)\s*[:\-]?\s*([^\n,]+)", text_no_contact, re.I)
+    if allergy_kw_m:
+        val = allergy_kw_m.group(1).strip().lower()
         if any(neg in val for neg in ["none", "nahi", "nhi", "no", "nil", "na", "koi nahi", "kuch nahi"]):
             allergies = ["None"]
         else:
@@ -802,17 +811,29 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
             else:
                 allergies = ["None"]
     else:
-        neg_allergy_m = re.search(r"\b(none|nil|no allergies?|koi allergy nahi|kisi dawai se nahi|kisi dawai ki nahi|allergy nahi|allergy nhi|koi nahi)\b", text_no_phone, re.I)
+        # Priority B: Numbered item 4 or 5 without label
+        allergy_num_m = re.search(r"(?:4|5)[\.\)]\s*[:\-]?\s*([^\n,]+)", text_no_contact, re.I)
+        if allergy_num_m:
+            val = allergy_num_m.group(1).strip().lower()
+            if any(neg in val for neg in ["none", "nahi", "nhi", "no", "nil", "na", "koi nahi", "kuch nahi"]):
+                allergies = ["None"]
+            elif not any(w in val for w in ["umar", "age", "saal", "male", "female", "mard", "aurat"]):
+                clean_val = re.sub(r"[^\w\s]", "", val).strip().title()
+                if clean_val and len(clean_val) > 2:
+                    allergies = [clean_val]
+
+    if allergies is None:
+        neg_allergy_m = re.search(r"\b(none|nil|no allergies?|koi allergy nahi|kisi dawai se nahi|kisi dawai ki nahi|allergy nahi|allergy nhi|koi nahi)\b", text_no_contact, re.I)
         if neg_allergy_m:
             allergies = ["None"]
         else:
-            med_m = re.search(r"\b(penicillin|sulfa|aspirin|panadol|augmentin|paracetamol|ibuprofen|amoxicillin|flagyl|disprin)\b", text_no_phone, re.I)
+            med_m = re.search(r"\b(penicillin|sulfa|aspirin|panadol|augmentin|paracetamol|ibuprofen|amoxicillin|flagyl|disprin)\b", text_no_contact, re.I)
             if med_m:
                 allergies = [med_m.group(1).title()]
 
-    # 5. Name extraction
+    # 6. Name extraction
     name = None
-    name_label_m = re.search(r"(?:naam|name|1[\.\)]?)\s*[:\-]?\s*([A-Za-z\s]+?)(?:,|\n|phone|mobile|03|2[\.\)]|\d|$)", text_no_phone, re.I)
+    name_label_m = re.search(r"(?:naam|name|1[\.\)]?)\s*[:\-]?\s*([A-Za-z\s]+?)(?:,|\n|phone|mobile|email|03|2[\.\)]|\d|$)", text_no_contact, re.I)
     if name_label_m and len(name_label_m.group(1).strip()) >= 3:
         cand = clean_patient_name(name_label_m.group(1).strip())
         if cand and cand not in ("Valued Patient", "None"):
@@ -821,13 +842,13 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
     if name is None:
         non_name_triggers = [
             "confirm", "theek", "haan", "hanji", "ok", "yes", "none", "nahi", "nhi",
-            "cancel", "booking", "slot", "appointment", "doctor", "dr"
+            "cancel", "booking", "slot", "appointment", "doctor", "dr", "email"
         ]
         text_lower_words = text_clean.lower().split()
         is_only_control_words = any(w in non_name_triggers for w in text_lower_words) and len(text_lower_words) <= 2
         
         if not is_only_control_words and not phone_m and age is None and (allergies is None or allergies == ["None"]):
-            cand = clean_patient_name(text_no_phone)
+            cand = clean_patient_name(text_no_contact)
             if cand and cand not in ("Valued Patient", "None") and 3 <= len(cand) <= 40:
                 words = cand.split()
                 if 1 <= len(words) <= 4:
@@ -836,6 +857,7 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
     return {
         "name": name,
         "phone": phone,
+        "email": email,
         "age": age,
         "gender": gender,
         "allergies": allergies
@@ -843,11 +865,12 @@ def extract_conversational_patient_fields(text: str) -> Dict[str, Any]:
 
 
 def parse_conversational_patient_info(text: str) -> Dict[str, Any]:
-    """Extracts phone, name, age, gender, and allergies from conversational patient message with safe defaults."""
+    """Extracts phone, name, email, age, gender, and allergies from conversational patient message with safe defaults."""
     fields = extract_conversational_patient_fields(text)
     return {
         "name": fields.get("name") or "Valued Patient",
         "phone": fields.get("phone") or "03001234567",
+        "email": fields.get("email"),
         "gender": fields.get("gender") or "Unspecified",
         "age": fields.get("age") or 30,
         "allergies": fields.get("allergies") or ["None"]
@@ -858,6 +881,7 @@ def register_conversational_patient(parsed: Dict[str, Any]) -> Dict[str, Any]:
     """Registers patient in SQLite database and long-term memory."""
     name = parsed.get("name") or "Valued Patient"
     phone = parsed.get("phone") or "03001234567"
+    email = parsed.get("email") or f"{name.lower().replace(' ', '.')}@example.com"
     age = parsed.get("age", 30)
     gender = parsed.get("gender", "Unspecified")
     allergies = parsed.get("allergies", [])
@@ -866,13 +890,23 @@ def register_conversational_patient(parsed: Dict[str, Any]) -> Dict[str, Any]:
         existing = db.find_patient_by_phone(phone)
         if existing:
             final_name = name if name and name != "Valued Patient" else existing["full_name"]
+            final_email = parsed.get("email") or existing.get("email") or email
+            if getattr(db, "is_supabase", False):
+                try:
+                    db.supabase.table("patients").update({
+                        "full_name": final_name,
+                        "email": final_email,
+                        "known_allergies": allergies
+                    }).eq("id", existing["id"]).execute()
+                except Exception:
+                    pass
             try:
                 with db.get_connection() as conn:
                     cur = conn.cursor()
                     cur.execute("""
-                    UPDATE patients SET full_name = ?, known_allergies = ?
+                    UPDATE patients SET full_name = ?, email = ?, known_allergies = ?
                     WHERE id = ?
-                    """, (final_name, json.dumps(allergies), existing["id"]))
+                    """, (final_name, final_email, json.dumps(allergies), existing["id"]))
                     conn.commit()
             except Exception:
                 pass
@@ -883,17 +917,36 @@ def register_conversational_patient(parsed: Dict[str, Any]) -> Dict[str, Any]:
                 "full_name": final_name,
                 "mrn": existing["mrn"],
                 "phone": existing["phone"],
+                "email": final_email,
                 "gender": existing.get("gender", gender),
                 "allergies": allergies if allergies else (json.loads(existing["known_allergies"]) if isinstance(existing.get("known_allergies"), str) and existing["known_allergies"].startswith("[") else ["None"])
             }
 
     patient_id = str(uuid.uuid4())
     mrn = f"CCC-PK-{secrets.randbelow(90000) + 10000}"
-    email = f"{name.lower().replace(' ', '.')}@example.com"
     salt = secrets.token_hex(16)
     pwd_hash = f"{salt}:{hashlib.sha256((salt + 'Patient123!').encode('utf-8')).hexdigest()}"
 
     if db:
+        if getattr(db, "is_supabase", False):
+            try:
+                db.supabase.table("patients").insert({
+                    "id": patient_id,
+                    "mrn": mrn,
+                    "cnic": f"42101-{secrets.randbelow(9000000) + 1000000}-1",
+                    "full_name": name,
+                    "gender": gender,
+                    "date_of_birth": f"{2026 - int(age)}-01-01",
+                    "phone": phone,
+                    "email": email,
+                    "city": "Lahore",
+                    "address": "City Care Outpatient",
+                    "known_allergies": allergies,
+                    "chronic_conditions": [],
+                    "created_at": datetime.now(timezone.utc).isoformat()
+                }).execute()
+            except Exception as e:
+                print(f"[Supabase Patient Insert Warning]: {e}")
         try:
             with db.get_connection() as conn:
                 cur = conn.cursor()
@@ -915,6 +968,7 @@ def register_conversational_patient(parsed: Dict[str, Any]) -> Dict[str, Any]:
         "patient_id": patient_id,
         "patient_name": name,
         "phone": phone,
+        "email": email,
         "mrn": mrn,
         "age": age,
         "gender": gender,
@@ -931,6 +985,7 @@ def register_conversational_patient(parsed: Dict[str, Any]) -> Dict[str, Any]:
         "full_name": name,
         "mrn": mrn,
         "phone": phone,
+        "email": email,
         "gender": gender,
         "allergies": allergies
     }
@@ -1364,6 +1419,8 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
             missing_fields.append("name")
         if not collected.get("phone"):
             missing_fields.append("phone")
+        if not collected.get("email") and not state.get("long_term_memory", {}).get("email"):
+            missing_fields.append("email")
         if not collected.get("age"):
             missing_fields.append("age")
         if collected.get("allergies") is None:
@@ -1381,6 +1438,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     idx += 1
                 if "phone" in missing_fields:
                     missing_lines.append(f"{idx}. **Mobile Phone Number** (e.g. 0300-1234567)")
+                    idx += 1
+                if "email" in missing_fields:
+                    missing_lines.append(f"{idx}. **Email Address** (e.g. yourname@gmail.com — to receive confirmation & calendar invite)")
                     idx += 1
                 if "age" in missing_fields:
                     missing_lines.append(f"{idx}. **Age & Gender** (e.g. 28 years, Male/Female)")
@@ -1401,6 +1461,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     idx += 1
                 if "phone" in missing_fields:
                     missing_lines.append(f"{idx}. **Mobile Number** (jaisay 0300-1234567)")
+                    idx += 1
+                if "email" in missing_fields:
+                    missing_lines.append(f"{idx}. **Email Address** (jaisay yourname@gmail.com — confirmation aur Google Calendar invite ke liye)")
                     idx += 1
                 if "age" in missing_fields:
                     missing_lines.append(f"{idx}. **Umar aur Jins** (Age & Gender — jaisay 28 saal, Mard/Aurat)")
@@ -1428,10 +1491,12 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 "node_transitions": transitions
             }
 
-        # ALL 4 REQUIRED FIELDS ARE PRESENT! Register and book!
+        # ALL REQUIRED FIELDS ARE PRESENT! Register and book!
+        patient_email = collected.get("email") or state.get("long_term_memory", {}).get("email")
         reg_p = register_conversational_patient({
             "name": collected["name"],
             "phone": collected["phone"],
+            "email": patient_email,
             "age": collected["age"],
             "gender": collected.get("gender", "Unspecified"),
             "allergies": collected.get("allergies", ["None"])
@@ -1467,9 +1532,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
             fee = booking_res.get("fee", 2000)
             branch_lbl = sched_req.get("branch_name", "City Care Clinics")
 
+            target_email = patient_email or reg_p.get("email") or f"{reg_p['name'].lower().replace(' ', '.')}@example.com"
             email_notifier.send_appointment_confirmation(
                 patient_name=reg_p["name"],
-                patient_email=f"{reg_p['name'].lower().replace(' ', '.')}@example.com",
+                patient_email=target_email,
                 doctor_name=doc_name,
                 specialty=doc_spec,
                 branch_name=branch_lbl,
@@ -1489,9 +1555,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"• **Branch:** {branch_lbl}\n"
                     f"• **Consultation Fee:** PKR {fee:,}\n"
                     f"• **MRN:** {reg_p['mrn']}\n"
-                    f"• **Phone:** {reg_p['phone']}\n\n"
+                    f"• **Phone:** {reg_p['phone']}\n"
+                    f"• **Email:** {target_email}\n\n"
                     f"📅 [Add to Google Calendar]({gcal_link})\n\n"
-                    f"Confirmation details sent. Please arrive 10 minutes before your appointment."
+                    f"📧 A confirmation email with appointment details and calendar invite has been sent to **{target_email}**. Please arrive 10 minutes before your appointment."
                 )
             else:
                 confirm_msg = (
@@ -1503,9 +1570,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"• **Branch:** {branch_lbl}\n"
                     f"• **Consultation Fee:** PKR {fee:,}\n"
                     f"• **MRN:** {reg_p['mrn']}\n"
-                    f"• **Mobile:** {reg_p['phone']}\n\n"
+                    f"• **Mobile:** {reg_p['phone']}\n"
+                    f"• **Email:** {target_email}\n\n"
                     f"📅 [Google Calendar mein shamil karein]({gcal_link})\n\n"
-                    f"Aap ko confirmation bhej di gayi hai. Baraye meharbani waqt se 10 minute pehle tashreef layein."
+                    f"📧 Mukammal confirmation email aur Google Calendar invite aap ke email address **{target_email}** par bhej di gayi hai. Baraye meharbani waqt se 10 minute pehle tashreef layein."
                 )
 
             messages.append({
@@ -1522,6 +1590,7 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 "patient_id": reg_p["id"],
                 "patient_name": reg_p["name"],
                 "patient_phone": reg_p["phone"],
+                "patient_email": target_email,
                 "patient_mrn": reg_p["mrn"],
                 "is_returning_patient": True,
                 "appointment_result": booking_res,
@@ -1591,12 +1660,13 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
             if v is not None and not collected.get(k):
                 collected[k] = v
 
-        is_all_present = bool(collected.get("name") and collected.get("phone") and collected.get("age") and collected.get("allergies") is not None)
+        is_all_present = bool(collected.get("name") and collected.get("phone") and collected.get("email") and collected.get("age") and collected.get("allergies") is not None)
 
         if not has_identity and is_all_present:
             reg_p = register_conversational_patient({
                 "name": collected["name"],
                 "phone": collected["phone"],
+                "email": collected.get("email"),
                 "age": collected["age"],
                 "gender": collected.get("gender", "Unspecified"),
                 "allergies": collected.get("allergies", ["None"])
@@ -1604,6 +1674,7 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
             state["patient_id"] = reg_p["id"]
             state["patient_name"] = reg_p["name"]
             state["patient_phone"] = reg_p["phone"]
+            state["patient_email"] = reg_p.get("email")
             state["patient_mrn"] = reg_p["mrn"]
             state["is_returning_patient"] = True
             has_identity = True
@@ -1618,8 +1689,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"Excellent! To finalize and book your appointment with **{doc_name}** on **{selected_slot_to_book.get('display_date', '')}** at **{selected_slot_to_book.get('display_time', '')}**, please provide the following details here in chat:\n\n"
                     f"1. **Full Name**\n"
                     f"2. **Mobile Phone Number** (e.g. 0300-1234567)\n"
-                    f"3. **Age & Gender** (e.g. 28 years, Male/Female)\n"
-                    f"4. **Allergies:** Any allergies to specific medicines (e.g. Penicillin)? (Or write 'None')\n\n"
+                    f"3. **Email Address** (e.g. yourname@gmail.com — to receive confirmation & calendar invite)\n"
+                    f"4. **Age & Gender** (e.g. 28 years, Male/Female)\n"
+                    f"5. **Allergies:** Any allergies to specific medicines (e.g. Penicillin)? (Or write 'None')\n\n"
                     f"Once received, your appointment will be booked instantly and you will receive your unique **Appointment ID**!"
                 )
             else:
@@ -1627,8 +1699,9 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"Bohat khoob! **{doc_name}** ke sath **{selected_slot_to_book.get('display_date', '')}** ko **{selected_slot_to_book.get('display_time', '')}** par appointment book karne ke liye baraye meharbani apni yeh maloomat chat mein likh kar bhej dein:\n\n"
                     f"1. **Poora Naam** (Full Name)\n"
                     f"2. **Mobile Number** (Phone Number — jaisay 0300-1234567)\n"
-                    f"3. **Umar aur Jins** (Age & Gender — jaisay 28 saal, Mard/Aurat)\n"
-                    f"4. **Allergies** (agar kisi makhsoos dawai ya cheez se allergy ho, warna 'None' likhein)\n\n"
+                    f"3. **Email Address** (jaisay yourname@gmail.com — confirmation aur Google Calendar invite ke liye)\n"
+                    f"4. **Umar aur Jins** (Age & Gender — jaisay 28 saal, Mard/Aurat)\n"
+                    f"5. **Allergies** (agar kisi makhsoos dawai se allergy ho, warna 'None' likhein)\n\n"
                     f"Yeh maloomat milte hi aap ki appointment book ho jaye gi aur aap ko aap ka **Appointment ID** de diya jaye ga!"
                 )
 
@@ -1675,9 +1748,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
             fee = booking_res.get("fee", 2000)
             branch_lbl = sched_req.get("branch_name", "City Care Clinics")
 
+            pat_email = state.get("patient_email") or state.get("long_term_memory", {}).get("email") or f"{state.get('patient_name', 'patient').lower().replace(' ', '.')}@example.com"
             email_notifier.send_appointment_confirmation(
                 patient_name=state.get("patient_name", "Valued Patient"),
-                patient_email=f"{state.get('patient_name', 'patient').lower().replace(' ', '.')}@example.com",
+                patient_email=pat_email,
                 doctor_name=doc_name,
                 specialty=doc_spec,
                 branch_name=branch_lbl,
@@ -1696,9 +1770,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"• **Date & Time:** {date_disp} at {time_disp}\n"
                     f"• **Branch:** {branch_lbl}\n"
                     f"• **Consultation Fee:** PKR {fee:,}\n"
-                    f"• **MRN:** {state.get('patient_mrn', 'N/A')}\n\n"
+                    f"• **MRN:** {state.get('patient_mrn', 'N/A')}\n"
+                    f"• **Email:** {pat_email}\n\n"
                     f"📅 [Add to Google Calendar]({gcal_link})\n\n"
-                    f"Email and SMS confirmation has been dispatched. Please arrive 10 minutes early."
+                    f"📧 A confirmation email with appointment details and calendar invite has been sent to **{pat_email}**. Please arrive 10 minutes early."
                 )
             else:
                 confirm_msg = (
@@ -1709,9 +1784,10 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                     f"• **Tareeq o Waqt:** {date_disp} - {time_disp}\n"
                     f"• **Branch:** {branch_lbl}\n"
                     f"• **Consultation Fee:** PKR {fee:,}\n"
-                    f"• **MRN:** {state.get('patient_mrn', 'N/A')}\n\n"
+                    f"• **MRN:** {state.get('patient_mrn', 'N/A')}\n"
+                    f"• **Email:** {pat_email}\n\n"
                     f"📅 [Google Calendar mein shamil karein]({gcal_link})\n\n"
-                    f"Aap ko email aur SMS confirmation bhi bhej di gayi hai. Baraye meharbani waqt se 10 minute pehle tashreef layein."
+                    f"📧 Mukammal confirmation email aur Google Calendar invite aap ke email address **{pat_email}** par bhej di gayi hai. Baraye meharbani waqt se 10 minute pehle tashreef layein."
                 )
 
             messages.append({
@@ -1728,6 +1804,7 @@ def scheduling_node(state: ClinicalState) -> Dict[str, Any]:
                 "patient_id": state.get("patient_id"),
                 "patient_name": state.get("patient_name"),
                 "patient_phone": state.get("patient_phone"),
+                "patient_email": pat_email,
                 "patient_mrn": state.get("patient_mrn"),
                 "is_returning_patient": True,
                 "appointment_result": booking_res,
