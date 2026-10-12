@@ -15,7 +15,8 @@ for d in ["Day 4", "Day 5", "Day 3", "Day 3/agents", "Day 2", "Day 1", "."]:
         sys.path.insert(0, target_path)
 
 # Import the FastAPI application from Day 4 api_server
-from api_server import app  # noqa: E402
+from api_server import app  # type: ignore # noqa: E402
+
 
 if __name__ == "__main__":
     import uvicorn

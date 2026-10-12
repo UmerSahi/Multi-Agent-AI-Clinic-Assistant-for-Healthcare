@@ -2,6 +2,7 @@
   "python.analysis.extraPaths": [
     "${workspaceFolder}",
     "${workspaceFolder}/Day 4",
+    "${workspaceFolder}/Day 5",
     "${workspaceFolder}/Day 3",
     "${workspaceFolder}/Day 3/agents",
     "${workspaceFolder}/Day 3/evaluation",
@@ -11,6 +12,7 @@
   "python.autoComplete.extraPaths": [
     "${workspaceFolder}",
     "${workspaceFolder}/Day 4",
+    "${workspaceFolder}/Day 5",
     "${workspaceFolder}/Day 3",
     "${workspaceFolder}/Day 3/agents",
     "${workspaceFolder}/Day 3/evaluation",
@@ -18,6 +20,7 @@
     "${workspaceFolder}/Day 2/mcp_servers"
   ],
   "python.analysis.diagnosticSeverityOverrides": {
-    "reportMissingImports": "none"
+    "reportMissingImports": "none",
+    "reportMissingModuleSource": "none"
   }
 }
